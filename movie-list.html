@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEGA LISTA — Filmes, Séries & Animes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --surface2: #181820;
+  --border: #2a2a38;
+  --accent: #e8473f;
+  --accent2: #f0a500;
+  --accent3: #7c6cfc;
+  --text: #e8e8f0;
+  --text2: #8888a0;
+  --text3: #555568;
+  --watched: #1a3a1a;
+  --watching: #1a2a3a;
+  --tag-l: #c94d7a;
+  --tag-g: #4d7ac9;
+  --tag-t: #7ac94d;
+  --tag-h: #c9a84d;
+  --tag-b: #a84dc9;
+  --tag-z: #4dc9c9;
+  --tag-r: #c97a4d;
+  --tag-an: #ff6b6b;
+  --tag-se: #6bffb8;
+  --tag-sf: #6bb8ff;
+  --tag-bh: #ff6bff;
+  --tag-ph: #ffb86b;
+  --tag-x: #ff4444;
+  --green: #4caf50;
+  --yellow: #ffc107;
+  --blue: #2196f3;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.logo span { color: var(--text2); font-size: 14px; letter-spacing: 1px; display: block; font-family: 'Space Mono', monospace; margin-top: -4px; }
+
+.header-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+}
+
+.search-box {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 14px;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  outline: none;
+  width: 220px;
+  transition: border-color 0.2s;
+}
+.search-box:focus { border-color: var(--accent3); }
+
+select {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238888a0'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 24px;
+  transition: border-color 0.2s;
+}
+select:focus { border-color: var(--accent3); }
+
+.stats-bar {
+  display: flex;
+  gap: 16px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--text2);
+  margin-left: auto;
+  white-space: nowrap;
+}
+.stats-bar span { color: var(--text); }
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 0;
+  padding: 0 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+.tab {
+  padding: 10px 20px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  color: var(--text2);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.tab:hover { color: var(--text); }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* FILTERS */
+.filters {
+  padding: 12px 24px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+.filter-chip {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  padding: 4px 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.5px;
+}
+.filter-chip:hover { border-color: var(--text2); color: var(--text); }
+.filter-chip.active { background: var(--accent); border-color: var(--accent); color: white; }
+
+/* GRID */
+.grid-container {
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+/* CARD */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover { border-color: var(--accent3); transform: translateY(-2px); }
+.card.watched { border-color: var(--green) !important; }
+.card.watched::after { content: '✓ VISTO'; position: absolute; top: 0; right: 0; background: var(--green); color: white; padding: 2px 7px; font-family: 'Space Mono',monospace; font-size: 9px; font-weight: bold; z-index: 3; letter-spacing: 0.5px; }
+.card.watching { border-color: var(--accent2) !important; }
+.card.watching::after { content: '▶ VENDO'; position: absolute; top: 0; right: 0; background: var(--accent2); color: var(--bg); padding: 2px 7px; font-family: 'Space Mono',monospace; font-size: 9px; font-weight: bold; z-index: 3; letter-spacing: 0.5px; }
+.card.want { border-color: var(--accent3) !important; }
+.card.want::after { content: '★ QUERO'; position: absolute; top: 0; right: 0; background: var(--accent3); color: white; padding: 2px 7px; font-family: 'Space Mono',monospace; font-size: 9px; font-weight: bold; z-index: 3; letter-spacing: 0.5px; }
+
+.card-poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background: var(--surface2);
+  position: relative;
+  overflow: hidden;
+}
+.card-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+.card:hover .card-poster img { transform: scale(1.04); }
+.poster-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--surface2);
+  color: var(--text3);
+  padding: 12px;
+  text-align: center;
+}
+.poster-icon { font-size: 28px; }
+.poster-title-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  line-height: 1.3;
+  color: var(--text2);
+}
+
+/* Top-left: level badge */
+.level-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  padding: 2px 7px;
+  font-weight: bold;
+  z-index: 2;
+  letter-spacing: 0.5px;
+}
+.level-1 { background: #2a4a2a; color: #6fcf6f; }
+.level-2 { background: #3a3a1a; color: #f0c040; }
+.level-3 { background: #3a2a1a; color: #f09040; }
+.level-4 { background: #3a1a1a; color: #f06060; }
+.level-5 { background: #2a1a3a; color: #c080ff; }
+
+/* Bottom of poster: media type strip */
+.media-strip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 6px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  z-index: 2;
+  flex-wrap: wrap;
+}
+.media-type-badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 1px 5px;
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+}
+/* No-poster indicator */
+.no-poster-badge {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background: rgba(0,0,0,0.7);
+  border: 1px solid var(--text3);
+  color: var(--text3);
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  padding: 1px 4px;
+  z-index: 3;
+  letter-spacing: 0.5px;
+}
+
+.card-info {
+  padding: 8px 8px 7px;
+}
+.card-id {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--text3);
+  float: right;
+  margin-left: 4px;
+  line-height: 1.6;
+}
+.card-title {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-year {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--text3);
+  margin-bottom: 5px;
+}
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+/* Orientation / Identity tags — more prominent */
+.tag-L { background: #5a1a38; color: #ff7ab0; border: 1px solid #ff7ab060; }
+.tag-G { background: #1a2a50; color: #7ab0ff; border: 1px solid #7ab0ff60; }
+.tag-T { background: #1a4a28; color: #7affaa; border: 1px solid #7affaa60; }
+.tag-B { background: #3a1a55; color: #cc88ff; border: 1px solid #cc88ff60; }
+.tag-H { background: #3a2a10; color: #ffcc66; border: 1px solid #ffcc6640; }
+/* Genre / content tags */
+.tag-AN { background: #4a1010; color: #ff7070; border: 1px solid #ff707060; }
+.tag-SE { background: #0a3a25; color: #55ffcc; border: 1px solid #55ffcc60; }
+.tag-SF { background: #0a1e3a; color: #55aaff; border: 1px solid #55aaff60; }
+.tag-BH { background: #3a0a3a; color: #ff66ff; border: 1px solid #ff66ff60; }
+.tag-PH { background: #3a2205; color: #ffaa44; border: 1px solid #ffaa4460; }
+.tag-X  { background: #440000; color: #ff4444; border: 1px solid #ff444460; }
+.tag-R  { background: #3a2010; color: #ffaa77; border: 1px solid #ffaa7760; }
+.tag-Z  { background: #103a3a; color: #44ffff; border: 1px solid #44ffff60; }
+.tag-V  { background: #10103a; color: #8899ff; border: 1px solid #8899ff60; }
+.tag-C  { background: #0a2810; color: #55ff88; border: 1px solid #55ff8860; }
+.tag-EC { background: #2a1500; color: #ff9933; border: 1px solid #ff993360; }
+.tag-HN { background: #3a0015; color: #ff4488; border: 1px solid #ff448860; }
+.tag-BR { background: #1a1a00; color: #ccff44; border: 1px solid #ccff4460; }
+.tag-JP { background: #2a0010; color: #ff88aa; border: 1px solid #ff88aa60; }
+.tag-KR { background: #002a2a; color: #44ffff; border: 1px solid #44ffff60; }
+.tag-HK { background: #102510; color: #88ffaa; border: 1px solid #88ffaa60; }
+.tag-TW { background: #001525; color: #aaffff; border: 1px solid #aaffff60; }
+
+/* MODAL */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text2);
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.2s;
+}
+.modal-close:hover { color: var(--accent); }
+.modal-header {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.modal-poster {
+  width: 120px;
+  height: 180px;
+  flex-shrink: 0;
+  background: var(--surface2);
+  overflow: hidden;
+}
+.modal-poster img { width: 100%; height: 100%; object-fit: cover; }
+.modal-meta { flex: 1; min-width: 0; }
+.modal-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.modal-subtitle {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--text2);
+  margin-bottom: 12px;
+}
+.modal-scores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.score-item {
+  background: var(--surface2);
+  padding: 6px 8px;
+  text-align: center;
+}
+.score-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  color: var(--text3);
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 2px;
+}
+.score-value {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--accent2);
+}
+.modal-notes-text {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.modal-rec-section {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+}
+/* Horizontal scroll for similar titles */
+#modalSimilar::-webkit-scrollbar { height: 4px; }
+#modalSimilar::-webkit-scrollbar-track { background: var(--bg); }
+#modalSimilar::-webkit-scrollbar-thumb { background: var(--border); }
+.section-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 8px;
+}
+.rec-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.rec-tag {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  padding: 4px 10px;
+  color: var(--accent3);
+}
+
+.modal-body { padding: 20px; }
+
+.status-section {
+  margin-bottom: 16px;
+}
+.status-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.btn {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  background: var(--surface2);
+  color: var(--text2);
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.15s;
+}
+.btn:hover { border-color: var(--text2); color: var(--text); }
+.btn.active-watched { background: #1a3a1a; border-color: var(--green); color: var(--green); }
+.btn.active-watching { background: #1a2a3a; border-color: var(--accent2); color: var(--accent2); }
+.btn.active-want { background: #1a1a2a; border-color: var(--accent3); color: var(--accent3); }
+.btn-save { background: var(--accent); border-color: var(--accent); color: white; }
+.btn-save:hover { background: #cc3830; border-color: #cc3830; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group.full { grid-column: 1/-1; }
+.form-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.form-input {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+.form-input:focus { border-color: var(--accent3); }
+textarea.form-input {
+  resize: vertical;
+  min-height: 80px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.star-rating {
+  display: flex;
+  gap: 4px;
+}
+.star {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text3);
+  transition: color 0.1s;
+  line-height: 1;
+}
+.star.filled { color: var(--accent2); }
+.star:hover ~ .star { color: var(--text3) !important; }
+
+/* EMPTY STATE */
+.empty-state {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--text3);
+}
+.empty-state-icon { font-size: 48px; margin-bottom: 16px; }
+.empty-state p { font-family: 'Space Mono', monospace; font-size: 13px; }
+
+/* LEVEL SECTIONS */
+.level-header {
+  padding: 16px 24px 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.level-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.level-count {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--text3);
+}
+.level-divider {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* SORT INDICATOR */
+.sort-indicator {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--text3);
+  padding: 0 24px 8px;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); }
+::-webkit-scrollbar-thumb:hover { background: var(--text3); }
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 12px 20px;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  z-index: 9999;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* LOADING */
+.loading-poster {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--surface2) 25%, var(--border) 50%, var(--surface2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+@media (max-width: 600px) {
+  .grid-container { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; padding: 14px; }
+  .modal-scores { grid-template-columns: repeat(4, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+  .modal-header { flex-direction: column; }
+  .modal-poster { width: 100%; height: 200px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    MEGALIST
+    <span>Filmes · Séries · Animes</span>
+  </div>
+  <div class="header-controls">
+    <input type="text" class="search-box" placeholder="🔍 Buscar título..." id="searchInput">
+    <select id="sortSelect">
+      <option value="default">Ordem Original</option>
+      <option value="title-az">Título A→Z</option>
+      <option value="title-za">Título Z→A</option>
+      <option value="year-new">Mais Novo</option>
+      <option value="year-old">Mais Antigo</option>
+      <option value="afinidade">Por Afinidade</option>
+      <option value="nivel">Por Nível</option>
+      <option value="prof">Por Profundidade</option>
+      <option value="cult">Por Valor Cultural</option>
+      <option value="erot">Por Erotismo</option>
+      <option value="pert">Por Perturbação</option>
+      <option value="rari">Por Raridade (raro primeiro)</option>
+    </select>
+    <select id="midiaTipo">
+      <option value="all">Todos os Tipos</option>
+      <option value="Filme">Filmes</option>
+      <option value="Anime">Animes</option>
+      <option value="Serie">Séries</option>
+    </select>
+    <select id="statusFilter">
+      <option value="all">Todos os Status</option>
+      <option value="watched">✓ Assistido</option>
+      <option value="watching">▶ Assistindo</option>
+      <option value="want">★ Quero Ver</option>
+      <option value="none">Sem Status</option>
+    </select>
+  </div>
+  <div class="stats-bar" id="statsBar">
+    <span>Total: <span id="statTotal">0</span></span>
+    <span>✓ <span id="statWatched">0</span></span>
+    <span>▶ <span id="statWatching">0</span></span>
+  </div>
+</header>
+
+<div class="tabs" id="tabsContainer">
+  <div class="tab active" data-tab="all">Todos</div>
+</div>
+
+<div class="filters" id="filtersContainer">
+  <span class="filter-label">Tipo:</span>
+  <div class="filter-chip active" data-tipo="all">Todos</div>
+  <div class="filter-chip" data-tipo="L">L Lésbico</div>
+  <div class="filter-chip" data-tipo="G">G Gay</div>
+  <div class="filter-chip" data-tipo="T">T Trans</div>
+  <div class="filter-chip" data-tipo="H">H Hétero</div>
+  <div class="filter-chip" data-tipo="B">B Bi/Pan</div>
+  <div class="filter-chip" data-tipo="Z">Z Vampiro</div>
+  <div class="filter-chip" data-tipo="R">R Religião</div>
+  <div class="filter-chip" data-tipo="AN">AN Anime</div>
+  <div class="filter-chip" data-tipo="SE">SE Série</div>
+  <div class="filter-chip" data-tipo="SF">SF Sci-Fi</div>
+  <div class="filter-chip" data-tipo="BH">BH Body Horror</div>
+  <div class="filter-chip" data-tipo="PH">PH Psicológico</div>
+  <div class="filter-chip" data-tipo="X">X Tabu Extremo</div>
+  <div class="filter-chip" data-tipo="BR">BR Brasil</div>
+</div>
+
+<div id="mainContent"></div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModalDirect()">×</button>
+    <div class="modal-header">
+      <div class="modal-poster" id="modalPoster" style="cursor:pointer;" onclick="openPosterEditor(currentModalId)" title="Clique para editar a capa"></div>
+      <div class="modal-meta">
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-subtitle" id="modalSubtitle"></div>
+        <div class="modal-scores" id="modalScores"></div>
+        <div class="modal-notes-text" id="modalNotes"></div>
+        <button class="btn" style="margin-top:10px;font-size:10px;padding:5px 12px;" onclick="openPosterEditor(currentModalId)">🖼 Editar Capa</button>
+      </div>
+    </div>
+    <div class="modal-rec-section">
+      <div class="section-title">Descrição</div>
+      <div id="modalDescription" style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:8px;font-style:italic;"></div>
+      <button class="btn" style="font-size:10px;padding:4px 10px;" onclick="openDescEditor()">✏ Editar Descrição</button>
+    </div>
+    <div class="modal-rec-section">
+      <div class="section-title">Afinidade com</div>
+      <div class="rec-tags" id="modalRec"></div>
+    </div>
+    <div class="modal-rec-section" id="similarSection" style="display:none;">
+      <div class="section-title">Títulos Similares</div>
+      <div id="modalSimilar" style="display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;"></div>
+    </div>
+    <div class="modal-body">
+      <div class="section-title" style="margin-bottom:10px;">Status & Review</div>
+      <div class="status-buttons">
+        <button class="btn" id="btnWatched" onclick="setStatus('watched')">✓ Assistido</button>
+        <button class="btn" id="btnWatching" onclick="setStatus('watching')">▶ Assistindo</button>
+        <button class="btn" id="btnWant" onclick="setStatus('want')">★ Quero Ver</button>
+        <button class="btn" id="btnNone" onclick="setStatus('none')">— Remover</button>
+      </div>
+      <div id="extraFields" style="display:none;">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Nota</label>
+            <div class="star-rating" id="starRating">
+              <span class="star" data-val="1">★</span>
+              <span class="star" data-val="2">★</span>
+              <span class="star" data-val="3">★</span>
+              <span class="star" data-val="4">★</span>
+              <span class="star" data-val="5">★</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Data de Conclusão</label>
+            <input type="date" class="form-input" id="inputDate">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group" id="episodeGroup" style="display:none;">
+            <label class="form-label">Episódio Atual</label>
+            <input type="text" class="form-input" id="inputEpisode" placeholder="Ex: S01E05">
+          </div>
+        </div>
+        <div class="form-group full" style="margin-bottom:12px;">
+          <label class="form-label">Review / Comentário</label>
+          <textarea class="form-input" id="inputReview" placeholder="Escreva sua review..."></textarea>
+        </div>
+      </div>
+      <button class="btn btn-save" onclick="saveEntry()" style="width:100%;padding:10px;">SALVAR</button>
+    </div>
+  </div>
+</div>
+
+<!-- POSTER EDITOR -->
+<div class="modal-overlay" id="posterEditorOverlay" onclick="closePosterEditor()" style="z-index:2000">
+  <div class="modal" style="max-width:460px;" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closePosterEditor()">×</button>
+    <div style="padding:20px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;margin-bottom:4px;">Editar Capa</div>
+      <div style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text2);margin-bottom:16px;" id="peTitle"></div>
+
+      <div style="display:flex;gap:14px;margin-bottom:16px;align-items:flex-start;">
+        <img id="pePreview" style="width:90px;height:135px;object-fit:cover;background:var(--surface2);flex-shrink:0;display:none;" onerror="this.style.display='none'">
+        <div style="flex:1;">
+          <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text3);letter-spacing:1px;margin-bottom:6px;">URL DA IMAGEM</div>
+          <input id="peUrl" class="form-input" type="text" placeholder="https://... ou /tmdb-path.jpg" oninput="previewPosterUrl()" style="width:100%;margin-bottom:8px;">
+          <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text3);line-height:1.6;">
+            Cole qualquer URL de imagem.<br>
+            Busque em: <a href="https://www.themoviedb.org" target="_blank" style="color:var(--accent3)">TMDB</a> ·
+            <a href="https://myanimelist.net" target="_blank" style="color:var(--accent3)">MAL</a> ·
+            <a href="https://www.imdb.com" target="_blank" style="color:var(--accent3)">IMDB</a>
+          </div>
+        </div>
+      </div>
+
+      <input type="hidden" id="peId">
+      <div style="display:flex;gap:8px;">
+        <button class="btn btn-save" onclick="savePosterEdit()" style="flex:1;padding:10px;">✓ Salvar</button>
+        <button class="btn" onclick="deletePosterEdit()" style="padding:10px;color:var(--accent);border-color:var(--accent);">✕ Remover</button>
+        <button class="btn" onclick="closePosterEditor()" style="padding:10px;">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DESCRIPTION EDITOR -->
+<div class="modal-overlay" id="descEditorOverlay" onclick="closeDescEditor()" style="z-index:2000">
+  <div class="modal" style="max-width:460px;" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeDescEditor()">×</button>
+    <div style="padding:20px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;margin-bottom:4px;">Editar Descrição</div>
+      <div style="font-family:'Space Mono',monospace;font-size:11px;color:var(--text2);margin-bottom:12px;" id="deTitle"></div>
+      <div id="deAutoDesc" style="font-size:11px;color:var(--text3);background:var(--surface2);padding:10px;margin-bottom:12px;line-height:1.5;display:none;">
+        <span style="color:var(--accent2);font-family:'Space Mono',monospace;font-size:9px;display:block;margin-bottom:4px;">DESCRIÇÃO AUTOMÁTICA (base)</span>
+        <span id="deAutoText"></span>
+        <button onclick="useAutoDesc()" style="display:block;margin-top:8px;background:none;border:1px solid var(--border);color:var(--text3);font-family:'Space Mono',monospace;font-size:9px;padding:3px 8px;cursor:pointer;">↓ Usar esta como base</button>
+      </div>
+      <textarea id="deText" class="form-input" rows="5" placeholder="Escreva uma descrição personalizada..."></textarea>
+      <div style="display:flex;gap:8px;margin-top:12px;">
+        <button class="btn btn-save" onclick="saveDescEdit()" style="flex:1;padding:10px;">✓ Salvar</button>
+        <button class="btn" onclick="deleteDescEdit()" style="padding:10px;color:var(--accent);border-color:var(--accent);">✕ Remover</button>
+        <button class="btn" onclick="closeDescEditor()" style="padding:10px;">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ==============================
+// CONSTANTS
+// ==============================
+const REC_LABELS = {
+  BTS: 'Beyond Two Souls',
+  LIS: 'Life is Strange',
+  RH: 'Rocky Horror',
+  LB: 'Look Back',
+  VD: 'Videodrome',
+  CE: 'Celeste',
+  BR: 'Blade Runner',
+  DD: 'Donnie Darko'
+};
+
+const NIVEL_NAMES = ['Nível 1 — Sutil', 'Nível 2 — Erótico', 'Nível 3 — Muito Erótico', 'Nível 4 — Altamente Explícito', 'Nível 5 — Fronteira Pornô'];
+const NIVEL_COLORS = ['#6fcf6f', '#f0c040', '#f09040', '#f06060', '#c080ff'];
+
+// Preenchido pelo parser do markdown
+let MEDIA_DATA = [];
+
+// ==============================
+// MARKDOWN PARSER
+// ==============================
+
+function detectNivel(heading) {
+  const m = heading.match(/N[IÍ]VEL\s+(\d)/i);
+  return m ? parseInt(m[1]) - 1 : null;
+}
+
+function cell(s) {
+  return (s || '').trim().replace(/^—$/, '');
+}
+
+function parseRow(cols, nivel, sectionName) {
+  if (cols.length < 9) return null;
+  // Use the markdown row number (col 0) as stable ID
+  const mdNum = parseInt(cell(cols[0]));
+  if (!mdNum || isNaN(mdNum)) return null;
+  const title = cell(cols[1]);
+  if (!title || title.startsWith('—') || /já listado/i.test(title)) return null;
+  const year  = parseInt(cell(cols[2])) || 0;
+  const media = cell(cols[3]) || 'Filme';
+  const tipo  = cell(cols[4]).split(',').map(t => t.trim()).filter(Boolean);
+  const erot  = parseInt(cell(cols[5]))  || 0;
+  const expl  = parseInt(cell(cols[6]))  || 0;
+  const prof  = parseInt(cell(cols[7]))  || 0;
+  const pert  = parseInt(cell(cols[8]))  || 0;
+  const tabu  = parseInt(cell(cols[9]))  || 0;
+  const rari  = parseInt(cell(cols[10])) || 0;
+  const cult  = parseInt(cell(cols[11])) || 0;
+  const rec   = cell(cols[12]).split(',').map(r => r.trim()).filter(Boolean);
+  const notes = cell(cols[13]) || '';
+  if (/já listado/i.test(notes) || /já listado/i.test(title)) return null;
+  return { id: mdNum, title, year, media, tipo, erot, expl, prof, pert, tabu, rari, cult, rec, notes, nivel, section: sectionName };
+}
+
+function parseMarkdown(text) {
+  const lines = text.split('\n');
+  const items = [];
+  const seenIds = new Set();
+  let currentNivel = 0;
+  let currentSection = 'Nível 1 — Sutil';
+  let inTable = false;
+  let headerPassed = false;
+  let isMediaTable = false; // only parse tables with the right columns
+
+  for (const raw of lines) {
+    const line = raw.trim();
+
+    // Detect level headings
+    if (/^##\s+N[IÍ]VEL\s+\d/i.test(line)) {
+      const m = line.match(/N[IÍ]VEL\s+(\d)/i);
+      if (m) {
+        currentNivel = parseInt(m[1]) - 1;
+        currentSection = line.replace(/^##\s+/, '').trim();
+      }
+      inTable = false; headerPassed = false; isMediaTable = false;
+      continue;
+    }
+    // Detect other section headings (comédias, filmes restantes, etc.)
+    if (/^##\s+/.test(line)) {
+      currentSection = line.replace(/^##\s+/, '').trim();
+      inTable = false; headerPassed = false; isMediaTable = false;
+      continue;
+    }
+
+    if (line.startsWith('|')) {
+      const cols = line.split('|').slice(1, -1);
+      // Separator line
+      if (cols.every(c => /^[-: ]+$/.test(c.trim()))) {
+        if (inTable) headerPassed = true;
+        continue;
+      }
+      // Header line — check if it's the media table (has "Titulo" column)
+      if (!headerPassed) {
+        const hasTitle = cols.some(c => /titulo/i.test(c.trim()));
+        const hasNum   = cell(cols[0]) === '#';
+        if (hasNum && hasTitle) {
+          inTable = true;
+          isMediaTable = true;
+        } else {
+          inTable = true;
+          isMediaTable = false;
+        }
+        continue;
+      }
+      // Data row
+      if (inTable && headerPassed && isMediaTable) {
+        const item = parseRow(cols, currentNivel, currentSection);
+        if (item && !seenIds.has(item.id)) {
+          seenIds.add(item.id);
+          items.push(item);
+        }
+      }
+    } else {
+      if (inTable) { inTable = false; headerPassed = false; isMediaTable = false; }
+    }
+  }
+  return items;
+}
+
+// ==============================
+// LOADING / ERROR STATE
+// ==============================
+function showLoading() {
+  document.getElementById('mainContent').innerHTML = `
+    <div class="empty-state">
+      <div class="empty-state-icon">⏳</div>
+      <p>Carregando movie-list.md...</p>
+    </div>`;
+}
+
+function showError(msg) {
+  document.getElementById('mainContent').innerHTML = `
+    <div class="empty-state">
+      <div class="empty-state-icon">⚠️</div>
+      <p style="color:var(--accent);margin-bottom:12px">${msg}</p>
+      <p style="font-size:11px;color:var(--text3);line-height:1.8">
+        Coloque <strong style="color:var(--text2)">movie-list.md</strong> na mesma pasta que este HTML.<br>
+        Por restrições do navegador, abra via servidor local:<br>
+        <strong style="color:var(--accent2)">VS Code → Live Server</strong> &nbsp;ou&nbsp;
+        <strong style="color:var(--accent2)">python3 -m http.server</strong> no terminal.
+      </p>
+    </div>`;
+}
+
+
+// ==============================
+// STATE
+// ==============================
+let userData = {};
+let activeTab = 'all';
+let activeTipo = 'all';
+let searchQuery = '';
+let sortMode = 'default';
+let midiaTipo = 'all';
+let statusFilter = 'all';
+let currentModalId = null;
+let currentRating = 0;
+
+// ==============================
+// STORAGE
+// ==============================
+function loadData() {
+  try { userData = JSON.parse(localStorage.getItem('megalist_v1') || '{}'); }
+  catch(e) { userData = {}; }
+}
+function saveData() {
+  localStorage.setItem('megalist_v1', JSON.stringify(userData));
+}
+
+
+// ==============================
+// RENDER
+// ==============================
+function getFilteredSorted() {
+  let data = [...MEDIA_DATA];
+
+  // Tab filter — by section name
+  if (activeTab !== 'all') {
+    data = data.filter(item => item.section === activeTab);
+  }
+
+  // Tipo filter
+  if (activeTipo !== 'all') {
+    data = data.filter(item => item.tipo.includes(activeTipo));
+  }
+
+  // Media type filter
+  if (midiaTipo !== 'all') {
+    if (midiaTipo === 'Anime') {
+      data = data.filter(item => item.media === 'Anime' || item.tipo.includes('AN'));
+    } else if (midiaTipo === 'Serie') {
+      data = data.filter(item => item.media === 'Serie' || (item.tipo.includes('SE') && !item.tipo.includes('AN')));
+    } else {
+      data = data.filter(item => item.media === 'Filme' && !item.tipo.includes('AN') && !item.tipo.includes('SE'));
+    }
+  }
+
+  // Status filter
+  if (statusFilter !== 'all') {
+    data = data.filter(item => {
+      const ud = userData[item.id];
+      const s = ud ? ud.status : 'none';
+      return s === statusFilter;
+    });
+  }
+
+  // Search
+  if (searchQuery) {
+    const q = searchQuery.toLowerCase();
+    data = data.filter(item =>
+      item.title.toLowerCase().includes(q) ||
+      item.notes.toLowerCase().includes(q) ||
+      item.tipo.some(t => t.toLowerCase().includes(q)) ||
+      item.rec.some(r => (REC_LABELS[r]||'').toLowerCase().includes(q))
+    );
+  }
+
+  // Sort
+  switch (sortMode) {
+    case 'title-az': data.sort((a,b) => a.title.localeCompare(b.title, 'pt')); break;
+    case 'title-za': data.sort((a,b) => b.title.localeCompare(a.title, 'pt')); break;
+    case 'year-new': data.sort((a,b) => b.year - a.year); break;
+    case 'year-old': data.sort((a,b) => a.year - b.year); break;
+    case 'afinidade': data.sort((a,b) => b.rec.length - a.rec.length); break;
+    case 'nivel': data.sort((a,b) => b.nivel - a.nivel); break;
+    case 'prof': data.sort((a,b) => b.prof - a.prof); break;
+    case 'cult': data.sort((a,b) => b.cult - a.cult); break;
+    case 'erot': data.sort((a,b) => b.erot - a.erot); break;
+    case 'pert': data.sort((a,b) => b.pert - a.pert); break;
+    case 'rari': data.sort((a,b) => b.rari - a.rari); break;
+  }
+
+  return data;
+}
+
+function renderGrid() {
+  const data = getFilteredSorted();
+  const container = document.getElementById('mainContent');
+  const watchedCount = Object.values(userData).filter(u => u.status === 'watched').length;
+  const watchingCount = Object.values(userData).filter(u => u.status === 'watching').length;
+
+  document.getElementById('statTotal').textContent = data.length;
+  document.getElementById('statWatched').textContent = watchedCount;
+  document.getElementById('statWatching').textContent = watchingCount;
+
+  if (data.length === 0) {
+    container.innerHTML = `<div class="empty-state"><div class="empty-state-icon">🎬</div><p>Nenhuma mídia encontrada</p></div>`;
+    return;
+  }
+
+  let html = '';
+
+  // Recommendation panel — only on default all-items view
+  if (activeTab === 'all' && sortMode === 'default' && !searchQuery && activeTipo === 'all' && midiaTipo === 'all' && statusFilter === 'all') {
+    html += renderRecommendations();
+  }
+
+  if (activeTab === 'all' && sortMode === 'default') {
+    // Group by section, preserving markdown order
+    const sectionOrder = [...new Set(MEDIA_DATA.map(i => i.section))];
+    const bySection = {};
+    data.forEach(item => {
+      if (!bySection[item.section]) bySection[item.section] = [];
+      bySection[item.section].push(item);
+    });
+    sectionOrder.forEach(sec => {
+      if (!bySection[sec]) return;
+      const items = bySection[sec];
+      const nIdx = items[0].nivel;
+      const color = NIVEL_COLORS[nIdx] || '#8888a0';
+      html += `<div class="level-header">
+        <div class="level-title" style="color:${color}">${sec}</div>
+        <div class="level-count">${items.length} títulos</div>
+        <div class="level-divider"></div>
+      </div>
+      <div class="grid-container">`;
+      items.forEach(item => { html += renderCard(item); });
+      html += `</div>`;
+    });
+  } else {
+    html += `<div class="grid-container">`;
+    data.forEach(item => { html += renderCard(item); });
+    html += `</div>`;
+  }
+
+  container.innerHTML = html;
+  loadAllVisiblePosters(data);
+}
+
+
+// ======================================================
+// POSTER ENGINE v3
+// Priority: posters.json > localStorage edits > auto-fetch
+// ID = markdown row number (column #) — always stable
+// ======================================================
+
+const TMDB_IMG  = 'https://image.tmdb.org/t/p/w342';
+const TMDB_KEY  = '8265bd1679663a7ea12ac168da84d2e8';
+const EDIT_KEY  = 'megalist_poster_edits_v1';   // user edits in localStorage
+const AUTO_KEY  = 'megalist_poster_auto_v1';    // auto-fetched cache
+
+// Loaded from posters.json on init
+let POSTERS_JSON = {};
+// User edits (set / delete / override) stored in localStorage
+let posterEdits  = {};
+// Auto-fetch results stored in localStorage
+let posterAuto   = {};
+
+function loadPosterCache() {
+  try { posterEdits = JSON.parse(localStorage.getItem(EDIT_KEY) || '{}'); } catch(e) {}
+  try { posterAuto  = JSON.parse(localStorage.getItem(AUTO_KEY) || '{}'); } catch(e) {}
+}
+function savePosterEdits() {
+  try { localStorage.setItem(EDIT_KEY, JSON.stringify(posterEdits)); } catch(e) {}
+}
+function savePosterAuto() {
+  try { localStorage.setItem(AUTO_KEY,  JSON.stringify(posterAuto));  } catch(e) {}
+}
+
+// Returns full URL, null (no poster), or undefined (not yet resolved)
+function resolveUrl(id) {
+  const key = String(id);
+  // 1. User edits have highest priority (can override or delete)
+  if (key in posterEdits) {
+    const v = posterEdits[key];
+    if (!v) return null;
+    return v.startsWith('/') ? TMDB_IMG + v : v;
+  }
+  // 2. posters.json (loaded from file)
+  if (key in POSTERS_JSON) {
+    const v = POSTERS_JSON[key];
+    if (!v) return null;
+    return v.startsWith('/') ? TMDB_IMG + v : v;
+  }
+  // 3. Auto-fetch cache
+  if (key in posterAuto) {
+    const v = posterAuto[key];
+    if (!v) return null;
+    return v.startsWith('/') ? TMDB_IMG + v : v;
+  }
+  return undefined;
+}
+
+// Apply a URL (or null) to a card's poster elements
+function applyPoster(id, url) {
+  const img     = document.querySelector(`img[data-poster="${id}"]`);
+  const shimmer = document.querySelector(`[data-shimmer="${id}"]`);
+  const ph      = document.querySelector(`[data-ph="${id}"]`);
+  const badge   = document.querySelector(`.card[data-id="${id}"] .no-poster-badge`);
+
+  if (!url) {
+    if (shimmer) shimmer.style.display = 'none';
+    if (ph)      ph.style.display = 'flex';
+    return;
+  }
+  if (!img) return;
+  img.onload  = () => {
+    if (shimmer) shimmer.style.display = 'none';
+    img.style.display = 'block';
+    if (badge) badge.style.display = 'none'; // poster loaded — hide badge
+  };
+  img.onerror = () => {
+    if (shimmer) shimmer.style.display = 'none';
+    if (ph) ph.style.display = 'flex';
+    posterAuto[String(id)] = null;
+    savePosterAuto();
+  };
+  img.src = url;
+}
+
+// --- AUTO-FETCH QUEUE ---
+const _fetchQueue = [];
+let   _fetchBusy  = false;
+
+function enqueueFetch(item) {
+  const key = String(item.id);
+  if (key in posterEdits || key in POSTERS_JSON || key in posterAuto) return;
+  if (_fetchQueue.find(i => i.id === item.id)) return;
+  _fetchQueue.push(item);
+  processFetchQueue();
+}
+
+async function processFetchQueue() {
+  if (_fetchBusy || _fetchQueue.length === 0) return;
+  _fetchBusy = true;
+  const item = _fetchQueue.shift();
+  try { await autoFetch(item); }
+  catch(e) { posterAuto[String(item.id)] = null; savePosterAuto(); }
+  _fetchBusy = false;
+  setTimeout(processFetchQueue, 120);
+}
+
+async function autoFetch(item) {
+  const isAnime = item.media === 'Anime' || item.tipo.includes('AN');
+  // Try multiple sources
+  if (isAnime) {
+    const url = await tryJikan(item) || await tryTMDB(item, 'tv') || await tryTMDB(item, 'movie');
+    storePosterAuto(item.id, url);
+  } else {
+    const isSeries = item.media === 'Serie' || (item.tipo.includes('SE') && !item.tipo.includes('AN'));
+    const url = await tryTMDB(item, isSeries ? 'tv' : 'movie')
+             || (!isSeries && await tryTMDB(item, 'tv'))
+             || await tryOMDB(item);
+    storePosterAuto(item.id, url);
+  }
+}
+
+function storePosterAuto(id, url) {
+  posterAuto[String(id)] = url || null;
+  savePosterAuto();
+  if (url) applyPoster(id, url);
+  else applyPoster(id, null);
+}
+
+// TMDB search
+async function tryTMDB(item, type) {
+  try {
+    const clean = item.title
+      .replace(/\s*\(\d{4}\)\s*/g, '')
+      .replace(/\s*\((série|documentário.*?|animado|original)\)\s*/gi, '')
+      .replace(/\s+—.*/, '')
+      .trim();
+    const q = encodeURIComponent(clean);
+    const yearKey = type === 'tv' ? 'first_air_date_year' : 'year';
+    const yearParam = item.year > 1900 ? `&${yearKey}=${item.year}` : '';
+    const url = `https://api.themoviedb.org/3/search/${type}?api_key=${TMDB_KEY}&query=${q}${yearParam}&language=pt-BR`;
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const data = await res.json();
+    const results = (data.results || []).filter(r => r.poster_path);
+    // Prefer year-exact match
+    const hit = results.find(r => {
+      const y = parseInt((r.release_date || r.first_air_date || '').slice(0, 4));
+      return item.year > 0 && Math.abs(y - item.year) <= 1;
+    }) || results[0];
+    if (!hit?.poster_path) return null;
+    return TMDB_IMG + hit.poster_path;
+  } catch(e) { return null; }
+}
+
+// Jikan (MyAnimeList) search
+async function tryJikan(item) {
+  try {
+    const clean = item.title
+      .replace(/\s*\(.*?\)\s*/g, '')
+      .replace(/\s*:.*$/, '')
+      .trim();
+    const url = `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(clean)}&limit=8`;
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const data = await res.json();
+    const results = (data.data || []).filter(r => r.images?.jpg?.large_image_url);
+    const hit = results.find(r => {
+      const y = r.aired?.prop?.from?.year;
+      return y && item.year > 0 && Math.abs(y - item.year) <= 1;
+    }) || results[0];
+    return hit?.images?.jpg?.large_image_url || null;
+  } catch(e) { return null; }
+}
+
+// OMDB (Open Movie DB) — free fallback, no key needed for basic use
+async function tryOMDB(item) {
+  try {
+    const clean = item.title.replace(/\s*\(.*?\)\s*/g, '').trim();
+    const yearParam = item.year > 1900 ? `&y=${item.year}` : '';
+    const url = `https://www.omdbapi.com/?apikey=trilogy&t=${encodeURIComponent(clean)}${yearParam}&plot=short`;
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (data.Poster && data.Poster !== 'N/A') return data.Poster;
+    return null;
+  } catch(e) { return null; }
+}
+
+function loadPosterForItem(item) {
+  const url = resolveUrl(item.id);
+  if (url !== undefined) applyPoster(item.id, url);
+  else enqueueFetch(item);
+}
+
+function loadAllVisiblePosters(data) {
+  data.forEach(item => loadPosterForItem(item));
+}
+
+// --- POSTER EDITOR ---
+// Called from modal. Opens a small overlay to set or clear a poster.
+function openPosterEditor(id) {
+  const item = MEDIA_DATA.find(m => m.id === id);
+  if (!item) return;
+  const current = resolveUrl(id);
+  const overlay = document.getElementById('posterEditorOverlay');
+  document.getElementById('peTitle').textContent = item.title;
+  document.getElementById('pePreview').src = current || '';
+  document.getElementById('pePreview').style.display = current ? 'block' : 'none';
+  document.getElementById('peUrl').value = current || '';
+  document.getElementById('peId').value = id;
+  overlay.classList.add('open');
+}
+
+function closePosterEditor() {
+  document.getElementById('posterEditorOverlay').classList.remove('open');
+}
+
+function savePosterEdit() {
+  const id  = parseInt(document.getElementById('peId').value);
+  const url = document.getElementById('peUrl').value.trim();
+  const key = String(id);
+
+  if (!url) {
+    delete posterEdits[key];
+    delete posterAuto[key];
+    // Remove from posters.json in memory too
+    delete POSTERS_JSON[key];
+  } else {
+    posterEdits[key] = url;
+    // Also update in-memory POSTERS_JSON so it takes effect immediately
+    POSTERS_JSON[key] = url;
+  }
+  savePosterEdits();
+  savePosterAuto();
+  downloadPostersJson();
+
+  const newUrl = resolveUrl(id);
+  applyPoster(id, newUrl);
+  // Re-render card to update SEM CAPA badge
+  const cardEl = document.querySelector(`.card[data-id="${id}"]`);
+  if (cardEl) {
+    const item = MEDIA_DATA.find(m => m.id === id);
+    if (item) cardEl.outerHTML = renderCard(item); // replace in DOM
+    loadPosterForItem(MEDIA_DATA.find(m => m.id === id));
+  }
+
+  if (document.getElementById('modalOverlay').classList.contains('open') && currentModalId === id) {
+    updateModalPoster(id, MEDIA_DATA.find(m => m.id === id));
+  }
+
+  closePosterEditor();
+  showToast('✓ Capa salva — posters.json baixado');
+}
+
+function deletePosterEdit() {
+  const id  = parseInt(document.getElementById('peId').value);
+  const key = String(id);
+  posterEdits[key] = null;
+  delete posterAuto[key];
+  delete POSTERS_JSON[key];
+  savePosterEdits();
+  savePosterAuto();
+  downloadPostersJson();
+
+  applyPoster(id, null);
+  const cardEl = document.querySelector(`.card[data-id="${id}"]`);
+  if (cardEl) {
+    const item = MEDIA_DATA.find(m => m.id === id);
+    if (item) cardEl.outerHTML = renderCard(item);
+    loadPosterForItem(MEDIA_DATA.find(m => m.id === id));
+  }
+
+  closePosterEditor();
+  showToast('Capa removida — posters.json baixado');
+}
+
+// Download the current POSTERS_JSON merged with all edits as posters.json
+function downloadPostersJson() {
+  // Merge: start from base JSON, apply edits on top
+  const merged = { ...POSTERS_JSON };
+  for (const [k, v] of Object.entries(posterEdits)) {
+    if (v === null) delete merged[k];
+    else merged[k] = v;
+  }
+  // Sort keys numerically
+  const sorted = {};
+  Object.keys(merged).sort((a,b) => parseInt(a)-parseInt(b)).forEach(k => { sorted[k] = merged[k]; });
+
+  const blob = new Blob([JSON.stringify(sorted, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'posters.json';
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+function previewPosterUrl() {
+  const url = document.getElementById('peUrl').value.trim();
+  if (!url) return;
+  const full = url.startsWith('/') ? TMDB_IMG + url : url;
+  const prev = document.getElementById('pePreview');
+  prev.src = full;
+  prev.style.display = 'block';
+}
+
+// Update modal poster element
+function updateModalPoster(id, item) {
+  const url = resolveUrl(id);
+  const mediaIcon = item.media === 'Anime' ? '🎌' : item.tipo.includes('SE') ? '📺' : '🎬';
+  const el = document.getElementById('modalPoster');
+  if (url) {
+    el.innerHTML = `<img src="${url}" alt="${item.title.replace(/"/g,'')}"
+      style="width:100%;height:100%;object-fit:cover;"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;
+        flex-direction:column;gap:8px;background:var(--surface2);color:var(--text3);
+        padding:16px;text-align:center;font-family:'Space Mono',monospace;font-size:11px;">
+        ${mediaIcon}<br>${item.title}</div>`;
+  } else {
+    el.innerHTML = `<div style="width:100%;height:100%;display:flex;align-items:center;
+      justify-content:center;flex-direction:column;gap:8px;background:var(--surface2);
+      color:var(--text3);padding:16px;text-align:center;font-family:'Space Mono',monospace;
+      font-size:11px;">${mediaIcon}<br>${item.title}</div>`;
+  }
+}
+
+// Full human-readable labels for every type tag
+const TAG_LABELS = {
+  L:'Lésbico', G:'Gay', T:'Trans', H:'Hétero', B:'Bi/Pan',
+  V:'Voyeur', R:'Religião', Z:'Vampiro', C:'Comédia', X:'Tabu',
+  AN:'Anime', SE:'Série', SF:'Sci-Fi', BH:'Body Horror',
+  PH:'Psicológico', EC:'Ecchi', HN:'Hentai',
+  BR:'Brasil', JP:'Japão', KR:'Coreia', HK:'Hong Kong', TW:'Taiwan'
+};
+
+// Media type → colored badge
+const MEDIA_BADGES = {
+  'Filme': { label:'FILME', bg:'#1a1a2a', color:'#aaaacc' },
+  'Serie': { label:'SÉRIE', bg:'#0a2a1a', color:'#44cc88' },
+  'Anime': { label:'ANIME', bg:'#2a1010', color:'#ff7070' },
+};
+
+function renderCard(item) {
+  const ud = userData[item.id] || {};
+  const status = ud.status || 'none';
+  const statusClass = status === 'watched' ? 'watched'
+                    : status === 'watching' ? 'watching'
+                    : status === 'want'     ? 'want' : '';
+
+  // Which tags to show (skip AN/SE since they're in the media strip)
+  const skipInTags = new Set(['AN','SE']);
+  // Identity/genre tags only, up to 4
+  const showTags = item.tipo.filter(t => !skipInTags.has(t)).slice(0, 4);
+  const tagsHtml = showTags.map(t => {
+    const label = TAG_LABELS[t] || t;
+    return `<span class="tag tag-${t}" title="${label}">${label}</span>`;
+  }).join('');
+
+  // Media type strip (bottom of poster)
+  const mediaBadge = MEDIA_BADGES[item.media] || MEDIA_BADGES['Filme'];
+  let stripParts = `<span class="media-type-badge"
+    style="background:${mediaBadge.bg};color:${mediaBadge.color};border:1px solid ${mediaBadge.color}40;">
+    ${mediaBadge.label}</span>`;
+
+  // If anime or series, add that too
+  if (item.tipo.includes('AN') && item.media !== 'Anime')
+    stripParts += `<span class="media-type-badge" style="background:#2a1010;color:#ff7070;border:1px solid #ff707040;">ANIME</span>`;
+  if (item.tipo.includes('SE') && item.media !== 'Serie')
+    stripParts += `<span class="media-type-badge" style="background:#0a2a1a;color:#44cc88;border:1px solid #44cc8840;">SÉRIE</span>`;
+
+  const safeTitle = item.title.replace(/"/g, '&quot;');
+  const mediaIcon = item.media === 'Anime' ? '🎌' : item.tipo.includes('SE') ? '📺' : '🎬';
+
+  // Check if this item has a poster resolved
+  const hasPoster = resolveUrl(item.id) !== null && resolveUrl(item.id) !== undefined;
+  const noPosterBadge = hasPoster ? '' : `<div class="no-poster-badge">SEM CAPA</div>`;
+
+  const posterInner = `
+    <div class="loading-poster" style="position:absolute;inset:0;" data-shimmer="${item.id}"></div>
+    <img src="" alt="${safeTitle}"
+      style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;"
+      data-poster="${item.id}">
+    <div class="poster-placeholder" data-ph="${item.id}" style="display:none;position:absolute;inset:0;">
+      <div class="poster-icon">${mediaIcon}</div>
+      <div class="poster-title-text">${item.title}</div>
+    </div>
+    <div class="level-badge level-${item.nivel + 1}">N${item.nivel + 1}</div>
+    <div class="media-strip">${stripParts}</div>
+    ${noPosterBadge}`;
+
+  return `<div class="card ${statusClass}" onclick="openModal(${item.id})" data-id="${item.id}">
+    <div class="card-poster" style="position:relative;">
+      ${posterInner}
+    </div>
+    <div class="card-info">
+      <span class="card-id">#${item.id}</span>
+      <div class="card-title" title="${safeTitle}">${item.title}</div>
+      <div class="card-year">${item.year} · ${item.media}</div>
+      <div class="card-tags">${tagsHtml}</div>
+    </div>
+  </div>`;
+}
+
+
+// MODAL
+// ==============================
+// ==============================
+// DESCRIPTION SYSTEM
+// Stores user-written descriptions separately from markdown notes.
+// Also caches descriptions fetched from TMDB/Jikan.
+// ==============================
+const DESC_USER_KEY = 'megalist_desc_user_v1';
+const DESC_AUTO_KEY = 'megalist_desc_auto_v1';
+let descUser = {};  // user-written descriptions
+let descAuto = {};  // auto-fetched from TMDB/MAL
+
+function loadDescCache() {
+  try { descUser = JSON.parse(localStorage.getItem(DESC_USER_KEY) || '{}'); } catch(e) {}
+  try { descAuto = JSON.parse(localStorage.getItem(DESC_AUTO_KEY) || '{}'); } catch(e) {}
+}
+function saveDescUser() {
+  try { localStorage.setItem(DESC_USER_KEY, JSON.stringify(descUser)); } catch(e) {}
+}
+function saveDescAuto() {
+  try { localStorage.setItem(DESC_AUTO_KEY, JSON.stringify(descAuto)); } catch(e) {}
+}
+
+// Get best available description for an item
+function getDescription(item) {
+  const key = String(item.id);
+  if (descUser[key]) return { text: descUser[key], source: 'user' };
+  if (descAuto[key]) return { text: descAuto[key], source: 'auto' };
+  if (item.notes)    return { text: item.notes, source: 'notes' };
+  return null;
+}
+
+// Fetch description from TMDB or Jikan, cache it
+async function fetchDescription(item) {
+  const key = String(item.id);
+  if (descUser[key] || descAuto[key]) return; // already have one
+  try {
+    const isAnime = item.media === 'Anime' || item.tipo.includes('AN');
+    let text = null;
+    if (isAnime) {
+      const clean = item.title.replace(/\s*\(.*?\)\s*/g, '').replace(/\s*:.*/, '').trim();
+      const res = await fetch(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(clean)}&limit=5`);
+      if (res.ok) {
+        const data = await res.json();
+        const hit = (data.data || []).find(r => r.aired?.prop?.from?.year && Math.abs(r.aired.prop.from.year - item.year) <= 1)
+                 || (data.data || [])[0];
+        if (hit?.synopsis) text = hit.synopsis.replace(/\[Written by MAL Rewrite\]/g,'').trim().slice(0, 300);
+      }
+    } else {
+      const isSeries = item.media === 'Serie' || item.tipo.includes('SE');
+      const type = isSeries ? 'tv' : 'movie';
+      const clean = item.title.replace(/\s*\(\d{4}\)\s*/g, '').trim();
+      const yearP = item.year > 1900 ? `&${type==='tv'?'first_air_date_year':'year'}=${item.year}` : '';
+      const res = await fetch(`https://api.themoviedb.org/3/search/${type}?api_key=${TMDB_KEY}&query=${encodeURIComponent(clean)}${yearP}&language=pt-BR`);
+      if (res.ok) {
+        const data = await res.json();
+        const hit = (data.results||[]).find(r => r.poster_path) || (data.results||[])[0];
+        if (hit?.overview) text = hit.overview.trim().slice(0, 300);
+      }
+    }
+    if (text) {
+      descAuto[key] = text;
+      saveDescAuto();
+    }
+  } catch(e) {}
+}
+
+// ==============================
+// RECOMMENDATION ENGINE
+// Scores every item against a "profile" built from watched items.
+// Profile = weighted sum of tipo vectors + rec codes + nivel proximity.
+// ==============================
+
+function buildUserProfile() {
+  // Get all watched items
+  const watchedIds = Object.entries(userData)
+    .filter(([,v]) => v.status === 'watched' || v.status === 'watching')
+    .map(([id]) => parseInt(id));
+  if (watchedIds.length === 0) return null;
+
+  const watched = MEDIA_DATA.filter(m => watchedIds.includes(m.id));
+
+  // Weight recent watches more (last 10 most important)
+  const recent = watched.slice(-10);
+  const all    = watched;
+
+  // Build frequency maps
+  const tipoScore = {};
+  const recScore  = {};
+  const nivelDist = {};
+
+  const addScores = (items, weight) => {
+    items.forEach(item => {
+      item.tipo.forEach(t => { tipoScore[t] = (tipoScore[t] || 0) + weight; });
+      item.rec.forEach(r  => { recScore[r]  = (recScore[r]  || 0) + weight; });
+      nivelDist[item.nivel] = (nivelDist[item.nivel] || 0) + weight;
+    });
+  };
+
+  addScores(all,    1);
+  addScores(recent, 2); // recency boost
+
+  return { tipoScore, recScore, nivelDist, watchedIds };
+}
+
+function scoreItem(item, profile) {
+  let score = 0;
+  const { tipoScore, recScore, nivelDist, watchedIds } = profile;
+
+  // Already watched = exclude
+  if (watchedIds.includes(item.id)) return -1;
+
+  // Tipo match (identity + genre)
+  item.tipo.forEach(t => { score += (tipoScore[t] || 0) * 3; });
+
+  // REC affinity code match
+  item.rec.forEach(r => { score += (recScore[r] || 0) * 5; });
+
+  // Nivel proximity (prefer similar intensity levels)
+  const topNivel = Object.entries(nivelDist).sort((a,b)=>b[1]-a[1])[0];
+  if (topNivel) {
+    const nivelDiff = Math.abs(item.nivel - parseInt(topNivel[0]));
+    score += Math.max(0, (3 - nivelDiff)) * 2;
+  }
+
+  // Notes/title keyword overlap boost
+  const watchedNotes = MEDIA_DATA.filter(m => watchedIds.includes(m.id))
+    .map(m => m.notes.toLowerCase()).join(' ');
+  const keywords = item.notes.toLowerCase().split(/\s+/).filter(w => w.length > 4);
+  keywords.forEach(w => { if (watchedNotes.includes(w)) score += 1; });
+
+  return score;
+}
+
+function getRecommendations(limit = 12) {
+  const profile = buildUserProfile();
+  if (!profile) return [];
+  return MEDIA_DATA
+    .map(item => ({ item, score: scoreItem(item, profile) }))
+    .filter(x => x.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(x => x.item);
+}
+
+// Renders the recommendations panel into mainContent prepended section
+function renderRecommendations() {
+  const recs = getRecommendations(12);
+  if (recs.length === 0) return '';
+  const cards = recs.map(item => renderCard(item)).join('');
+  return `
+  <div class="level-header">
+    <div class="level-title" style="color:var(--accent2)">✦ Recomendado para Você</div>
+    <div class="level-count">${recs.length} sugestões · baseado no que você assistiu</div>
+    <div class="level-divider"></div>
+  </div>
+  <div class="grid-container">${cards}</div>`;
+}
+
+// Get similar items to a specific item (not watched, by tipo+rec overlap)
+function getSimilarItems(item, limit = 8) {
+  const watched = new Set(Object.entries(userData).filter(([,v])=>v.status==='watched').map(([id])=>parseInt(id)));
+  return MEDIA_DATA
+    .filter(m => m.id !== item.id)
+    .map(m => {
+      let score = 0;
+      // Type overlap
+      const sharedTipo = m.tipo.filter(t => item.tipo.includes(t)).length;
+      score += sharedTipo * 4;
+      // REC code overlap
+      const sharedRec = m.rec.filter(r => item.rec.includes(r)).length;
+      score += sharedRec * 6;
+      // Same media type
+      if (m.media === item.media) score += 2;
+      // Same section
+      if (m.section === item.section) score += 3;
+      // Similar nivel (±1)
+      if (Math.abs(m.nivel - item.nivel) <= 1) score += 2;
+      // Boost unwatched
+      if (!watched.has(m.id)) score += 1;
+      return { m, score };
+    })
+    .filter(x => x.score >= 6)
+    .sort((a,b) => b.score - a.score)
+    .slice(0, limit)
+    .map(x => x.m);
+}
+
+// Description editor
+function openDescEditor() {
+  const item = MEDIA_DATA.find(m => m.id === currentModalId);
+  if (!item) return;
+  const key = String(item.id);
+  document.getElementById('deTitle').textContent = item.title;
+  document.getElementById('deText').value = descUser[key] || '';
+  // Show auto desc if available
+  const autoText = descAuto[key] || (item.notes && item.notes !== descUser[key] ? item.notes : null);
+  const autoEl = document.getElementById('deAutoDesc');
+  if (autoText) {
+    document.getElementById('deAutoText').textContent = autoText;
+    autoEl.style.display = 'block';
+  } else {
+    autoEl.style.display = 'none';
+    // Try fetching
+    fetchDescription(item).then(() => {
+      const at = descAuto[key];
+      if (at) {
+        document.getElementById('deAutoText').textContent = at;
+        autoEl.style.display = 'block';
+      }
+    });
+  }
+  document.getElementById('descEditorOverlay').classList.add('open');
+}
+function closeDescEditor() {
+  document.getElementById('descEditorOverlay').classList.remove('open');
+}
+function useAutoDesc() {
+  const item = MEDIA_DATA.find(m => m.id === currentModalId);
+  if (!item) return;
+  const autoText = descAuto[String(item.id)] || item.notes;
+  if (autoText) document.getElementById('deText').value = autoText;
+}
+function saveDescEdit() {
+  const item = MEDIA_DATA.find(m => m.id === currentModalId);
+  if (!item) return;
+  const key = String(item.id);
+  const text = document.getElementById('deText').value.trim();
+  if (text) {
+    descUser[key] = text;
+    saveDescUser();
+    showToast('✓ Descrição salva');
+  } else {
+    delete descUser[key];
+    saveDescUser();
+    showToast('Descrição removida');
+  }
+  closeDescEditor();
+  // Refresh description in modal
+  const descEl = document.getElementById('modalDescription');
+  const d = getDescription(item);
+  if (d) descEl.innerHTML = `${d.text} <span style="font-size:10px;color:var(--text3);font-style:normal;">${d.source==='user'?'(sua descrição)':d.source==='auto'?'(TMDB/MAL)':'(notas)'}</span>`;
+}
+function deleteDescEdit() {
+  const item = MEDIA_DATA.find(m => m.id === currentModalId);
+  if (!item) return;
+  delete descUser[String(item.id)];
+  saveDescUser();
+  closeDescEditor();
+  showToast('Descrição removida');
+}
+
+function openModal(id) {
+  const item = MEDIA_DATA.find(m => m.id === id);
+  if (!item) return;
+  currentModalId = id;
+  const ud = userData[id] || {};
+
+  document.getElementById('modalTitle').textContent = item.title;
+  document.getElementById('modalSubtitle').textContent = `${item.year} · ${item.media} · ${item.tipo.join(', ')}`;
+
+  const scores = [
+    ['EROT', item.erot], ['EXPL', item.expl], ['PROF', item.prof], ['PERT', item.pert],
+    ['TABU', item.tabu], ['RARI', item.rari], ['CULT', item.cult]
+  ];
+  document.getElementById('modalScores').innerHTML = scores.map(([k,v]) =>
+    `<div class="score-item"><span class="score-label">${k}</span><span class="score-value">${v}/5</span></div>`
+  ).join('');
+
+  document.getElementById('modalNotes').textContent = item.notes;
+
+  // Description
+  const descInfo = getDescription(item);
+  const descEl = document.getElementById('modalDescription');
+  if (descInfo) {
+    descEl.textContent = descInfo.text;
+    const src = descInfo.source === 'user' ? '(sua descrição)' : descInfo.source === 'auto' ? '(TMDB/MAL)' : '(notas do markdown)';
+    descEl.innerHTML = `${descEl.textContent} <span style="font-size:10px;color:var(--text3);font-style:normal;">${src}</span>`;
+  } else {
+    descEl.innerHTML = `<span style="color:var(--text3)">Sem descrição. Clique em "Editar Descrição" para adicionar ou aguarde o carregamento automático.</span>`;
+    // Auto-fetch description in background
+    fetchDescription(item).then(() => {
+      if (currentModalId === id) {
+        const d2 = getDescription(item);
+        if (d2) descEl.innerHTML = `${d2.text} <span style="font-size:10px;color:var(--text3);font-style:normal;">(TMDB/MAL)</span>`;
+      }
+    });
+  }
+
+  document.getElementById('modalRec').innerHTML = item.rec.map(r =>
+    `<span class="rec-tag">${r} — ${REC_LABELS[r] || r}</span>`
+  ).join('');
+
+  // Similar titles
+  const similar = getSimilarItems(item, 8);
+  const simSection = document.getElementById('similarSection');
+  const simEl = document.getElementById('modalSimilar');
+  if (similar.length > 0) {
+    simSection.style.display = 'block';
+    simEl.innerHTML = similar.map(s => {
+      const url = resolveUrl(s.id);
+      const thumbSrc = url || '';
+      const thumbStyle = `width:70px;height:105px;object-fit:cover;flex-shrink:0;background:var(--surface2);border:1px solid var(--border);cursor:pointer;`;
+      const mediaIcon = s.media==='Anime'?'🎌':s.tipo.includes('SE')?'📺':'🎬';
+      return `<div style="flex-shrink:0;width:70px;" onclick="closeModalDirect();setTimeout(()=>openModal(${s.id}),80)" title="${s.title} (${s.year})">
+        ${thumbSrc ? `<img src="${thumbSrc}" style="${thumbStyle}" onerror="this.style.display='none'">` : `<div style="${thumbStyle};display:flex;align-items:center;justify-content:center;font-size:20px;">${mediaIcon}</div>`}
+        <div style="font-size:9px;color:var(--text2);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'Space Mono',monospace;">${s.title}</div>
+      </div>`;
+    }).join('');
+  } else {
+    simSection.style.display = 'none';
+  }
+
+  // Poster no modal
+  updateModalPoster(id, item);
+
+  // If not yet resolved, trigger auto-fetch and update when done
+  if (resolveUrl(id) === undefined) {
+    (async () => {
+      await autoFetch(item);
+      if (currentModalId === id && document.getElementById('modalOverlay').classList.contains('open')) {
+        updateModalPoster(id, item);
+      }
+    })();
+  }
+
+  // Status buttons
+  setStatusUI(ud.status || 'none');
+
+  // Extra fields
+  const isSeriesOrAnime = item.tipo.includes('SE') || item.media === 'Anime';
+  document.getElementById('episodeGroup').style.display = isSeriesOrAnime ? 'block' : 'none';
+
+  currentRating = ud.rating || 0;
+  renderStars(currentRating);
+  document.getElementById('inputDate').value = ud.date || '';
+  document.getElementById('inputReview').value = ud.review || '';
+  document.getElementById('inputEpisode').value = ud.episode || '';
+
+  const hasStatus = ud.status && ud.status !== 'none';
+  document.getElementById('extraFields').style.display = hasStatus ? 'block' : 'none';
+
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function setStatusUI(status) {
+  ['btnWatched','btnWatching','btnWant','btnNone'].forEach(id => {
+    document.getElementById(id).className = 'btn';
+  });
+  if (status === 'watched') document.getElementById('btnWatched').className = 'btn active-watched';
+  else if (status === 'watching') document.getElementById('btnWatching').className = 'btn active-watching';
+  else if (status === 'want') document.getElementById('btnWant').className = 'btn active-want';
+}
+
+function setStatus(status) {
+  setStatusUI(status);
+  const hasStatus = status !== 'none';
+  document.getElementById('extraFields').style.display = hasStatus ? 'block' : 'none';
+  if (!userData[currentModalId]) userData[currentModalId] = {};
+  userData[currentModalId].status = status;
+}
+
+function renderStars(val) {
+  document.querySelectorAll('.star').forEach((s, i) => {
+    s.className = i < val ? 'star filled' : 'star';
+  });
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModalDirect();
+}
+function closeModalDirect() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function saveEntry() {
+  if (!currentModalId) return;
+  if (!userData[currentModalId]) userData[currentModalId] = {};
+  const ud = userData[currentModalId];
+  if (!ud.status) ud.status = 'none';
+  ud.rating = currentRating;
+  ud.date = document.getElementById('inputDate').value;
+  ud.review = document.getElementById('inputReview').value;
+  ud.episode = document.getElementById('inputEpisode').value;
+  saveData();
+  renderGrid();
+  closeModalDirect();
+  showToast('✓ Salvo!');
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+// ==============================
+// STAR RATING
+// ==============================
+document.querySelectorAll('.star').forEach(star => {
+  star.addEventListener('click', () => {
+    currentRating = parseInt(star.dataset.val);
+    renderStars(currentRating);
+  });
+  star.addEventListener('mouseover', () => {
+    const v = parseInt(star.dataset.val);
+    document.querySelectorAll('.star').forEach((s,i) => s.className = i < v ? 'star filled' : 'star');
+  });
+  star.addEventListener('mouseout', () => renderStars(currentRating));
+});
+
+// ==============================
+// EVENTS
+// ==============================
+
+// Tabs — use event delegation since they're built dynamically
+document.getElementById('tabsContainer').addEventListener('click', e => {
+  const tab = e.target.closest('.tab');
+  if (!tab) return;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  tab.classList.add('active');
+  activeTab = tab.dataset.tab;
+  renderGrid();
+});
+
+document.querySelectorAll('.filter-chip[data-tipo]').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.filter-chip[data-tipo]').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    activeTipo = chip.dataset.tipo;
+    renderGrid();
+  });
+});
+
+document.getElementById('searchInput').addEventListener('input', e => {
+  searchQuery = e.target.value;
+  renderGrid();
+});
+
+document.getElementById('sortSelect').addEventListener('change', e => {
+  sortMode = e.target.value;
+  renderGrid();
+});
+
+document.getElementById('midiaTipo').addEventListener('change', e => {
+  midiaTipo = e.target.value;
+  renderGrid();
+});
+
+document.getElementById('statusFilter').addEventListener('change', e => {
+  statusFilter = e.target.value;
+  renderGrid();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModalDirect();
+});
+
+// ==============================
+// BUILD TABS dynamically from parsed data
+// ==============================
+function buildTabs() {
+  const sections = [...new Set(MEDIA_DATA.map(i => i.section))];
+  const container = document.getElementById('tabsContainer');
+  // Keep the "Todos" tab, replace the rest
+  container.innerHTML = `<div class="tab active" data-tab="all">Todos (${MEDIA_DATA.length})</div>` +
+    sections.map(s => {
+      const count = MEDIA_DATA.filter(i => i.section === s).length;
+      const label = s.length > 30 ? s.slice(0, 28) + '…' : s;
+      return `<div class="tab" data-tab="${s.replace(/"/g,'&quot;')}" title="${s}">${label} <span style="opacity:.5;font-size:10px">${count}</span></div>`;
+    }).join('');
+}
+
+// ==============================
+// INIT — carrega o markdown e inicia o app
+// ==============================
+async function init() {
+  showLoading();
+  loadData();
+  loadPosterCache();
+  loadDescCache();
+
+  try {
+    // Load both files in parallel
+    const [mdRes, postersRes] = await Promise.all([
+      fetch('movie-list.md'),
+      fetch('posters.json').catch(() => null)
+    ]);
+
+    if (!mdRes.ok) throw new Error(`HTTP ${mdRes.status} ao carregar movie-list.md`);
+    const text = await mdRes.text();
+
+    // Load posters.json if available (silently skip if missing)
+    if (postersRes && postersRes.ok) {
+      try { POSTERS_JSON = await postersRes.json(); } catch(e) {}
+    }
+
+    MEDIA_DATA = parseMarkdown(text);
+    if (MEDIA_DATA.length === 0) {
+      showError('Nenhum título encontrado no markdown. Verifique o formato das tabelas.');
+      return;
+    }
+    buildTabs();
+    renderGrid();
+  } catch (err) {
+    if (err.name === 'TypeError' || err.message.includes('fetch') || err.message.includes('CORS')) {
+      showError('Não foi possível carregar <strong>movie-list.md</strong>.<br>Use um servidor local para abrir este arquivo.');
+    } else {
+      showError(`Erro: ${err.message}`);
+    }
+  }
+}
+
+init();
+</script>
+</body>
+</html>
