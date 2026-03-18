@@ -661,6 +661,108 @@ textarea.form-input {
   .modal-header { flex-direction: column; }
   .modal-poster { width: 100%; height: 200px; }
 }
+
+/* SYNC PANEL */
+.sync-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.sync-fab {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+.sync-fab:hover { border-color: var(--accent3); color: var(--text); }
+.sync-menu {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 16px;
+  width: 290px;
+  display: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+.sync-menu.open { display: block; }
+.sync-menu-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+.sync-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 14px;
+  margin-top: 10px;
+}
+.sync-stat {
+  background: var(--surface2);
+  padding: 7px 6px;
+  text-align: center;
+}
+.sync-stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: var(--accent2);
+  line-height: 1;
+}
+.sync-stat-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  color: var(--text3);
+  letter-spacing: 0.5px;
+}
+.sync-btn-row { display: flex; flex-direction: column; gap: 6px; }
+.sync-btn {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  padding: 9px 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+.sync-btn:hover { border-color: var(--accent3); color: var(--text); }
+.sync-btn .icon { font-size: 14px; flex-shrink: 0; }
+.sync-btn.primary { border-color: var(--accent3); color: var(--accent3); }
+.sync-btn.primary:hover { background: var(--accent3); color: white; }
+.sync-btn.danger { border-color: #cc3333; color: #cc3333; }
+.sync-divider { height: 1px; background: var(--border); margin: 8px 0; }
+.sync-last {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--text3);
+  text-align: center;
+  margin-top: 10px;
+}
+@media (max-width: 600px) {
+  .sync-panel { bottom: 14px; right: 14px; }
+  .sync-menu { width: calc(100vw - 28px); }
+}
 </style>
 </head>
 <body>
@@ -866,6 +968,42 @@ textarea.form-input {
     </div>
   </div>
 </div>
+
+<!-- SYNC PANEL -->
+<div class="sync-panel">
+  <div class="sync-menu" id="syncMenu">
+    <div class="sync-menu-title">↕ Sincronizar</div>
+    <div style="font-family:'Space Mono',monospace;font-size:9px;color:var(--text3);line-height:1.6;">
+      Exporte do dispositivo A, importe no B.<br>
+      Inclui: status, notas, reviews, capas editadas.
+    </div>
+    <div class="sync-stats" id="syncStats"></div>
+    <div class="sync-btn-row">
+      <button class="sync-btn primary" onclick="exportData()">
+        <span class="icon">⬇</span> Exportar userdata.json
+      </button>
+      <button class="sync-btn primary" onclick="document.getElementById('importFileInput').click()">
+        <span class="icon">⬆</span> Importar userdata.json
+      </button>
+      <div class="sync-divider"></div>
+      <button class="sync-btn" onclick="exportPostersOnly()">
+        <span class="icon">🖼</span> Exportar posters.json atualizado
+      </button>
+      <button class="sync-btn" onclick="exportDescOnly()">
+        <span class="icon">📝</span> Exportar descriptions.json
+      </button>
+      <div class="sync-divider"></div>
+      <button class="sync-btn danger" onclick="confirmClearData()">
+        <span class="icon">🗑</span> Limpar todos os dados locais
+      </button>
+    </div>
+    <div class="sync-last" id="syncLastTime"></div>
+  </div>
+  <button class="sync-fab" onclick="toggleSyncMenu()">↕ SYNC</button>
+</div>
+
+<!-- Hidden file input for import -->
+<input type="file" id="importFileInput" accept=".json" style="display:none" onchange="importData(event)">
 
 <div class="toast" id="toast"></div>
 
@@ -1383,57 +1521,52 @@ function savePosterEdit() {
   const key = String(id);
 
   if (!url) {
+    // Clear all sources for this ID → will re-fetch automatically
     delete posterEdits[key];
     delete posterAuto[key];
-    // Remove from posters.json in memory too
     delete POSTERS_JSON[key];
   } else {
+    // Save to edits layer (localStorage) — no download needed
     posterEdits[key] = url;
-    // Also update in-memory POSTERS_JSON so it takes effect immediately
-    POSTERS_JSON[key] = url;
+    POSTERS_JSON[key] = url; // update in-memory so resolveUrl sees it instantly
   }
   savePosterEdits();
   savePosterAuto();
-  downloadPostersJson();
+  // Note: no downloadPostersJson() — posters are stored in localStorage automatically.
+  // Use the Sync panel to export when needed.
 
   const newUrl = resolveUrl(id);
   applyPoster(id, newUrl);
-  // Re-render card to update SEM CAPA badge
   const cardEl = document.querySelector(`.card[data-id="${id}"]`);
   if (cardEl) {
     const item = MEDIA_DATA.find(m => m.id === id);
-    if (item) cardEl.outerHTML = renderCard(item); // replace in DOM
-    loadPosterForItem(MEDIA_DATA.find(m => m.id === id));
+    if (item) { cardEl.outerHTML = renderCard(item); loadPosterForItem(item); }
   }
-
   if (document.getElementById('modalOverlay').classList.contains('open') && currentModalId === id) {
     updateModalPoster(id, MEDIA_DATA.find(m => m.id === id));
   }
 
   closePosterEditor();
-  showToast('✓ Capa salva — posters.json baixado');
+  showToast('✓ Capa salva');
 }
 
 function deletePosterEdit() {
   const id  = parseInt(document.getElementById('peId').value);
   const key = String(id);
-  posterEdits[key] = null;
+  posterEdits[key] = null; // null = explicitly removed
   delete posterAuto[key];
   delete POSTERS_JSON[key];
   savePosterEdits();
   savePosterAuto();
-  downloadPostersJson();
 
   applyPoster(id, null);
   const cardEl = document.querySelector(`.card[data-id="${id}"]`);
   if (cardEl) {
     const item = MEDIA_DATA.find(m => m.id === id);
-    if (item) cardEl.outerHTML = renderCard(item);
-    loadPosterForItem(MEDIA_DATA.find(m => m.id === id));
+    if (item) { cardEl.outerHTML = renderCard(item); loadPosterForItem(item); }
   }
-
   closePosterEditor();
-  showToast('Capa removida — posters.json baixado');
+  showToast('Capa removida');
 }
 
 // Download the current POSTERS_JSON merged with all edits as posters.json
@@ -1590,6 +1723,12 @@ let descAuto = {};           // auto-fetched cache (localStorage)
 
 function loadDescCache() {
   try { descAuto = JSON.parse(localStorage.getItem(DESC_AUTO_KEY) || '{}'); } catch(e) {}
+  // Also restore any descriptions the user manually edited (stored in localStorage)
+  try {
+    const cached = JSON.parse(localStorage.getItem('megalist_desc_import_v1') || '{}');
+    // Will be merged with DESCRIPTIONS_JSON after file loads (in init)
+    if (Object.keys(cached).length > 0) window._descLocalCache = cached;
+  } catch(e) {}
 }
 function saveDescAuto() {
   try { localStorage.setItem(DESC_AUTO_KEY, JSON.stringify(descAuto)); } catch(e) {}
@@ -1820,7 +1959,9 @@ function saveDescEdit() {
   const text = document.getElementById('deText').value.trim();
   if (text) { DESCRIPTIONS_JSON[key] = text; }
   else      { delete DESCRIPTIONS_JSON[key]; }
-  downloadDescriptionsJson();
+  // Save to localStorage as a cache — no download needed.
+  // Use Sync panel to export descriptions.json when needed.
+  try { localStorage.setItem('megalist_desc_import_v1', JSON.stringify(DESCRIPTIONS_JSON)); } catch(e) {}
   closeDescEditor();
   // Refresh modal description
   const descEl = document.getElementById('modalDescription');
@@ -1829,15 +1970,15 @@ function saveDescEdit() {
     const src = d.source === 'user' ? '(sua descrição)' : '(TMDB/MAL)';
     descEl.innerHTML = `${d.text} <span style="font-size:10px;color:var(--text3);font-style:normal;">${src}</span>`;
   }
-  showToast(text ? '✓ Descrição salva — descriptions.json baixado' : 'Descrição removida');
+  showToast(text ? '✓ Descrição salva' : 'Descrição removida');
 }
 function deleteDescEdit() {
   const item = MEDIA_DATA.find(m => m.id === currentModalId);
   if (!item) return;
   delete DESCRIPTIONS_JSON[String(item.id)];
-  downloadDescriptionsJson();
+  try { localStorage.setItem('megalist_desc_import_v1', JSON.stringify(DESCRIPTIONS_JSON)); } catch(e) {}
   closeDescEditor();
-  showToast('Descrição removida — descriptions.json baixado');
+  showToast('Descrição removida');
 }
 
 function openModal(id) {
@@ -2095,6 +2236,294 @@ function buildTabs() {
 }
 
 // ==============================
+// SYNC ENGINE
+// userdata.json includes: watched status, reviews, ratings,
+// episodes, poster edits, poster auto-cache, descriptions,
+// profile (favorites, rankings). Everything needed to restore
+// the full state on any device.
+// ==============================
+
+const SYNC_META_KEY = 'megalist_sync_meta_v1';
+
+function getSyncMeta() {
+  try { return JSON.parse(localStorage.getItem(SYNC_META_KEY) || '{}'); } catch(e) { return {}; }
+}
+function saveSyncMeta(meta) {
+  localStorage.setItem(SYNC_META_KEY, JSON.stringify(meta));
+}
+
+// Build stats for the sync panel
+function buildSyncStats() {
+  const watched  = Object.values(userData).filter(u => u.status === 'watched').length;
+  const watching = Object.values(userData).filter(u => u.status === 'watching').length;
+  const want     = Object.values(userData).filter(u => u.status === 'want').length;
+  const posters  = Object.keys(posterEdits).filter(k => posterEdits[k]).length;
+  const descs    = Object.keys(DESCRIPTIONS_JSON).length;
+  const autos    = Object.keys(posterAuto).filter(k => posterAuto[k]).length;
+  return { watched, watching, want, posters, descs, autos };
+}
+
+function updateSyncPanel() {
+  const s = buildSyncStats();
+  document.getElementById('syncStats').innerHTML = `
+    <div class="sync-stat"><div class="sync-stat-num">${s.watched}</div><div class="sync-stat-label">Vistos</div></div>
+    <div class="sync-stat"><div class="sync-stat-num">${s.watching}</div><div class="sync-stat-label">Vendo</div></div>
+    <div class="sync-stat"><div class="sync-stat-num">${s.want}</div><div class="sync-stat-label">Quero Ver</div></div>
+    <div class="sync-stat"><div class="sync-stat-num">${s.posters + s.autos}</div><div class="sync-stat-label">Capas</div></div>
+    <div class="sync-stat"><div class="sync-stat-num">${s.descs}</div><div class="sync-stat-label">Descrições</div></div>
+    <div class="sync-stat"><div class="sync-stat-num">${Object.keys(userData).length}</div><div class="sync-stat-label">Itens</div></div>
+  `;
+  const meta = getSyncMeta();
+  if (meta.lastExport) {
+    const d = new Date(meta.lastExport);
+    document.getElementById('syncLastTime').textContent =
+      `Último export: ${d.toLocaleDateString('pt-BR')} ${d.toLocaleTimeString('pt-BR', {hour:'2-digit',minute:'2-digit'})}`;
+  }
+}
+
+function toggleSyncMenu() {
+  const menu = document.getElementById('syncMenu');
+  const isOpen = menu.classList.contains('open');
+  if (!isOpen) updateSyncPanel();
+  menu.classList.toggle('open');
+}
+
+// Close sync menu when clicking outside
+document.addEventListener('click', e => {
+  const panel = document.querySelector('.sync-panel');
+  if (panel && !panel.contains(e.target)) {
+    document.getElementById('syncMenu').classList.remove('open');
+  }
+});
+
+// ── EXPORT ──────────────────────────────────────────────
+// Exports everything into one portable userdata.json
+// ── EXPORT ──────────────────────────────────────────────
+// userdata.json = dados pessoais + snapshot das capas novas
+// A seção "posters_new" contém SOMENTE capas que não estão no
+// posters.json base (edits + auto-fetched).
+// Ao importar, o app mostra um botão para baixar o posters.json
+// atualizado com essas capas incorporadas.
+function exportData() {
+  // Capas novas = edits do usuário + auto-fetched, excluindo as que
+  // já estão no posters.json base (nenhuma necessidade de duplicar)
+  const postersNew = {};
+  Object.entries(posterAuto).forEach(([k, v]) => {
+    if (v && !POSTERS_JSON[k]) postersNew[k] = v;
+  });
+  Object.entries(posterEdits).forEach(([k, v]) => {
+    // Inclui todas as edits manuais, inclusive nulls (remoções)
+    if (!(k in POSTERS_JSON) || v !== POSTERS_JSON[k]) postersNew[k] = v;
+  });
+
+  // Perfil (favoritos, rankings)
+  let profile = {};
+  try { profile = JSON.parse(localStorage.getItem('megalist_profile_v1') || '{}'); } catch(e) {}
+
+  const payload = {
+    _version:    3,
+    _exportedAt: new Date().toISOString(),
+    _device:     navigator.userAgent.slice(0, 80),
+    // ── Dados pessoais ──
+    userData,
+    profile,
+    descriptions_user: DESCRIPTIONS_JSON,
+    // ── Capas novas (não estão no posters.json base) ──
+    posters_new:  postersNew,
+    // ── Resumo para diagnóstico ──
+    _stats: {
+      watched:     Object.values(userData).filter(u => u.status === 'watched').length,
+      watching:    Object.values(userData).filter(u => u.status === 'watching').length,
+      want:        Object.values(userData).filter(u => u.status === 'want').length,
+      posters_new: Object.keys(postersNew).length,
+      descriptions:Object.keys(DESCRIPTIONS_JSON).length,
+    },
+  };
+
+  downloadJSON(payload, `megalist-userdata-${new Date().toISOString().slice(0,10)}.json`);
+  saveSyncMeta({ ...getSyncMeta(), lastExport: new Date().toISOString() });
+  updateSyncPanel();
+  showToast('✓ userdata.json exportado');
+}
+
+// ── IMPORT ──────────────────────────────────────────────
+// Ao importar:
+// 1. Restaura userData, profile e descriptions
+// 2. Aplica posters_new ao localStorage imediatamente
+// 3. Oferece baixar posters.json atualizado para substituir na pasta
+function importData(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  event.target.value = '';
+
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const payload = JSON.parse(e.target.result);
+
+      if (!payload.userData && !payload.posters_new && !payload.posters) {
+        showToast('❌ Arquivo inválido — não é um backup do Megalist');
+        return;
+      }
+
+      // Compatibilidade com versão 2 (campo "posters" antigo)
+      const postersNew = payload.posters_new
+        || payload.posters  // v2 fallback
+        || {};
+
+      const stats = payload._stats || {};
+      const watched = stats.watched
+        ?? Object.values(payload.userData || {}).filter(u => u.status === 'watched').length;
+      const posterCount = Object.keys(postersNew).filter(k => postersNew[k]).length;
+      const descCount   = Object.keys(payload.descriptions_user || payload.descriptions || {}).length;
+
+      const exportDate = payload._exportedAt
+        ? new Date(payload._exportedAt).toLocaleString('pt-BR')
+        : 'data desconhecida';
+
+      const ok = window.confirm(
+        `Importar backup de ${exportDate}?\n\n` +
+        `• ${watched} visto(s) · ${stats.watching ?? '?'} assistindo · ${stats.want ?? '?'} quero ver\n` +
+        `• ${posterCount} capa(s) nova(s)\n` +
+        `• ${descCount} descrição(ões)\n\n` +
+        `Os dados locais serão substituídos.`
+      );
+      if (!ok) return;
+
+      // 1 — Restaura dados pessoais
+      if (payload.userData) {
+        userData = payload.userData;
+        localStorage.setItem('megalist_v1', JSON.stringify(userData));
+      }
+      if (payload.profile) {
+        localStorage.setItem('megalist_profile_v1', JSON.stringify(payload.profile));
+      }
+
+      // 2 — Restaura descrições
+      const descs = payload.descriptions_user || payload.descriptions;
+      if (descs) {
+        DESCRIPTIONS_JSON = descs;
+        localStorage.setItem('megalist_desc_import_v1', JSON.stringify(DESCRIPTIONS_JSON));
+      }
+
+      // 3 — Aplica capas novas ao localStorage imediatamente
+      // (ficam em posterEdits para prioridade máxima)
+      let newPosterCount = 0;
+      Object.entries(postersNew).forEach(([k, v]) => {
+        if (v === null) {
+          posterEdits[k] = null;
+          delete posterAuto[k];
+        } else if (v) {
+          // Separa TMDB paths (/) vs URLs completas
+          if (v.startsWith('/')) posterAuto[k] = v;
+          else                   posterEdits[k] = v;
+          newPosterCount++;
+        }
+      });
+      savePosterEdits();
+      savePosterAuto();
+
+      saveSyncMeta({ ...getSyncMeta(), lastImport: new Date().toISOString() });
+      renderGrid();
+      updateSyncPanel();
+
+      // 4 — Pergunta se quer baixar posters.json atualizado
+      if (newPosterCount > 0) {
+        const dl = window.confirm(
+          `✓ Dados importados!\n\n` +
+          `${newPosterCount} capa(s) nova(s) foram aplicadas ao app.\n\n` +
+          `Deseja baixar o posters.json atualizado?\n` +
+          `(Substitua o arquivo na pasta do projeto para que as capas\n` +
+          `carreguem sem depender do localStorage.)`
+        );
+        if (dl) exportPostersOnly();
+      } else {
+        showToast(`✓ Importado! ${watched} itens restaurados.`);
+      }
+
+    } catch(err) {
+      showToast(`❌ Erro ao importar: ${err.message}`);
+    }
+  };
+  reader.readAsText(file);
+}
+
+// ── EXPORT HELPERS ──────────────────────────────────────
+// Gera o posters.json definitivo: base + auto-fetched + edits manuais
+function exportPostersOnly() {
+  const merged = { ...POSTERS_JSON };
+  // Auto-fetched aplica por cima do base
+  Object.entries(posterAuto).forEach(([k, v]) => { if (v) merged[k] = v; });
+  // Edits manuais têm prioridade máxima
+  Object.entries(posterEdits).forEach(([k, v]) => {
+    if (v === null) delete merged[k];
+    else if (v)     merged[k] = v;
+  });
+  // Ordena numericamente
+  const sorted = {};
+  Object.keys(merged)
+    .sort((a, b) => parseInt(a) - parseInt(b))
+    .forEach(k => { sorted[k] = merged[k]; });
+  downloadJSON(sorted, 'posters.json');
+  showToast('✓ posters.json exportado — substitua na pasta do projeto');
+}
+
+function exportDescOnly() {
+  const sorted = {};
+  Object.keys(DESCRIPTIONS_JSON)
+    .sort((a, b) => parseInt(a) - parseInt(b))
+    .forEach(k => { sorted[k] = DESCRIPTIONS_JSON[k]; });
+  downloadJSON(sorted, 'descriptions.json');
+  showToast('✓ descriptions.json exportado');
+}
+
+function downloadJSON(obj, filename) {
+  const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+
+function confirmClearData() {
+  const ok = window.confirm(
+    'Apagar TODOS os dados locais?\n\n' +
+    'Isso vai remover: status assistidos, reviews, notas, capas salvas e descrições personalizadas.\n\n' +
+    'Faça um export antes se quiser um backup!'
+  );
+  if (!ok) return;
+  localStorage.removeItem('megalist_v1');
+  localStorage.removeItem('megalist_poster_edits_v1');
+  localStorage.removeItem('megalist_poster_auto_v1');
+  localStorage.removeItem('megalist_desc_auto_v1');
+  localStorage.removeItem('megalist_desc_import_v1');
+  localStorage.removeItem('megalist_profile_v1');
+  userData = {};
+  posterEdits = {};
+  posterAuto = {};
+  renderGrid();
+  updateSyncPanel();
+  showToast('Dados locais apagados');
+}
+
+// ==============================
+// POSTER AUTO-SAVE (no download required)
+// When a new poster is found automatically or manually set,
+// it goes into posterEdits (localStorage) immediately.
+// No need to overwrite posters.json for every new poster.
+// posters.json is the BASE; posterEdits = your personal layer on top.
+// ==============================
+
+// Override savePosterEdits to also keep posterAuto in sync
+function savePosterEdits() {
+  try { localStorage.setItem('megalist_poster_edits_v1', JSON.stringify(posterEdits)); } catch(e) {}
+}
+function savePosterAuto() {
+  try { localStorage.setItem('megalist_poster_auto_v1', JSON.stringify(posterAuto)); } catch(e) {}
+}
+
+// ==============================
 // INIT — carrega o markdown e inicia o app
 // ==============================
 async function init() {
@@ -2119,6 +2548,11 @@ async function init() {
     }
     if (descRes && descRes.ok) {
       try { DESCRIPTIONS_JSON = await descRes.json(); } catch(e) {}
+    }
+    // Merge user edits stored in localStorage on top of file
+    if (window._descLocalCache) {
+      Object.assign(DESCRIPTIONS_JSON, window._descLocalCache);
+      delete window._descLocalCache;
     }
 
     MEDIA_DATA = parseMarkdown(text);
