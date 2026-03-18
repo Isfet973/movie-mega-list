@@ -360,6 +360,24 @@ select:focus { border-color: var(--accent3); }
 .tag-KR { background: #002a2a; color: #44ffff; border: 1px solid #44ffff60; }
 .tag-HK { background: #102510; color: #88ffaa; border: 1px solid #88ffaa60; }
 .tag-TW { background: #001525; color: #aaffff; border: 1px solid #aaffff60; }
+/* New genre tags */
+.tag-TH { background: #1a1535; color: #aa88ff; border: 1px solid #aa88ff60; }
+.tag-HR { background: #350a0a; color: #ff5555; border: 1px solid #ff555560; }
+.tag-RO { background: #3a1525; color: #ff99bb; border: 1px solid #ff99bb60; }
+.tag-DR { background: #1a1a30; color: #9999ff; border: 1px solid #9999ff60; }
+.tag-CR { background: #0a1510; color: #44ff99; border: 1px solid #44ff9960; }
+.tag-MY { background: #151530; color: #8888ff; border: 1px solid #8888ff60; }
+.tag-MU { background: #301a00; color: #ffbb44; border: 1px solid #ffbb4460; }
+.tag-DO { background: #001520; color: #44bbff; border: 1px solid #44bbff60; }
+.tag-WS { background: #201005; color: #cc8844; border: 1px solid #cc884460; }
+.tag-OV { background: #0a0a20; color: #7777cc; border: 1px solid #7777cc60; }
+.tag-Q  { background: #301030; color: #ff77ff; border: 1px solid #ff77ff60; }
+.tag-W  { background: #0a2010; color: #66ff66; border: 1px solid #66ff6660; }
+/* Country tags */
+.tag-FR { background: #000a20; color: #4488ff; border: 1px solid #4488ff60; }
+.tag-IT { background: #200a00; color: #ff6644; border: 1px solid #ff664460; }
+.tag-MX { background: #001a0a; color: #44cc66; border: 1px solid #44cc6660; }
+.tag-AR { background: #00101a; color: #44aacc; border: 1px solid #44aacc60; }
 
 /* MODAL */
 .modal-overlay {
@@ -428,14 +446,13 @@ select:focus { border-color: var(--accent3); }
 }
 .modal-scores {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 6px;
   margin-bottom: 12px;
 }
 .score-item {
   background: var(--surface2);
   padding: 6px 8px;
-  text-align: center;
 }
 .score-label {
   font-family: 'Space Mono', monospace;
@@ -443,13 +460,12 @@ select:focus { border-color: var(--accent3); }
   color: var(--text3);
   letter-spacing: 1px;
   display: block;
-  margin-bottom: 2px;
+  text-transform: uppercase;
 }
 .score-value {
   font-family: 'Space Mono', monospace;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
-  color: var(--accent2);
 }
 .modal-notes-text {
   font-size: 13px;
@@ -654,6 +670,7 @@ textarea.form-input {
     MEGALIST
     <span>Filmes · Séries · Animes</span>
   </div>
+  <a href="profile.html" style="font-family:'Space Mono',monospace;font-size:10px;color:var(--text2);text-decoration:none;letter-spacing:1px;padding:6px 10px;border:1px solid var(--border);white-space:nowrap;flex-shrink:0;transition:all 0.2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--text2)'">MEU PERFIL →</a>
   <div class="header-controls">
     <input type="text" class="search-box" placeholder="🔍 Buscar título..." id="searchInput">
     <select id="sortSelect">
@@ -696,22 +713,34 @@ textarea.form-input {
 </div>
 
 <div class="filters" id="filtersContainer">
-  <span class="filter-label">Tipo:</span>
+  <span class="filter-label">Identidade:</span>
   <div class="filter-chip active" data-tipo="all">Todos</div>
-  <div class="filter-chip" data-tipo="L">L Lésbico</div>
-  <div class="filter-chip" data-tipo="G">G Gay</div>
-  <div class="filter-chip" data-tipo="T">T Trans</div>
-  <div class="filter-chip" data-tipo="H">H Hétero</div>
-  <div class="filter-chip" data-tipo="B">B Bi/Pan</div>
-  <div class="filter-chip" data-tipo="Z">Z Vampiro</div>
-  <div class="filter-chip" data-tipo="R">R Religião</div>
-  <div class="filter-chip" data-tipo="AN">AN Anime</div>
-  <div class="filter-chip" data-tipo="SE">SE Série</div>
-  <div class="filter-chip" data-tipo="SF">SF Sci-Fi</div>
-  <div class="filter-chip" data-tipo="BH">BH Body Horror</div>
-  <div class="filter-chip" data-tipo="PH">PH Psicológico</div>
-  <div class="filter-chip" data-tipo="X">X Tabu Extremo</div>
-  <div class="filter-chip" data-tipo="BR">BR Brasil</div>
+  <div class="filter-chip" data-tipo="L">Lésbico</div>
+  <div class="filter-chip" data-tipo="G">Gay</div>
+  <div class="filter-chip" data-tipo="T">Trans</div>
+  <div class="filter-chip" data-tipo="B">Bi/Pan</div>
+  <div class="filter-chip" data-tipo="H">Hétero</div>
+  <span class="filter-label" style="margin-left:8px;">Gênero:</span>
+  <div class="filter-chip" data-tipo="SF">Sci-Fi</div>
+  <div class="filter-chip" data-tipo="PH">Psicológico</div>
+  <div class="filter-chip" data-tipo="BH">Body Horror</div>
+  <div class="filter-chip" data-tipo="HR">Horror</div>
+  <div class="filter-chip" data-tipo="TH">Thriller</div>
+  <div class="filter-chip" data-tipo="CR">Crime</div>
+  <div class="filter-chip" data-tipo="MU">Musical</div>
+  <div class="filter-chip" data-tipo="DO">Documentário</div>
+  <span class="filter-label" style="margin-left:8px;">Tema:</span>
+  <div class="filter-chip" data-tipo="X">Tabu</div>
+  <div class="filter-chip" data-tipo="V">Voyeurismo</div>
+  <div class="filter-chip" data-tipo="R">Religião</div>
+  <div class="filter-chip" data-tipo="Z">Vampiro</div>
+  <div class="filter-chip" data-tipo="EC">Ecchi</div>
+  <div class="filter-chip" data-tipo="HN">Hentai</div>
+  <span class="filter-label" style="margin-left:8px;">Origem:</span>
+  <div class="filter-chip" data-tipo="BR">Brasil</div>
+  <div class="filter-chip" data-tipo="JP">Japão</div>
+  <div class="filter-chip" data-tipo="KR">Coreia</div>
+  <div class="filter-chip" data-tipo="FR">França</div>
 </div>
 
 <div id="mainContent"></div>
@@ -1146,6 +1175,8 @@ const AUTO_KEY  = 'megalist_poster_auto_v1';    // auto-fetched cache
 
 // Loaded from posters.json on init
 let POSTERS_JSON = {};
+// Loaded from descriptions.json on init
+let DESCRIPTIONS_JSON = {};
 // User edits (set / delete / override) stored in localStorage
 let posterEdits  = {};
 // Auto-fetch results stored in localStorage
@@ -1457,11 +1488,25 @@ function updateModalPoster(id, item) {
 
 // Full human-readable labels for every type tag
 const TAG_LABELS = {
-  L:'Lésbico', G:'Gay', T:'Trans', H:'Hétero', B:'Bi/Pan',
-  V:'Voyeur', R:'Religião', Z:'Vampiro', C:'Comédia', X:'Tabu',
-  AN:'Anime', SE:'Série', SF:'Sci-Fi', BH:'Body Horror',
-  PH:'Psicológico', EC:'Ecchi', HN:'Hentai',
-  BR:'Brasil', JP:'Japão', KR:'Coreia', HK:'Hong Kong', TW:'Taiwan'
+  // ── Orientação / Identidade ──
+  L:  'Lésbico',    G:  'Gay',         T: 'Trans',
+  B:  'Bi/Pan',     H:  'Hétero',      Q: 'Queer',
+  // ── Temáticas de conteúdo ──
+  X:  'Tabu',       V:  'Voyeurismo',  R: 'Religião',
+  Z:  'Vampiro',    C:  'Comédia',     W: 'Werewolf',
+  // ── Gênero cinematográfico ──
+  SF: 'Sci-Fi',     PH: 'Psicológico', BH: 'Body Horror',
+  TH: 'Thriller',   HR: 'Horror',      RO: 'Romance',
+  DR: 'Drama',      CR: 'Crime',       MY: 'Mistério',
+  MU: 'Musical',    DO: 'Documentário',WS: 'Western',
+  // ── Conteúdo adulto ──
+  EC: 'Ecchi',      HN: 'Hentai',
+  // ── Formato ──
+  AN: 'Anime',      SE: 'Série',       OV: 'OVA/Curta',
+  // ── Origem geográfica ──
+  BR: 'Brasil',     JP: 'Japão',       KR: 'Coreia',
+  HK: 'Hong Kong',  TW: 'Taiwan',      FR: 'França',
+  IT: 'Itália',     MX: 'México',      AR: 'Argentina',
 };
 
 // Media type → colored badge
@@ -1537,67 +1582,83 @@ function renderCard(item) {
 // ==============================
 // ==============================
 // DESCRIPTION SYSTEM
-// Stores user-written descriptions separately from markdown notes.
-// Also caches descriptions fetched from TMDB/Jikan.
+// Priority: user (descriptions.json) > auto (TMDB/MAL cache)
+// Never falls back to markdown notes — always fetches from API.
 // ==============================
-const DESC_USER_KEY = 'megalist_desc_user_v1';
 const DESC_AUTO_KEY = 'megalist_desc_auto_v1';
-let descUser = {};  // user-written descriptions
-let descAuto = {};  // auto-fetched from TMDB/MAL
+let descAuto = {};           // auto-fetched cache (localStorage)
 
 function loadDescCache() {
-  try { descUser = JSON.parse(localStorage.getItem(DESC_USER_KEY) || '{}'); } catch(e) {}
   try { descAuto = JSON.parse(localStorage.getItem(DESC_AUTO_KEY) || '{}'); } catch(e) {}
-}
-function saveDescUser() {
-  try { localStorage.setItem(DESC_USER_KEY, JSON.stringify(descUser)); } catch(e) {}
 }
 function saveDescAuto() {
   try { localStorage.setItem(DESC_AUTO_KEY, JSON.stringify(descAuto)); } catch(e) {}
 }
 
-// Get best available description for an item
+// Get best available description — API sources only, no markdown notes
 function getDescription(item) {
   const key = String(item.id);
-  if (descUser[key]) return { text: descUser[key], source: 'user' };
-  if (descAuto[key]) return { text: descAuto[key], source: 'auto' };
-  if (item.notes)    return { text: item.notes, source: 'notes' };
+  if (DESCRIPTIONS_JSON[key]) return { text: DESCRIPTIONS_JSON[key], source: 'user' };
+  if (descAuto[key])          return { text: descAuto[key],          source: 'auto' };
   return null;
 }
 
-// Fetch description from TMDB or Jikan, cache it
+// Fetch description from TMDB or Jikan, cache in memory + localStorage
 async function fetchDescription(item) {
   const key = String(item.id);
-  if (descUser[key] || descAuto[key]) return; // already have one
+  if (DESCRIPTIONS_JSON[key] || descAuto[key]) return;
   try {
     const isAnime = item.media === 'Anime' || item.tipo.includes('AN');
     let text = null;
     if (isAnime) {
-      const clean = item.title.replace(/\s*\(.*?\)\s*/g, '').replace(/\s*:.*/, '').trim();
-      const res = await fetch(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(clean)}&limit=5`);
+      const clean = item.title.replace(/\s*\(.*?\)\s*/g,'').replace(/\s*:.*/,'').trim();
+      const res = await fetch(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(clean)}&limit=8`);
       if (res.ok) {
         const data = await res.json();
-        const hit = (data.data || []).find(r => r.aired?.prop?.from?.year && Math.abs(r.aired.prop.from.year - item.year) <= 1)
-                 || (data.data || [])[0];
-        if (hit?.synopsis) text = hit.synopsis.replace(/\[Written by MAL Rewrite\]/g,'').trim().slice(0, 300);
+        const hit = (data.data||[]).find(r => {
+          const y = r.aired?.prop?.from?.year;
+          return y && Math.abs(y - item.year) <= 1;
+        }) || (data.data||[])[0];
+        if (hit?.synopsis) text = hit.synopsis
+          .replace(/\[Written by MAL Rewrite\]/gi,'')
+          .replace(/\(Source:.*?\)/gi,'')
+          .trim().slice(0, 400);
       }
     } else {
-      const isSeries = item.media === 'Serie' || item.tipo.includes('SE');
+      const isSeries = item.media === 'Serie' || (item.tipo.includes('SE') && !item.tipo.includes('AN'));
       const type = isSeries ? 'tv' : 'movie';
-      const clean = item.title.replace(/\s*\(\d{4}\)\s*/g, '').trim();
+      const clean = item.title.replace(/\s*\(\d{4}\)\s*/g,'').replace(/\s*\(.*?\)\s*/g,'').trim();
       const yearP = item.year > 1900 ? `&${type==='tv'?'first_air_date_year':'year'}=${item.year}` : '';
-      const res = await fetch(`https://api.themoviedb.org/3/search/${type}?api_key=${TMDB_KEY}&query=${encodeURIComponent(clean)}${yearP}&language=pt-BR`);
-      if (res.ok) {
+      // Try pt-BR first, fallback to en-US
+      for (const lang of ['pt-BR','en-US']) {
+        const res = await fetch(
+          `https://api.themoviedb.org/3/search/${type}?api_key=${TMDB_KEY}&query=${encodeURIComponent(clean)}${yearP}&language=${lang}`
+        );
+        if (!res.ok) continue;
         const data = await res.json();
-        const hit = (data.results||[]).find(r => r.poster_path) || (data.results||[])[0];
-        if (hit?.overview) text = hit.overview.trim().slice(0, 300);
+        const hit = (data.results||[]).find(r => {
+          const y = parseInt((r.release_date||r.first_air_date||'').slice(0,4));
+          return Math.abs(y - item.year) <= 1 && r.overview;
+        }) || (data.results||[]).find(r => r.overview);
+        if (hit?.overview) { text = hit.overview.trim().slice(0, 400); break; }
       }
     }
-    if (text) {
-      descAuto[key] = text;
-      saveDescAuto();
-    }
+    if (text) { descAuto[key] = text; saveDescAuto(); }
   } catch(e) {}
+}
+
+// Download merged descriptions.json (base + user edits)
+function downloadDescriptionsJson() {
+  const sorted = {};
+  Object.keys(DESCRIPTIONS_JSON)
+    .sort((a,b) => parseInt(a)-parseInt(b))
+    .forEach(k => { sorted[k] = DESCRIPTIONS_JSON[k]; });
+  const blob = new Blob([JSON.stringify(sorted, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'descriptions.json';
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }
 
 // ==============================
@@ -1726,23 +1787,19 @@ function openDescEditor() {
   const item = MEDIA_DATA.find(m => m.id === currentModalId);
   if (!item) return;
   const key = String(item.id);
-  document.getElementById('deTitle').textContent = item.title;
-  document.getElementById('deText').value = descUser[key] || '';
+  document.getElementById('deTitle').textContent = `#${item.id} — ${item.title}`;
+  document.getElementById('deText').value = DESCRIPTIONS_JSON[key] || '';
   // Show auto desc if available
-  const autoText = descAuto[key] || (item.notes && item.notes !== descUser[key] ? item.notes : null);
+  const autoText = descAuto[key];
   const autoEl = document.getElementById('deAutoDesc');
   if (autoText) {
     document.getElementById('deAutoText').textContent = autoText;
     autoEl.style.display = 'block';
   } else {
     autoEl.style.display = 'none';
-    // Try fetching
     fetchDescription(item).then(() => {
       const at = descAuto[key];
-      if (at) {
-        document.getElementById('deAutoText').textContent = at;
-        autoEl.style.display = 'block';
-      }
+      if (at) { document.getElementById('deAutoText').textContent = at; autoEl.style.display = 'block'; }
     });
   }
   document.getElementById('descEditorOverlay').classList.add('open');
@@ -1753,7 +1810,7 @@ function closeDescEditor() {
 function useAutoDesc() {
   const item = MEDIA_DATA.find(m => m.id === currentModalId);
   if (!item) return;
-  const autoText = descAuto[String(item.id)] || item.notes;
+  const autoText = descAuto[String(item.id)];
   if (autoText) document.getElementById('deText').value = autoText;
 }
 function saveDescEdit() {
@@ -1761,28 +1818,26 @@ function saveDescEdit() {
   if (!item) return;
   const key = String(item.id);
   const text = document.getElementById('deText').value.trim();
-  if (text) {
-    descUser[key] = text;
-    saveDescUser();
-    showToast('✓ Descrição salva');
-  } else {
-    delete descUser[key];
-    saveDescUser();
-    showToast('Descrição removida');
-  }
+  if (text) { DESCRIPTIONS_JSON[key] = text; }
+  else      { delete DESCRIPTIONS_JSON[key]; }
+  downloadDescriptionsJson();
   closeDescEditor();
-  // Refresh description in modal
+  // Refresh modal description
   const descEl = document.getElementById('modalDescription');
   const d = getDescription(item);
-  if (d) descEl.innerHTML = `${d.text} <span style="font-size:10px;color:var(--text3);font-style:normal;">${d.source==='user'?'(sua descrição)':d.source==='auto'?'(TMDB/MAL)':'(notas)'}</span>`;
+  if (d) {
+    const src = d.source === 'user' ? '(sua descrição)' : '(TMDB/MAL)';
+    descEl.innerHTML = `${d.text} <span style="font-size:10px;color:var(--text3);font-style:normal;">${src}</span>`;
+  }
+  showToast(text ? '✓ Descrição salva — descriptions.json baixado' : 'Descrição removida');
 }
 function deleteDescEdit() {
   const item = MEDIA_DATA.find(m => m.id === currentModalId);
   if (!item) return;
-  delete descUser[String(item.id)];
-  saveDescUser();
+  delete DESCRIPTIONS_JSON[String(item.id)];
+  downloadDescriptionsJson();
   closeDescEditor();
-  showToast('Descrição removida');
+  showToast('Descrição removida — descriptions.json baixado');
 }
 
 function openModal(id) {
@@ -1792,33 +1847,63 @@ function openModal(id) {
   const ud = userData[id] || {};
 
   document.getElementById('modalTitle').textContent = item.title;
-  document.getElementById('modalSubtitle').textContent = `${item.year} · ${item.media} · ${item.tipo.join(', ')}`;
+  // Subtitle: year · media · full tipo labels
+  const tipoLabels = item.tipo.map(t => TAG_LABELS[t] || t).join(' · ');
+  document.getElementById('modalSubtitle').textContent = `${item.year} · ${item.media} · ${tipoLabels}`;
 
+  const SCORE_META = {
+    EROT: { label: 'Erotismo',    color: '#e8473f' },
+    EXPL: { label: 'Explicitude', color: '#ff6644' },
+    PROF: { label: 'Profundidade',color: '#7c6cfc' },
+    PERT: { label: 'Perturbação', color: '#ff9933' },
+    TABU: { label: 'Tabu',        color: '#ff4444' },
+    RARI: { label: 'Raridade',    color: '#44aaff' },
+    CULT: { label: 'Cult/Arte',   color: '#f0a500' },
+  };
   const scores = [
     ['EROT', item.erot], ['EXPL', item.expl], ['PROF', item.prof], ['PERT', item.pert],
     ['TABU', item.tabu], ['RARI', item.rari], ['CULT', item.cult]
   ];
-  document.getElementById('modalScores').innerHTML = scores.map(([k,v]) =>
-    `<div class="score-item"><span class="score-label">${k}</span><span class="score-value">${v}/5</span></div>`
-  ).join('');
+  document.getElementById('modalScores').innerHTML = scores.map(([k,v]) => {
+    const meta = SCORE_META[k] || { label: k, color: '#888' };
+    const pct = (v / 5) * 100;
+    return `<div class="score-item" title="${meta.label}: ${v}/5">
+      <span class="score-label">${meta.label}</span>
+      <div style="display:flex;align-items:center;gap:6px;margin-top:3px;">
+        <div style="flex:1;height:4px;background:var(--surface2);border-radius:2px;overflow:hidden;">
+          <div style="width:${pct}%;height:100%;background:${meta.color};border-radius:2px;transition:width 0.4s;"></div>
+        </div>
+        <span class="score-value" style="color:${meta.color};min-width:18px;">${v}</span>
+      </div>
+    </div>`;
+  }).join('');
 
-  document.getElementById('modalNotes').textContent = item.notes;
+  // Show notes as keyword chips (not raw text)
+  const notesEl = document.getElementById('modalNotes');
+  if (item.notes) {
+    const keywords = item.notes.split(/[.+·,]/).map(k => k.trim()).filter(k => k.length > 1 && k.length < 40);
+    notesEl.innerHTML = keywords.map(k =>
+      `<span style="display:inline-block;background:var(--surface2);border:1px solid var(--border);
+       color:var(--text2);font-family:'Space Mono',monospace;font-size:9px;padding:2px 7px;
+       margin:2px 2px 0 0;letter-spacing:0.3px;">${k}</span>`
+    ).join('');
+  } else {
+    notesEl.textContent = '';
+  }
 
-  // Description
+  // Description — API sources only (TMDB/MAL + user edits in descriptions.json)
   const descInfo = getDescription(item);
   const descEl = document.getElementById('modalDescription');
   if (descInfo) {
-    descEl.textContent = descInfo.text;
-    const src = descInfo.source === 'user' ? '(sua descrição)' : descInfo.source === 'auto' ? '(TMDB/MAL)' : '(notas do markdown)';
-    descEl.innerHTML = `${descEl.textContent} <span style="font-size:10px;color:var(--text3);font-style:normal;">${src}</span>`;
+    const src = descInfo.source === 'user' ? '(sua descrição)' : '(TMDB/MAL)';
+    descEl.innerHTML = `${descInfo.text} <span style="font-size:10px;color:var(--text3);font-style:normal;">${src}</span>`;
   } else {
-    descEl.innerHTML = `<span style="color:var(--text3)">Sem descrição. Clique em "Editar Descrição" para adicionar ou aguarde o carregamento automático.</span>`;
-    // Auto-fetch description in background
+    descEl.innerHTML = `<span style="color:var(--text3)">Buscando descrição...</span>`;
     fetchDescription(item).then(() => {
-      if (currentModalId === id) {
-        const d2 = getDescription(item);
-        if (d2) descEl.innerHTML = `${d2.text} <span style="font-size:10px;color:var(--text3);font-style:normal;">(TMDB/MAL)</span>`;
-      }
+      if (currentModalId !== id) return;
+      const d = getDescription(item);
+      if (d) descEl.innerHTML = `${d.text} <span style="font-size:10px;color:var(--text3);font-style:normal;">(TMDB/MAL)</span>`;
+      else   descEl.innerHTML = `<span style="color:var(--text3)">Descrição não encontrada. Clique em "Editar Descrição" para adicionar.</span>`;
     });
   }
 
@@ -2019,18 +2104,21 @@ async function init() {
   loadDescCache();
 
   try {
-    // Load both files in parallel
-    const [mdRes, postersRes] = await Promise.all([
+    // Load all data files in parallel
+    const [mdRes, postersRes, descRes] = await Promise.all([
       fetch('movie-list.md'),
-      fetch('posters.json').catch(() => null)
+      fetch('posters.json').catch(() => null),
+      fetch('descriptions.json').catch(() => null)
     ]);
 
     if (!mdRes.ok) throw new Error(`HTTP ${mdRes.status} ao carregar movie-list.md`);
     const text = await mdRes.text();
 
-    // Load posters.json if available (silently skip if missing)
     if (postersRes && postersRes.ok) {
       try { POSTERS_JSON = await postersRes.json(); } catch(e) {}
+    }
+    if (descRes && descRes.ok) {
+      try { DESCRIPTIONS_JSON = await descRes.json(); } catch(e) {}
     }
 
     MEDIA_DATA = parseMarkdown(text);

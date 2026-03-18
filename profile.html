@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Perfil — MEGALIST</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --surface2: #181820;
+  --surface3: #1e1e28;
+  --border: #2a2a38;
+  --accent: #e8473f;
+  --accent2: #f0a500;
+  --accent3: #7c6cfc;
+  --text: #e8e8f0;
+  --text2: #8888a0;
+  --text3: #555568;
+  --green: #4caf50;
+  --gold: #ffd700;
+  --silver: #c0c0c0;
+  --bronze: #cd7f32;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  min-height: 100vh;
+}
+
+/* NAV */
+nav {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 3px;
+  color: var(--accent);
+}
+.nav-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--text2);
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.nav-link:hover { color: var(--text); }
+.nav-link.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* LAYOUT */
+.page { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+.section-count {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--text3);
+}
+.section-divider { flex: 1; height: 1px; background: var(--border); }
+
+/* STATS BAR */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 16px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  color: var(--text3);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+.tab {
+  padding: 10px 20px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  color: var(--text2);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.tab:hover { color: var(--text); }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* TOGGLE +18 */
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.toggle-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: var(--text2);
+  letter-spacing: 1px;
+}
+.toggle {
+  position: relative;
+  width: 44px;
+  height: 22px;
+  cursor: pointer;
+}
+.toggle input { display: none; }
+.toggle-track {
+  width: 100%;
+  height: 100%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  transition: background 0.2s;
+}
+.toggle input:checked + .toggle-track { background: var(--accent); border-color: var(--accent); }
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background: var(--text3);
+  border-radius: 50%;
+  transition: transform 0.2s, background 0.2s;
+}
+.toggle input:checked ~ .toggle-thumb { transform: translateX(22px); background: white; }
+
+/* RANKING */
+.ranking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.rank-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  transition: border-color 0.2s;
+  cursor: default;
+}
+.rank-item:hover { border-color: var(--border); }
+.rank-item.dragging { opacity: 0.5; border-color: var(--accent3); }
+.rank-item.drag-over { border-color: var(--accent2); background: var(--surface2); }
+.rank-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  width: 28px;
+  text-align: center;
+  flex-shrink: 0;
+  color: var(--text3);
+}
+.rank-num.gold   { color: var(--gold); }
+.rank-num.silver { color: var(--silver); }
+.rank-num.bronze { color: var(--bronze); }
+.rank-poster {
+  width: 36px;
+  height: 54px;
+  object-fit: cover;
+  background: var(--surface2);
+  flex-shrink: 0;
+}
+.rank-info { flex: 1; min-width: 0; }
+.rank-title {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rank-meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--text3);
+  margin-top: 2px;
+}
+.rank-stars { color: var(--accent2); font-size: 11px; }
+.rank-drag { color: var(--text3); cursor: grab; font-size: 16px; padding: 0 4px; user-select: none; }
+.rank-remove {
+  background: none;
+  border: none;
+  color: var(--text3);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  transition: color 0.2s;
+}
+.rank-remove:hover { color: var(--accent); }
+
+/* FAVORITES GRID */
+.fav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+}
+.fav-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.15s;
+}
+.fav-card:hover { border-color: var(--accent3); transform: translateY(-2px); }
+.fav-poster {
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  background: var(--surface2);
+  position: relative;
+}
+.fav-poster img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.fav-poster-ph {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; color: var(--text3);
+  flex-direction: column; gap: 6px;
+}
+.fav-poster-ph span { font-family: 'Space Mono',monospace; font-size: 9px; color: var(--text3); text-align: center; padding: 0 8px; }
+.fav-remove {
+  position: absolute;
+  top: 4px; right: 4px;
+  background: rgba(0,0,0,0.7);
+  border: none;
+  color: var(--accent);
+  width: 22px; height: 22px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.fav-card:hover .fav-remove { opacity: 1; }
+.fav-info { padding: 7px 8px 6px; }
+.fav-title {
+  font-size: 11px; font-weight: 600;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.fav-year { font-family: 'Space Mono',monospace; font-size: 9px; color: var(--text3); }
+
+/* EMPTY */
+.empty-state {
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--text3);
+}
+.empty-icon { font-size: 40px; margin-bottom: 12px; }
+.empty-msg { font-family: 'Space Mono', monospace; font-size: 12px; line-height: 1.6; }
+.empty-sub { font-size: 11px; color: var(--text3); margin-top: 8px; }
+
+/* ADD SEARCH */
+.search-add {
+  position: relative;
+  margin-bottom: 20px;
+}
+.search-add input {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 10px 14px;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+.search-add input:focus { border-color: var(--accent3); }
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0; right: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: none;
+  z-index: 200;
+  max-height: 260px;
+  overflow-y: auto;
+  display: none;
+}
+.search-dropdown.open { display: block; }
+.search-result {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.search-result:hover { background: var(--surface2); }
+.search-result img {
+  width: 28px; height: 42px; object-fit: cover;
+  background: var(--surface2); flex-shrink: 0;
+}
+.search-result-info { flex: 1; min-width: 0; }
+.search-result-title { font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.search-result-meta { font-family: 'Space Mono',monospace; font-size: 9px; color: var(--text3); }
+
+/* Section gap */
+.mb40 { margin-bottom: 40px; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); }
+
+@media (max-width: 600px) {
+  .page { padding: 20px 14px; }
+  .stats-grid { grid-template-columns: repeat(3, 1fr); }
+  .fav-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">MEGALIST</span>
+  <a href="movie-list.html" class="nav-link">← Lista</a>
+  <a href="profile.html"    class="nav-link active">Perfil</a>
+</nav>
+
+<div class="page">
+
+  <!-- STATS -->
+  <div class="stats-grid" id="statsGrid"></div>
+
+  <!-- TABS: Favoritos / Ranking -->
+  <div class="tabs">
+    <div class="tab active" data-tab="fav-filmes">Filmes Favoritos</div>
+    <div class="tab" data-tab="fav-series">Séries Favoritas</div>
+    <div class="tab" data-tab="fav-animes">Animes Favoritos</div>
+    <div class="tab" data-tab="ranking">Ranking Geral</div>
+  </div>
+
+  <div id="tabContent"></div>
+
+</div>
+
+<script>
+// =============================================
+// SHARED DATA — reads same localStorage as movie-list.html
+// =============================================
+const STORAGE_KEY  = 'megalist_v1';
+const PROFILE_KEY  = 'megalist_profile_v1';
+const POSTERS_KEY_EDIT = 'megalist_poster_edits_v1';
+const POSTERS_KEY_AUTO = 'megalist_poster_auto_v1';
+
+const TMDB_IMG = 'https://image.tmdb.org/t/p/w185';
+
+let MEDIA_DATA = [];
+let userData   = {};
+let profileData = {
+  favFilmes:  [],   // array of IDs
+  favSeries:  [],
+  favAnimes:  [],
+  rankFilmes: [],   // array of IDs, ordered
+  rankSeries: [],
+  rankAnimes: [],
+  show18Fav:  false,
+  show18Rank: false,
+};
+let POSTERS_JSON   = {};
+let posterEdits    = {};
+let posterAuto     = {};
+
+function loadAll() {
+  try { userData    = JSON.parse(localStorage.getItem(STORAGE_KEY)        || '{}'); } catch(e) {}
+  try { profileData = { ...profileData, ...JSON.parse(localStorage.getItem(PROFILE_KEY) || '{}') }; } catch(e) {}
+  try { posterEdits = JSON.parse(localStorage.getItem(POSTERS_KEY_EDIT)   || '{}'); } catch(e) {}
+  try { posterAuto  = JSON.parse(localStorage.getItem(POSTERS_KEY_AUTO)   || '{}'); } catch(e) {}
+}
+function saveProfile() {
+  localStorage.setItem(PROFILE_KEY, JSON.stringify(profileData));
+}
+
+function resolveUrl(id) {
+  const key = String(id);
+  if (key in posterEdits) {
+    const v = posterEdits[key];
+    if (!v) return null;
+    return v.startsWith('/') ? TMDB_IMG + v : v;
+  }
+  if (key in POSTERS_JSON) {
+    const v = POSTERS_JSON[key];
+    if (!v) return null;
+    return v.startsWith('/') ? TMDB_IMG + v : v;
+  }
+  if (key in posterAuto) {
+    const v = posterAuto[key];
+    if (!v) return null;
+    return v.startsWith('/') ? TMDB_IMG + v : v;
+  }
+  return null;
+}
+
+// =============================================
+// STATS
+// =============================================
+function renderStats() {
+  const watched  = Object.values(userData).filter(u => u.status==='watched').length;
+  const watching = Object.values(userData).filter(u => u.status==='watching').length;
+  const want     = Object.values(userData).filter(u => u.status==='want').length;
+  const rated    = Object.values(userData).filter(u => u.rating > 0);
+  const avgRating = rated.length
+    ? (rated.reduce((s,u) => s + u.rating, 0) / rated.length).toFixed(1)
+    : '—';
+
+  const byMedia = { Filme: 0, Serie: 0, Anime: 0 };
+  Object.keys(userData).forEach(id => {
+    if (userData[id].status !== 'watched') return;
+    const item = MEDIA_DATA.find(m => m.id === parseInt(id));
+    if (item) byMedia[item.media] = (byMedia[item.media] || 0) + 1;
+  });
+
+  const stats = [
+    { num: MEDIA_DATA.length, label: 'total na lista', color: 'var(--text)' },
+    { num: watched,           label: '✓ assistidos',   color: 'var(--green)' },
+    { num: watching,          label: '▶ assistindo',   color: 'var(--accent2)' },
+    { num: want,              label: '★ quero ver',    color: 'var(--accent3)' },
+    { num: avgRating,         label: 'nota média',     color: 'var(--accent2)' },
+    { num: byMedia.Filme,     label: 'filmes vistos',  color: '#aaaacc' },
+    { num: byMedia.Serie,     label: 'séries vistas',  color: '#44cc88' },
+    { num: byMedia.Anime,     label: 'animes vistos',  color: '#ff7070' },
+  ];
+
+  document.getElementById('statsGrid').innerHTML = stats.map(s => `
+    <div class="stat-card">
+      <div class="stat-num" style="color:${s.color}">${s.num}</div>
+      <div class="stat-label">${s.label}</div>
+    </div>`).join('');
+}
+
+// =============================================
+// TABS
+// =============================================
+let activeTab = 'fav-filmes';
+document.querySelectorAll('.tab').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    activeTab = t.dataset.tab;
+    renderTab();
+  });
+});
+
+function renderTab() {
+  const el = document.getElementById('tabContent');
+  if (activeTab === 'fav-filmes')  el.innerHTML = renderFavsPage('Filme');
+  else if (activeTab === 'fav-series') el.innerHTML = renderFavsPage('Serie');
+  else if (activeTab === 'fav-animes') el.innerHTML = renderFavsPage('Anime');
+  else if (activeTab === 'ranking')    el.innerHTML = renderRankingPage();
+  attachFavListeners();
+  attachRankListeners();
+}
+
+// =============================================
+// HELPERS
+// =============================================
+function isAdult(item) {
+  return item.nivel >= 2 || item.tipo.some(t => ['X','HN','EC'].includes(t));
+}
+
+function favKey(media) {
+  return media === 'Filme' ? 'favFilmes' : media === 'Serie' ? 'favSeries' : 'favAnimes';
+}
+function rankKey(media) {
+  return media === 'Filme' ? 'rankFilmes' : media === 'Serie' ? 'rankSeries' : 'rankAnimes';
+}
+
+function getFavItems(media) {
+  const show18 = profileData.show18Fav;
+  return profileData[favKey(media)]
+    .map(id => MEDIA_DATA.find(m => m.id === id))
+    .filter(Boolean)
+    .filter(item => show18 || !isAdult(item));
+}
+function getRankItems(media) {
+  const show18 = profileData.show18Rank;
+  return profileData[rankKey(media)]
+    .map(id => MEDIA_DATA.find(m => m.id === id))
+    .filter(Boolean)
+    .filter(item => show18 || !isAdult(item));
+}
+
+function posterImg(item, cls='') {
+  const url = resolveUrl(item.id);
+  const icon = item.media==='Anime'?'🎌':item.tipo.includes('SE')?'📺':'🎬';
+  if (url) return `<img src="${url}" class="${cls}" onerror="this.style.display='none'">`;
+  return `<div class="${cls} fav-poster-ph">${icon}<span>${item.title}</span></div>`;
+}
+
+// =============================================
+// FAVORITES
+// =============================================
+function renderFavsPage(media) {
+  const mediaLabel = media === 'Filme' ? 'Filmes' : media === 'Serie' ? 'Séries' : 'Animes';
+  const items = getFavItems(media);
+  const fk = favKey(media);
+  const total18 = profileData[fk].length - items.length;
+
+  const toggle18 = `
+    <div class="toggle-row">
+      <span class="toggle-label">Mostrar +18</span>
+      <label class="toggle">
+        <input type="checkbox" id="toggle18fav" ${profileData.show18Fav?'checked':''} onchange="toggle18Fav()">
+        <div class="toggle-track"></div>
+        <div class="toggle-thumb"></div>
+      </label>
+      ${total18>0 ? `<span style="font-family:'Space Mono',monospace;font-size:10px;color:var(--accent)">${total18} item(s) +18 ocultos</span>` : ''}
+    </div>`;
+
+  const searchBox = `
+    <div class="search-add" id="favSearchWrap-${media}">
+      <input type="text" placeholder="+ Adicionar ${mediaLabel.toLowerCase()} favoritos..." 
+        oninput="searchToAdd(this,'${media}')" 
+        onfocus="document.getElementById('favDrop-${media}').classList.add('open')"
+        onblur="setTimeout(()=>document.getElementById('favDrop-${media}').classList.remove('open'),200)"
+        id="favSearch-${media}">
+      <div class="search-dropdown" id="favDrop-${media}"></div>
+    </div>`;
+
+  const grid = items.length === 0
+    ? `<div class="empty-state">
+        <div class="empty-icon">⭐</div>
+        <div class="empty-msg">Nenhum ${mediaLabel.toLowerCase().slice(0,-1)} favorito ainda.</div>
+        <div class="empty-sub">Use o campo acima para adicionar.</div>
+       </div>`
+    : `<div class="fav-grid">${items.map(item => `
+        <div class="fav-card" title="${item.title}">
+          <div class="fav-poster">
+            ${posterImg(item)}
+            <button class="fav-remove" onclick="removeFav(${item.id},'${media}')" title="Remover">×</button>
+          </div>
+          <div class="fav-info">
+            <div class="fav-title">${item.title}</div>
+            <div class="fav-year">${item.year}</div>
+          </div>
+        </div>`).join('')}
+      </div>`;
+
+  return `
+    <div class="section-header">
+      <div class="section-title" style="color:${media==='Anime'?'#ff7070':media==='Serie'?'#44cc88':'#aaaacc'}">${mediaLabel} Favoritos</div>
+      <div class="section-count">${items.length} títulos</div>
+      <div class="section-divider"></div>
+    </div>
+    ${toggle18}
+    ${searchBox}
+    ${grid}`;
+}
+
+function searchToAdd(input, media) {
+  const q = input.value.toLowerCase().trim();
+  const drop = document.getElementById(`favDrop-${media}`);
+  if (!q) { drop.innerHTML = ''; drop.classList.remove('open'); return; }
+  const fk = favKey(media);
+  const results = MEDIA_DATA
+    .filter(m => {
+      const isCorrectMedia = media === 'Anime'
+        ? (m.media === 'Anime' || m.tipo.includes('AN'))
+        : media === 'Serie'
+        ? (m.media === 'Serie' || (m.tipo.includes('SE') && !m.tipo.includes('AN')))
+        : (m.media === 'Filme' && !m.tipo.includes('AN') && !m.tipo.includes('SE'));
+      return isCorrectMedia && m.title.toLowerCase().includes(q);
+    })
+    .filter(m => !profileData[fk].includes(m.id))
+    .slice(0, 8);
+
+  drop.innerHTML = results.map(m => {
+    const url = resolveUrl(m.id);
+    const icon = m.media==='Anime'?'🎌':m.tipo.includes('SE')?'📺':'🎬';
+    return `<div class="search-result" onclick="addFav(${m.id},'${media}')">
+      ${url ? `<img src="${url}">` : `<div style="width:28px;height:42px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">${icon}</div>`}
+      <div class="search-result-info">
+        <div class="search-result-title">${m.title}</div>
+        <div class="search-result-meta">${m.year} · ${m.media}${isAdult(m)?' · +18':''}</div>
+      </div>
+    </div>`;
+  }).join('') || '<div style="padding:10px 12px;font-size:12px;color:var(--text3);">Nenhum resultado</div>';
+
+  drop.classList.add('open');
+}
+
+function addFav(id, media) {
+  const fk = favKey(media);
+  if (!profileData[fk].includes(id)) {
+    profileData[fk].push(id);
+    saveProfile();
+    renderTab();
+    renderStats();
+  }
+}
+
+function removeFav(id, media) {
+  const fk = favKey(media);
+  profileData[fk] = profileData[fk].filter(i => i !== id);
+  saveProfile();
+  renderTab();
+  renderStats();
+}
+
+function toggle18Fav() {
+  profileData.show18Fav = !profileData.show18Fav;
+  saveProfile();
+  renderTab();
+}
+
+// =============================================
+// RANKING
+// =============================================
+function renderRankingPage() {
+  const toggle18 = `
+    <div class="toggle-row">
+      <span class="toggle-label">Mostrar +18</span>
+      <label class="toggle">
+        <input type="checkbox" id="toggle18rank" ${profileData.show18Rank?'checked':''} onchange="toggle18Rank()">
+        <div class="toggle-track"></div>
+        <div class="toggle-thumb"></div>
+      </label>
+    </div>`;
+
+  const sections = [
+    { media: 'Filme', label: 'Filmes', color: '#aaaacc' },
+    { media: 'Serie', label: 'Séries', color: '#44cc88' },
+    { media: 'Anime', label: 'Animes', color: '#ff7070' },
+  ];
+
+  let html = `<div class="section-header">
+    <div class="section-title" style="color:var(--accent2)">Ranking Geral</div>
+    <div class="section-count">Arraste para reordenar</div>
+    <div class="section-divider"></div>
+  </div>${toggle18}`;
+
+  sections.forEach(({ media, label, color }) => {
+    const items = getRankItems(media);
+    const rk = rankKey(media);
+    const total18 = profileData[rk].length - items.length;
+
+    const searchBox = `
+      <div class="search-add" id="rankSearchWrap-${media}" style="max-width:500px;">
+        <input type="text" placeholder="+ Adicionar ao ranking de ${label.toLowerCase()}..."
+          oninput="searchToRank(this,'${media}')"
+          onfocus="document.getElementById('rankDrop-${media}').classList.add('open')"
+          onblur="setTimeout(()=>document.getElementById('rankDrop-${media}').classList.remove('open'),200)"
+          id="rankSearch-${media}">
+        <div class="search-dropdown" id="rankDrop-${media}"></div>
+      </div>`;
+
+    const listHtml = items.length === 0
+      ? `<div style="padding:20px 0;font-family:'Space Mono',monospace;font-size:11px;color:var(--text3);">Nenhum item no ranking ainda.</div>`
+      : `<div class="ranking-list" id="rankList-${media}" data-media="${media}">
+          ${items.map((item, i) => {
+            const numClass = i===0?'gold':i===1?'silver':i===2?'bronze':'';
+            const url = resolveUrl(item.id);
+            const icon = item.media==='Anime'?'🎌':item.tipo.includes('SE')?'📺':'🎬';
+            const ud = userData[item.id] || {};
+            const stars = ud.rating ? '★'.repeat(ud.rating) + '☆'.repeat(5-ud.rating) : '';
+            return `<div class="rank-item" draggable="true" data-id="${item.id}" data-media="${media}">
+              <span class="rank-drag" title="Arraste para reordenar">⠿</span>
+              <span class="rank-num ${numClass}">${i+1}</span>
+              ${url
+                ? `<img src="${url}" class="rank-poster" onerror="this.style.display='none'">`
+                : `<div class="rank-poster" style="display:flex;align-items:center;justify-content:center;font-size:18px;">${icon}</div>`}
+              <div class="rank-info">
+                <div class="rank-title">${item.title}</div>
+                <div class="rank-meta">${item.year} · ${item.media}${isAdult(item)?' · +18':''}
+                  ${stars ? ` · <span class="rank-stars">${stars}</span>` : ''}
+                </div>
+              </div>
+              <button class="rank-remove" onclick="removeRank(${item.id},'${media}')" title="Remover">×</button>
+            </div>`;
+          }).join('')}
+        </div>`;
+
+    html += `
+      <div style="margin-bottom:32px;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;color:${color};margin-bottom:12px;">
+          ${label} ${total18>0?`<span style="font-size:12px;color:var(--accent);font-family:'Space Mono',monospace;">(${total18} +18 ocultos)</span>`:''}
+        </div>
+        ${searchBox}
+        ${listHtml}
+      </div>`;
+  });
+
+  return html;
+}
+
+function searchToRank(input, media) {
+  const q = input.value.toLowerCase().trim();
+  const drop = document.getElementById(`rankDrop-${media}`);
+  if (!q) { drop.innerHTML = ''; drop.classList.remove('open'); return; }
+  const rk = rankKey(media);
+  const results = MEDIA_DATA
+    .filter(m => {
+      const isCorrectMedia = media === 'Anime'
+        ? (m.media === 'Anime' || m.tipo.includes('AN'))
+        : media === 'Serie'
+        ? (m.media === 'Serie' || (m.tipo.includes('SE') && !m.tipo.includes('AN')))
+        : (m.media === 'Filme' && !m.tipo.includes('AN') && !m.tipo.includes('SE'));
+      return isCorrectMedia && m.title.toLowerCase().includes(q);
+    })
+    .filter(m => !profileData[rk].includes(m.id))
+    .slice(0, 8);
+
+  drop.innerHTML = results.map(m => {
+    const url = resolveUrl(m.id);
+    const icon = m.media==='Anime'?'🎌':m.tipo.includes('SE')?'📺':'🎬';
+    return `<div class="search-result" onclick="addRank(${m.id},'${media}')">
+      ${url ? `<img src="${url}">` : `<div style="width:28px;height:42px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">${icon}</div>`}
+      <div class="search-result-info">
+        <div class="search-result-title">${m.title}</div>
+        <div class="search-result-meta">${m.year} · ${m.media}${isAdult(m)?' · +18':''}</div>
+      </div>
+    </div>`;
+  }).join('') || '<div style="padding:10px 12px;font-size:12px;color:var(--text3);">Nenhum resultado</div>';
+
+  drop.classList.add('open');
+}
+
+function addRank(id, media) {
+  const rk = rankKey(media);
+  if (!profileData[rk].includes(id)) {
+    profileData[rk].push(id);
+    saveProfile();
+    renderTab();
+  }
+}
+
+function removeRank(id, media) {
+  const rk = rankKey(media);
+  profileData[rk] = profileData[rk].filter(i => i !== id);
+  saveProfile();
+  renderTab();
+}
+
+function toggle18Rank() {
+  profileData.show18Rank = !profileData.show18Rank;
+  saveProfile();
+  renderTab();
+}
+
+// =============================================
+// DRAG & DROP for ranking
+// =============================================
+let dragSrcId = null;
+let dragSrcMedia = null;
+
+function attachRankListeners() {
+  document.querySelectorAll('.rank-item[draggable]').forEach(el => {
+    el.addEventListener('dragstart', e => {
+      dragSrcId    = parseInt(el.dataset.id);
+      dragSrcMedia = el.dataset.media;
+      el.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+    });
+    el.addEventListener('dragend', () => el.classList.remove('dragging'));
+    el.addEventListener('dragover', e => { e.preventDefault(); el.classList.add('drag-over'); });
+    el.addEventListener('dragleave', () => el.classList.remove('drag-over'));
+    el.addEventListener('drop', e => {
+      e.preventDefault();
+      el.classList.remove('drag-over');
+      const targetId    = parseInt(el.dataset.id);
+      const targetMedia = el.dataset.media;
+      if (dragSrcId === targetId || dragSrcMedia !== targetMedia) return;
+      const rk = rankKey(targetMedia);
+      const arr = [...profileData[rk]];
+      const fromIdx = arr.indexOf(dragSrcId);
+      const toIdx   = arr.indexOf(targetId);
+      if (fromIdx === -1 || toIdx === -1) return;
+      arr.splice(fromIdx, 1);
+      arr.splice(toIdx, 0, dragSrcId);
+      profileData[rk] = arr;
+      saveProfile();
+      renderTab();
+    });
+  });
+}
+
+function attachFavListeners() {
+  // Nothing extra needed — inline handlers handle it
+}
+
+// =============================================
+// INIT
+// =============================================
+async function init() {
+  loadAll();
+
+  try {
+    const [mdRes, postersRes] = await Promise.all([
+      fetch('movie-list.md'),
+      fetch('posters.json').catch(() => null),
+    ]);
+    if (mdRes.ok) {
+      const text = await mdRes.text();
+      MEDIA_DATA = parseMarkdown(text);
+    }
+    if (postersRes && postersRes.ok) {
+      try { POSTERS_JSON = await postersRes.json(); } catch(e) {}
+    }
+  } catch(e) {
+    console.warn('Could not load data files:', e);
+  }
+
+  renderStats();
+  renderTab();
+}
+
+// =============================================
+// MARKDOWN PARSER (minimal copy from main app)
+// =============================================
+function cell(s) { return (s||'').trim().replace(/^—$/,''); }
+
+function parseMarkdown(text) {
+  const lines = text.split('\n');
+  const items = [];
+  const seen  = new Set();
+  let nivel = 0, section = 'Nível 1', inTable = false, headerPassed = false, isMedia = false;
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (/^##\s+N[IÍ]VEL\s+\d/i.test(line)) {
+      const m = line.match(/N[IÍ]VEL\s+(\d)/i);
+      if (m) { nivel = parseInt(m[1])-1; section = line.replace(/^##\s+/,'').trim(); }
+      inTable = false; headerPassed = false; isMedia = false; continue;
+    }
+    if (/^##\s+/.test(line)) {
+      section = line.replace(/^##\s+/,'').trim();
+      inTable = false; headerPassed = false; isMedia = false; continue;
+    }
+    if (line.startsWith('|')) {
+      const cols = line.split('|').slice(1,-1);
+      if (cols.every(c => /^[-: ]+$/.test(c.trim()))) { if (inTable) headerPassed=true; continue; }
+      if (!headerPassed) {
+        isMedia = cell(cols[0])==='#' && cols.some(c=>/titulo/i.test(c.trim()));
+        inTable = true; continue;
+      }
+      if (inTable && headerPassed && isMedia) {
+        const id = parseInt(cell(cols[0]));
+        if (!id || seen.has(id)) continue;
+        const title = cell(cols[1]);
+        if (!title || /já listado/i.test(title)) continue;
+        seen.add(id);
+        items.push({
+          id, title,
+          year:  parseInt(cell(cols[2]))||0,
+          media: cell(cols[3])||'Filme',
+          tipo:  cell(cols[4]).split(',').map(t=>t.trim()).filter(Boolean),
+          erot:  parseInt(cell(cols[5]))||0,
+          expl:  parseInt(cell(cols[6]))||0,
+          prof:  parseInt(cell(cols[7]))||0,
+          pert:  parseInt(cell(cols[8]))||0,
+          tabu:  parseInt(cell(cols[9]))||0,
+          rari:  parseInt(cell(cols[10]))||0,
+          cult:  parseInt(cell(cols[11]))||0,
+          rec:   cell(cols[12]).split(',').map(r=>r.trim()).filter(Boolean),
+          notes: cell(cols[13])||'',
+          nivel, section,
+        });
+      }
+    } else {
+      if (inTable) { inTable=false; headerPassed=false; isMedia=false; }
+    }
+  }
+  return items;
+}
+
+init();
+</script>
+</body>
+</html>
