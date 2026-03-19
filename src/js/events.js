@@ -114,8 +114,8 @@ async function init(){
     const baseUrl = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname.split('/').slice(0, -1).join('/') + '/';
     
     const [mdR, mdataR] = await Promise.all([
-      fetch('assets/data/movie-list.md').catch(err => { throw new Error('Não foi possível acessar movie-list.md. Verifique se o arquivo existe.'); }),
-      fetch('assets/data/media-data.json').catch(() => null)
+      fetch('movie-list.md').catch(err => { throw new Error('Não foi possível acessar movie-list.md na raiz.'); }),
+      fetch('media-data.json').catch(() => null)
     ]);
 
     if (!mdR.ok) {

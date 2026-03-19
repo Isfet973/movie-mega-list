@@ -526,8 +526,8 @@ async function init(){
   loadAll();
   try{
     const [mdR,mdataR]=await Promise.all([
-      fetch('assets/data/movie-list.md').catch(()=>null),
-      fetch('assets/data/media-data.json').catch(()=>null),
+      fetch('movie-list.md').catch(()=>null),
+      fetch('media-data.json').catch(()=>null),
     ]);
 
     if(mdR && mdR.ok){
