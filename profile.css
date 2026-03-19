@@ -11,8 +11,16 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-
 
 /* NAV */
 nav{background:var(--surface);border-bottom:1px solid var(--border);padding:0 16px;height:52px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100;}
-.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--accent);cursor:pointer;flex-shrink:0;}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:38px;letter-spacing:4px;color:var(--accent);cursor:pointer;flex-shrink:0;}
 .nav-logo:hover{opacity:.8;}
+.logo-full{display:inline;}
+.logo-short{display:none;}
+
+@media(max-width:640px){
+  .logo-full{display:none;}
+  .logo-short{display:inline!important;}
+  .nav-logo{font-size:32px;}
+}
 .nav-sep{width:1px;height:24px;background:var(--border);}
 .nav-link{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--text2);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;transition:all .2s;}
 .nav-link:hover{color:var(--text);}

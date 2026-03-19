@@ -10,7 +10,7 @@
 .desktop-only{display:block;}
 @media(max-width:640px){
   .nav-logo::after{content:'';} 
-  .nav-logo{font-size:28px;letter-spacing:3px;}
+  .nav-logo{font-size:32px;letter-spacing:3px;}
   .logo-full{display:none;}
   .logo-short{display:inline!important;}
   .desktop-only{display:none!important;}
