@@ -526,9 +526,9 @@ async function init(){
   loadAll();
   try{
     const [mdR,pR,mdataR]=await Promise.all([
-      fetch('movie-list.md'),
-      fetch('posters.json').catch(()=>null),
-      fetch('media-data.json').catch(()=>null),
+      fetch('assets/data/movie-list.md'),
+      fetch('assets/data/posters.json').catch(()=>null),
+      fetch('assets/data/media-data.json').catch(()=>null),
     ]);
     if(mdR.ok){ const t=await mdR.text(); MEDIA_DATA=parseMarkdown(t); }
     if(mdataR&&mdataR.ok){

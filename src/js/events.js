@@ -110,8 +110,8 @@ async function init(){
   document.getElementById('mainContent').innerHTML=`<div class="empty"><div class="empty-icon">⏳</div><div class="empty-msg">Carregando...</div></div>`;
   try{
     const [mdR,mdataR]=await Promise.all([
-      fetch('movie-list.md'),
-      fetch('media-data.json').catch(()=>null),
+      fetch('assets/data/movie-list.md'),
+      fetch('assets/data/media-data.json').catch(()=>null),
     ]);
     if(!mdR.ok) throw new Error(`HTTP ${mdR.status}`);
     const md=await mdR.text();
@@ -130,10 +130,8 @@ async function init(){
   }catch(err){
     document.getElementById('mainContent').innerHTML=`<div class="empty">
       <div class="empty-icon">⚠️</div>
-      <div class="empty-msg">Erro: ${err.message}<br><br>
-      Abra via servidor local:<br>
-      <code style="color:var(--accent2)">python3 -m http.server</code><br>
-      ou use o Live Server do VS Code.</div></div>`;
+      <div class="empty-msg">Erro ao carregar: ${err.message}<br><br>
+      Verifique se os arquivos <code>assets/data/movie-list.md</code> e <code>assets/data/media-data.json</code> existem no repositório.</div></div>`;
   }
 }
 init();
