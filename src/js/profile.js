@@ -525,23 +525,30 @@ function confirmClear(){
 async function init(){
   loadAll();
   try{
-    const [mdR,pR,mdataR]=await Promise.all([
-      fetch('assets/data/movie-list.md'),
-      fetch('assets/data/posters.json').catch(()=>null),
+    const [mdR,mdataR]=await Promise.all([
+      fetch('assets/data/movie-list.md').catch(()=>null),
       fetch('assets/data/media-data.json').catch(()=>null),
     ]);
-    if(mdR.ok){ const t=await mdR.text(); MEDIA_DATA=parseMarkdown(t); }
-    if(mdataR&&mdataR.ok){
+
+    if(mdR && mdR.ok){
+      const t=await mdR.text();
+      MEDIA_DATA=parseMarkdown(t);
+    } else {
+      console.warn('Could not load movie-list.md');
+    }
+
+    if(mdataR && mdataR.ok){
       try{
         const md=await mdataR.json();
         if(md.posters) POSTERS_JSON={...md.posters,...POSTERS_JSON};
-        // descriptions from media-data.json are automatically used
         if(md.descriptions) Object.assign(descUser,md.descriptions);
-      }catch(e){}
-    } else if(pR&&pR.ok){
-      try{ POSTERS_JSON=await pR.json(); }catch(e){}
+      }catch(e){
+        console.error('Error parsing media-data.json:', e);
+      }
     }
-  }catch(e){ console.warn('Could not load data:',e); }
+  }catch(e){
+    console.warn('Could not load data:',e);
+  }
   renderProfileCard(); renderStats(); renderChart(); renderTab();
 }
 init();

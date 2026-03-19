@@ -107,31 +107,60 @@ async function init(){
   };
   setNavH();
   window.addEventListener('resize',()=>setTimeout(setNavH,60));
-  document.getElementById('mainContent').innerHTML=`<div class="empty"><div class="empty-icon">⏳</div><div class="empty-msg">Carregando...</div></div>`;
-  try{
-    const [mdR,mdataR]=await Promise.all([
-      fetch('assets/data/movie-list.md'),
-      fetch('assets/data/media-data.json').catch(()=>null),
+  document.getElementById('mainContent').innerHTML=`<div class="empty"><div class="empty-icon">⏳</div><div class="empty-msg">Carregando dados...</div></div>`;
+  
+  try {
+    // Tenta carregar os arquivos. No GitHub Pages, o fetch funciona com caminhos relativos.
+    const baseUrl = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname.split('/').slice(0, -1).join('/') + '/';
+    
+    const [mdR, mdataR] = await Promise.all([
+      fetch('assets/data/movie-list.md').catch(err => { throw new Error('Não foi possível acessar movie-list.md. Verifique se o arquivo existe.'); }),
+      fetch('assets/data/media-data.json').catch(() => null)
     ]);
-    if(!mdR.ok) throw new Error(`HTTP ${mdR.status}`);
-    const md=await mdR.text();
-    if(mdataR&&mdataR.ok){
-      try{
-        const mdata=await mdataR.json();
-        if(mdata.posters) POSTERS_JSON={...mdata.posters,...POSTERS_JSON};
-        if(mdata.descriptions) DESCS_JSON={...mdata.descriptions,...DESCS_JSON};
-      }catch(e){}
+
+    if (!mdR.ok) {
+      if (window.location.protocol === 'file:') {
+        throw new Error('O navegador bloqueia o carregamento de arquivos locais (protocolo file://). Por favor, use um servidor local (Live Server no VS Code ou python -m http.server).');
+      }
+      throw new Error(`Erro HTTP ${mdR.status}: Não foi possível carregar a lista de filmes.`);
     }
+
+    const md = await mdR.text();
+    
+    if (mdataR && mdataR.ok) {
+      try {
+        const mdata = await mdataR.json();
+        if (mdata.posters) POSTERS_JSON = { ...mdata.posters, ...POSTERS_JSON };
+        if (mdata.descriptions) DESCS_JSON = { ...mdata.descriptions, ...DESCS_JSON };
+      } catch (e) {
+        console.warn('Erro ao processar media-data.json:', e);
+      }
+    }
+
     // Merge user desc edits on top
     Object.assign(DESCS_JSON, descUser);
-    MEDIA_DATA=parseMarkdown(md);
-    if(!MEDIA_DATA.length) throw new Error('Nenhum título encontrado');
-    buildNavTabs(); updateMediaCounts(); renderGrid(); setNavH();
-  }catch(err){
-    document.getElementById('mainContent').innerHTML=`<div class="empty">
+    MEDIA_DATA = parseMarkdown(md);
+    
+    if (!MEDIA_DATA.length) throw new Error('O arquivo movie-list.md parece estar vazio ou em formato inválido.');
+    
+    buildNavTabs(); 
+    updateMediaCounts(); 
+    renderGrid(); 
+    setNavH();
+    
+  } catch (err) {
+    console.error('Erro no INIT:', err);
+    document.getElementById('mainContent').innerHTML = `<div class="empty">
       <div class="empty-icon">⚠️</div>
-      <div class="empty-msg">Erro ao carregar: ${err.message}<br><br>
-      Verifique se os arquivos <code>assets/data/movie-list.md</code> e <code>assets/data/media-data.json</code> existem no repositório.</div></div>`;
+      <div class="empty-msg">
+        <strong>Erro ao carregar:</strong> ${err.message}<br><br>
+        <div style="font-size:11px; color:var(--text3); text-align:left; max-width:400px; margin:0 auto; line-height:1.6;">
+          • Verifique se a pasta <code>assets/data/</code> contém os arquivos <code>movie-list.md</code> e <code>media-data.json</code>.<br>
+          • Se estiver no GitHub Pages, certifique-se de que os nomes dos arquivos estão exatamente como no código (case-sensitive).<br>
+          • No VS Code, use a extensão <strong>Live Server</strong> para rodar o projeto corretamente.
+        </div>
+      </div>
+    </div>`;
   }
 }
 init();
