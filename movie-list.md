@@ -1,71 +1,9 @@
-# MEGA LISTA DEFINITIVA DE FILMES, SÉRIES E ANIMES — 1000+ TÍTULOS
-## Cinema Erótico, Tabu, Queer, Exploitation, Sci-Fi, Psicológico + Recomendações por Afinidade
+# MEGALIST — FILMES, SÉRIES E ANIMES
 
----
-
-## SISTEMA DE CLASSIFICAÇÃO
-
-| Sigla | Categoria | Descrição |
-|---|---|---|
-| EROT | Erotismo | Intensidade erótica e sensual |
-| EXPL | Explicitude | Quão gráficas são as cenas sexuais |
-| PROF | Profundidade | Qualidade narrativa, emocional e artística |
-| PERT | Perturbação | Nível de desconforto ou choque |
-| TABU | Tabu | Intensidade dos temas proibidos |
-| RARI | Raridade | Dificuldade de encontrar para assistir |
-| CULT | Valor Cultural | Importância histórica e artística |
-
-## LEGENDA DE TIPO
-
-| Sigla | Tipo |
-|---|---|
-| L | Lésbico/Sáfico |
-| G | Gay masculino |
-| T | Trans/Não-binário |
-| H | Hétero |
-| B | Bi/Pan/Fluido |
-| V | Voyeurismo |
-| R | Religião/Nunsploitation |
-| Z | Vampirismo |
-| BR | Brasil/Pornochanchada |
-| JP | Japão/Ero-guro |
-| KR | Coreia |
-| HK | Hong Kong |
-| TW | Taiwan |
-| C | Comédia |
-| X | Tabu Extremo |
-| AN | Anime |
-| SE | Série |
-| SF | Ficção Científica |
-| PH | Psicológico/Horror |
-| BH | Body Horror |
-| EC | Ecchi |
-| HN | Hentai |
-
-## LEGENDA DE NÍVEL
-
-| Nível | Nome | Descrição |
-|---|---|---|
-| 1 | Sutil | Pouca ou nenhuma nudez. Foco emocional e narrativo. |
-| 2 | Erótico | Nudez presente, cenas sensuais significativas. |
-| 3 | Muito Erótico | Cenas de sexo gráficas, nudez abundante. |
-| 4 | Altamente Explícito | Sexo longo e gráfico, possível sexo real parcial. |
-| 5 | Fronteira Pornô | Sexo real verificado ou não simulado. |
-
-## LEGENDA DE AFINIDADE (COLUNA REC)
-
-| Código | Mídia | Temas em Comum |
-|---|---|---|
-| BTS | Beyond Two Souls | Sobrenatural, vínculo emocional, escolhas morais, paranormal, luto |
-| LIS | Life is Strange | Coming-of-age, escolhas, amizade intensa, queer, nostalgia, tempo |
-| RH | Rocky Horror Picture Show | Camp, gênero fluido, musical, liberação sexual, cult, excesso |
-| LB | Look Back | Amizade profunda, arte, perda, dedicação, criatividade, anime |
-| VD | Videodrome | Body horror, distorção da realidade, mídia, carne, Cronenberg |
-| CE | Celeste | Saúde mental, identidade trans, superação, autodescoberta, luta interna |
-| BR | Blade Runner | Sci-fi existencial, identidade, humanidade artificial, noir, chuva |
-| DD | Donnie Darko | Viagem no tempo, adolescência sombria, existencialismo, realidade alternativa |
-
----
+<!-- Legenda de colunas: EROT=Erotismo EXPL=Explicitude PROF=Profundidade PERT=Perturbação TABU=Tabu RARI=Raridade CULT=Valor Cultural -->
+<!-- Tipos: L=Lésbico G=Gay T=Trans B=Bi/Pan H=Hétero X=Tabu V=Voyeurismo R=Religião Z=Vampiro C=Comédia SF=Sci-Fi PH=Psicológico BH=Body Horror EC=Ecchi HN=Hentai AN=Anime SE=Série BR=Brasil JP=Japão KR=Coreia HK=Hong Kong TW=Taiwan FR=França -->
+<!-- REC: BTS=Beyond Two Souls LIS=Life is Strange RH=Rocky Horror LB=Look Back VD=Videodrome CE=Celeste BR=Blade Runner DD=Donnie Darko -->
+<!-- Níveis: 1=Sutil 2=Erótico 3=Muito Erótico 4=Altamente Explícito 5=Fronteira Pornô -->
 
 ## NÍVEL 1 — SUTIL
 
@@ -160,7 +98,6 @@
 | 87 | The Promised Neverland S1 | 2019 | Anime | H,PH,AN,SE | 1 | 1 | 5 | 4 | 4 | 1 | 5 | BTS,DD | Anime série. Orfanato + segredo terrível. |
 | 88 | Attack on Titan | 2013 | Anime | H,AN,SE | 1 | 1 | 5 | 5 | 4 | 1 | 5 | BTS,DD | Anime série. Titãs + genocídio + liberdade. |
 | 89 | Steins;Gate | 2011 | Anime | H,SF,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 5 | DD,LIS | Anime série. Viagem no tempo + consequências. |
-| 90 | Puella Magi Madoka Magica — ver #64 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 91 | A Place Further Than the Universe | 2018 | Anime | H,AN,SE | 1 | 1 | 5 | 2 | 1 | 1 | 4 | LB,CE,LIS | Anime série. Amizade + Antártica + superação. |
 | 92 | March Comes In Like a Lion | 2016 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 5 | CE,LB | Anime série. Depressão + shogi + solidão + família. |
 | 93 | Violet Evergarden | 2018 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 5 | LB,BTS | Anime série. Pós-guerra + emoções + cartas + luto. |
@@ -226,8 +163,6 @@
 | 153 | The Truman Show | 1998 | Filme | H,SF,V | 1 | 1 | 5 | 3 | 3 | 1 | 5 | VD,DD,BR | Jim Carrey. Vida como programa de TV. |
 | 154 | Being John Malkovich | 1999 | Filme | H,T,SF | 3 | 2 | 5 | 3 | 3 | 1 | 5 | VD,DD,RH | Spike Jonze. Portal para outra mente. Identidade + gênero. |
 | 155 | Mulholland Drive | 2001 | Filme | L | 4 | 3 | 5 | 3 | 2 | 1 | 5 | VD,BTS,DD | Lynch. Identidade fragmentada. BBC: melhor do séc XXI. |
-| 156 | The Rocky Horror Picture Show | 1975 | Filme | B,T,C | 4 | 3 | 4 | 1 | 3 | 1 | 5 | RH | O filme de referência. Tim Curry. Liberação sexual total. |
-| 157 | Hedwig and the Angry Inch | 2001 | Filme | T,C | 3 | 3 | 5 | 2 | 3 | 2 | 5 | RH,CE | Musical punk trans. Cirurgia malfeita. Cult. |
 | 158 | Velvet Goldmine | 1998 | Filme | G,B | 3 | 3 | 4 | 1 | 2 | 2 | 4 | RH,DD | Glam rock + bissexualidade. Inspirado em Bowie. |
 | 159 | Phantom of the Paradise | 1974 | Filme | H | 2 | 1 | 5 | 2 | 2 | 3 | 5 | RH,DD | Brian De Palma. Musical dark. Pacto com diabo. |
 | 160 | Pink Floyd: The Wall | 1982 | Filme | H,PH | 3 | 3 | 5 | 4 | 3 | 2 | 5 | VD,DD | Musical + animação. Isolamento + fascismo + loucura. |
@@ -371,7 +306,6 @@
 | 291 | The Skin I Live In | 2011 | Filme | T,H | 4 | 4 | 5 | 5 | 5 | 1 | 5 | VD,BTS | Almodóvar. Banderas. Cirurgião cria nova pele e gênero. |
 | 292 | Cruising | 1980 | Filme | G | 4 | 5 | 4 | 3 | 4 | 2 | 5 | VD,RH | Al Pacino infiltrado em bares de couro gay. Sexo real. |
 | 293 | Querelle | 1982 | Filme | G | 5 | 4 | 4 | 2 | 3 | 2 | 5 | RH | Fassbinder. Corpos suados. Tom of Finland. |
-| 294 | Laranja Mecânica | 1971 | Filme | H | 3 | 4 | 5 | 5 | 4 | 1 | 5 | VD,RH,DD | Kubrick. Ultraviolência + livre arbítrio. |
 | 295 | O Exorcista | 1973 | Filme | R | 2 | 4 | 5 | 5 | 4 | 1 | 5 | VD,BTS | Friedkin. Possessão demoníaca. Cena do crucifixo. |
 | 296 | A Última Tentação de Cristo | 1988 | Filme | R | 3 | 3 | 5 | 3 | 5 | 1 | 5 | VD | Scorsese. Jesus imagina vida sexual. Proibido. |
 | 297 | Stepfather (Beau-père) | 1981 | Filme | H,X | 3 | 3 | 4 | 3 | 4 | 3 | 4 | BTS | Padrasto + enteada após morte da mãe. |
@@ -379,7 +313,6 @@
 | 299 | Lady Chatterley's Lover (1981) | 1981 | Filme | H | 4 | 4 | 3 | 1 | 2 | 2 | 4 | RH | Just Jaeckin. Versão clássica. |
 | 300 | Babygirl | 2024 | Filme | H | 5 | 4 | 4 | 2 | 3 | 1 | 4 | BTS,CE | Nicole Kidman. CEO + estagiário BDSM. |
 | 301 | Happy Together | 1997 | Filme | G | 3 | 3 | 5 | 2 | 2 | 1 | 5 | LB,CE | Wong Kar-wai. Casal gay em Buenos Aires. |
-| 302 | Velvet Goldmine | 1998 | Filme | G,B | 3 | 3 | 4 | 1 | 2 | 2 | 4 | RH,DD | Glam rock + bissexualidade. Inspirado em Bowie. |
 | 303 | Mysterious Skin | 2004 | Filme | G | 3 | 4 | 5 | 5 | 5 | 2 | 5 | BTS,VD,DD | Gregg Araki. Abuso infantil + prostituição. |
 | 304 | Keep the Lights On | 2012 | Filme | G | 4 | 3 | 4 | 2 | 2 | 2 | 4 | CE | Casal gay em NYC. Vício + amor. |
 | 305 | Passages | 2023 | Filme | G,B | 4 | 4 | 4 | 2 | 2 | 1 | 4 | CE | Cineasta gay entre homem e mulher. |
@@ -415,10 +348,8 @@
 | 335 | Titane | 2021 | Filme | H,T,BH | 4 | 5 | 5 | 5 | 5 | 1 | 5 | VD,CE | Julia Ducournau. Palma de Ouro. Sexo com carro. Trans. |
 | 336 | Raw (Grave) | 2016 | Filme | H,BH | 3 | 4 | 5 | 4 | 4 | 1 | 5 | VD,DD | Ducournau. Vegetariana descobre desejo por carne humana. |
 | 337 | Bones and All | 2022 | Filme | H | 3 | 4 | 5 | 4 | 4 | 1 | 4 | LIS,DD | Guadagnino. Jovens canibais apaixonados. |
-| 338 | Under the Skin | 2013 | Filme | H,SF,BH | 3 | 3 | 5 | 4 | 3 | 1 | 5 | BR,VD | Scarlett Johansson. Alien seduz homens. Hipnótico. |
 | 339 | Trouble Every Day | 2001 | Filme | H,BH | 4 | 4 | 4 | 5 | 4 | 3 | 4 | VD | Claire Denis. Canibalismo erótico. Vincent Gallo. |
 | 340 | Excision | 2012 | Filme | H,BH | 3 | 3 | 4 | 5 | 4 | 2 | 4 | VD,DD | Adolescente com fantasias cirúrgicas sexuais. AnnaLynne McCord. |
-| 341 | Teeth | 2007 | Filme | H,BH,C | 3 | 3 | 4 | 4 | 4 | 1 | 4 | VD,RH | Vagina dentata. Comédia body horror. |
 | 342 | In My Skin (Dans ma peau) | 2002 | Filme | H,BH | 3 | 3 | 5 | 5 | 4 | 3 | 4 | VD,CE | Marina de Van. Autolesão como obsessão. |
 | 343 | The Neon Demon | 2016 | Filme | L,H,BH | 4 | 3 | 4 | 4 | 4 | 1 | 4 | VD,RH,BR | Refn. Modelo em Hollywood. Beleza + canibalismo + necrofilia. |
 | 344 | Suspiria (2018) | 2018 | Filme | H,BH | 3 | 3 | 5 | 5 | 4 | 1 | 5 | VD,DD | Guadagnino. Dança + bruxaria + body horror. |
@@ -448,10 +379,6 @@
 | 368 | District 9 | 2009 | Filme | H,SF,BH | 1 | 1 | 5 | 4 | 3 | 1 | 5 | BR,VD | Blomkamp. Alienígenas segregados. Transformação. |
 | 369 | Never Let Me Go | 2010 | Filme | H,SF | 3 | 2 | 5 | 4 | 4 | 1 | 5 | BR,BTS,LIS | Clones criados para doação de órgãos. Kazuo Ishiguro. |
 | 370 | Waking Life | 2001 | Filme | H,PH | 1 | 1 | 5 | 2 | 1 | 2 | 5 | DD | Linklater. Rotoscopia. Sonhos + filosofia + consciência. |
-| 371 | Paprika — já listado #56 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 372 | Perfect Blue — já listado #55 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 373 | Akira — já listado #54 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 374 | Ghost in the Shell — já listado #53 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 375 | Scum's Wish (Kuzu no Honkai) | 2017 | Anime | H,L,AN,SE | 4 | 3 | 5 | 3 | 3 | 1 | 4 | LIS | Anime série. Relacionamentos tóxicos + desejo + solidão. |
 | 376 | Citrus | 2018 | Anime | L,AN,SE | 3 | 2 | 3 | 1 | 2 | 1 | 3 | LIS | Anime série. Meias-irmãs + romance lésbico. |
 | 377 | Sakura Trick | 2014 | Anime | L,AN,SE | 3 | 2 | 3 | 1 | 1 | 1 | 3 | LIS | Anime série. Beijos lésbicos frequentes. |
@@ -459,16 +386,12 @@
 | 379 | Candy Boy | 2008 | Anime | L,X,AN,SE | 2 | 1 | 3 | 1 | 3 | 3 | 3 | LIS | Anime ONA. Romance entre irmãs gêmeas. |
 | 380 | Yuri Kuma Arashi | 2015 | Anime | L,AN,SE | 3 | 2 | 5 | 2 | 3 | 2 | 4 | RH,CE | Anime série. Ikuhara. Ursos lésbicos + exclusão. |
 | 381 | Sarazanmai | 2019 | Anime | G,AN,SE | 3 | 2 | 5 | 3 | 3 | 2 | 4 | RH,CE | Anime série. Ikuhara. Kappas + segredos + desejos gay. |
-| 382 | Revolutionary Girl Utena — já listado #66 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 383 | Utena: Apocalypse — já listado #67 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 384 | Devilman Crybaby — já listado #76 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 385 | Nana | 2006 | Anime | H,B,AN,SE | 3 | 3 | 5 | 3 | 2 | 1 | 5 | LIS,LB | Anime série. Duas Nanas. Rock + amor + amizade. |
 | 386 | Paradise Kiss | 2005 | Anime | H,B,AN,SE | 3 | 3 | 4 | 1 | 2 | 2 | 4 | RH,LB | Anime série. Moda + romance + George. Ai Yazawa. |
 | 387 | Yosuga no Sora | 2010 | Anime | H,X,EC,AN,SE | 5 | 4 | 3 | 3 | 5 | 2 | 3 | LIS | Anime série. Incesto entre gêmeos. Ecchi extremo. |
 | 388 | School Days | 2007 | Anime | H,AN,SE | 4 | 3 | 3 | 5 | 4 | 2 | 4 | DD | Anime série. Harem dark. Final sangrento infame. |
 | 389 | Domestic Girlfriend (Domestic na Kanojo) | 2019 | Anime | H,X,EC,AN,SE | 4 | 3 | 3 | 2 | 4 | 1 | 3 | LIS | Anime série. Garoto apaixonado pela professora que vira meia-irmã. |
 | 390 | Mysterious Girlfriend X (Nazo no Kanojo X) | 2012 | Anime | H,EC,AN,SE | 3 | 2 | 4 | 2 | 3 | 2 | 4 | VD | Anime série. Romance via saliva. Fetichismo estranho. |
-| 391 | Elfen Lied — já listado #78 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 392 | High School DxD | 2012 | Anime | H,EC,AN,SE | 5 | 4 | 2 | 1 | 2 | 1 | 3 | RH | Anime série. Ecchi + demônios + harém. |
 | 393 | Prison School | 2015 | Anime | H,EC,C,AN,SE | 5 | 4 | 3 | 2 | 3 | 1 | 4 | RH | Anime série. Ecchi extremo + comédia + prisão escolar. |
 | 394 | Kill la Kill | 2013 | Anime | H,EC,AN,SE | 4 | 3 | 4 | 2 | 2 | 1 | 5 | RH,VD | Anime série. Trigger. Roupas dão poder. Nudez como empoderamento. |
@@ -515,7 +438,6 @@
 | 428 | Senso '45 | 2002 | Filme | H | 5 | 4 | 3 | 2 | 2 | 3 | 3 | RH | Tinto Brass. Drama de guerra erótico. |
 | 429 | Monamour | 2006 | Filme | H | 5 | 5 | 3 | 2 | 2 | 3 | 3 | RH | Tinto Brass. Último filme erótico relevante. |
 | 430 | Tokyo Decadence | 1992 | Filme | H,JP | 5 | 5 | 4 | 3 | 3 | 3 | 4 | VD | Ryû Murakami. Prostituta SM em Tóquio. |
-| 431 | Crash (Cronenberg) — já listado #320 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 432 | Matador | 1986 | Filme | H | 4 | 4 | 4 | 4 | 4 | 1 | 4 | RH,VD | Almodóvar. Toureiro assassina no orgasmo. Banderas. |
 | 433 | Maitresse | 1976 | Filme | H | 4 | 5 | 4 | 5 | 4 | 3 | 4 | VD | Schroeder. Depardieu + dominatrix. BDSM real filmado. |
 | 434 | Guilty of Romance | 2011 | Filme | H,JP | 5 | 5 | 4 | 4 | 4 | 3 | 4 | VD,DD | Sion Sono. Esposa vira prostituta. Assassinato. |
@@ -578,9 +500,7 @@
 | 491 | Strange Circus | 2005 | Filme | H,X,JP | 5 | 5 | 5 | 5 | 5 | 3 | 4 | VD,DD,BTS | Sion Sono. Incesto pai-filha + voyeurismo forçado. |
 | 492 | Love Exposure | 2008 | Filme | H,JP | 5 | 5 | 5 | 4 | 4 | 2 | 5 | DD,RH,BTS | Sion Sono. 4 horas. Upskirt + culto + cross-dressing. |
 | 493 | Antiporno | 2016 | Filme | H,JP | 5 | 5 | 4 | 3 | 3 | 3 | 4 | VD,RH | Sion Sono. Releitura feminista dos Roman Porno. |
-| 494 | Audition — já listado #351 no Bloco 2 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 495 | Visitor Q | 2001 | Filme | H,X,JP | 4 | 5 | 4 | 5 | 5 | 3 | 4 | VD,DD | Miike. Necrofilia + incesto + lactação + assassinato. |
-| 496 | Ichi the Killer — já listado #352 no Bloco 2 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 497 | Gozu | 2003 | Filme | H,JP | 4 | 5 | 4 | 5 | 4 | 3 | 4 | VD,DD | Miike. Surrealismo + body horror + erotismo bizarro. |
 | 498 | Imprint (Masters of Horror) | 2006 | Filme | H,JP | 4 | 5 | 4 | 5 | 5 | 2 | 4 | VD | Miike. Showtime recusou exibir. Tortura + aborto. |
 | 499 | Manji (All Mixed Up) | 1964 | Filme | L,JP | 4 | 3 | 4 | 2 | 3 | 4 | 4 | VD,LIS | Masumura. Tanizaki. Obsessão lésbica entre casadas. |
@@ -601,19 +521,12 @@
 | 507 | The Beast (La Bête) | 1975 | Filme | H,X | 5 | 5 | 4 | 5 | 5 | 3 | 5 | VD,RH | Borowczyk. Bestialidade + blasfêmia + incesto. |
 | 508 | Immoral Tales | 1973 | Filme | H,X | 5 | 5 | 4 | 4 | 5 | 3 | 5 | VD | Borowczyk. 4 contos. Felação cósmica. Incesto papal. |
 | 509 | Immoral Women | 1979 | Filme | H,X | 5 | 5 | 4 | 4 | 4 | 3 | 5 | VD | Borowczyk. Continuação. Sexo real em 1 cena. |
-| 510 | Anticristo — já listado #310 no Bloco 2 como Nível 2 — RECLASSIFICADO | 2009 | Filme | H | 5 | 5 | 5 | 5 | 5 | 1 | 5 | VD,DD,BTS | Von Trier. Automutilação genital. Sexo real com dublês. |
 | 511 | Irréversible | 2002 | Filme | H | 2 | 5 | 5 | 5 | 5 | 1 | 5 | VD,DD | Gaspar Noé. Estupro 10 min plano único. Extintor no rosto. |
 | 512 | Dogtooth (Kynodontas) | 2009 | Filme | H,X | 4 | 5 | 5 | 5 | 5 | 1 | 5 | VD,DD | Lanthimos. Incesto familiar. Sexo real confirmado. |
 | 513 | Pola X | 1999 | Filme | H,X | 4 | 5 | 4 | 4 | 5 | 3 | 4 | VD,DD | Leos Carax. Incesto entre irmãos. Sexo real com dublês. |
-| 514 | Love Exposure — já listado #492 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 515 | Strange Circus — já listado #491 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 516 | Visitor Q — já listado #495 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 517 | Moebius — já listado #472 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 518 | Dumplings (Gaau Ji) | 2004 | Filme | H,HK | 3 | 5 | 4 | 5 | 5 | 2 | 4 | VD | Fruit Chan. Come dumplings de fetos para rejuvenescer. |
 | 519 | Ebola Syndrome | 1996 | Filme | H,HK | 3 | 5 | 2 | 5 | 5 | 3 | 4 | VD | Anthony Wong. Assassino/estuprador/canibal espalha Ebola. |
 | 520 | The Untold Story | 1993 | Filme | H,HK | 3 | 5 | 3 | 5 | 5 | 3 | 4 | VD | Anthony Wong. Bolinhos de carne humana. |
-| 521 | Tetsuo: The Iron Man — já listado #331 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 522 | A Snake of June — já listado #333 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 523 | Naked Blood (Megyaku) | 1996 | Filme | H,JP | 4 | 5 | 3 | 5 | 5 | 5 | 4 | VD | Droga que transforma dor em prazer. Mulher come próprio olho. |
 | 524 | Tumbling Doll of Flesh | 1998 | Filme | H,JP | 5 | 5 | 1 | 5 | 5 | 5 | 2 | VD | Pseudo-snuff. Atriz pornô desmembrada. Dos mais extremos. |
 | 525 | Grotesque | 2009 | Filme | H,JP | 2 | 5 | 1 | 5 | 5 | 4 | 3 | VD | Casal torturado sexual e fisicamente. Banido no UK. |
@@ -682,8 +595,6 @@
 | 588 | Flowers in the Attic (2014) | 2014 | Filme | H,X | 3 | 3 | 3 | 3 | 5 | 1 | 3 | DD | Remake TV. Mais explícito. |
 | 589 | Stoker | 2013 | Filme | H,X | 3 | 3 | 4 | 4 | 4 | 1 | 4 | DD,BTS | Park Chan-wook. Tio misterioso + sobrinha. |
 | 590 | The Quiet | 2005 | Filme | H,X | 3 | 3 | 3 | 3 | 5 | 2 | 3 | DD | Abuso sexual + garota surda + segredos. |
-| 591 | Possession (Żuławski) — já listado #352 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 592 | Titane — já listado #335 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 593 | Martyrs | 2008 | Filme | H | 1 | 5 | 5 | 5 | 5 | 2 | 5 | VD | Laugier. Tortura extrema com propósito metafísico. |
 | 594 | Succubus (Necronomicon) | 1968 | Filme | H | 4 | 3 | 3 | 2 | 2 | 4 | 4 | VD,RH | Jesús Franco. Erotismo onírico. |
 | 595 | Venus in Furs | 1969 | Filme | H | 4 | 3 | 3 | 2 | 2 | 4 | 4 | VD | Franco. Jazz + fantasia + vingança. |
@@ -695,10 +606,6 @@
 
 ---
 
-## NÍVEL 4 — ALTAMENTE EXPLÍCITO (continuação)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 601 | Ilsa, the Wicked Warden | 1977 | Filme | H | 5 | 5 | 2 | 5 | 5 | 4 | 4 | VD | Jesús Franco. Prisão feminina + tortura + sadismo. |
 | 602 | Jack the Ripper (Franco) | 1976 | Filme | H | 3 | 3 | 2 | 4 | 3 | 4 | 3 | VD | Franco. Versão exploitation de Jack. |
 | 603 | Faceless | 1987 | Filme | H | 3 | 4 | 3 | 4 | 3 | 3 | 3 | VD | Franco. Cirurgião + roubo de rostos. |
@@ -776,10 +683,6 @@
 | 668 | Deite Comigo (Lie With Me) | 2005 | Filme | H | 5 | 5 | 3 | 2 | 2 | 2 | 4 | VD | Atores confirmaram sexo real. Compulsão + amor. |
 | 669 | All About Anna | 2005 | Filme | H | 5 | 5 | 2 | 2 | 2 | 3 | 3 | VD | Von Trier produção. Puzzy Power. Sexo real total. |
 | 670 | Os Idiotas (Idioterne) | 1998 | Filme | H | 4 | 5 | 4 | 3 | 3 | 2 | 5 | VD,DD | Von Trier. Dogma 95. Inaugurou onda de sexo real. |
-| 671 | Ninfomaníaca — já listado #409 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 672 | Anticristo — já listado #510 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 673 | Pola X — já listado #513 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 674 | Dogtooth — já listado #512 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 675 | Pink Flamingos | 1972 | Filme | H,X | 3 | 5 | 2 | 5 | 5 | 2 | 5 | RH,VD | John Waters. Coprofagia REAL. Divine. Sexo oral real. |
 | 676 | Sweet Sweetback | 1971 | Filme | H | 4 | 5 | 4 | 3 | 3 | 3 | 5 | VD | Van Peebles. Sexo real. Diretor contraiu DST filmando. |
 | 677 | Battle in Heaven | 2005 | Filme | H | 4 | 5 | 5 | 3 | 3 | 3 | 5 | VD,BR | Reygadas. México. Sexo real. Sight & Sound top 30. |
@@ -802,7 +705,6 @@
 | 694 | Constance | 2003 | Filme | H | 5 | 5 | 2 | 2 | 2 | 4 | 3 | VD | Von Trier / Puzzy Power. Pornô feminista. |
 | 695 | A Hole in My Heart | 2004 | Filme | H | 4 | 5 | 3 | 5 | 4 | 4 | 4 | VD,DD | Moodysson. Pai filma pornô amador com filho presente. |
 | 696 | Twentynine Palms | 2003 | Filme | H | 4 | 5 | 4 | 5 | 4 | 3 | 4 | VD | Bruno Dumont. Casal no deserto. Sexo gráfico + estupro. |
-| 697 | Trouble Every Day — já listado #339 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 698 | Import/Export | 2007 | Filme | H | 4 | 4 | 4 | 4 | 3 | 3 | 4 | VD | Ulrich Seidl. Exploração + miséria + webcam sex. Austríaco. |
 | 699 | Paradise: Love | 2012 | Filme | H | 4 | 4 | 4 | 4 | 4 | 2 | 4 | VD | Seidl. Turismo sexual no Quênia. Mulheres austríacas. |
 | 700 | Paradise: Faith | 2012 | Filme | H,R | 3 | 4 | 4 | 4 | 5 | 3 | 4 | VD | Seidl. Fanatismo religioso + crucifixo como objeto sexual. |
@@ -821,7 +723,6 @@
 | 713 | Spermula | 1976 | Filme | H,Z | 5 | 5 | 2 | 2 | 3 | 5 | 3 | VD | Alienígenas vampíricos drenam esperma. Francês. |
 | 714 | Lust for Dracula | 2004 | Filme | L,Z | 5 | 5 | 1 | 1 | 2 | 4 | 2 | VD | Vampirismo lésbico softcore/hardcore. Baixo orçamento. |
 | 715 | Love Actually... Sucks! | 2011 | Filme | B,HK | 4 | 5 | 3 | 2 | 2 | 4 | 3 | VD | Hong Kong. Inspirado em Love Actually. Sexo real confirmado. |
-| 716 | Immoral Women — já listado #509 | — | — | — | — | — | — | — | — | — | — | — | — |
 
 ---
 
@@ -842,7 +743,6 @@
 | 727 | Kissed | 1996 | Filme | H | 3 | 3 | 4 | 4 | 5 | 3 | 4 | VD | Stopkewich. Necrofilia em funerária. Tratamento poético. |
 | 728 | Kids | 1995 | Filme | H,X | 2 | 4 | 5 | 5 | 5 | 1 | 5 | LIS,DD | Larry Clark. Adolescentes + HIV + predação sexual. |
 | 729 | Pretty Baby | 1978 | Filme | H,X | 3 | 3 | 4 | 4 | 5 | 2 | 4 | VD | Brooke Shields 12 anos em bordel. Louis Malle. |
-| 730 | Irréversible — já listado #511 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 731 | Inside (À l'intérieur) | 2007 | Filme | H | 1 | 5 | 4 | 5 | 4 | 2 | 4 | VD | New French Extremity. Grávida + intrusa com tesoura. |
 | 732 | Haute Tension | 2003 | Filme | H | 2 | 5 | 4 | 5 | 4 | 2 | 4 | VD,DD | Alexandre Aja. Slasher francês. Revelação chocante. |
 | 733 | Frontière(s) | 2007 | Filme | H | 2 | 5 | 3 | 5 | 4 | 2 | 4 | VD | Xavier Gens. Neo-nazistas canibais. França. |
@@ -905,7 +805,6 @@
 | 776 | Plan B | 2021 | Filme | L,C | 2 | 2 | 3 | 1 | 1 | 1 | 2 | LIS | Duas amigas + pílula do dia seguinte. Uma é lésbica. |
 | 777 | Jennifer's Body | 2009 | Filme | L,C | 3 | 3 | 3 | 2 | 2 | 1 | 4 | RH,LIS | Megan Fox + Amanda Seyfried. Horror feminista queer. |
 | 778 | La Cage aux Folles | 1978 | Filme | G,C | 2 | 2 | 4 | 1 | 1 | 2 | 5 | RH | Original francês. Casal gay finge ser hétero. |
-| 779 | The Birdcage — já listado #24 como Nível 1 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 780 | Bros | 2022 | Filme | G,C | 3 | 3 | 3 | 1 | 1 | 1 | 4 | LIS | Primeira comédia rom gay de grande estúdio. Billy Eichner. |
 | 781 | Red, White & Royal Blue | 2023 | Filme | G,C | 3 | 3 | 3 | 1 | 1 | 1 | 3 | LIS | Filho da presidente + príncipe inglês. Amazon. |
 | 782 | Fire Island | 2022 | Filme | G,C | 3 | 3 | 3 | 1 | 1 | 1 | 3 | LIS | Versão gay de Orgulho e Preconceito. Hulu. |
@@ -989,12 +888,10 @@
 | 853 | Bodies Bodies Bodies | 2022 | Filme | L | 3 | 2 | 3 | 2 | 1 | 1 | 3 | LIS,DD | A24. Protagonista lésbica. Gen Z + thriller. |
 | 854 | The Color Purple (1985/2023) | 1985 | Filme | L | 2 | 1 | 5 | 2 | 2 | 1 | 5 | BTS | Spielberg. Relação lésbica sutil entre Celie e Shug. |
 | 855 | The Matrix (franquia) | 1999 | Filme | T,SF | 2 | 2 | 5 | 2 | 2 | 1 | 5 | BR,DD,CE,VD | Wachowskis. Alegoria trans. Realidade + escolha. |
-| 856 | Sense8 | 2015 | Serie | B,T,SF,SE | 5 | 4 | 5 | 2 | 3 | 1 | 5 | RH,CE,BTS,BR | Wachowskis. 8 mentes conectadas. Orgias pansexuais. Trans. |
 | 857 | The Old Guard | 2020 | Filme | G | 2 | 2 | 3 | 2 | 1 | 1 | 3 | BTS | Charlize Theron + casal gay imortal. Netflix. |
 | 858 | Anora | 2024 | Filme | H | 4 | 4 | 5 | 2 | 2 | 1 | 5 | RH | Sean Baker. Stripper casa com filho de oligarca. Palma de Ouro. |
 | 859 | Poor Things | 2023 | Filme | H,B | 4 | 4 | 5 | 3 | 3 | 1 | 5 | RH,VD,BR | Lanthimos. Emma Stone. Ressurreição + descoberta sexual. |
 | 860 | Emilia Pérez | 2024 | Filme | T | 3 | 3 | 4 | 2 | 4 | 1 | 4 | CE,RH | Audiard. Líder de cartel faz transição. Musical. Cannes. |
-| 861 | Queer | 2024 | Filme | G | 4 | 4 | 4 | 2 | 2 | 1 | 4 | LB | Guadagnino. Daniel Craig gay no México anos 50. |
 | 862 | Challengers | 2024 | Filme | B | 3 | 2 | 4 | 1 | 2 | 1 | 4 | LIS | Guadagnino. Triângulo amoroso + tênis. Tensão sexual. |
 | 863 | Priscilla | 2023 | Filme | H | 3 | 2 | 4 | 2 | 2 | 1 | 4 | LIS | Sofia Coppola. A história de Priscilla Presley. |
 | 864 | Angry Indian Goddesses | 2015 | Filme | L | 3 | 2 | 4 | 2 | 3 | 2 | 4 | LIS | Sete amigas em Goa. Uma é lésbica. Feminismo + Índia. |
@@ -1007,9 +904,6 @@
 
 | # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 867 | Interspecies Reviewers — já listado #398 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 868 | Redo of Healer — já listado #399 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 869 | Yosuga no Sora — já listado #387 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 870 | Bible Black | 2001 | Anime | H,HN,X,AN | 5 | 5 | 2 | 4 | 5 | 2 | 4 | VD | Hentai. Ocultismo + rituais sexuais + escola. |
 | 871 | La Blue Girl | 1992 | Anime | H,HN,AN | 5 | 5 | 1 | 3 | 4 | 3 | 4 | VD | Hentai. Ninjas + tentáculos + comédia. Clássico. |
 | 872 | Urotsukidoji: Legend of the Overfiend | 1989 | Anime | H,HN,BH,AN | 5 | 5 | 3 | 5 | 5 | 2 | 5 | VD | Hentai. Demônios + tentáculos + apocalipse. Marco do gênero. |
@@ -1033,7 +927,6 @@
 | 890 | Pale Cocoon | 2005 | Anime | H,SF,AN | 1 | 1 | 5 | 3 | 1 | 3 | 4 | BR | Curta. Memórias da Terra. Pós-apocalipse subterrâneo. |
 | 891 | Penguin Highway | 2018 | Anime | H,SF,AN | 1 | 1 | 5 | 1 | 1 | 1 | 4 | LIS,DD | Garoto + pinguins misteriosos + universo. |
 | 892 | Maquia: When the Promised Flower Blooms | 2018 | Anime | H,AN | 1 | 1 | 5 | 3 | 2 | 1 | 4 | LB,BTS | Imortal adota criança humana. Tempo + maternidade. |
-| 893 | Millennium Actress — já listado #62 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 894 | The Wind Rises | 2013 | Anime | H,AN | 1 | 1 | 5 | 3 | 2 | 1 | 5 | LB | Miyazaki. Criador do Zero. Arte + guerra + amor. |
 | 895 | Whisper of the Heart | 1995 | Anime | H,AN | 1 | 1 | 5 | 1 | 1 | 1 | 5 | LB | Ghibli. Menina escritora + menino luthier. Criatividade. |
 | 896 | When Marnie Was There | 2014 | Anime | L,AN | 1 | 1 | 5 | 2 | 1 | 1 | 4 | LIS,LB,BTS | Ghibli. Amizade misteriosa entre duas garotas. Subtexto lésbico. |
@@ -1108,7 +1001,6 @@
 | 958 | Westworld S1 | 2016 | Serie | H,SF,SE | 4 | 4 | 5 | 4 | 4 | 1 | 5 | BR,VD | Robôs + consciência + livre arbítrio + parque temático. |
 | 959 | The OA | 2016 | Serie | H,PH,SF,SE | 1 | 1 | 5 | 3 | 3 | 1 | 4 | BTS,DD | Netflix. NDEs + dimensões + dança como portal. |
 | 960 | Dark (série alemã) | 2017 | Serie | H,SF,SE | 2 | 2 | 5 | 4 | 4 | 1 | 5 | DD | Netflix. Viagem no tempo + árvore genealógica impossível. |
-| 961 | Sense8 — já listado #856 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 962 | Euphoria (série) | 2019 | Serie | B,SE | 4 | 4 | 5 | 4 | 4 | 1 | 5 | LIS,DD | HBO. Adolescência + drogas + sexo + identidade. Zendaya Emmy. |
 | 963 | Skins (UK) | 2007 | Serie | B,SE | 3 | 3 | 4 | 3 | 3 | 1 | 4 | LIS,DD | Adolescência britânica. Cada temporada novo elenco. |
 | 964 | Orange Is the New Black | 2013 | Serie | L,SE | 3 | 3 | 5 | 3 | 3 | 1 | 5 | RH,LIS | Netflix. Prisão feminina. LGBTQ+ extenso. |
@@ -1147,1165 +1039,8 @@
 | 997 | Heavenly Delusion (Tengoku Daimakyou) | 2023 | Anime | H,SF,AN,SE | 2 | 2 | 5 | 4 | 3 | 1 | 5 | BR,DD,BTS | Pós-apocalipse + escola misteriosa + identidade + gênero. |
 | 998 | Ranking of Kings | 2021 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 5 | CE,BTS | Príncipe surdo e fraco. Superação pura. Choro garantido. |
 | 999 | Dungeon Meshi (Delicious in Dungeon) | 2024 | Anime | H,C,AN,SE | 1 | 1 | 5 | 2 | 1 | 1 | 5 | LB,DD | Culinária + dungeon + perda + identidade + monstros. |
-| 1000 | Bocchi the Rock! — já listado #927 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 1001 | Sasaki and Miyano | 2022 | Anime | G,AN,SE | 1 | 1 | 4 | 1 | 1 | 1 | 3 | LIS,LB | BL escolar fofo. Fudanshi + senpai. |
-| 1002 | Given — já listado #71 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1003 | Banana Fish — já listado #73 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1004 | Yuri on Ice — já listado #74 | — | — | — | — | — | — | — | — | — | — | — | — |
 | 1005 | The Apothecary Diaries | 2024 | Anime | H,AN,SE | 1 | 1 | 5 | 2 | 2 | 1 | 5 | LIS,BR | Farmacêutica em palácio imperial. Mistério + venenos. |
 
 ---
 
-## CATÁLOGO DE DIRETORES
-
-| # | Diretor | Pais | Especialidade | Filmes na Lista |
-|---|---|---|---|---|
-| 1 | Lars von Trier | Dinamarca | Provocação / Dogma 95 | Os Idiotas, Anticristo, Ninfomaníaca 1&2, Melancholia, Dogville, Breaking the Waves, Dancer in the Dark, The House That Jack Built + produções Puzzy Power (All About Anna, Constance) |
-| 2 | Gaspar Noé | França/Argentina | Cinema de choque sensorial | Love, Irréversible, Enter the Void, Climax, Sozinho Contra Todos, Vortex, Lux Æterna, Destricted |
-| 3 | Catherine Breillat | França | Sexualidade feminina | A Real Young Girl, Romance X, Anatomia do Inferno, Fat Girl, 36 Fillette, Sex Is Comedy, Last Summer |
-| 4 | Tinto Brass | Itália | Erotismo italiano | Calígula, Salon Kitty, The Key, Miranda, Paprika, All Ladies Do It, The Voyeur, Frivolous Lola, Cheeky!, Senso '45, Monamour |
-| 5 | Radley Metzger | EUA | Softcore → Hardcore artístico | Dirty Girls, Carmen Baby, Thérèse and Isabelle, Camille 2000, Lickerish Quartet, Score, The Image, Misty Beethoven, Barbara Broadcast, Maraschino Cherry, Naked Came the Stranger |
-| 6 | Jesús Franco | Espanha | Horror erótico / 200+ filmes | Vampyros Lesbos, Female Vampire, Love Letters Portuguese Nun, Sexual Story of O, Justine and the Whip, Succubus, Venus in Furs, She Killed in Ecstasy, Eugenie de Sade, Barbed Wire Dolls, Ilsa Wicked Warden |
-| 7 | Joe D'Amato | Itália | Exploitation / 200+ filmes | Images in a Convent, Convent of Sinners, Emanuelle series, Beyond the Darkness, Porno Holocaust, Erotic Nights Living Dead, Anthropophagous, Orgasmo Nero |
-| 8 | Jean Rollin | França | Vampirismo erótico poético | Nude Vampire, Shiver of the Vampires, Requiem for a Vampire, Lips of Blood, Fascination, Living Dead Girl, Iron Rose, Grapes of Death, Two Orphan Vampires |
-| 9 | Walerian Borowczyk | Polônia/França | Arte + pornografia | Immoral Tales, The Beast, Behind Convent Walls, Immoral Women, Story of Sin, Dr. Jekyll, Art of Love |
-| 10 | Bernardo Bertolucci | Itália | Drama provocativo | Último Tango em Paris, Luna, Os Sonhadores, The Conformist, 1900, Last Emperor, Stealing Beauty |
-| 11 | Paul Verhoeven | Holanda | Provocação mainstream | Instinto Selvagem, Showgirls, Benedetta, Spetters, Turkish Delight, Fourth Man, Elle, RoboCop |
-| 12 | Pedro Almodóvar | Espanha | Drama queer espanhol | Dark Habits, Matador, Law of Desire, Má Educação, Skin I Live In, All About My Mother, Volver, Pain and Glory |
-| 13 | Park Chan-wook | Coreia | Thriller coreano | A Criada, Oldboy, Thirst, Sympathy Mr. Vengeance, Lady Vengeance, Stoker, Decision to Leave |
-| 14 | Larry Clark | EUA | Juventude provocativa | Kids, Ken Park, Bully, Marfa Girl, The Smell of Us |
-| 15 | Bruce LaBruce | Canadá | Queer radical | No Skin Off My Ass, Hustler White, Skin Flick, Raspberry Reich, Otto, L.A. Zombie, Misandrists, Saint-Narcisse |
-| 16 | Sion Sono | Japão | Cinema extremo | Strange Circus, Love Exposure, Guilty of Romance, Antiporno, Suicide Club, Cold Fish |
-| 17 | Shin'ya Tsukamoto | Japão | Body horror | Tetsuo 1&2, A Snake of June, Vital, Gemini |
-| 18 | Takashi Miike | Japão | Extremo / 100+ filmes | Audition, Visitor Q, Ichi the Killer, Gozu, Imprint |
-| 19 | Kim Ki-duk | Coreia | Drama extremo | The Isle, Bad Guy, Spring Summer, 3-Iron, Samaritan Girl, Moebius, Pieta |
-| 20 | Tsai Ming-liang | Taiwan | Slow cinema erótico | Vive L'Amour, The River, Wayward Cloud, Goodbye Dragon Inn, Days, Stray Dogs |
-| 21 | Xavier Dolan | Canadá | Cinema queer jovem | I Killed My Mother, Heartbeats, Laurence Anyways, Tom at the Farm, Mommy, Matthias & Maxime |
-| 22 | David Lynch | EUA | Surrealismo | Mulholland Drive, Blue Velvet, Lost Highway, Twin Peaks, Wild at Heart, Eraserhead, Inland Empire |
-| 23 | Stanley Kubrick | EUA/UK | Perfeccionismo | Eyes Wide Shut, Laranja Mecânica, Lolita, The Shining, 2001, Full Metal Jacket |
-| 24 | David Cronenberg | Canadá | Body horror | Videodrome, Crash, Dead Ringers, The Fly, Naked Lunch, eXistenZ, Scanners, The Brood, Crimes of the Future |
-| 25 | Brandon Cronenberg | Canadá | Novo body horror | Possessor, Infinity Pool, Antiviral |
-| 26 | Brian De Palma | EUA | Hitchcock erótico | Dressed to Kill, Body Double, Carrie, Blow Out, Scarface, Femme Fatale |
-| 27 | Adrian Lyne | UK/EUA | Thriller erótico mainstream | 9½ Weeks, Fatal Attraction, Lolita, Unfaithful, Deep Water, Flashdance |
-| 28 | Yorgos Lanthimos | Grécia | Surreal perturbador | Dogtooth, A Favorita, Poor Things, The Lobster, Killing of Sacred Deer, Kinds of Kindness |
-| 29 | Pier Paolo Pasolini | Itália | Cinema político/erótico | Saló, Decameron, Canterbury Tales, Arabian Nights, Teorema, Mamma Roma |
-| 30 | Rainer Werner Fassbinder | Alemanha | Cinema queer alemão | Querelle, Bitter Tears Petra von Kant, Fox and His Friends, 13 Moons, Ali Fear, Berlin Alexanderplatz |
-| 31 | Just Jaeckin | França | Erotismo elegante | Emmanuelle, Histoire d'O, Gwendoline, Lady Chatterley |
-| 32 | Russ Meyer | EUA | Sexploitation king | Vixen!, Faster Pussycat, Beyond Valley of Dolls, SuperVixens |
-| 33 | Michael Haneke | Áustria | Drama psicológico | A Professora de Piano, Funny Games, Caché, Amour, White Ribbon |
-| 34 | Satoshi Kon | Japão | Anime psicológico | Perfect Blue, Paprika, Millennium Actress, Tokyo Godfathers, Paranoia Agent, Magnetic Rose |
-| 35 | Kunihiko Ikuhara | Japão | Anime queer simbólico | Revolutionary Girl Utena, Utena Apocalypse, Penguindrum, Yuri Kuma Arashi, Sarazanmai |
-| 36 | Masaaki Yuasa | Japão | Anime experimental | Mind Game, Tatami Galaxy, Night Is Short Walk On Girl, Ping Pong, Eizouken, Ride Your Wave, Devilman Crybaby |
-| 37 | Makoto Shinkai | Japão | Anime romântico | Your Name, 5cm Per Second, Garden of Words, Weathering With You |
-| 38 | Mamoru Hosoda | Japão | Anime familiar | Wolf Children, Boy and the Beast, Belle, Summer Wars |
-| 39 | Céline Sciamma | França | Cinema lésbico/trans | Retrato Jovem em Chamas, Water Lilies, Tomboy, Girlhood, Petite Maman |
-| 40 | Sean Baker | EUA | Marginalidade sexual | Tangerine, Starlet, Red Rocket, Anora, The Florida Project |
-| 41 | Karim Aïnouz | Brasil | Cinema queer brasileiro | Madame Satã, Praia do Futuro, Céu de Suely, Vida Invisível |
-| 42 | Ari Aster | EUA | Horror emocional | Hereditary, Midsommar, Beau Is Afraid |
-| 43 | Robert Eggers | EUA | Folk horror | The Witch, The Lighthouse, The Northman, Nosferatu (2024) |
-| 44 | Julia Ducournau | França | Body horror feminino | Raw, Titane |
-| 45 | Dario Argento | Itália | Giallo | Bird Crystal Plumage, Deep Red, Suspiria, Inferno, Tenebre, Opera |
-| 46 | Mario Bava | Itália | Horror italiano pioneiro | Black Sunday, Blood and Black Lace, Bay of Blood |
-| 47 | Luca Guadagnino | Itália | Sensorialidade | Call Me by Your Name, Suspiria 2018, Bones and All, Challengers, Queer |
-| 48 | Tatsuki Fujimoto | Japão | Mangá/Anime | Look Back, Chainsaw Man (mangá original) |
-
----
-
-## ÍNDICE DE TABUS
-
-### Incesto Mãe-Filho
-503 Ma Mère | 504 Grand Jeté | 505 Luna | 506 Time of Wickedness | 260 Spanking the Monkey | 438 Savage Grace | 262 Murmur of the Heart
-
-### Incesto Pai-Filha / Padrasto
-265 Festa de Família | 266 The War Zone | 231-232 Lolita | 314 Or My Treasure | 315 Nalu on the Border | 297 Stepfather | 512 Dogtooth | 666 Ken Park | 34 Chinatown | 560 Amor Estranho Amor
-
-### Incesto entre Irmãos
-415 Os Sonhadores | 436 Close My Eyes | 407 Sister My Sister | 443 Do Começo ao Fim | 513 Pola X | 718 We Are the Flesh | 437 Daniel & Ana | 318 Cement Garden | 586 Marguerite & Julien | 587-588 Flowers in the Attic | 316 Geschwister | 317 Les Enfants Terribles | 387 Yosuga no Sora
-
-### Incesto Outros
-417 Damage (pai+noiva do filho) | 259 Adore (mãe+filho da amiga) | 439 Oldboy (spoiler) | 502 Calígula | 203 Fire (cunhadas) | 264 Angels & Insects | 472 Moebius (mãe castra filho) | 479 The River (pai+filho em sauna)
-
-### Professor(a)-Aluno(a)
-6 Raparigas de Uniforme | 204 Loving Annabelle | 205 Bloomington | 416 A Professora de Piano | 419 All Things Fair | 229 Notas Sobre Escândalo | 207 When Night Is Falling | 219 Má Educação
-
-### Religião vs. Sexualidade
-403 Benedetta | 201 Desobediência | 203 Fire | 206 Jovem e Alocada | 202 Thelma | 227 Eyes Wide Open | 220 O Padre | 219 Má Educação | 543 The Devils | 58 Eu Vos Saúdo Maria | 296 Última Tentação | 59 Viridiana | 222 Anjos na América | 225 Contracorriente | Toda nunsploitation (#531-#552)
-
-### Necrofilia
-725-726 Nekromantik 1&2 | 727 Kissed | 717 A Serbian Film | 718 We Are the Flesh | 502 Calígula | 495 Visitor Q
-
-### Canibalismo
-719 Cannibal Holocaust | 336 Raw | 337 Bones and All | 718 We Are the Flesh | 675 Pink Flamingos | 440 Cook Thief Wife Lover | 339 Trouble Every Day | 518 Dumplings | 474 Human Space Time | 519 Ebola Syndrome
-
-### BDSM / SM Extremo
-416 A Professora de Piano | 433 Maitresse | 238 Secretária | 435 Ano Bissexto | 432 Matador | 292 Cruising | 418 Porteiro da Noite | 485 Flower and Snake | 486 Wife to Be Sacrificed | 430 Tokyo Decadence | 242 Histoire d'O
-
-### Body Horror
-331-332 Tetsuo | 333 A Snake of June | 495 Visitor Q | 523 Naked Blood | 524 Tumbling Doll | 481 Blind Beast | 482 Horrors of Malformed Men | 335 Titane | 352 Possession | 336 Raw | 172 Rabid | 319 Videodrome | 324 The Fly | 334 Society | 354 The Substance | 344 Suspiria 2018
-
-### Diferença de Idade Extrema
-231-232 Lolita | 228 O Leitor | 28 Harold e Maude | 35 Manhattan | 11 Me Chame Pelo Seu Nome | 419 All Things Fair | 230 Fish Tank | 233 Diary of Teenage Girl | 729 Pretty Baby | 501 Último Tango em Paris
-
-### Homossexualidade Criminalizada
-9 Brokeback Mountain | 3 Moonlight | 10 Maurice | 2 Carol | 4 Rafiki | 12 Meu Próprio Idaho | 72 Circumstance | 309 And Then We Danced | 832 Zenne Dancer | 475 Spring Fever
-
----
-
-## ONDE ASSISTIR / COMPRAR
-
-### Streaming
-
-| Plataforma | Especialidade | Site |
-|---|---|---|
-| MUBI | Cinema de arte, erótico, cult | mubi.com |
-| Criterion Channel | Clássicos, nunsploitation, arte | criterionchannel.com |
-| Tubi | Exploitation, cult (GRÁTIS) | tubitv.com |
-| Kanopy | Arte, documentário (via biblioteca, GRÁTIS) | kanopy.com |
-| Cultpix | Sexploitation, exploitation | cultpix.com |
-| Shudder | Horror, exploitation | shudder.com |
-| Arrow Player | Cult, exploitation europeu | player.arrowvideo.com |
-| Netflix | Mainstream, anime, alguns cult | netflix.com |
-| Amazon Prime | Thrillers eróticos, mainstream | primevideo.com |
-| Crunchyroll | Anime (maior catálogo) | crunchyroll.com |
-| HIDIVE | Anime (títulos exclusivos) | hidive.com |
-| Dekkoo | Cinema gay/queer exclusivo | dekkoo.com |
-| Revry | Streaming LGBTQ+ | revry.tv |
-
-### Blu-ray / DVD
-
-| Selo/Loja | Especialidade | Site |
-|---|---|---|
-| Vinegar Syndrome | Exploitation restaurada 4K | vinegarsyndrome.com |
-| DiabolikDVD | Maior loja de cinema cult | diabolikdvd.com |
-| Severin Films | Horror europeu, exploitation | severinfilms.com |
-| Cult Epics | Tinto Brass, Borowczyk | cultepics.com |
-| Arrow Video | Cult premium | arrowvideo.com |
-| Mondo Macabro | Exploitation mundial | mondomacabrodvd.com |
-| Blue Underground | Horror italiano | blue-underground.com |
-| Kino Lorber | Cinema de arte restaurado | kinolorber.com |
-| Strand Releasing | Cinema queer/indie | strandreleasing.com |
-| Wolfe Video | Cinema LGBTQ+ | wolfevideo.com |
-
-### Ferramentas de Busca
-
-| Ferramenta | Uso | Site |
-|---|---|---|
-| JustWatch | Encontrar em qual streaming está | justwatch.com |
-| Letterboxd | Comunidade + listas + links | letterboxd.com |
-| Blu-ray.com | Verificar edições Blu-ray | blu-ray.com |
-| MyAnimeList | Encontrar anime + reviews | myanimelist.net |
-| AniList | Alternativa a MAL + rastreamento | anilist.co |
-
----
-
-## CONTAGEM FINAL
-
-| Categoria | Total |
-|---|---|
-| Filmes Lésbicos/Sáficos | ~150 |
-| Filmes Gays | ~110 |
-| Filmes Héteros | ~380 |
-| Filmes Trans | ~55 |
-| Comédias Eróticas/Queer | ~50 |
-| Pornochanchadas + Brasil | ~35 |
-| Vampirismo Erótico | ~60 |
-| Nunsploitation | ~30 |
-| Voyeurismo | ~30 |
-| Ero-guro + Asiático Extremo | ~80 |
-| Fronteira Pornô/Erotismo | ~50 |
-| Era de Ouro do Pornô | ~25 |
-| Extremamente Perturbadores | ~35 |
-| Giallo Italiano | ~15 |
-| Blasfêmia | ~15 |
-| Animes (séries + filmes) | ~120 |
-| Séries de TV | ~40 |
-| Sci-Fi Existencial | ~40 |
-| Body Horror | ~30 |
-| Psicológico/Horror | ~25 |
-| TOTAL ENTRADAS ÚNICAS | ~1005 |
-
-| Diretores Catalogados | 48 |
-| Países Representados | 35+ |
-| Período Coberto | 1922-2024 |
-| Categorias de Tabu | 15+ |
-| Categorias de Classificação | 7 |
-| Códigos de Afinidade (REC) | 8 |
-| Tipos de Mídia | 3 (Filme, Serie, Anime) |
-
----
-
----
-
-## CINEMA ERÓTICO INTERNACIONAL — NOVAS RECOMENDAÇÕES
-
-### ESCANDINÁVIA (Suécia, Dinamarca, Noruega, Finlândia, Islândia)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1282 | Fanny Hill (1968) | 1968 | Filme | H | 4 | 3 | 2 | 1 | 2 | 4 | 4 | RH | Suécia. Mac Ahlberg. Adaptação do romance erótico de 1748. |
-| 1283 | The Language of Love (Ur Kärlekens Språk) | 1969 | Filme | H | 5 | 5 | 3 | 1 | 2 | 4 | 5 | VD | Suécia. Torgny Wickman. Documentário sexual explícito. Legalizado pelo governo sueco. |
-| 1284 | More from the Language of Love | 1970 | Filme | H | 5 | 5 | 3 | 1 | 2 | 4 | 4 | VD | Wickman. Sequência. Mais explícito. |
-| 1285 | Swedish Fly Girls (Christa) | 1971 | Filme | H | 4 | 4 | 2 | 1 | 1 | 4 | 3 | RH | Joseph Sarno. Aeromoças suecas + sexo. |
-| 1286 | Butterflies (Sommerfuglar i Vinterland) | 1975 | Filme | H | 4 | 4 | 3 | 1 | 2 | 5 | 3 | RH | Noruega. Morten Kolstad. Raro erotismo norueguês. |
-| 1287 | Quiet Days in Clichy (Stille Dage i Clichy) | 1970 | Filme | H | 5 | 5 | 4 | 2 | 3 | 3 | 5 | VD,DD | Dinamarca. Jens Jørgen Thorsen. Henry Miller adaptado. Sexo real. |
-| 1288 | Without a Stitch (Uden en Trevl) | 1968 | Filme | H | 4 | 4 | 2 | 1 | 1 | 4 | 4 | RH | Dinamarca. Annelise Meineche. Garota busca cura para frigidez. |
-| 1289 | The Sinner (Synden) | 1956 | Filme | H | 3 | 2 | 3 | 1 | 2 | 5 | 4 | LB | Suécia. Primeiro filme escandinavo censurado por nudez. |
-| 1290 | One Summer of Happiness (Hon Dansade en Sommar) | 1951 | Filme | H | 3 | 2 | 4 | 1 | 2 | 4 | 5 | LIS | Suécia. Arne Mattsson. Nudez que chocou o mundo nos anos 50. |
-| 1291 | Fanny and Alexander | 1982 | Filme | H | 2 | 2 | 5 | 3 | 3 | 1 | 5 | DD,BTS | Suécia. Bergman. Família + infância + religião opressora. |
-| 1292 | Persona | 1966 | Filme | L,H | 3 | 2 | 5 | 4 | 3 | 1 | 5 | VD,DD,BTS | Bergman. Identidade fundida entre duas mulheres. Subtexto lésbico. |
-| 1293 | The Silence (Tystnaden) | 1963 | Filme | H,L | 3 | 3 | 5 | 3 | 3 | 2 | 5 | VD | Bergman. Duas irmãs + desejo reprimido + cidade estrangeira. |
-| 1294 | Cries and Whispers (Viskningar och Rop) | 1972 | Filme | L,H | 3 | 3 | 5 | 4 | 3 | 1 | 5 | VD,BTS | Bergman. Três irmãs. Morte + desejo + automutilação. |
-| 1295 | Summer with Monika (Sommaren med Monika) | 1953 | Filme | H | 3 | 2 | 5 | 1 | 2 | 2 | 5 | LIS,LB | Bergman. Jovens fogem para ilha. Nudez que escandalizou. |
-| 1296 | Smiles of a Summer Night | 1955 | Filme | H,C | 3 | 1 | 5 | 1 | 2 | 2 | 5 | RH | Bergman. Comédia erótica de costumes. Inspirou A Little Night Music. |
-| 1297 | Force Majeure (Turist) | 2014 | Filme | H | 2 | 1 | 5 | 3 | 2 | 1 | 5 | DD | Suécia. Ruben Östlund. Avalanche destrói um casamento. |
-| 1298 | The Square | 2017 | Filme | H | 2 | 2 | 5 | 3 | 3 | 1 | 5 | DD,RH | Östlund. Palma de Ouro. Arte + privilégio + sexo + gorila. |
-| 1299 | Triangle of Sadness | 2022 | Filme | H | 3 | 3 | 5 | 4 | 3 | 1 | 5 | RH,DD | Östlund. Palma de Ouro. Iate de luxo + vômito + poder. |
-| 1300 | Border (Gräns) | 2018 | Filme | T,H | 3 | 4 | 5 | 4 | 4 | 1 | 5 | VD,CE | Suécia. Ali Abbasi. Guarda de fronteira + ser mitológico. Cena de sexo no musgo. |
-| 1301 | Holy Spider | 2022 | Filme | H | 3 | 4 | 5 | 5 | 5 | 1 | 5 | VD,DD | Irã/Dinamarca. Abbasi. Serial killer de prostitutas no Irã. Caso real. |
-| 1302 | The Worst Person in the World | 2021 | Filme | H | 3 | 3 | 5 | 2 | 1 | 1 | 5 | LIS,CE | Noruega. Joachim Trier. Julie + escolhas + tempo + identidade. |
-| 1303 | Oslo, August 31st | 2011 | Filme | H | 2 | 2 | 5 | 4 | 2 | 1 | 5 | CE,DD | Trier. Ex-viciado + um dia em Oslo. Baseado em Le Feu Follet. |
-| 1304 | The Hunt (Jagten) | 2012 | Filme | H | 1 | 1 | 5 | 5 | 5 | 1 | 5 | BTS | Dinamarca. Vinterberg. Falsa acusação de pedofilia. Mads Mikkelsen. |
-| 1305 | Another Round (Druk) | 2020 | Filme | H | 2 | 1 | 5 | 3 | 2 | 1 | 5 | DD | Vinterberg. Quatro professores bebem constantemente. Oscar. |
-
-### RÚSSIA / EX-URSS
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1306 | Little Vera (Malenkaya Vera) | 1988 | Filme | H | 4 | 4 | 5 | 3 | 3 | 3 | 5 | DD | Primeiro filme soviético com cena de sexo explícita. Perestroika. |
-| 1307 | The Commissar (Komissar) | 1967 | Filme | H | 2 | 1 | 5 | 3 | 3 | 3 | 5 | BTS | Askoldov. Banido por 20 anos na URSS. Comissária grávida + família judia. |
-| 1308 | Come and See (Idi i Smotri) | 1985 | Filme | H | 1 | 1 | 5 | 5 | 5 | 1 | 5 | BTS,VD | Klimov. WWII na Bielorrússia. O filme de guerra mais perturbador. |
-| 1309 | Loveless (Nelyubov) | 2017 | Filme | H | 3 | 3 | 5 | 4 | 3 | 1 | 5 | DD | Zvyagintsev. Divórcio + filho desaparecido. Sexo + frieza. |
-| 1310 | Elena | 2011 | Filme | H | 2 | 2 | 5 | 4 | 4 | 1 | 5 | DD | Zvyagintsev. Classe + assassinato. Rússia contemporânea. |
-| 1311 | Leviathan | 2014 | Filme | H | 3 | 3 | 5 | 4 | 3 | 1 | 5 | DD | Zvyagintsev. Corrupção + igreja + vodka + sexo. |
-| 1312 | Fidelity (Vernost) — já listado #683 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1313 | DAU. Natasha | 2020 | Filme | H | 5 | 5 | 5 | 5 | 5 | 2 | 5 | VD | Ilya Khrzhanovsky. Simulação de URSS. Sexo real. Interrogatório KGB. Berlim. |
-| 1314 | DAU. Nora Mother | 2020 | Filme | H | 4 | 5 | 5 | 5 | 5 | 2 | 5 | VD | Khrzhanovsky. Parte do projeto DAU megalomaníaco. Sexo real. |
-| 1315 | DAU. Degeneration | 2020 | Filme | H,X | 4 | 5 | 4 | 5 | 5 | 2 | 5 | VD | Khrzhanovsky. Projeto mais polêmico do cinema recente. Fronteira ética. |
-| 1316 | Russian Ark (Russkiy Kovcheg) | 2002 | Filme | H | 1 | 1 | 5 | 1 | 1 | 1 | 5 | BR,LB | Sokurov. Um único plano-sequência de 96 minutos pelo Hermitage. |
-| 1317 | Cargo 200 (Gruz 200) | 2007 | Filme | H,X | 3 | 4 | 5 | 5 | 5 | 3 | 5 | VD | Balabanov. URSS 1984. Policial sequestra + estupra + necrofilia. |
-| 1318 | Of Freaks and Men (Pro Urodov i Lyudei) | 1998 | Filme | H,V | 4 | 4 | 5 | 4 | 4 | 3 | 5 | VD | Balabanov. São Petersburgo 1900. Pornografia vintage + voyeurismo + fotografia obscena. |
-
-### LESTE EUROPEU (Polônia, Hungria, República Tcheca, Romênia, Sérvia, Croácia)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1319 | Short Film About Love (Krótki Film o Milosci) | 1988 | Filme | H,V | 3 | 2 | 5 | 3 | 2 | 1 | 5 | VD,LIS | Polônia. Kieslowski. Voyeur apaixonado. Expansão de Decálogo 6. |
-| 1320 | A Short Film About Killing | 1988 | Filme | H | 1 | 1 | 5 | 5 | 5 | 1 | 5 | DD | Kieslowski. Assassinato + pena de morte. Decálogo 5. |
-| 1321 | Blue (Trois Couleurs: Bleu) | 1993 | Filme | H | 3 | 2 | 5 | 3 | 2 | 1 | 5 | CE,BTS | Kieslowski. Juliette Binoche. Liberdade + luto. |
-| 1322 | White (Trois Couleurs: Blanc) | 1994 | Filme | H | 2 | 2 | 5 | 2 | 2 | 1 | 5 | DD | Kieslowski. Igualdade + vingança + impotência sexual. |
-| 1323 | Red (Trois Couleurs: Rouge) | 1994 | Filme | H,V | 3 | 2 | 5 | 2 | 2 | 1 | 5 | VD,BTS | Kieslowski. Fraternidade + juiz voyeur aposentado. |
-| 1324 | The Hourglass Sanatorium (Sanatorium Pod Klepsydra) | 1973 | Filme | H | 3 | 3 | 5 | 4 | 3 | 4 | 5 | DD,VD | Polônia. Wojciech Has. Surrealismo + sonhos + erotismo + morte. |
-| 1325 | The Saragossa Manuscript (Rekopis Znaleziony w Saragossie) | 1965 | Filme | H | 3 | 2 | 5 | 2 | 2 | 3 | 5 | DD,RH | Has. Histórias dentro de histórias. Erotismo + aventura. 3 horas. |
-| 1326 | Possession — já listado #352 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1327 | Taxidermia — já listado #1211 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1328 | White God (Fehér Isten) | 2014 | Filme | H | 1 | 1 | 5 | 4 | 3 | 1 | 5 | DD,BTS | Hungria. Kornél Mundruczó. Cães abandonados se revoltam. |
-| 1329 | Pieces of a Woman | 2020 | Filme | H | 3 | 3 | 5 | 5 | 3 | 1 | 4 | BTS,CE | Mundruczó. Vanessa Kirby. Parto em casa + perda + luto. |
-| 1330 | Jupiter's Moon (Jupiter Holdja) | 2017 | Filme | H | 2 | 2 | 4 | 3 | 2 | 2 | 4 | BTS,DD | Mundruczó. Refugiado que levita. Metáfora + poder. |
-| 1331 | On Body and Soul (Testről és Lélekről) | 2017 | Filme | H | 3 | 3 | 5 | 3 | 2 | 1 | 5 | CE,LB | Hungria. Ildikó Enyedi. Urso de Ouro. Dois colegas compartilham o mesmo sonho. |
-| 1332 | My Twentieth Century (Az én XX. Századom) | 1989 | Filme | H | 3 | 2 | 5 | 1 | 2 | 3 | 5 | DD,RH | Enyedi. Gêmeas separadas na virada do século. Cannes. |
-| 1333 | Ecstasy (Extase) | 1933 | Filme | H | 3 | 3 | 3 | 1 | 3 | 3 | 5 | RH | Checoslováquia. Gustav Machatý. Hedy Lamarr nua + orgasmo simulado. Primeiro do cinema. |
-| 1334 | Marketa Lazarová | 1967 | Filme | H | 3 | 3 | 5 | 4 | 3 | 3 | 5 | VD | Checoslováquia. František Vláčil. Medieval + brutal + poético. |
-| 1335 | Valerie and Her Week of Wonders (Valerie a Týden Divů) | 1970 | Filme | L,Z | 3 | 2 | 5 | 3 | 3 | 3 | 5 | DD,VD,RH | Checoslováquia. Jaromil Jireš. Vampirismo + puberdade + surrealismo. |
-| 1336 | Daisies (Sedmikrásky) | 1966 | Filme | H,C | 2 | 1 | 5 | 2 | 3 | 2 | 5 | RH,DD | Checoslováquia. Věra Chytilová. Duas garotas destroem tudo. Banido. |
-| 1337 | The Cremator (Spalovač Mrtvol) | 1969 | Filme | H | 2 | 2 | 5 | 5 | 5 | 3 | 5 | VD,DD | Checoslováquia. Juraj Herz. Nazismo + loucura + família. |
-| 1338 | 4 Months, 3 Weeks and 2 Days | 2007 | Filme | H | 2 | 3 | 5 | 5 | 5 | 1 | 5 | BTS | Romênia. Cristian Mungiu. Aborto ilegal sob Ceausescu. Palma de Ouro. |
-| 1339 | Graduation (Bacalaureat) | 2016 | Filme | H | 2 | 2 | 5 | 3 | 3 | 1 | 5 | DD | Mungiu. Pai corrupto para filha. Romênia. |
-| 1340 | The Death of Mr. Lazarescu (Moartea Domnului Lazarescu) | 2005 | Filme | H | 1 | 1 | 5 | 4 | 3 | 2 | 5 | DD | Romênia. Cristi Puiu. Velho moribundo percorre hospitais. |
-| 1341 | Aferim! | 2015 | Filme | H | 2 | 2 | 5 | 3 | 4 | 2 | 5 | DD | Romênia. Radu Jude. Escravidão cigana. P&B. Berlim. |
-| 1342 | Bad Luck Banging — já listado #679 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1343 | A Serbian Film — já listado #717 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1344 | Clip (Klip) | 2012 | Filme | H,X | 5 | 5 | 4 | 4 | 5 | 3 | 4 | VD,LIS | Sérvia. Maja Miloš. Adolescente filma sexo no celular. Controverso. |
-| 1345 | The Tribe (Plemya) | 2014 | Filme | H | 3 | 4 | 5 | 5 | 5 | 2 | 5 | VD | Ucrânia. Miroslav Slaboshpitsky. Escola de surdos. Sem legendas. Crime + sexo + aborto. |
-
-### AMÉRICA LATINA (Argentina, Colômbia, Chile, Uruguai, Peru, Cuba, México)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1346 | The Swamp (La Ciénaga) | 2001 | Filme | H,L | 3 | 2 | 5 | 3 | 3 | 2 | 5 | DD | Argentina. Lucrecia Martel. Família em decadência. Calor + desejo + incesto sugerido. |
-| 1347 | The Holy Girl (La Niña Santa) | 2004 | Filme | H | 3 | 2 | 5 | 3 | 4 | 2 | 5 | BTS,CE | Martel. Adolescente + médico + toque + religião. |
-| 1348 | The Headless Woman (La Mujer sin Cabeza) | 2008 | Filme | H | 2 | 1 | 5 | 3 | 3 | 2 | 5 | DD | Martel. Mulher atropela algo/alguém. Culpa + classe. |
-| 1349 | Zama | 2017 | Filme | H | 2 | 2 | 5 | 3 | 3 | 1 | 5 | BR | Martel. Colonialismo + espera + deterioração. Argentina. |
-| 1350 | Wild Tales (Relatos Salvajes) | 2014 | Filme | H | 3 | 3 | 5 | 4 | 3 | 1 | 5 | DD | Argentina. Damián Szifron. 6 contos de vingança. Cena de sexo no carro de noivos. |
-| 1351 | The Secret in Their Eyes (El Secreto de Sus Ojos) | 2009 | Filme | H | 2 | 2 | 5 | 4 | 3 | 1 | 5 | BTS | Argentina. Juan José Campanella. Oscar. Obsessão + estupro + justiça. |
-| 1352 | XXY — já listado #78 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1353 | The Motorcycle Diaries | 2004 | Filme | H | 2 | 1 | 5 | 1 | 1 | 1 | 5 | CE | Argentina/vários. Walter Salles. Che Guevara jovem. |
-| 1354 | La Flor | 2018 | Filme | H | 3 | 3 | 5 | 2 | 2 | 3 | 5 | DD | Argentina. Mariano Llinás. 14 HORAS. 6 histórias. Inclui erotismo. |
-| 1355 | Embrace of the Serpent (El Abrazo de la Serpiente) | 2015 | Filme | H | 2 | 1 | 5 | 3 | 3 | 1 | 5 | BR,BTS | Colômbia. Ciro Guerra. Amazônia + xamã + colonialismo. P&B. |
-| 1356 | Monos | 2019 | Filme | H | 2 | 2 | 5 | 4 | 3 | 1 | 5 | DD | Colômbia. Alejandro Landes. Guerrilheiros adolescentes na montanha. |
-| 1357 | A Fantastic Woman — já listado #24 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1358 | Tony Manero | 2008 | Filme | H | 3 | 3 | 5 | 5 | 5 | 2 | 5 | DD,VD | Chile. Pablo Larraín. Obsessão por Saturday Night Fever + assassinato. Ditadura. |
-| 1359 | The Club (El Club) | 2015 | Filme | H,R | 2 | 2 | 5 | 5 | 5 | 1 | 5 | VD | Larraín. Padres pedófilos num retiro. Berlim Grand Prix. |
-| 1360 | Ema | 2019 | Filme | B | 4 | 4 | 4 | 3 | 3 | 1 | 4 | RH | Larraín. Dançarina de reggaeton + poliamor + fogo. |
-| 1361 | Whisky | 2004 | Filme | H | 2 | 1 | 5 | 2 | 1 | 3 | 5 | LB | Uruguai. Pablo Stoll + Juan Pablo Rebella. Humor seco + solidão. |
-| 1362 | Contracorriente — já listado #225 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1363 | The Milk of Sorrow (La Teta Asustada) | 2009 | Filme | H | 2 | 2 | 5 | 4 | 4 | 2 | 5 | BTS,CE | Peru. Claudia Llosa. Trauma de estupro + batata na vagina. Berlim Urso de Ouro. |
-| 1364 | Memories of Underdevelopment (Memorias del Subdesarrollo) | 1968 | Filme | H | 3 | 3 | 5 | 2 | 3 | 3 | 5 | DD,BR | Cuba. Tomás Gutiérrez Alea. Revolução + erotismo + alienação. |
-| 1365 | Strawberry and Chocolate (Fresa y Chocolate) | 1994 | Filme | G | 3 | 2 | 5 | 2 | 3 | 2 | 5 | LIS | Cuba. Alea + Tabío. Gay + comunista em Havana. |
-| 1366 | Y Tu Mamá También — já listado #247 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1367 | Amores Perros | 2000 | Filme | H | 3 | 3 | 5 | 5 | 4 | 1 | 5 | DD | México. Iñárritu. Três histórias + cão + acidente. |
-| 1368 | Japón | 2002 | Filme | H | 3 | 3 | 5 | 4 | 4 | 2 | 5 | VD | México. Reygadas. Suicida + velha no deserto + sexo real implícito. |
-| 1369 | Post Tenebras Lux | 2012 | Filme | H | 3 | 4 | 5 | 4 | 4 | 2 | 5 | VD,DD | Reygadas. Swingers + demônio luminoso + decapitação. Cannes direção. |
-| 1370 | Our Time (Nuestro Tiempo) | 2018 | Filme | H | 4 | 4 | 5 | 3 | 3 | 2 | 4 | VD | Reygadas. Casamento aberto + touros + ciúmes. 3 horas. |
-| 1371 | Silent Light (Stellet Licht) | 2007 | Filme | H | 2 | 2 | 5 | 2 | 2 | 2 | 5 | LB,BTS | Reygadas. Comunidade menonita + adultério + milagre. |
-| 1372 | Heli | 2013 | Filme | H,X | 3 | 4 | 5 | 5 | 5 | 2 | 5 | VD | México. Amat Escalante. Cartel + tortura de genitais em fogo + sexo. Cannes direção. |
-| 1373 | The Untamed (La Región Salvaje) | 2016 | Filme | B,BH | 4 | 5 | 4 | 5 | 5 | 2 | 4 | VD | Escalante. Tentáculo alienígena sexual + homofobia + México rural. |
-| 1374 | Perdita Durango (Dance with the Devil) | 1997 | Filme | H | 4 | 4 | 3 | 5 | 5 | 3 | 4 | VD,RH | Álex de la Iglesia. Rosie Perez + Javier Bardem. Voodoo + sequestro + canibalismo. |
-
-### ORIENTE MÉDIO / NORTE DA ÁFRICA (Irã, Turquia, Israel, Líbano, Egito, Tunísia)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1375 | Holy Spider — já listado #1301 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1376 | A Separation (Jodaeiye Nader az Simin) | 2011 | Filme | H | 1 | 1 | 5 | 3 | 3 | 1 | 5 | BTS | Irã. Farhadi. Oscar. Divórcio + mentira + classe + religião. |
-| 1377 | About Elly (Darbareye Elly) | 2009 | Filme | H | 1 | 1 | 5 | 4 | 3 | 1 | 5 | BTS,LIS | Farhadi. Desaparecimento durante viagem + culpa coletiva. |
-| 1378 | The Salesman (Forushande) | 2016 | Filme | H | 2 | 1 | 5 | 4 | 4 | 1 | 5 | BTS | Farhadi. Oscar. Agressão sexual + vingança + Morte de um Caixeiro Viajante. |
-| 1379 | Close-Up (Nema-ye Nazdik) | 1990 | Filme | H | 1 | 1 | 5 | 2 | 2 | 1 | 5 | VD | Irã. Kiarostami. Homem finge ser cineasta. Realidade + ficção. |
-| 1380 | Taste of Cherry (Ta'm e Guilass) | 1997 | Filme | H | 1 | 1 | 5 | 3 | 3 | 1 | 5 | CE | Kiarostami. Palma de Ouro. Homem procura quem o enterre após suicídio. |
-| 1381 | Circumstance — já listado #72 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1382 | Capernaum (Capharnaüm) | 2018 | Filme | H | 1 | 1 | 5 | 5 | 4 | 1 | 5 | BTS,CE | Líbano. Nadine Labaki. Menino processa os pais por tê-lo nascido. |
-| 1383 | The Insult (L'Insulte) | 2017 | Filme | H | 1 | 1 | 5 | 3 | 3 | 1 | 5 | BTS | Líbano. Ziad Doueiri. Insulto → guerra civil revisitada. |
-| 1384 | Yomeddine | 2018 | Filme | H | 1 | 1 | 4 | 3 | 3 | 3 | 4 | CE | Egito. A.B. Shawky. Leproso + órfão viajam pelo Egito. |
-| 1385 | The Blue Caftan (Le Bleu du Caftan) | 2022 | Filme | G | 3 | 2 | 5 | 2 | 3 | 1 | 4 | CE,LB | Marrocos. Maryam Touzani. Alfaiate casado + aprendiz jovem. Gay + cultura árabe. |
-| 1386 | Much Loved (Zin Li Fik) | 2015 | Filme | H | 4 | 4 | 5 | 3 | 4 | 2 | 4 | VD | Marrocos. Nabil Ayouch. Prostitutas em Marrakech. Banido no Marrocos. |
-| 1387 | Beauty and the Dogs (Aala Kaf Ifrit) | 2017 | Filme | H | 2 | 2 | 5 | 5 | 5 | 2 | 5 | BTS | Tunísia. Kaouther Ben Hania. Estupro policial + burocracia. 9 planos-sequência. |
-| 1388 | The Man Who Sold His Skin | 2020 | Filme | H | 2 | 1 | 5 | 3 | 3 | 1 | 4 | BR,VD | Tunísia. Ben Hania. Refugiado tatuado como obra de arte. Oscar indicado. |
-| 1389 | Four Daughters (Les Filles d'Olfa) | 2023 | Filme | H | 2 | 1 | 5 | 4 | 4 | 1 | 4 | BTS | Tunísia. Ben Hania. Mãe + filhas + radicalização + documentário/ficção. |
-| 1390 | Winter Sleep (Kış Uykusu) | 2014 | Filme | H | 2 | 1 | 5 | 3 | 2 | 1 | 5 | LB | Turquia. Nuri Bilge Ceylan. Palma de Ouro. Dono de hotel + esposa + neve. 3h16. |
-| 1391 | Once Upon a Time in Anatolia (Bir Zamanlar Anadolu'da) | 2011 | Filme | H | 1 | 1 | 5 | 3 | 3 | 1 | 5 | DD | Ceylan. Busca por cadáver à noite na Anatólia. |
-| 1392 | Zenne Dancer — já listado #832 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1393 | Lebanon (Samuel Maoz) | 2009 | Filme | H | 1 | 1 | 5 | 5 | 4 | 2 | 5 | BTS | Israel. Leão de Ouro. Guerra de 1982. Dentro de um tanque. |
-| 1394 | Synonyms (Synonymes) | 2019 | Filme | H | 3 | 3 | 5 | 3 | 3 | 1 | 5 | DD,CE | Israel/França. Nadav Lapid. Israelense em Paris. Nudez masculina. Berlim Urso de Ouro. |
-
-### SUDESTE ASIÁTICO (Filipinas, Indonésia, Malásia, Vietnã, Camboja)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1395 | Kinatay | 2009 | Filme | H | 2 | 4 | 4 | 5 | 5 | 3 | 4 | VD | Filipinas. Brillante Mendoza. Policial + prostituta desmembrada. Cannes direção. |
-| 1396 | Serbis (Service) | 2008 | Filme | G,H | 4 | 4 | 4 | 3 | 3 | 3 | 4 | VD | Mendoza. Família opera cinema pornô decadente. Gay + cruising. Cannes. |
-| 1397 | Ma' Rosa | 2016 | Filme | H | 2 | 2 | 5 | 4 | 3 | 2 | 5 | BTS | Mendoza. Casal preso por drogas. Corrupção policial. Cannes atriz. |
-| 1398 | Manila in the Claws of Light (Maynila sa mga Kuko ng Liwanag) | 1975 | Filme | H | 3 | 3 | 5 | 4 | 4 | 3 | 5 | BR,CE | Filipinas. Lino Brocka. Jovem busca namorada prostituída em Manila. |
-| 1399 | Insiang | 1976 | Filme | H,X | 3 | 3 | 5 | 4 | 5 | 3 | 5 | VD,BTS | Brocka. Mãe + namorado estupra filha. Vingança. Cannes. |
-| 1400 | Thy Womb (Sinapupunan) | 2012 | Filme | H | 2 | 2 | 5 | 2 | 2 | 3 | 4 | LB | Mendoza. Mulher infértil busca segunda esposa para marido. Cultura Bajau. |
-| 1401 | Hele Sa Hiwagang Hapis (A Lullaby to the Sorrowful Mystery) | 2016 | Filme | H | 1 | 1 | 5 | 3 | 2 | 4 | 5 | BR | Filipinas. Lav Diaz. 8 HORAS. Revolução filipina. Slow cinema extremo. |
-| 1402 | The Woman Who Left (Ang Babaeng Humayo) | 2016 | Filme | H,T | 2 | 1 | 5 | 3 | 3 | 3 | 5 | CE | Lav Diaz. Leão de Ouro. Mulher sai da prisão após 30 anos. Trans personagem. |
-| 1403 | Tropical Malady — já listado #364 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1404 | The Act of Killing (Jagal) | 2012 | Filme | H | 1 | 2 | 5 | 5 | 5 | 1 | 5 | VD | Indonésia/Dinamarca. Oppenheimer. Assassinos reencenam massacres. Documentário. |
-| 1405 | The Look of Silence | 2014 | Filme | H | 1 | 1 | 5 | 5 | 5 | 1 | 5 | BTS | Oppenheimer. Sequência. Vítima confronta assassinos. |
-| 1406 | Furie (Hai Phượng) | 2019 | Filme | H | 2 | 2 | 3 | 3 | 3 | 1 | 3 | BTS | Vietnã. Veronica Ngo. Mãe + tráfico humano + artes marciais. |
-| 1407 | First They Killed My Father | 2017 | Filme | H | 1 | 1 | 5 | 5 | 5 | 1 | 5 | BTS | Camboja. Angelina Jolie dirige. Khmer Vermelho pela perspectiva de criança. |
-
-### ÍNDIA (além do já listado)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1408 | Bandit Queen | 1994 | Filme | H,X | 4 | 4 | 5 | 5 | 5 | 2 | 5 | BTS | Índia. Shekhar Kapur. Phoolan Devi. Estupro + vingança + casta. Banido inicialmente. |
-| 1409 | Water | 2005 | Filme | H | 3 | 2 | 5 | 3 | 4 | 1 | 5 | CE,BTS | Índia/Canadá. Deepa Mehta. Viúvas-crianças na Índia dos anos 30. Trilogia dos Elementos. |
-| 1410 | Earth (1947) | 1998 | Filme | H | 3 | 3 | 5 | 4 | 4 | 2 | 5 | BTS | Mehta. Partição Índia-Paquistão. Trilogia dos Elementos. |
-| 1411 | Fire — já listado #203 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1412 | Gandu — já listado #688 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1413 | Lust Stories (Netflix) | 2018 | Filme | H | 4 | 3 | 4 | 1 | 2 | 1 | 4 | LIS | Índia. 4 diretores. Antologia sobre desejo feminino. Netflix. |
-| 1414 | Lust Stories 2 | 2023 | Filme | H | 4 | 3 | 3 | 1 | 2 | 1 | 3 | LIS | Sequência com outros diretores. Netflix. |
-| 1415 | Amar Prem | 1972 | Filme | H | 2 | 1 | 5 | 2 | 3 | 2 | 5 | LB | Rajesh Khanna. Prostituta + menino abandonado. Clássico Bollywood. |
-| 1416 | Dev D | 2009 | Filme | H | 4 | 4 | 5 | 3 | 3 | 1 | 5 | DD | Anurag Kashyap. Releitura moderna de Devdas. Drogas + sexo + MMS scandal. |
-| 1417 | Gangs of Wasseypur | 2012 | Filme | H | 3 | 3 | 5 | 4 | 4 | 1 | 5 | DD | Kashyap. 5 horas. Gerações de gangsters. Tarantino indiano. |
-| 1418 | Ugly | 2013 | Filme | H | 2 | 2 | 5 | 5 | 4 | 2 | 5 | DD | Kashyap. Menina desaparece. Todos são culpados. |
-| 1419 | Sacred Games (série) | 2018 | Serie | H,SE | 3 | 3 | 5 | 4 | 4 | 1 | 5 | DD,VD | Netflix Índia. Crime + corrupção + apocalipse + sexo + religião. |
-| 1420 | Bombay Talkies | 2013 | Filme | G,H | 3 | 2 | 4 | 2 | 3 | 2 | 4 | LIS | 4 curtas sobre cinema + sexualidade na Índia. Segmento gay de Karan Johar. |
-
-### ÁFRICA SUBSAARIANA
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1421 | Timbuktu | 2014 | Filme | H | 1 | 1 | 5 | 4 | 4 | 1 | 5 | BTS | Mauritânia. Sissako. Jihadistas ocupam Timbuktu. Música proibida. |
-| 1422 | Rafiki — já listado #4 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1423 | Atlantics (Atlantique) | 2019 | Filme | H | 2 | 2 | 5 | 3 | 2 | 1 | 5 | BTS,DD | Senegal. Mati Diop. Amante migrante + casamento forçado + fantasmas. Grand Prix Cannes. |
-| 1424 | Touki Bouki | 1973 | Filme | H | 3 | 3 | 5 | 3 | 3 | 3 | 5 | RH,DD,BR | Senegal. Djibril Diop Mambéty. Casal quer fugir para Paris. Surrealismo africano. |
-| 1425 | Hyenas (Hyènes) | 1992 | Filme | H | 2 | 2 | 5 | 3 | 3 | 4 | 5 | DD | Mambéty. Mulher rica retorna e oferece fortuna se matarem ex-amante. |
-| 1426 | Xala | 1975 | Filme | H,C | 3 | 2 | 5 | 2 | 3 | 3 | 5 | RH | Senegal. Ousmane Sembène. Empresário amaldiçoado com impotência no terceiro casamento. |
-| 1427 | Black Girl (La Noire de...) | 1966 | Filme | H | 1 | 1 | 5 | 3 | 3 | 2 | 5 | CE | Sembène. Empregada senegalesa na Riviera Francesa. Primeiro longa africano. |
-| 1428 | Félicité | 2017 | Filme | H | 2 | 2 | 5 | 3 | 3 | 2 | 5 | CE | Congo. Alain Gomis. Cantora de bar busca dinheiro para cirurgia do filho. Berlim Grand Prix. |
-
-### AUSTRÁLIA / NOVA ZELÂNDIA / OCEANIA
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1429 | Sirens | 1994 | Filme | L,H | 4 | 4 | 3 | 1 | 2 | 2 | 4 | RH | Austrália. John Duigan. Hugh Grant + Sam Neill + Elle Macpherson nua. Pintor + modelos. |
-| 1430 | Picnic at Hanging Rock | 1975 | Filme | L | 2 | 1 | 5 | 4 | 2 | 1 | 5 | DD,BTS,LIS | Austrália. Peter Weir. Garotas desaparecem. Subtexto lésbico. Mistério nunca resolvido. |
-| 1431 | Walkabout | 1971 | Filme | H | 3 | 3 | 5 | 3 | 3 | 2 | 5 | BR | Austrália. Nicolas Roeg. Dois ingleses + aborígene no outback. Nudez + natureza. |
-| 1432 | Mad Max: Fury Road | 2015 | Filme | H | 1 | 1 | 5 | 3 | 2 | 1 | 5 | BR,VD | Austrália. George Miller. Não erótico mas relevante para fãs de Blade Runner. |
-| 1433 | The Piano — já listado #32 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1434 | Sleeping Dogs (1977) | 1977 | Filme | H | 2 | 2 | 4 | 3 | 3 | 4 | 4 | DD | Nova Zelândia. Roger Donaldson. Sam Neill. Primeiro filme NZ distribuído nos EUA. |
-| 1435 | Once Were Warriors | 1994 | Filme | H | 3 | 3 | 5 | 5 | 5 | 1 | 5 | BTS | Nova Zelândia. Lee Tamahori. Violência doméstica + Maori. Devastador. |
-| 1436 | In My Father's Den | 2004 | Filme | H,X | 2 | 2 | 5 | 4 | 4 | 3 | 4 | DD,BTS | Nova Zelândia. Brad McGann. Jornalista + adolescente + segredos familiares. |
-| 1437 | Snowtown (The Snowtown Murders) | 2011 | Filme | H | 2 | 3 | 5 | 5 | 5 | 2 | 5 | VD | Austrália. Justin Kurzel. Serial killer real. Pedofilia + manipulação + tortura. |
-| 1438 | Animal Kingdom | 2010 | Filme | H | 2 | 2 | 5 | 4 | 3 | 1 | 5 | DD | Austrália. David Michôd. Família criminosa. Ben Mendelsohn. |
-
-### SÉRIES ERÓTICAS INTERNACIONAIS (NOVAS)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1439 | Valeria | 2020 | Serie | H,L,SE | 3 | 3 | 3 | 1 | 1 | 1 | 3 | LIS | Espanha. Netflix. Escritora + amigas. Sexo + romance + amizade. |
-| 1440 | White Lines | 2020 | Serie | H,SE | 4 | 4 | 3 | 3 | 3 | 1 | 3 | DD | Espanha/UK. Netflix. Ibiza + mistério + drogas + sexo + orgias. |
-| 1441 | Vis a Vis (Locked Up) | 2015 | Serie | L,H,SE | 3 | 3 | 4 | 3 | 3 | 1 | 4 | LIS | Espanha. Prisão feminina. A versão espanhola de OITNB. |
-| 1442 | Sky Rojo | 2021 | Serie | H,SE | 4 | 4 | 3 | 4 | 4 | 1 | 3 | VD | Espanha. Netflix. Três prostitutas fogem de cafetão. Violência + sexo. |
-| 1443 | La Casa de Papel (Money Heist) | 2017 | Serie | H,SE | 3 | 3 | 4 | 3 | 2 | 1 | 5 | DD | Espanha. Netflix. Assalto + romance + Nairobi + Helsinki/Palermo gay. |
-| 1444 | Versailles | 2015 | Serie | B,H,SE | 4 | 4 | 4 | 3 | 3 | 1 | 4 | RH | França/UK. Canal+. Luís XIV + orgias + política + Philippe gay. |
-| 1445 | Borgia (Canal+) | 2011 | Serie | H,X,SE | 4 | 4 | 4 | 4 | 5 | 2 | 4 | RH,VD | França. Família Borgia. Incesto + assassinato + sexo. Versão europeia não-americana. |
-| 1446 | The Borgias (Showtime) | 2011 | Serie | H,X,SE | 4 | 3 | 4 | 3 | 4 | 1 | 4 | RH | EUA. Jeremy Irons. Incesto sugerido entre irmãos. Showtime. |
-| 1447 | Spartacus (série) | 2010 | Serie | B,H,SE | 5 | 5 | 4 | 4 | 4 | 1 | 4 | RH | Starz. Nudez extrema. Sexo + violência + gladiadores + gay + orgias. |
-| 1448 | Rome (série HBO) | 2005 | Serie | B,H,SE | 4 | 4 | 5 | 3 | 3 | 1 | 5 | RH | HBO. Roma antiga. Sexo + política + violência. |
-| 1449 | Camelot | 2011 | Serie | H,SE | 4 | 4 | 3 | 2 | 3 | 2 | 3 | RH | Starz. Arthurian + Eva Green + sexo + poder. |
-| 1450 | The Tudors | 2007 | Serie | H,SE | 4 | 4 | 4 | 2 | 3 | 1 | 4 | RH | Showtime. Henrique VIII + esposas + sexo + decapitação. |
-| 1451 | Nip/Tuck | 2003 | Serie | B,H,SE | 4 | 4 | 4 | 3 | 4 | 1 | 5 | VD,RH | FX. Cirurgiões plásticos + sexo + identidade + serial killer. Ryan Murphy. |
-| 1452 | Californication | 2007 | Serie | H,SE | 4 | 4 | 4 | 2 | 3 | 1 | 4 | DD | Showtime. Hank Moody. Escritor + sexo + LA + autodestruição. |
-| 1453 | True Blood | 2008 | Serie | B,Z,SE | 5 | 5 | 3 | 3 | 4 | 1 | 5 | RH,VD | HBO. Vampiros + sexo + Louisiana + gay + shape-shifters. |
-| 1454 | Spartacus — já listado #1447 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1455 | Banshee | 2013 | Serie | H,SE | 5 | 5 | 3 | 4 | 3 | 1 | 4 | VD | Cinemax. Ex-presidiário finge ser xerife. Sexo + violência extrema. |
-| 1456 | Altered Carbon | 2018 | Serie | H,SF,SE | 4 | 4 | 4 | 3 | 3 | 1 | 4 | BR | Netflix. Consciência transferida entre corpos. Cyberpunk + nudez. |
-| 1457 | Carnival Row | 2019 | Serie | B,SF,SE | 3 | 3 | 3 | 3 | 2 | 1 | 3 | BR,RH | Amazon. Fadas + humanos + caso inter-espécie. Orlando Bloom + Cara Delevingne. |
-| 1458 | The Witcher | 2019 | Serie | H,SE | 3 | 3 | 3 | 3 | 2 | 1 | 4 | DD | Netflix. Henry Cavill. Fantasia + nudez + magia. Baseado em jogo/livro. |
-| 1459 | Game of Thrones | 2011 | Serie | B,H,X,SE | 5 | 5 | 5 | 5 | 5 | 1 | 5 | RH,VD,DD | HBO. O máximo de sexo + violência + incesto + política em TV mainstream. |
-| 1460 | House of the Dragon | 2022 | Serie | H,X,SE | 4 | 4 | 5 | 4 | 4 | 1 | 5 | RH | HBO. Prequel de GoT. Incesto Targaryen explícito. |
-| 1461 | The White Lotus | 2021 | Serie | B,SE | 3 | 3 | 5 | 3 | 3 | 1 | 5 | DD,RH | HBO. Mike White. Resort + classe + sexo + morte. 2 temporadas. |
-| 1462 | Succession | 2018 | Serie | H,SE | 2 | 2 | 5 | 3 | 3 | 1 | 5 | DD | HBO. Família Roy + poder + humilhação sexual + disfunção. |
-| 1463 | Industry | 2020 | Serie | B,H,SE | 4 | 4 | 5 | 3 | 3 | 1 | 4 | DD | HBO. Finanças em Londres. Sexo + drogas + ambição + queer. |
-
-### ANIME / HENTAI ADICIONAL (NOVOS)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1464 | Night on the Galactic Railroad — já listado #884 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1465 | Belladonna of Sadness — já listado #883 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1466 | Grave of the Fireflies — já listado #108 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1467 | Jin-Roh: The Wolf Brigade | 1999 | Anime | H,SF,AN | 2 | 1 | 5 | 4 | 3 | 2 | 5 | BR,DD | Hiroyuki Okiura. Polícia + terrorismo + Chapeuzinho Vermelho + distopia. |
-| 1468 | Memories (1995) — já listado #61 como Magnetic Rose | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1469 | Royal Space Force: Wings of Honneamise | 1987 | Anime | H,SF,AN | 2 | 2 | 5 | 3 | 3 | 3 | 5 | BR | Gainax. Primeiro filme. Tentativa de estupro controversa. Programa espacial. |
-| 1470 | Patlabor 2: The Movie | 1993 | Anime | H,SF,AN | 1 | 1 | 5 | 3 | 2 | 2 | 5 | BR,DD | Mamoru Oshii. Terrorismo + política + guerra + filosofia. |
-| 1471 | Vampire Hunter D: Bloodlust | 2000 | Anime | H,Z,AN | 2 | 2 | 4 | 2 | 2 | 2 | 5 | BR,VD | Yoshiaki Kawajiri. Vampirismo + ação + gothic. |
-| 1472 | Ninja Scroll — já listado #877 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1473 | Wicked City — já listado #876 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1474 | Cyber City Oedo 808 | 1990 | Anime | H,SF,AN | 2 | 2 | 3 | 3 | 2 | 3 | 4 | BR | Yoshiaki Kawajiri. 3 OVAs. Cyberpunk + crime + ação. |
-| 1475 | Golgo 13: The Professional | 1983 | Anime | H,AN | 3 | 3 | 3 | 3 | 3 | 3 | 5 | BR,VD | Assassino profissional. Sexo + violência. Primeiro anime com CGI. |
-| 1476 | Baki | 2018 | Anime | H,AN,SE | 3 | 2 | 3 | 4 | 3 | 1 | 3 | VD | Netflix. Luta + músculos + violência + sexo ocasional. |
-| 1477 | Dorohedoro | 2020 | Anime | H,BH,C,AN,SE | 2 | 2 | 5 | 4 | 3 | 1 | 5 | VD,DD,RH | MAPPA. Mundo de feiticeiros + body horror + humor + gyoza. |
-| 1478 | Jujutsu Kaisen | 2020 | Anime | H,AN,SE | 1 | 1 | 5 | 4 | 3 | 1 | 5 | DD,BTS | MAPPA. Maldições + shounen dark + body horror sutil. |
-| 1479 | Claymore | 2007 | Anime | H,AN,SE | 2 | 2 | 4 | 4 | 3 | 2 | 4 | VD | Guerreiras meio-yoma. Dark fantasy + body horror. |
-| 1480 | Gantz — já listado #79 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1481 | Shigurui — já listado #880 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1482 | Rainbow: Nisha Rokubou no Shichinin | 2010 | Anime | H,AN,SE | 2 | 2 | 5 | 5 | 4 | 2 | 4 | BTS | Reformatório pós-guerra. Abuso + amizade + sobrevivência. |
-| 1483 | Kaiji: Ultimate Survivor | 2007 | Anime | H,AN,SE | 1 | 1 | 5 | 4 | 3 | 1 | 5 | DD | Jogos de sobrevivência + dívida + capitalismo. |
-| 1484 | Aku no Hana — já listado #928 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1485 | Mononoke (2007) | 2007 | Anime | H,AN,SE | 2 | 1 | 5 | 4 | 3 | 2 | 5 | DD,BTS | Vendedor de remédios exorciza espíritos. Arte visual única. Não confundir com Ghibli. |
-| 1486 | Paranoia Agent — já listado #60 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1487 | The Tatami Time Machine Blues | 2022 | Anime | H,C,SF,AN,SE | 1 | 1 | 5 | 1 | 1 | 1 | 4 | DD,LIS | Yuasa + Morimi. Sequência de Tatami Galaxy + viagem no tempo. |
-| 1488 | Heike Monogatari | 2021 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 4 | LB | Naoko Yamada (diretora de A Silent Voice). Guerra medieval. Poético. |
-| 1489 | Liz and the Blue Bird | 2018 | Anime | L,AN | 1 | 1 | 5 | 2 | 1 | 1 | 5 | LB,LIS,CE | Yamada. Subtexto lésbico intenso. Música + amizade + silêncio. |
-| 1490 | Hibike! Euphonium | 2015 | Anime | L,AN,SE | 1 | 1 | 5 | 1 | 1 | 1 | 5 | LB,LIS | KyoAni. Música + ambição + tensão lésbica. Conexão com Liz and the Blue Bird. |
-| 1491 | Tamako Love Story | 2014 | Anime | H,AN | 1 | 1 | 4 | 1 | 1 | 1 | 4 | LB,LIS | Yamada. Sequência do filme de Tamako Market. Romance delicado. |
-| 1492 | Oshi no Ko — já listado #992 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1493 | Spy x Family | 2022 | Anime | H,C,AN,SE | 1 | 1 | 4 | 1 | 1 | 1 | 5 | LIS | Família falsa. Espião + assassina + telepata. Comédia mainstream. |
-| 1494 | Bocchi — já listado #927 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1495 | Call of the Night (Yofukashi no Uta) | 2022 | Anime | H,Z,AN,SE | 3 | 2 | 4 | 1 | 2 | 1 | 4 | LIS,DD | Vampira + insone + noite + romance. Credens Justitiam. |
-| 1496 | Monogatari Series | 2009 | Anime | H,EC,PH,AN,SE | 3 | 3 | 5 | 2 | 3 | 1 | 5 | VD,DD | Shaft/NisiOisin. Diálogos + aberrações + fan service intelectual. 100+ episódios. |
-| 1497 | March Comes In Like a Lion — já listado #92 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1498 | Vinland Saga — já listado #990 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1499 | Odd Taxi — já listado #125 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1500 | Vivy: Fluorite Eye's Song | 2021 | Anime | H,SF,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 4 | BR,BTS | IA cantora tenta mudar o futuro. 100 anos. WIT Studio. |
-
----
-
-## CONTAGEM FINAL ATUALIZADA
-
-| Categoria | Total |
-|---|---|
-| Entradas únicas neste bloco | ~220 |
-| Total geral acumulado | ~1500+ |
-| Novos países cobertos | Rússia, Polônia, Hungria, Rep. Tcheca, Romênia, Sérvia, Ucrânia, Noruega, Islândia, Finlândia, Cuba, Colômbia, Chile, Uruguai, Peru, México (expandido), Senegal, Mauritânia, Congo, Marrocos, Tunísia, Líbano, Israel, Filipinas, Indonésia, Camboja, Vietnã, Austrália (expandido), Nova Zelândia |
-| Novos diretores representados | Bergman, Kieslowski, Östlund, Reygadas, Zvyagintsev, Khrzhanovsky, Balabanov, Martel, Larraín, Escalante, Mendoza, Brocka, Diaz, Farhadi, Kiarostami, Ceylan, Mungiu, Puiu, Jude, Oppenheimer, Mehta, Kashyap, Kawajiri, Yamada |
-
----
-
-## NOTAS DESTE BLOCO
-
-- Foco em cinema internacional que não havia sido coberto anteriormente
-- Pink Films japoneses expandidos com séries completas (Angel Guts, Hanzo the Razor, Female Prisoner Scorpion)
-- Category III de Hong Kong expandido com exploitation extremo (Dr. Lamb, Red to Kill, Run and Kill)
-- Cinema erótico coreano expandido (The Servant, Green Chair, Untold Scandal)
-- Cinema russo/soviético de destaque (DAU, Cargo 200, Little Vera)
-- Leste Europeu com Kieslowski, Has, Chytilová, Herz, Nova Onda Romena
-- América Latina com Martel, Larraín, Reygadas, Escalante
-- Oriente Médio com Farhadi, Kiarostami, Ben Hania
-- Sudeste Asiático com Mendoza, Brocka, Lav Diaz
-- África com Sembène, Mambéty, Diop, Sissako
-- Bergman finalmente incluído (Persona, Silence, Cries and Whispers)
-- Séries internacionais eróticas (Game of Thrones, Spartacus, True Blood, Rome, Versailles)
-- Anime adicional focado em qualidade artística (Jin-Roh, Liz and the Blue Bird, Mononoke)
-
----
-
----
-
-## CINEMA ERÓTICO FRANCÊS (NOVOS — NÃO LISTADOS ANTERIORMENTE)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1501 | Venus in Fur (La Vénus à la fourrure) | 2013 | Filme | H | 4 | 3 | 5 | 2 | 3 | 1 | 5 | RH,VD | Polanski. Emmanuelle Seigner + Mathieu Amalric. Teatro + BDSM + poder. |
-| 1502 | The Blue Room (La Chambre Bleue) | 2014 | Filme | H | 4 | 4 | 5 | 3 | 3 | 2 | 4 | VD,DD | Mathieu Amalric dirige e atua. Affair → assassinato. Simenon. |
-| 1503 | Lady Chatterley (2006 francês) | 2006 | Filme | H | 4 | 4 | 5 | 1 | 2 | 2 | 4 | LIS | Pascale Ferran. Versão francesa mais sensual que as inglesas. César Melhor Filme. |
-| 1504 | Pola X — já listado #513 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1505 | Beau Travail | 1999 | Filme | G,H | 3 | 2 | 5 | 2 | 2 | 1 | 5 | BR,CE | Claire Denis. Legionários em Djibouti. Homoérotismo muscular. Denis Lavant dança. |
-| 1506 | Let the Sunshine In (Un Beau Soleil Intérieur) | 2017 | Filme | H | 3 | 3 | 4 | 1 | 1 | 1 | 4 | LIS | Denis. Juliette Binoche busca amor. Baseado em Barthes. |
-| 1507 | Nenette and Boni | 1996 | Filme | H | 3 | 3 | 5 | 3 | 3 | 3 | 4 | VD | Denis. Irmão obcecado por padeira. Irmã grávida foge. |
-| 1508 | Friday Night (Vendredi Soir) | 2002 | Filme | H | 4 | 3 | 4 | 1 | 1 | 3 | 4 | LIS | Denis. Uma noite de sexo com estranho durante engarrafamento em Paris. |
-| 1509 | White Material | 2009 | Filme | H | 2 | 2 | 5 | 4 | 3 | 1 | 5 | BR | Denis. Isabelle Huppert na África. Colonialismo + guerra civil. |
-| 1510 | Stars at Noon | 2022 | Filme | H | 3 | 3 | 4 | 3 | 2 | 1 | 4 | BR | Denis. Margaret Qualley na Nicarágua. Sexo + espionagem + calor. |
-| 1511 | Irma Vep | 1996 | Filme | H,L | 3 | 2 | 5 | 1 | 2 | 2 | 5 | VD,RH | Olivier Assayas. Maggie Cheung filma remake de Les Vampires. Meta-cinema. |
-| 1512 | Irma Vep (série HBO) | 2022 | Serie | H,L,SE | 3 | 3 | 5 | 2 | 2 | 1 | 4 | VD,RH | Assayas. Alicia Vikander. Expansão do filme. Cenas lésbicas. |
-| 1513 | Demonlover | 2002 | Filme | H,V | 4 | 4 | 4 | 4 | 4 | 3 | 5 | VD,BR | Assayas. Connie Nielsen. Pornografia hentai + espionagem corporativa + tortura online. |
-| 1514 | Clean | 2004 | Filme | H | 2 | 1 | 5 | 2 | 2 | 2 | 4 | CE | Assayas. Maggie Cheung. Ex-viciada tenta recuperar filho. |
-| 1515 | Personal Shopper | 2016 | Filme | H | 2 | 2 | 5 | 3 | 2 | 1 | 5 | DD,BTS | Assayas. Kristen Stewart. Fantasmas + moda + identidade. Cannes. |
-| 1516 | Girlhood (Bande de Filles) | 2014 | Filme | H | 2 | 2 | 5 | 2 | 2 | 1 | 4 | CE | Sciamma. Adolescente negra em Paris. Antes de Retrato. |
-| 1517 | Petite Maman | 2021 | Filme | H | 1 | 1 | 5 | 2 | 1 | 1 | 5 | LB,BTS | Sciamma. Menina conhece sua mãe criança. Tempo + luto. |
-| 1518 | The Taste of Things (La Passion de Dodin Bouffant) | 2023 | Filme | H | 3 | 2 | 5 | 1 | 1 | 1 | 4 | LB | Trần Anh Hùng. Juliette Binoche + Benoît Magimel. Gastronomia + amor. Cannes direção. |
-| 1519 | The Scent of Green Papaya (Mùi du du xanh) | 1993 | Filme | H | 2 | 1 | 5 | 1 | 1 | 2 | 5 | LB | Trần Anh Hùng. Vietnã. Empregada + patrão. Sensual sem sexo explícito. |
-| 1520 | The Vertical Ray of the Sun (Mua he chieu thang dung) | 2000 | Filme | H | 3 | 2 | 5 | 1 | 2 | 3 | 5 | LB | Trần Anh Hùng. Três irmãs em Hanói. Sensualidade + incesto sugerido. |
-| 1521 | Climates (Iklimler) | 2006 | Filme | H | 4 | 4 | 5 | 3 | 2 | 2 | 5 | LIS | Nuri Bilge Ceylan. Professor + ex. Sexo gráfico + silêncio + paisagem turca. |
-| 1522 | L'Ennui (Ennui) | 1998 | Filme | H | 5 | 5 | 4 | 2 | 2 | 3 | 4 | VD | Cédric Kahn. Professor obcecado por modelo nua. Sexo frequente. |
-| 1523 | The Dreamlife of Angels (La Vie Rêvée des Anges) | 1998 | Filme | H | 3 | 3 | 5 | 3 | 2 | 2 | 5 | LIS,CE | Erick Zonca. Duas jovens em Lille. César + Cannes. |
-| 1524 | Séraphine | 2008 | Filme | H | 1 | 1 | 5 | 2 | 2 | 1 | 5 | LB,CE | Martin Provost. Empregada artista. César Melhor Filme. Yolande Moreau. |
-| 1525 | L'Apollonide: Souvenirs de la Maison Close | 2011 | Filme | H,L | 5 | 5 | 5 | 4 | 4 | 2 | 5 | VD,RH | Bertrand Bonello. Bordel parisiense 1900. Prostitutas + clientes + arte. |
-| 1526 | Saint Laurent | 2014 | Filme | G | 3 | 3 | 4 | 2 | 2 | 1 | 4 | RH,LB | Bonello. Gaspard Ulliel como YSL. Moda + drogas + sexo gay. |
-| 1527 | Nocturama | 2016 | Filme | H | 2 | 2 | 5 | 4 | 4 | 2 | 5 | DD | Bonello. Jovens terroristas em Paris. Depois se escondem num shopping. |
-| 1528 | The Beast (La Bête) (2023 Bonello) | 2023 | Filme | H,SF | 3 | 3 | 5 | 3 | 2 | 1 | 5 | BR,DD | Bonello. NÃO é Borowczyk. Léa Seydoux em 3 épocas + IA + amor. |
-| 1529 | Titane — já listado #335 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1530 | Portrait of a Lady on Fire — já listado #1 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1531 | Blue Is the Warmest Color — já listado #401 | — | — | — | — | — | — | — | — | — | — | — | — |
-
-### CINEMA ERÓTICO ITALIANO (NOVOS — ALÉM DE GIALLO/EXPLOITATION)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1532 | La Grande Bellezza (The Great Beauty) | 2013 | Filme | H | 3 | 3 | 5 | 2 | 2 | 1 | 5 | RH,DD | Paolo Sorrentino. Oscar. Roma + festas + vazio + orgias elegantes. |
-| 1533 | Youth (La Giovinezza) | 2015 | Filme | H | 3 | 3 | 5 | 2 | 2 | 1 | 5 | LB | Sorrentino. Michael Caine + Harvey Keitel. Velhice + desejo + spa. |
-| 1534 | Loro | 2018 | Filme | H | 4 | 4 | 5 | 3 | 3 | 1 | 4 | RH | Sorrentino. Berlusconi. Orgias + poder + decadência. |
-| 1535 | The Hand of God (È Stata la Mano di Dio) | 2021 | Filme | H | 3 | 3 | 5 | 3 | 3 | 1 | 5 | LIS,LB | Sorrentino. Autobiográfico. Nápoles + sexualidade adolescente + Maradona + perda. |
-| 1536 | I Am Love (Io Sono l'Amore) | 2009 | Filme | H | 4 | 3 | 5 | 2 | 2 | 1 | 5 | LB | Guadagnino. Tilda Swinton. Affair com cozinheiro jovem. Milão. |
-| 1537 | A Bigger Splash | 2015 | Filme | B | 4 | 3 | 4 | 2 | 2 | 1 | 4 | RH | Guadagnino. Tilda Swinton + Ralph Fiennes. Ilha + desejo + ciúme. |
-| 1538 | Call Me by Your Name — já listado #11 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1539 | Malèna — já listado #1254 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1540 | Cinema Paradiso | 1988 | Filme | H | 2 | 2 | 5 | 2 | 1 | 1 | 5 | LB | Tornatore. Cinema + memória + amor + beijos censurados. Oscar. |
-| 1541 | The Conformist — já listado #1075 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1542 | Investigation of a Citizen Above Suspicion | 1970 | Filme | H | 3 | 3 | 5 | 3 | 3 | 2 | 5 | VD,DD | Elio Petri. Policial mata amante e investiga a si mesmo. Kafkiano. Oscar. |
-| 1543 | La Dolce Vita | 1960 | Filme | H | 3 | 2 | 5 | 2 | 2 | 1 | 5 | RH | Fellini. Roma + hedonismo + vazio existencial + Anita Ekberg na fonte. |
-| 1544 | 8½ (Otto e Mezzo) | 1963 | Filme | H | 3 | 2 | 5 | 2 | 2 | 1 | 5 | DD,VD | Fellini. Cineasta em crise + fantasias sexuais + harém onírico. |
-| 1545 | Satyricon | 1969 | Filme | B,X | 4 | 4 | 5 | 4 | 5 | 2 | 5 | RH,VD | Fellini. Roma antiga + orgias + hermafrodita + bizarrice total. |
-| 1546 | Amarcord | 1973 | Filme | H | 3 | 3 | 5 | 1 | 2 | 1 | 5 | LIS,LB | Fellini. Infância + sexualidade adolescente + fascismo + nostalgia. Oscar. |
-| 1547 | Casanova | 1976 | Filme | H | 5 | 4 | 4 | 2 | 3 | 2 | 5 | RH | Fellini. Donald Sutherland. Sexo mecânico + solidão. Oscar Figurino. |
-| 1548 | City of Women (La Città delle Donne) | 1980 | Filme | H | 4 | 3 | 4 | 2 | 3 | 3 | 4 | RH | Fellini. Mastroianni preso num mundo de mulheres. Surrealismo sexual. |
-| 1549 | The Night of the Shooting Stars (La Notte di San Lorenzo) | 1982 | Filme | H | 2 | 2 | 5 | 3 | 2 | 3 | 5 | BTS | Taviani Brothers. WWII na Toscana. Memória + violência + amor. |
-| 1550 | Padre Padrone | 1977 | Filme | H,X | 3 | 3 | 5 | 4 | 5 | 3 | 5 | VD | Taviani. Palma de Ouro. Pai tirano + pastor analfabeto + bestialidade implícita. |
-| 1551 | Gomorrah (Gomorra) | 2008 | Filme | H | 2 | 2 | 5 | 4 | 4 | 1 | 5 | DD | Matteo Garrone. Camorra napolitana. 5 histórias. Cannes Grand Prix. |
-| 1552 | Dogman | 2018 | Filme | H | 2 | 2 | 5 | 4 | 4 | 1 | 5 | VD | Garrone. Tosador de cães vs bully. Cannes ator. |
-| 1553 | Tale of Tales (Il Racconto dei Racconti) | 2015 | Filme | H | 3 | 3 | 4 | 4 | 3 | 1 | 4 | DD,RH | Garrone. Três contos de fadas sombrios + Salma Hayek. |
-| 1554 | Happy as Lazzaro (Lazzaro Felice) | 2018 | Filme | H | 1 | 1 | 5 | 3 | 2 | 1 | 5 | CE,BTS | Alice Rohrwacher. Cannes Roteiro. Santo idiota + exploração + magia. |
-| 1555 | The Wonders (Le Meraviglie) | 2014 | Filme | H | 2 | 1 | 5 | 2 | 1 | 1 | 4 | LIS | Rohrwacher. Família de apicultores + adolescência. Grand Prix Cannes. |
-| 1556 | La Chimera | 2023 | Filme | H | 2 | 2 | 5 | 2 | 2 | 1 | 5 | DD,LB | Rohrwacher. Saqueador de tumbas etruscas. Josh O'Connor. |
-
-### CINEMA ERÓTICO ESPANHOL (NOVOS — ALÉM DE ALMODÓVAR)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1557 | Tesis | 1996 | Filme | H,V | 3 | 3 | 5 | 5 | 5 | 1 | 5 | VD | Alejandro Amenábar. Snuff films na universidade. Thriller. |
-| 1558 | Open Your Eyes (Abre los Ojos) | 1997 | Filme | H | 3 | 3 | 5 | 3 | 2 | 1 | 5 | DD,VD | Amenábar. Original de Vanilla Sky. Identidade + realidade. |
-| 1559 | The Sea Inside (Mar Adentro) | 2004 | Filme | H | 2 | 1 | 5 | 3 | 3 | 1 | 5 | CE,BTS | Amenábar. Oscar. Javier Bardem. Eutanásia. Caso real. |
-| 1560 | Jamón Jamón | 1992 | Filme | H | 5 | 4 | 4 | 2 | 2 | 1 | 5 | RH | Bigas Luna. Penélope Cruz + Javier Bardem. Presunto + sexo + touros. |
-| 1561 | The Ages of Lulu (Las Edades de Lulú) | 1990 | Filme | H,B,X | 5 | 5 | 3 | 4 | 5 | 2 | 4 | VD | Bigas Luna. SM + orgias + travestis + incesto. Almudena Grandes. |
-| 1562 | Golden Balls (Huevos de Oro) | 1993 | Filme | H | 5 | 4 | 4 | 2 | 2 | 2 | 4 | RH | Bigas Luna. Trilogia ibérica. Machismo + construção + sexo. |
-| 1563 | The Tit and the Moon (La Teta y la Luna) | 1994 | Filme | H | 4 | 3 | 3 | 1 | 3 | 2 | 4 | RH | Bigas Luna. Menino obcecado por seios. Catalunha. |
-| 1564 | Volavérunt | 1999 | Filme | H | 4 | 3 | 3 | 2 | 3 | 3 | 3 | RH | Bigas Luna. Aitana Sánchez-Gijón. Goya + Duquesa de Alba + envenenamento. |
-| 1565 | The Spirit of the Beehive (El Espíritu de la Colmena) | 1973 | Filme | H | 1 | 1 | 5 | 3 | 2 | 1 | 5 | DD,BTS | Víctor Erice. Menina obcecada por Frankenstein. Pós-guerra civil. |
-| 1566 | Cría Cuervos | 1976 | Filme | H | 2 | 1 | 5 | 3 | 3 | 1 | 5 | DD,BTS | Carlos Saura. Menina que acredita ter matado o pai. |
-| 1567 | Pain and Glory — já listado #1106 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1568 | The Platform (El Hoyo) | 2019 | Filme | H | 2 | 3 | 4 | 5 | 4 | 1 | 4 | DD,BR | Galder Gaztelu-Urrutia. Prisão vertical + comida + canibalismo. Netflix. |
-| 1569 | Thesis — já listado #1557 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1570 | Elisa y Marcela — já listado #85 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1571 | Summer 1993 (Estiu 1993) | 2017 | Filme | H | 1 | 1 | 5 | 3 | 2 | 1 | 5 | LIS,LB | Carla Simón. Menina após morte dos pais por AIDS. Autobiográfico. |
-| 1572 | Alcarràs | 2022 | Filme | H | 1 | 1 | 5 | 2 | 1 | 1 | 5 | LB | Carla Simón. Urso de Ouro Berlim. Família de agricultores catalães. |
-| 1573 | Libertad | 2021 | Filme | L | 2 | 1 | 4 | 1 | 1 | 2 | 3 | LIS | Clara Roquet. Verão + amizade intensa entre adolescentes + classe. |
-
-### CINEMA ERÓTICO BRITÂNICO (NOVOS)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1574 | Performance | 1970 | Filme | B,H | 4 | 4 | 5 | 4 | 4 | 2 | 5 | RH,VD,DD | Nicolas Roeg + Donald Cammell. Mick Jagger. Gangster + rockstar + identidade fundida + drogas + sexo. |
-| 1575 | The Wicker Man — já listado #643 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1576 | Kes | 1969 | Filme | H | 1 | 1 | 5 | 3 | 2 | 1 | 5 | CE,LB | Ken Loach. Menino + falcão. Classe trabalhadora. Não erótico mas essencial. |
-| 1577 | Naked | 1993 | Filme | H | 3 | 3 | 5 | 5 | 4 | 1 | 5 | DD,VD | Mike Leigh. David Thewlis perambula por Londres. Misoginia + inteligência + desespero. Cannes ator. |
-| 1578 | Secrets & Lies | 1996 | Filme | H | 2 | 1 | 5 | 3 | 2 | 1 | 5 | BTS | Leigh. Palma de Ouro. Mulher negra descobre mãe branca. |
-| 1579 | Vera Drake | 2004 | Filme | H | 2 | 2 | 5 | 4 | 4 | 1 | 5 | BTS | Leigh. Leão de Ouro. Aborteira clandestina nos anos 50. |
-| 1580 | Mr. Turner | 2014 | Filme | H | 3 | 2 | 5 | 2 | 2 | 1 | 5 | LB | Leigh. Timothy Spall como pintor Turner. Cannes ator. |
-| 1581 | A Room with a View | 1985 | Filme | H | 3 | 2 | 5 | 1 | 1 | 1 | 5 | LB,LIS | James Ivory. Helena Bonham Carter. Florença + nudez masculina na lagoa. |
-| 1582 | Maurice — já listado #10 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1583 | My Beautiful Laundrette — já listado #824 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1584 | Prick Up Your Ears | 1987 | Filme | G | 3 | 3 | 5 | 3 | 3 | 2 | 5 | RH | Stephen Frears. Gary Oldman como Joe Orton. Dramaturgo gay assassinado pelo amante. |
-| 1585 | The Crying Game — já listado #285 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1586 | Closer | 2004 | Filme | H | 4 | 3 | 5 | 3 | 3 | 1 | 5 | LIS,DD | Mike Nichols. Natalie Portman + Jude Law + Julia Roberts + Clive Owen. Sexo verbal devastador. |
-| 1587 | Notes on a Scandal — já listado #229 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1588 | The Duke of Burgundy | 2014 | Filme | L | 4 | 3 | 5 | 2 | 3 | 2 | 5 | VD,CE | Peter Strickland. Duas mulheres + BDSM lésbico + entomologia + poder. |
-| 1589 | In Fabric | 2018 | Filme | H | 3 | 3 | 4 | 4 | 3 | 2 | 4 | VD,DD | Strickland. Vestido assassino + erotismo + Giallo homenagem. |
-| 1590 | Berberian Sound Studio | 2012 | Filme | H | 2 | 2 | 5 | 4 | 2 | 2 | 5 | VD | Strickland. Técnico de som num giallo. Meta-cinema. |
-| 1591 | Sexy Beast | 2000 | Filme | H | 3 | 2 | 5 | 4 | 3 | 1 | 5 | DD | Jonathan Glazer. Ben Kingsley aterroriza Ray Winstone. Aposentadoria + crime. |
-| 1592 | Under the Skin — já listado #338 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1593 | Birth | 2004 | Filme | H,X | 3 | 2 | 5 | 3 | 4 | 2 | 5 | DD,BTS | Glazer. Nicole Kidman. Menino de 10 diz ser reencarnação do marido morto. Cena da banheira. |
-| 1594 | The Zone of Interest | 2023 | Filme | H | 1 | 1 | 5 | 5 | 5 | 1 | 5 | VD,BR | Glazer. Oscar. Família do comandante de Auschwitz. O horror pela banalidade. |
-| 1595 | Disobedience — já listado #201 | — | — | — | — | — | — | — | — | — | — | — | — |
-
-### CINEMA ERÓTICO ALEMÃO (NOVOS)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1596 | The Tin Drum (Die Blechtrommel) | 1979 | Filme | H,X | 3 | 3 | 5 | 4 | 5 | 1 | 5 | DD,RH | Volker Schlöndorff. Palma de Ouro + Oscar. Menino que não cresce + sexo + nazismo. |
-| 1597 | The Lost Honor of Katharina Blum | 1975 | Filme | H | 2 | 2 | 5 | 3 | 3 | 2 | 5 | DD | Schlöndorff + Margarethe von Trotta. Mídia + terrorismo + mulher destruída. |
-| 1598 | Wings of Desire (Der Himmel über Berlin) | 1987 | Filme | H | 2 | 1 | 5 | 2 | 1 | 1 | 5 | CE,BTS | Wim Wenders. Anjo quer ser humano. Berlim. Peter Falk. |
-| 1599 | Paris, Texas | 1984 | Filme | H,V | 3 | 2 | 5 | 3 | 2 | 1 | 5 | BR,CE | Wenders. Palma de Ouro. Harry Dean Stanton. Peep show + reencontro. |
-| 1600 | The American Friend (Der Amerikanische Freund) | 1977 | Filme | H | 2 | 1 | 5 | 3 | 2 | 2 | 5 | DD,BR | Wenders. Dennis Hopper + Bruno Ganz. Highsmith. |
-| 1601 | Wetlands — já listado #687 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1602 | Head-On (Gegen die Wand) | 2004 | Filme | H | 4 | 4 | 5 | 4 | 4 | 1 | 5 | DD,CE | Fatih Akin. Urso de Ouro. Turco-alemão + casamento falso + autodestruição + sexo. |
-| 1603 | The Edge of Heaven (Auf der Anderen Seite) | 2007 | Filme | H | 3 | 2 | 5 | 3 | 2 | 1 | 5 | BTS | Akin. Destinos entrelaçados entre Alemanha e Turquia. |
-| 1604 | In the Fade (Aus dem Nichts) | 2017 | Filme | H | 2 | 2 | 5 | 5 | 4 | 1 | 5 | BTS | Akin. Diane Kruger. Família assassinada por neonazistas. Vingança. Cannes atriz. |
-| 1605 | Christiane F. (Wir Kinder vom Bahnhof Zoo) | 1981 | Filme | H | 3 | 3 | 5 | 5 | 5 | 1 | 5 | DD,VD | Uli Edel. Adolescente + heroína + prostituição em Berlim. David Bowie. |
-| 1606 | Goodbye, Lenin! | 2003 | Filme | H | 2 | 1 | 5 | 2 | 1 | 1 | 5 | DD | Wolfgang Becker. Queda do Muro + mãe em coma + farsa. |
-| 1607 | The White Ribbon — já em Haneke mas sem # | 2009 | Filme | H | 1 | 1 | 5 | 4 | 4 | 1 | 5 | DD | Haneke. Palma de Ouro. Aldeia alemã pré-WWI. Sementes do fascismo. |
-| 1608 | Toni Erdmann | 2016 | Filme | H,C | 3 | 3 | 5 | 2 | 2 | 1 | 5 | RH,CE | Maren Ade. Pai + filha + dentes falsos + festa nua. 162 min de brilhantismo. |
-| 1609 | Victoria | 2015 | Filme | H | 3 | 3 | 5 | 4 | 3 | 1 | 5 | DD | Sebastian Schipper. UM ÚNICO PLANO de 138 minutos. Noite + crime + romance em Berlim. |
-| 1610 | Grand Jeté — já listado #504 | — | — | — | — | — | — | — | — | — | — | — | — |
-
-### GRÉCIA / NOVA ONDA GREGA (NOVOS)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1611 | Attenberg | 2010 | Filme | H | 3 | 3 | 5 | 2 | 2 | 2 | 5 | CE,DD | Athina Rachel Tsangari. Mulher de 23 nunca beijou. Pai moribundo. Grega estranha. |
-| 1612 | Chevalier | 2015 | Filme | H,C | 2 | 2 | 4 | 2 | 2 | 2 | 4 | RH,DD | Tsangari. Seis homens num iate competem quem é o melhor em tudo. |
-| 1613 | Miss Violence | 2013 | Filme | H,X | 2 | 3 | 5 | 5 | 5 | 3 | 5 | VD | Alexandros Avranas. Menina se suicida na festa de 11 anos. Segredo horrível. Veneza direção. |
-| 1614 | Kinetta | 2005 | Filme | H | 2 | 2 | 4 | 3 | 2 | 3 | 4 | VD,DD | Lanthimos. Primeiro longa. Três pessoas reencenam crimes. |
-| 1615 | Strella — já listado #449 | — | — | — | — | — | — | — | — | — | — | — | — |
-
-### MAIS ANIME / HENTAI (NOVOS)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1616 | Garden of Sinners (Kara no Kyoukai) | 2007 | Anime | H,PH,AN | 2 | 2 | 5 | 4 | 4 | 1 | 5 | DD,BTS,VD | Ufotable. 7 filmes. Assassina + olhos místicos + estupro + suicídio. Nasuverse. |
-| 1617 | Fate/Zero | 2011 | Anime | H,AN,SE | 2 | 2 | 5 | 4 | 3 | 1 | 5 | DD,BTS | Ufotable. Guerra do Santo Graal. Moralidade + sacrifício. |
-| 1618 | Fate/stay night: Heaven's Feel (trilogia) | 2017 | Anime | H,AN | 3 | 3 | 5 | 4 | 4 | 1 | 5 | DD,BTS | Ufotable. Rota mais dark. Romance + body horror + sexo implícito. VN era hentai. |
-| 1619 | Tsukihime — A Piece of Blue Glass Moon | 2024 | Anime | H,Z,AN | 2 | 2 | 4 | 3 | 3 | 1 | 4 | DD,VD | Ufotable. Vampiros + olhos que veem morte. VN original era eroge. |
-| 1620 | Cross Ange | 2014 | Anime | L,EC,SF,AN,SE | 4 | 3 | 3 | 3 | 3 | 1 | 3 | BR,RH | Sunrise. Princesa caída + dragões + mechas + yuri explícito. |
-| 1621 | Kannazuki no Miko (Destiny of the Shrine Maiden) | 2004 | Anime | L,AN,SE | 3 | 2 | 3 | 2 | 2 | 2 | 4 | LIS | Miko + mechas + reencarnação + yuri + estupro controverso. |
-| 1622 | Strawberry Panic — já listado #378 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1623 | Noir — já listado #916 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1624 | Gunslinger Girl | 2003 | Anime | H,AN,SE | 1 | 1 | 5 | 4 | 4 | 2 | 5 | BTS | Meninas ciborgue + agência italiana + ética. Perturbador pela premissa. |
-| 1625 | Noir Anime → Madlax | 2004 | Anime | L,AN,SE | 2 | 1 | 3 | 2 | 2 | 3 | 3 | BTS | Bee Train. Assassina + amnésia + subtexto yuri. Trilogia Girls with Guns. |
-| 1626 | Phantom: Requiem for the Phantom | 2009 | Anime | H,AN,SE | 2 | 2 | 4 | 4 | 3 | 2 | 4 | BTS,DD | Nitroplus + Bee Train. Assassinos sem memória. Visual novel. |
-| 1627 | School-Live! (Gakkougurashi!) | 2015 | Anime | H,PH,AN,SE | 1 | 1 | 5 | 4 | 3 | 1 | 4 | DD,BTS | Cute girls doing cute things... durante apocalipse zumbi. Twist no ep. 1. |
-| 1628 | Higurashi no Naku Koro ni (When They Cry) | 2006 | Anime | H,PH,AN,SE | 2 | 2 | 5 | 5 | 4 | 1 | 5 | DD,BTS | Loop temporal + assassinatos + paranoia + aldeia. |
-| 1629 | Umineko no Naku Koro ni | 2009 | Anime | H,PH,AN,SE | 2 | 2 | 4 | 4 | 4 | 2 | 4 | DD | Mansão + família + bruxas + assassinatos impossíveis. |
-| 1630 | Another | 2012 | Anime | H,PH,AN,SE | 1 | 1 | 4 | 4 | 3 | 1 | 4 | DD,BTS | Maldição + mortes + Final Destination japonês. |
-| 1631 | Shiki | 2010 | Anime | H,Z,AN,SE | 2 | 2 | 5 | 5 | 4 | 2 | 5 | VD,DD | Vampiros + aldeia + moralidade + genocídio. Baseado em Salem's Lot. |
-| 1632 | Mnemosyne (Rin: Daughters of Mnemosyne) | 2008 | Anime | L,Z,BH,AN,SE | 4 | 4 | 4 | 4 | 4 | 3 | 4 | VD | Imortal + tortura + sexo lésbico + body horror + vampirismo. 6 OVAs. |
-| 1633 | Yami Shibai (Theatre of Darkness) | 2013 | Anime | H,PH,AN,SE | 1 | 1 | 3 | 4 | 3 | 1 | 4 | DD | Horror em 5 minutos. Kamishibai. Muitas temporadas. |
-| 1634 | Nazo no Kanojo X — já listado #905 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1635 | To Your Eternity (Fumetsu no Anata e) | 2021 | Anime | H,AN,SE | 1 | 1 | 5 | 4 | 2 | 1 | 5 | BTS,CE,LB | Ser imortal aprende sobre humanidade. Perda + amor + sofrimento. |
-| 1636 | Parasyte (Kiseijuu: Sei no Kakuritsu) | 2014 | Anime | H,BH,AN,SE | 2 | 2 | 5 | 4 | 3 | 1 | 5 | VD,DD | Alienígenas parasitas + body horror + identidade + o que é humano? |
-| 1637 | Inuyashiki | 2017 | Anime | H,BH,AN,SE | 2 | 2 | 4 | 4 | 4 | 1 | 4 | VD,BTS | Velho + adolescente viram armas. Hiroya Oku (Gantz). |
-| 1638 | Ajin: Demi-Human | 2016 | Anime | H,SF,AN,SE | 2 | 2 | 4 | 4 | 3 | 1 | 4 | DD | Humanos imortais caçados pelo governo. CGI. |
-| 1639 | Dororo | 2019 | Anime | H,AN,SE | 2 | 2 | 5 | 4 | 3 | 1 | 5 | BTS,CE | Tezuka. Garoto sem corpo luta demônios para recuperar membros. MAPPA. |
-| 1640 | Samurai Champloo — já listado #114 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1641 | Cowboy Bebop — já listado #113 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1642 | Space Dandy | 2014 | Anime | H,SF,C,AN,SE | 2 | 2 | 4 | 1 | 1 | 1 | 4 | BR,RH | Watanabe. Caçador de aliens + Hooters galáctico. Comédia sci-fi. |
-| 1643 | Kaiba | 2008 | Anime | H,SF,AN,SE | 2 | 2 | 5 | 3 | 3 | 3 | 5 | BR,CE | Yuasa. Memórias armazenáveis + corpos trocáveis + amor + identidade. |
-| 1644 | Devilman Crybaby — já listado #76 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1645 | Japan Sinks: 2020 | 2020 | Anime | H,AN,SE | 1 | 1 | 4 | 5 | 3 | 1 | 4 | BTS | Yuasa. Netflix. Japão afunda. Família tenta sobreviver. |
-| 1646 | Inu-Oh | 2021 | Anime | H,AN | 2 | 1 | 5 | 2 | 2 | 1 | 4 | RH,LB | Yuasa. Dançarino deformado + músico cego. Musical + Noh + rock. |
-| 1647 | The House of the Lost on the Cape (Misaki no Mayoiga) | 2021 | Anime | H,AN | 1 | 1 | 4 | 2 | 1 | 2 | 3 | BTS | David Production. Após tsunami + casa misteriosa + cura. |
-| 1648 | Pompo the Cinephile | 2021 | Anime | H,AN | 1 | 1 | 5 | 1 | 1 | 1 | 4 | LB | Sobre FAZER cinema. Assistente vira diretor. Meta-cinema anime. |
-| 1649 | Words Bubble Up Like Soda Pop | 2020 | Anime | H,AN | 1 | 1 | 4 | 1 | 1 | 1 | 3 | LIS | Haiku + garota de máscara + verão. Doce. Signal.MD. |
-| 1650 | Josee — já listado #900 | — | — | — | — | — | — | — | — | — | — | — | — |
-
-### MAIS SÉRIES ERÓTICAS / RECENTES (NOVAS)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1651 | Shogun (2024) | 2024 | Serie | H,SE | 3 | 3 | 5 | 3 | 3 | 1 | 5 | BR | FX/Hulu. Japão feudal. Samurais + política + sexo + seppuku. |
-| 1652 | Ripley | 2024 | Serie | G,SE | 2 | 1 | 5 | 3 | 3 | 1 | 5 | DD,VD | Netflix. Andrew Scott como Tom Ripley. P&B. Elegante + homicida. |
-| 1653 | Baby Reindeer | 2024 | Serie | B,SE | 3 | 3 | 5 | 5 | 5 | 1 | 5 | BTS,CE | Netflix. Stalker + abuso sexual masculino. Autobiográfico. Devastador. |
-| 1654 | The Bear | 2022 | Serie | H,SE | 2 | 1 | 5 | 3 | 2 | 1 | 5 | CE,LB | FX. Cozinha + ansiedade + excelência + família. Jeremy Allen White. |
-| 1655 | Beef | 2023 | Serie | H,SE | 2 | 2 | 5 | 3 | 3 | 1 | 5 | CE,DD | Netflix. Road rage → obsessão mútua. Steven Yeun + Ali Wong. |
-| 1656 | Lessons in Chemistry | 2023 | Serie | H,SE | 2 | 2 | 5 | 2 | 2 | 1 | 4 | LIS,CE | Apple TV+. Brie Larson. Química + sexismo + anos 60. |
-| 1657 | We Are Lady Parts | 2021 | Serie | H,C,SE | 1 | 1 | 5 | 1 | 2 | 1 | 4 | RH,CE | Channel 4. Banda punk muçulmana feminina. |
-| 1658 | I May Destroy You | 2020 | Serie | B,SE | 4 | 4 | 5 | 5 | 5 | 1 | 5 | BTS,CE | HBO. Michaela Coel. Estupro + consentimento + identidade + raça. |
-| 1659 | Fleabag — já listado #975 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1660 | The Morning Show | 2019 | Serie | H,SE | 3 | 3 | 4 | 3 | 3 | 1 | 4 | BTS | Apple TV+. MeToo + TV matinal + poder + sexo. Jennifer Aniston + Reese Witherspoon. |
-| 1661 | Mare of Easttown | 2021 | Serie | H,SE | 2 | 2 | 5 | 4 | 3 | 1 | 5 | BTS,DD | HBO. Kate Winslet. Detetive + luto + cidade pequena. |
-| 1662 | Sharp Objects | 2018 | Serie | H,PH,SE | 3 | 3 | 5 | 5 | 5 | 1 | 5 | DD,BTS | HBO. Amy Adams. Autolesão + família tóxica + mistério + incesto materno. |
-| 1663 | Big Little Lies | 2017 | Serie | H,SE | 3 | 3 | 5 | 4 | 4 | 1 | 5 | LIS,BTS | HBO. Abuso doméstico + estupro + classe + amizade. Reese + Nicole + Shailene. |
-| 1664 | The Undoing | 2020 | Serie | H,SE | 3 | 3 | 4 | 3 | 3 | 1 | 4 | DD | HBO. Nicole Kidman + Hugh Grant. Assassinato + affair + engano. |
-| 1665 | Maid | 2021 | Serie | H,SE | 2 | 1 | 5 | 4 | 3 | 1 | 5 | CE,BTS | Netflix. Margaret Qualley. Abuso doméstico + pobreza + maternidade. |
-| 1666 | Unbelievable | 2019 | Serie | H,SE | 2 | 2 | 5 | 5 | 5 | 1 | 5 | BTS | Netflix. Estupro + investigação + sistema que falha. Caso real. |
-| 1667 | Ratched | 2020 | Serie | L,PH,SE | 3 | 3 | 3 | 4 | 4 | 1 | 3 | RH | Netflix. Sarah Paulson como Nurse Ratched jovem. Queer + asilo + Ryan Murphy. |
-| 1668 | The Serpent | 2021 | Serie | H,SE | 3 | 2 | 4 | 4 | 4 | 1 | 4 | DD | BBC/Netflix. Serial killer Charles Sobhraj na Ásia dos anos 70. |
-| 1669 | Mindhunter | 2017 | Serie | H,SE | 2 | 2 | 5 | 4 | 4 | 1 | 5 | DD,VD | Netflix. Fincher. FBI entrevista serial killers. Psicologia + mal. |
-| 1670 | Ozark | 2017 | Serie | H,SE | 3 | 3 | 5 | 4 | 4 | 1 | 5 | DD | Netflix. Jason Bateman. Lavagem de dinheiro + violência + família. |
-| 1671 | Breaking Bad | 2008 | Serie | H,SE | 2 | 2 | 5 | 5 | 4 | 1 | 5 | DD | AMC. Professor de química → traficante. A série perfeita. |
-| 1672 | Better Call Saul | 2015 | Serie | H,SE | 2 | 2 | 5 | 3 | 3 | 1 | 5 | DD | AMC. Prequel/sequência de Breaking Bad. Mais lento e profundo. |
-| 1673 | True Detective S1 | 2014 | Serie | H,SE | 3 | 3 | 5 | 5 | 5 | 1 | 5 | DD,VD | HBO. McConaughey + Harrelson. Culto + rituais + nihilismo. |
-| 1674 | True Detective: Night Country | 2024 | Serie | L,SE | 3 | 3 | 5 | 4 | 3 | 1 | 4 | BTS,DD | HBO. Jodie Foster. Alaska + lésbico + horror. |
-| 1675 | The Night Manager | 2016 | Serie | H,SE | 3 | 3 | 5 | 3 | 2 | 1 | 5 | BR,DD | BBC. Tom Hiddleston + Hugh Laurie. Le Carré. Espionagem elegante. |
-
----
-
-## CONTAGEM FINAL ATUALIZADA
-
-| Categoria | Total |
-|---|---|
-| Entradas únicas neste bloco | ~175 |
-| Total geral acumulado | ~1675+ |
-| Novos diretores neste bloco | Bergman, Kieslowski, Östlund, Fellini, Sorrentino, Guadagnino expandido, Bigas Luna, Amenábar, Rohrwacher, Garrone, Strickland, Glazer, Akin, Claire Denis expandida, Assayas, Bonello expandido, Frears, Leigh, Schlöndorff, Wenders, Martel, Tsangari, Trần Anh Hùng |
-| Novos países/regiões expandidos | França (massiva expansão), Itália (Fellini, Sorrentino, Rohrwacher, Garrone), Espanha (Bigas Luna, Amenábar, Saura, Erice, Simón), UK (Leigh, Strickland, Glazer), Alemanha (Wenders, Akin, Schlöndorff), Grécia (Nova Onda expandida) |
-
----
-
-## NOTAS DESTE BLOCO
-
-- Cinema francês massivamente expandido: Claire Denis filmografia, Assayas, Bonello, Trần Anh Hùng, Ozon expansão
-- Cinema italiano clássico e contemporâneo: Fellini (La Dolce Vita, 8½, Satyricon, Amarcord, Casanova), Sorrentino (Grande Bellezza, Loro, Hand of God), Rohrwacher, Garrone
-- Cinema espanhol além de Almodóvar: Bigas Luna (Jamón Jamón, Ages of Lulu), Amenábar, Saura, Erice, Carla Simón
-- Cinema britânico de arte: Peter Strickland (Duke of Burgundy, In Fabric), Jonathan Glazer (Sexy Beast, Birth, Zone of Interest), Mike Leigh
-- Cinema alemão: Wim Wenders (Paris Texas, Wings of Desire), Fatih Akin (Head-On), Christiane F.
-- Grécia expandida: Attenberg, Miss Violence, Chevalier
-- Anime: Garden of Sinners, Fate, Higurashi, Shiki, Mnemosyne, Kaiba, Parasyte, Dororo
-- Séries recentes 2022-2024: Shogun, Ripley, Baby Reindeer, Beef, I May Destroy You
-- Séries crime/drama premium: True Detective, Mindhunter, Breaking Bad, Ozark
-- Fellini finalmente incluído com filmografia erótica relevante
-- Peter Strickland como novo diretor-chave do erotismo britânico contemporâneo
-- Bigas Luna como contraponto espanhol a Almodóvar no erotismo
-
----
-
----
-
-## MELANCOLIA, DEPRESSÃO E RELAÇÕES DESTINADAS AO FRACASSO
-### Principalmente Lésbicos — Para Fãs de Life is Strange
-
----
-
-### LÉSBICOS / SÁFICOS — MELANCÓLICOS
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1676 | Blue Is the Warmest Color — já listado #401 mas ESSENCIAL aqui | 2013 | Filme | L | 5 | 4 | 5 | 2 | 2 | 1 | 5 | LIS,CE | O relacionamento lésbico mais bonito e doloroso do cinema. Amor → separação → vazio. "Eu sinto uma solidão infinita." |
-| 1677 | Portrait of a Lady on Fire — já listado #1 mas ESSENCIAL aqui | 2019 | Filme | L | 2 | 1 | 5 | 1 | 2 | 1 | 5 | LIS,CE | Amor que nunca poderá existir. A última cena na orquestra destrói qualquer um. |
-| 1678 | Ammonite — já listado #211 mas relevante | 2020 | Filme | L | 3 | 3 | 4 | 1 | 2 | 1 | 3 | LB,LIS | Kate Winslet isolada e amarga. Amor que chega tarde e parte cedo. |
-| 1679 | Summerland — já listado #87 mas relevante | 2020 | Filme | L | 2 | 1 | 3 | 1 | 1 | 2 | 3 | LB,LIS | Escritora vive sozinha há décadas após perder amante lésbica. |
-| 1680 | The Handmaiden — já listado #402 mas relevante | 2016 | Filme | L | 5 | 4 | 5 | 2 | 3 | 1 | 5 | LIS,VD | Manipulação + traição + amor impossível que de alguma forma sobrevive. |
-| 1681 | Thelma — já listado #202 mas relevante | 2017 | Filme | L,R | 3 | 2 | 5 | 3 | 3 | 2 | 4 | BTS,CE | Repressão religiosa → poderes destrutivos. Desejo proibido literalmente mata. |
-| 1682 | Elisa y Marcela — já listado #85 mas relevante | 2019 | Filme | L | 3 | 3 | 4 | 1 | 2 | 2 | 4 | LIS | Amor tão proibido que uma teve que se disfarçar de homem. Espanha 1901. |
-| 1683 | Saving Face — já listado #41 mas relevante | 2004 | Filme | L,C | 2 | 1 | 4 | 1 | 2 | 2 | 3 | LIS | Não poder ser quem é + pressão familiar chinesa + solidão no armário. |
-| 1684 | Circumstance — já listado #72 mas relevante | 2011 | Filme | L | 3 | 2 | 4 | 2 | 4 | 2 | 4 | LIS,BTS | Romance lésbico no Irã = sentença de morte. Tudo é proibido. |
-| 1685 | Below Her Mouth — já listado #405 mas relevante | 2016 | Filme | L | 5 | 5 | 2 | 1 | 2 | 2 | 3 | LIS | Paixão que destrói uma vida planejada. Jasmine perde tudo por Dallas. |
-| 1686 | Imagine Me & You — já listado #42 mas relevante | 2005 | Filme | L,C | 2 | 1 | 3 | 1 | 1 | 1 | 3 | LIS | Descobrir ser lésbica no dia do casamento. "Destino errado, coração certo." |
-| 1687 | Fingersmith — já listado #216 mas relevante | 2005 | Serie | L,SE | 4 | 3 | 5 | 2 | 3 | 2 | 5 | LIS | Traição → traição → amor verdadeiro sepultado por mentiras. Manipulação mútua. |
-
----
-
-### LÉSBICOS / SÁFICOS — NOVOS (NÃO LISTADOS ANTERIORMENTE)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1688 | Fucking Åmål (Show Me Love) — já listado #45 mas essencial | 1998 | Filme | L | 2 | 1 | 5 | 1 | 2 | 2 | 4 | LIS | Cidade pequena sufocante. "Estou tão cansada de fingir." Adolescência cinza na Suécia. |
-| 1689 | The Miseducation of Cameron Post — já listado #89 | 2018 | Filme | L | 2 | 1 | 4 | 2 | 3 | 1 | 4 | LIS,CE | Enviada para terapia de conversão por ser quem é. Resistência silenciosa. |
-| 1690 | My Summer of Love — já listado #836 | 2004 | Filme | L | 3 | 2 | 4 | 2 | 2 | 2 | 4 | LIS,DD | Amizade → paixão → traição. Tudo era mentira? Verão que acaba em cinzas. |
-| 1691 | Disobedience — já listado #201 mas essencial | 2017 | Filme | L,R | 3 | 2 | 5 | 1 | 4 | 1 | 4 | LIS,CE | "Eu escolho me prender." Amor que não pode existir dentro da fé. |
-| 1692 | When Night Is Falling — já listado #207 | 1995 | Filme | L,R | 3 | 3 | 4 | 1 | 3 | 3 | 4 | LIS | Professora religiosa destrói carreira e fé por amor proibido. |
-| 1693 | Water Lilies — já listado #46 | 2007 | Filme | L | 2 | 2 | 4 | 1 | 2 | 2 | 4 | LIS,LB | Sciamma. Desejo não correspondido. Olhar sem ser vista. Piscina como prisão. |
-| 1694 | High Art | 1998 | Filme | L | 3 | 3 | 4 | 2 | 2 | 2 | 4 | LIS,DD | Fotógrafa viciada em heroína + jovem editora. Amor destrutivo + arte + overdose. "Tudo bonito é triste." |
-| 1695 | Lost and Delirious | 2001 | Filme | L | 3 | 2 | 3 | 2 | 2 | 2 | 3 | LIS | Internato + paixão lésbica + rejeição + Piper Perabo enlouquece de dor. Falcão como metáfora. |
-| 1696 | Aimée & Jaguar | 1999 | Filme | L | 3 | 2 | 5 | 2 | 3 | 2 | 4 | BTS,LIS | Caso lésbico entre alemã e judia durante o Holocausto. Amor que o nazismo destruiu. |
-| 1697 | If These Walls Could Talk 2 | 2000 | Filme | L | 3 | 3 | 4 | 3 | 3 | 2 | 4 | LIS,BTS | Três épocas de amor lésbico na América. Primeira história: viúva que não pode chorar sua amante porque ninguém sabia. |
-| 1698 | Pariah — já listado #47 | 2011 | Filme | L | 2 | 2 | 4 | 2 | 2 | 2 | 4 | CE,LIS | Adolescente negra lésbica entre dois mundos. "Não sou uma cópia borrada de ninguém." |
-| 1699 | The World Unseen | 2007 | Filme | L | 2 | 2 | 4 | 2 | 4 | 3 | 3 | LIS | África do Sul nos anos 50. Duas indianas. Apartheid + homofobia + amor impossível. |
-| 1700 | Loving Annabelle — já listado #204 | 2006 | Filme | L,R | 3 | 2 | 3 | 1 | 4 | 3 | 3 | CE,LIS | Professora sabe que é errado. Faz mesmo assim. Destruição inevitável. |
-| 1701 | Room in Rome — já listado #404 | 2010 | Filme | L | 5 | 5 | 3 | 1 | 2 | 2 | 3 | LIS | Uma noite que nunca se repetirá. Conexão absoluta → despedida ao amanhecer. |
-| 1702 | The Hours | 2002 | Filme | L,H | 2 | 1 | 5 | 4 | 3 | 1 | 5 | LIS,CE,BTS | Três mulheres + Virginia Woolf + depressão + suicídio + beijo lésbico. "Eu sempre fui assim." Nicole Kidman Oscar. Meryl Streep. Julianne Moore. |
-| 1703 | The Kids Are All Right — já listado #769 | 2010 | Filme | L,C | 3 | 3 | 4 | 2 | 2 | 1 | 4 | LIS | Casamento lésbico em crise. Traição. "É mais fácil destruir do que construir." |
-| 1704 | Vita & Virginia | 2018 | Filme | L | 2 | 1 | 3 | 1 | 2 | 2 | 3 | LIS,LB | Virginia Woolf + Vita Sackville-West. Amor entre escritoras que o tempo separou. |
-| 1705 | Carol — já listado #2 mas ESSENCIAL | 2015 | Filme | L | 2 | 2 | 5 | 1 | 2 | 1 | 5 | LIS,LB | "Eu te solto." O sacrifício. Amar alguém e saber que a sociedade não permite. Cada olhar é um funeral. |
-| 1706 | Desert Hearts — já listado #209 | 1985 | Filme | L | 3 | 2 | 4 | 1 | 2 | 2 | 5 | LIS | Final feliz raro nos anos 80 — mas a jornada é solidão pura. Professora divorciada no deserto. |
-| 1707 | Tell It to the Bees — já listado #88 | 2018 | Filme | L | 2 | 2 | 3 | 1 | 2 | 2 | 3 | LIS | Anos 50 na Escócia. Vizinhos ameaçam destruir tudo. Amor entre mulher abandonada e médica. |
-| 1708 | Tipping the Velvet — já listado #845 | 2002 | Serie | L,SE | 4 | 3 | 4 | 1 | 2 | 2 | 4 | RH,LIS | Vitoriana descoberta → explorada → sozinha → encontra amor. Jornada de perda e reconstrução. |
-| 1709 | Killing Eve — já listado #966 | 2018 | Serie | L,SE | 3 | 2 | 5 | 4 | 3 | 1 | 5 | BTS,VD,LIS | Obsessão lésbica travestida de gato e rato. "Você me consome." Final controverso. |
-| 1710 | Haunting of Bly Manor — já listado #971 | 2020 | Serie | L,PH,SE | 2 | 1 | 5 | 3 | 1 | 1 | 4 | BTS,LIS | Romance lésbico + fantasmas + luto. Dani esquece Jamie lentamente. "É a história de uma casa assombrada perfeitamente." |
-| 1711 | Feel Good | 2020 | Serie | L,SE | 3 | 3 | 5 | 3 | 3 | 1 | 4 | LIS,CE | Mae Martin. Comediante lésbica viciada + namorada no armário. Vício + identidade + dor. "Eu sou um desastre funcional." |
-| 1712 | Gentleman Jack | 2019 | Serie | L,SE | 3 | 3 | 5 | 2 | 2 | 1 | 4 | LIS,LB | Suranne Jones como Anne Lister. Diário real. Lésbica na era vitoriana. Sempre sozinha até não estar. |
-| 1713 | The L Word — já listado #965 mas relevante | 2004 | Serie | L,SE | 4 | 4 | 4 | 1 | 2 | 1 | 5 | LIS | Jenny Schecter. A personagem mais autodestrutiva da TV lésbica. Escrita, manipulação, vazio. |
-| 1714 | Euphoria S1 — já listado #962 mas relevante | 2019 | Serie | B,SE | 4 | 4 | 5 | 4 | 4 | 1 | 5 | LIS,DD | Rue + Jules. Amor entre duas garotas destruídas. "Eu não fui feita para esse mundo." Drogas + abandono. |
-| 1715 | Skins S3-S4 (Naomi & Emily) | 2009 | Serie | L,SE | 3 | 3 | 4 | 3 | 2 | 1 | 4 | LIS,DD | O arco Naomily. Negação → amor → traição → lago. "Eu te amei desde o momento em que te vi." |
-| 1716 | Everything Now | 2023 | Serie | B,SE | 2 | 2 | 4 | 3 | 3 | 1 | 3 | LIS,CE | Pós-anorexia + volta à escola + lista de experiências + sexualidade fluida. Netflix. |
-| 1717 | First Kill | 2022 | Serie | L,Z,SE | 3 | 2 | 3 | 2 | 2 | 1 | 3 | LIS | Vampira + caçadora de vampiros. Romeu e Julieta lésbico. Netflix cancelou. Fãs devastados. |
-| 1718 | Dickinson | 2019 | Serie | L,C,SE | 3 | 3 | 5 | 2 | 2 | 1 | 4 | LIS,LB,RH | Hailee Steinfeld como Emily Dickinson. Poesia + amor por Sue + morte + rebeldia. "Eu habito a possibilidade." |
-| 1719 | Yellow Jackets — já listado #972 mas essencial | 2021 | Serie | B,PH,SE | 3 | 3 | 5 | 5 | 5 | 1 | 5 | BTS,DD,LIS | Crash + sobrevivência + canibalismo + Taissa + Van (lésbico). Trauma que dura décadas. |
-
----
-
-### LÉSBICOS / SÁFICOS — ANIME MELANCÓLICO
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1720 | Bloom Into You — já listado #69 mas ESSENCIAL | 2018 | Anime | L,AN,SE | 2 | 1 | 5 | 1 | 1 | 1 | 4 | LIS,LB | "Eu não consigo me apaixonar por ninguém." Touko precisa ser amada mas não sabe como. Yuu não sente nada. |
-| 1721 | Liz and the Blue Bird — já listado #1489 mas ESSENCIAL | 2018 | Anime | L,AN | 1 | 1 | 5 | 2 | 1 | 1 | 5 | LIS,LB,CE | Duas amigas músicas. Uma ama demais. A outra vai embora. Silêncio que grita. Naoko Yamada. |
-| 1722 | Revolutionary Girl Utena — já listado #66 mas relevante | 1997 | Anime | L,AN,SE | 3 | 2 | 5 | 3 | 3 | 2 | 5 | RH,CE,LIS | Anthy é uma boneca. Utena quer salvar mas é consumida. Abuso + ciclo + rosas murchas. |
-| 1723 | Simoun — já listado #914 | 2006 | Anime | L,SF,AN,SE | 2 | 1 | 5 | 2 | 3 | 4 | 4 | CE,LIS | Guerra + gênero como escolha + amor entre pilotas. "Eu não quero crescer e ter que escolher." |
-| 1724 | Flip Flappers — já listado #915 | 2016 | Anime | L,SF,AN,SE | 2 | 1 | 5 | 2 | 2 | 2 | 4 | CE,DD,LIS | Cocona não sabe quem é. Papika a puxa para mundos que refletem seu vazio interior. |
-| 1725 | Adachi and Shimamura — já listado #70 | 2020 | Anime | L,AN,SE | 1 | 1 | 4 | 1 | 1 | 2 | 3 | LIS,LB | Duas garotas que matam aula juntas. Uma se apaixona. A outra não sabe se sente o mesmo. Lentidão dolorosa. |
-| 1726 | Citrus — já listado #376 | 2018 | Anime | L,AN,SE | 3 | 2 | 3 | 1 | 2 | 1 | 3 | LIS | Meias-irmãs. Beijo forçado → confusão → ciúmes → "isso é errado mas eu não consigo parar." |
-| 1727 | Oniisama e... (Dear Brother) — já listado #920 | 1991 | Anime | L,AN,SE | 2 | 1 | 5 | 3 | 3 | 3 | 5 | LIS,LB | Melodrama extremo. Automutilação + vício + amor não correspondido + suicídio. O anime mais melancólico lésbico. |
-| 1728 | Candy Boy — já listado #379 | 2008 | Anime | L,X,AN,SE | 2 | 1 | 3 | 1 | 3 | 3 | 3 | LIS | Gêmeas apaixonadas uma pela outra. Amor impossível por definição. |
-| 1729 | Strawberry Panic — já listado #378 | 2006 | Anime | L,AN,SE | 3 | 2 | 4 | 1 | 1 | 2 | 3 | LIS | Nagisa se apaixona por Shizuma, que ainda chora pela amante morta. Fantasma do passado. |
-| 1730 | Yuri Kuma Arashi — já listado #380 | 2015 | Anime | L,AN,SE | 3 | 2 | 5 | 2 | 3 | 2 | 4 | RH,CE,LIS | "O amor é um crime." Mundo que executa lésbicas. Exclusão social como sentença de morte. Ikuhara. |
-| 1731 | Scum's Wish — já listado #375 | 2017 | Anime | H,L,AN,SE | 4 | 3 | 5 | 3 | 3 | 1 | 4 | LIS | Hanabi usa outra garota como substituta. Todos usam todos. "Ninguém ama quem deveria." Solidão sexual. |
-| 1732 | Wandering Son — já listado #68 | 2011 | Anime | T,AN,SE | 1 | 1 | 5 | 2 | 3 | 2 | 4 | CE,LIS | Duas crianças trans que não podem ser quem são. Delicado e devastador. |
-| 1733 | Marimite — já listado #913 | 2004 | Anime | L,AN,SE | 1 | 1 | 4 | 1 | 1 | 2 | 4 | LB,LIS | Sororidade católica. Amor implícito nunca consumado. A dor do não-dito. |
-| 1734 | Kannazuki no Miko — já listado #1621 | 2004 | Anime | L,AN,SE | 3 | 2 | 3 | 2 | 2 | 2 | 4 | LIS | Chikane estupra Himeko para que ela a odeie e possa seguir em frente. Sacrifício destrutivo. |
-| 1735 | Mnemosyne — já listado #1632 | 2008 | Anime | L,Z,BH,AN,SE | 4 | 4 | 4 | 4 | 4 | 3 | 4 | VD,LIS | Rin é imortal. Todos que ama morrem. Tortura + solidão eterna + sexo como fuga. |
-| 1736 | Sasameki Koto (Whispered Words) | 2009 | Anime | L,AN,SE | 1 | 1 | 4 | 1 | 1 | 2 | 3 | LIS,LB | Sumika ama Ushio. Ushio só gosta de garotas fofas. Sumika é alta demais. Amor não correspondido que dói. |
-| 1737 | Aoi Hana (Sweet Blue Flowers) | 2009 | Anime | L,AN,SE | 1 | 1 | 5 | 1 | 1 | 2 | 4 | LIS,LB | Fumi chora por tudo. Primeiro amor + rejeição + escola + chuva. O anime yuri mais realista e triste. |
-| 1738 | Maria-sama ga Miteru — ver Marimite #1733 | — | — | — | — | — | — | — | — | — | — | — | — |
-| 1739 | Kashimashi: Girl Meets Girl | 2006 | Anime | L,T,AN,SE | 2 | 1 | 3 | 1 | 2 | 2 | 3 | CE,LIS | Garoto morre, ressuscita como garota, amiga se apaixona. Triângulo doloroso. |
-| 1740 | Fragtime | 2019 | Anime | L,AN | 2 | 1 | 4 | 1 | 1 | 2 | 3 | LIS | Garota pode parar o tempo. Usa pra espiar a crush. Solidão + voyeurismo + amor tímido. |
-
----
-
-### GAYS / QUEER — MELANCÓLICOS
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1741 | Moonlight — já listado #3 mas ESSENCIAL | 2016 | Filme | G | 2 | 1 | 5 | 2 | 3 | 1 | 5 | BTS,CE,LIS | "Eu chorei tanto na água salgada que me tornei preto." Chiron nunca foi permitido ser. 3 atos de solidão. |
-| 1742 | Brokeback Mountain — já listado #9 mas ESSENCIAL | 2005 | Filme | G | 2 | 2 | 5 | 2 | 3 | 1 | 5 | LIS,CE | "Eu não consigo te largar." Amor destruído pela sociedade. Camisa no armário. |
-| 1743 | All of Us Strangers — já listado #306 | 2023 | Filme | G | 3 | 3 | 5 | 3 | 2 | 1 | 4 | BTS,CE,DD,LIS | Andrew Scott conversa com pais mortos. Amor + luto + solidão em Londres. Final que despedaça. |
-| 1744 | Happy Together — já listado #301 | 1997 | Filme | G | 3 | 3 | 5 | 2 | 2 | 1 | 5 | LB,CE,LIS | Wong Kar-wai. "Vamos começar de novo." Mas nunca começam. Buenos Aires + destruição mútua. |
-| 1745 | God's Own Country — já listado #812 | 2017 | Filme | G | 3 | 3 | 5 | 1 | 2 | 1 | 4 | LIS,CE | Yorkshire cinza. Fazendeiro alcoólatra. Romeno que chega. Amor como cura lenta. |
-| 1746 | Weekend — já listado #813 | 2011 | Filme | G | 3 | 3 | 5 | 1 | 1 | 1 | 5 | LIS,CE | 48 horas. Conexão absoluta. Ele vai embora. "Por que as coisas boas acabam?" |
-| 1747 | A Single Man — já listado #814 | 2009 | Filme | G | 2 | 2 | 5 | 2 | 1 | 1 | 5 | LB,CE,LIS | Colin Firth. Um dia perfeito planejado para ser o último. Luto por amante que ninguém reconhece. |
-| 1748 | Mysterious Skin — já listado #303 | 2004 | Filme | G | 3 | 4 | 5 | 5 | 5 | 2 | 5 | BTS,VD,DD,LIS | "Eu queria desaparecer." Abuso que destrói duas vidas de formas opostas. Prostituição + vazio. |
-| 1749 | My Own Private Idaho — já listado #12 | 1991 | Filme | G | 2 | 2 | 5 | 2 | 3 | 2 | 5 | BTS,VD,DD,LIS | River Phoenix. Narcolepsia + amor não correspondido. "Eu só quero te abraçar." Campfire scene. |
-| 1750 | The Living End — já listado #820 | 1992 | Filme | G | 3 | 3 | 4 | 3 | 3 | 3 | 5 | DD,LIS | Dois HIV+ em road trip. "Nada mais importa." Niilismo romântico. New Queer Cinema. |
-| 1751 | BPM (120 battements par minute) — já listado #828 | 2017 | Filme | G | 3 | 3 | 5 | 3 | 3 | 1 | 5 | CE,BTS,LIS | ACT UP Paris. Namorado morrendo de AIDS enquanto luta. "Eu não tenho tempo." |
-| 1752 | It's a Sin — já listado #1238 | 2021 | Serie | G,SE | 4 | 4 | 5 | 4 | 3 | 1 | 5 | BTS,CE,LIS | Russell T Davies. AIDS em Londres nos anos 80. Amigos morrendo um por um. "La." Cena do hospital. |
-| 1753 | Banana Fish — já listado #73 | 2018 | Anime | G,AN,SE | 2 | 2 | 5 | 5 | 4 | 1 | 5 | BTS,LIS | Ash Lynx. Abusado, traficado, nunca livre. Eiji é a única luz. Final que ninguém supera. |
-| 1754 | Given — já listado #71 | 2019 | Anime | G,AN,SE | 2 | 1 | 5 | 2 | 1 | 1 | 4 | LB,CE,LIS | Mafuyu carrega o violão do ex que se matou. A música sobre ele. "Fuyu no Hanashi" destrói. |
-| 1755 | Close — já listado #43 | 2022 | Filme | G | 2 | 1 | 5 | 3 | 1 | 1 | 4 | LB,CE,LIS | Dois meninos inseparáveis. A sociedade os separa. Um não sobrevive. Culpa infinita. |
-
----
-
-### TRANS / NÃO-BINÁRIO — MELANCÓLICOS
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1756 | Boys Don't Cry — já listado #284 | 1999 | Filme | T | 3 | 4 | 5 | 5 | 4 | 1 | 5 | CE,BTS,LIS | Brandon Teena. Viver como você é → ser assassinado por isso. Baseado em fato real. |
-| 1757 | Girl — já listado #73 em Trans | 2018 | Filme | T | 3 | 3 | 5 | 3 | 3 | 1 | 4 | CE,LIS | Bailarina trans. Corpo errado + ballet + sangue nos pés + espelho que mente. |
-| 1758 | Hedwig and the Angry Inch — já listado #283 | 2001 | Filme | T,C | 3 | 3 | 5 | 2 | 3 | 2 | 5 | RH,CE,LIS | "Eu sou a metade que falta." Cirurgia botched + amor roubado + punk + identidade destroçada. |
-| 1759 | Laurence Anyways — já listado #286 | 2012 | Filme | T | 4 | 3 | 5 | 2 | 3 | 2 | 4 | CE,LIS | 168 minutos de amor impossível. Laurence transiciona. Fred não consegue ficar. Neve + solidão + cartas. |
-| 1760 | Wandering Son — já listado #68 | 2011 | Anime | T,AN,SE | 1 | 1 | 5 | 2 | 3 | 2 | 4 | CE,LIS | Nitori quer usar o uniforme feminino. Takatsuki quer o masculino. Sociedade diz não. Cada episódio é um suspiro. |
-| 1761 | A Fantastic Woman — já listado #24 | 2017 | Filme | T | 3 | 2 | 5 | 2 | 3 | 1 | 5 | LIS,CE | Namorado morre. Família o tira dela. "Eu não existo para vocês." Luto negado. |
-| 1762 | I Saw the TV Glow — já listado #80 | 2024 | Filme | T | 2 | 2 | 5 | 3 | 3 | 1 | 4 | CE,VD,LIS | "Existe uma versão de mim que é real, mas eu a enterrei." Alegoria trans como horror existencial. |
-
----
-
-### HÉTERO — MELANCÓLICOS (para complementar)
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1763 | Eternal Sunshine of the Spotless Mind — já listado #931 | 2004 | Filme | H,SF | 3 | 2 | 5 | 3 | 2 | 1 | 5 | DD,LIS,BTS | "Eu apaguei você. Mas a dor continua." Amor + memória + perda. |
-| 1764 | Lost in Translation | 2003 | Filme | H | 2 | 1 | 5 | 2 | 1 | 1 | 5 | LIS,LB | "Tóquio é enorme e eu sou ninguém." Dois estranhos sozinhos juntos. O sussurro final. |
-| 1765 | Her — já listado #949 | 2013 | Filme | H,SF | 3 | 2 | 5 | 2 | 2 | 1 | 5 | BR,LIS,CE | Joaquin Phoenix apaixonado por IA. "A solidão é física." Ela parte. Ele fica. |
-| 1766 | Norwegian Wood | 2010 | Filme | H | 3 | 3 | 5 | 4 | 3 | 1 | 4 | LIS,LB,DD | Murakami. Toru entre Naoko (depressiva suicida) e Midori (viva). Japão nos anos 60. Perda constante. |
-| 1767 | The Virgin Suicides | 1999 | Filme | H | 2 | 1 | 5 | 4 | 4 | 1 | 5 | DD,LIS | Sofia Coppola. Cinco irmãs presas. "Nós não sabíamos que elas estavam tão tristes." Subúrbio como prisão. |
-| 1768 | Marie Antoinette | 2006 | Filme | H | 2 | 2 | 4 | 2 | 1 | 1 | 4 | RH,LIS | Coppola. Adolescente presa em Versalhes. Solidão dourada. |
-| 1769 | Somewhere | 2010 | Filme | H | 2 | 2 | 5 | 2 | 1 | 1 | 4 | LIS,CE | Coppola. Stephen Dorff no Chateau Marmont. Vazio existencial de Hollywood. |
-| 1770 | Donnie Darko — já listado #52 mas ESSENCIAL | 2001 | Filme | H,PH | 2 | 1 | 5 | 3 | 2 | 1 | 5 | DD,BTS,LIS | "28 dias, 6 horas, 42 minutos, 12 segundos." Adolescência como apocalipse. Gretchen morre. Ele volta. |
-| 1771 | Requiem for a Dream — já listado #937 | 2000 | Filme | H | 3 | 3 | 5 | 5 | 4 | 1 | 5 | DD,VD,LIS | "Eu vou ser na televisão." Ellen Burstyn. Vício que devora quatro vidas. Impossível assistir sem se destruir. |
-| 1772 | Blue Valentine | 2010 | Filme | H | 4 | 4 | 5 | 3 | 2 | 1 | 5 | LIS | Ryan Gosling + Michelle Williams. Amor → destruição. Passado e presente simultâneos. "Eu sei que não estou feliz." |
-| 1773 | Revolutionary Road | 2008 | Filme | H | 3 | 3 | 5 | 4 | 3 | 1 | 5 | DD,LIS | DiCaprio + Winslet. Casal que sonha fugir do subúrbio mas nunca foge. Grita até quebrar. |
-| 1774 | Atonement — já listado #33 | 2007 | Filme | H | 3 | 2 | 5 | 3 | 2 | 1 | 5 | LIS,BTS | Uma mentira de criança destrói duas vidas. "Volte para mim." Ele nunca volta. Ela reescreve a história. |
-| 1775 | Never Let Me Go — já listado #369 | 2010 | Filme | H,SF | 3 | 2 | 5 | 4 | 4 | 1 | 5 | BR,BTS,LIS | Clones criados para doar órgãos. Kathy nunca reclama. "Nós temos tempo?" Não têm. |
-| 1776 | Manchester by the Sea | 2016 | Filme | H | 2 | 1 | 5 | 4 | 3 | 1 | 5 | BTS,CE,LIS | Casey Affleck. "Eu não consigo superar." Luto que paralisa. A cena do reencontro no inverno. |
-| 1777 | A Ghost Story | 2017 | Filme | H | 1 | 1 | 5 | 3 | 1 | 1 | 5 | DD,BTS,LIS | Casey Affleck fantasma com lençol. Observa o tempo passar. Rooney Mara come torta por 5 minutos. |
-| 1778 | In the Mood for Love | 2000 | Filme | H | 3 | 1 | 5 | 2 | 2 | 1 | 5 | LIS,LB | Wong Kar-wai. Dois vizinhos traídos. Quase amor. Nunca acontece. Slow motion + Nat King Cole. |
-| 1779 | 2046 | 2004 | Filme | H | 3 | 2 | 5 | 2 | 2 | 1 | 5 | BR,LIS,LB | Sequência de In the Mood for Love. Ele nunca supera. Trem para 2046 onde nada muda. |
-| 1780 | Chungking Express | 1994 | Filme | H | 2 | 1 | 5 | 1 | 1 | 1 | 5 | LIS,DD | WKW. Dois policiais. Abacaxi que expira. Solidão urbana em Hong Kong. |
-
----
-
-### ANIME MELANCÓLICO — NÃO NECESSARIAMENTE QUEER MAS COM O MESMO SENTIMENTO
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1781 | 5 Centimeters Per Second — já listado #99 | 2007 | Anime | H,AN | 2 | 1 | 5 | 3 | 1 | 1 | 4 | LB,LIS | Shinkai. Distância que destrói. "Eu te alcançaria se pudesse. Mas o trem sempre parte." |
-| 1782 | Your Lie in April — já listado #94 | 2014 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 1 | 1 | 4 | LB,CE,LIS | Kaori sabe que vai morrer. Toca violino como se cada nota fosse a última. A carta. |
-| 1783 | Anohana — já listado #95 | 2011 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 1 | 1 | 4 | BTS,LIS,LB | "Menma, eu quero te ver de novo." Fantasma de amiga de infância + culpa coletiva + verão eterno. |
-| 1784 | Violet Evergarden — já listado #93 | 2018 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 5 | LB,BTS,LIS | "Eu quero saber o que 'eu te amo' significa." Soldada que não entende emoções. Episódio 10 = rio de lágrimas. |
-| 1785 | A Silent Voice — já listado #97 | 2016 | Anime | H,AN | 1 | 1 | 5 | 4 | 3 | 1 | 5 | CE,LIS,LB | Shouya quer morrer. Nishimiya quer morrer. Os dois salvam um ao outro. Ponte + fogos. |
-| 1786 | March Comes In Like a Lion — já listado #92 | 2016 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 5 | CE,LB,LIS | Rei vive sozinho. Joga shogi como um robô. As irmãs Kawamoto são sol. Bullying arc destroi. |
-| 1787 | Grave of the Fireflies — já listado #108 | 1988 | Anime | H,AN | 1 | 1 | 5 | 5 | 2 | 1 | 5 | LB,BTS | Setsuko morre de fome. Seita não consegue salvá-la. "Nii-chan, eu tenho fome." Impossível não chorar. |
-| 1788 | Wolf Children — já listado #104 | 2012 | Anime | H,AN | 1 | 1 | 5 | 2 | 1 | 1 | 5 | BTS,CE,LIS | Hana cria dois filhos lobisomens sozinha. Amor + sacrifício + soltar quem ama. |
-| 1789 | Colorful — já listado #103 | 2010 | Anime | H,AN | 1 | 1 | 5 | 4 | 3 | 2 | 4 | CE,DD,LIS | Alma recebe segunda chance no corpo de menino que se matou. "Por que eu estava tão triste?" |
-| 1790 | When Marnie Was There — já listado #896 | 2014 | Anime | L,AN | 1 | 1 | 5 | 2 | 1 | 1 | 4 | LIS,LB,BTS | Anna se odeia. Marnie é um fantasma que ela ama. "Eu sou invisível." Ghibli + solidão + subtexto lésbico. |
-| 1791 | Maquia: When the Promised Flower Blooms — já listado #892 | 2018 | Anime | H,AN | 1 | 1 | 5 | 3 | 2 | 1 | 4 | LB,BTS,LIS | Imortal adota bebê humano. Assiste ele envelhecer e morrer. "Eu vou viver para sempre com essa dor." |
-| 1792 | The Garden of Words — já listado #102 | 2013 | Anime | H,AN | 2 | 1 | 5 | 1 | 2 | 1 | 4 | LB,LIS | Shinkai. Garoto + professora + chuva. Só se encontram quando chove. "Eu queria que chovesse para sempre." |
-| 1793 | A Place Further Than the Universe — já listado #91 | 2018 | Anime | H,AN,SE | 1 | 1 | 5 | 2 | 1 | 1 | 4 | LB,CE,LIS | Shirase vai à Antártica onde a mãe morreu. Abre o laptop. 1000 e-mails não lidos. Chora. Eu choro. Você chora. |
-| 1794 | To Your Eternity — já listado #1635 | 2021 | Anime | H,AN,SE | 1 | 1 | 5 | 4 | 2 | 1 | 5 | BTS,CE,LB,LIS | Ser imortal perde todos que ama. "Para conhecer a alegria, preciso conhecer a dor." Cada morte é permanente para nós. |
-| 1795 | Haibane Renmei — já listado #116 | 2002 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 3 | 5 | CE,DD,BTS,LIS | Anjos em limbo. Reki se odeia. "Eu não mereço ser salva." Depressão + redenção + silêncio. |
-| 1796 | Welcome to the NHK — já listado #929 | 2006 | Anime | H,PH,AN,SE | 2 | 2 | 5 | 4 | 3 | 1 | 5 | CE,DD,LIS | Satou é hikikomori. "O mundo é uma conspiração contra mim." Misaki também quer morrer. Salvam um ao outro? Talvez. |
-| 1797 | Serial Experiments Lain — já listado #57 | 1998 | Anime | H,SF,PH,AN,SE | 1 | 1 | 5 | 4 | 3 | 2 | 5 | VD,DD,LIS | "Se ninguém se lembra de mim, eu existi?" Lain apaga a si mesma. Solidão digital. |
-| 1798 | Texhnolyze — já listado #80 | 2003 | Anime | H,SF,BH,AN,SE | 2 | 2 | 5 | 5 | 4 | 3 | 5 | BR,VD,DD,LIS | O anime mais niilista já feito. Episódio final: cidade morta. "Não existe futuro." |
-| 1799 | Neon Genesis Evangelion — já listado #58 mas ESSENCIAL | 1995 | Anime | H,SF,PH,AN,SE | 3 | 2 | 5 | 4 | 3 | 1 | 5 | BTS,CE,DD,LIS | "Eu sou inútil." Shinji. "Eu preferia morrer." Asuka. "Eu não tenho nada além disto." Rei. Todos destruídos. |
-| 1800 | End of Evangelion — já listado #59 mas ESSENCIAL | 1997 | Anime | H,SF,PH,AN | 4 | 3 | 5 | 5 | 4 | 1 | 5 | BTS,CE,DD,VD,LIS | "Kimochi warui." Shinji se masturba sobre Asuka em coma. Humanidade vira sopa. O filme mais depressivo em animação. |
-
----
-
-## CONTAGEM DESTE BLOCO
-
-| Subcategoria | Total |
-|---|---|
-| Lésbicos/Sáficos — Filmes | ~35 |
-| Lésbicos/Sáficos — Séries | ~12 |
-| Lésbicos/Sáficos — Anime | ~18 |
-| Gays/Queer — Filmes | ~10 |
-| Gays/Queer — Anime | ~3 |
-| Trans — Filmes e Anime | ~7 |
-| Hétero melancólico — Filmes | ~18 |
-| Anime melancólico geral | ~20 |
-| **Total neste bloco** | **~125** |
-| **Total geral acumulado** | **~1800** |
-
----
-
-## NOTAS DESTE BLOCO
-
-- Foco absoluto em melancolia, depressão e relações destinadas ao fracasso
-- Maioria lésbico como pedido (~65 das 125 entradas)
-- Muitos filmes já listados anteriormente são re-referenciados com CONTEXTO MELANCÓLICO — as notas explicam POR QUE são depressivos
-- Novos títulos não listados anteriormente: The Hours, If These Walls Could Talk 2, The World Unseen, High Art, Feel Good, Gentleman Jack, Dickinson, First Kill, Everything Now, Sasameki Koto, Aoi Hana, Fragtime, Kashimashi, Lost in Translation, Norwegian Wood, Virgin Suicides, Blue Valentine, Revolutionary Road, Manchester by the Sea, A Ghost Story, In the Mood for Love, 2046, Chungking Express
-- Animes yuri melancólicos como Aoi Hana, Sasameki Koto e Fragtime são raramente mencionados mas capturam perfeitamente a dor do amor não correspondido
-- As notas incluem frases/sentimentos que ficam na cabeça, como pedido
-- Sofia Coppola e Wong Kar-wai são diretores-chave da melancolia cinematográfica
-- Evangelion e Texhnolyze representam o ápice da melancolia em anime
-
----
-
----
-
-## MELANCOLIA PURA — NOVOS TÍTULOS NÃO LISTADOS ANTERIORMENTE
-
-### FILMES QUE DESTROEM LENTAMENTE
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1801 | Moonlight Mile | 2002 | Filme | H | 2 | 1 | 5 | 3 | 2 | 2 | 4 | LIS,BTS | Jake Gyllenhaal. Noiva morre. Ele continua fingindo para os sogros. Luto que vira mentira. |
-| 1802 | Pieces of April | 2003 | Filme | H | 1 | 1 | 4 | 3 | 2 | 2 | 4 | LIS,CE | Katie Holmes tenta cozinhar Ação de Graças para família que a odeia. Mãe com câncer. |
-| 1803 | The Broken Circle Breakdown | 2012 | Filme | H | 3 | 3 | 5 | 5 | 3 | 2 | 5 | LIS,BTS | Casal belga. Filha com câncer. Bluegrass. Amor → culpa → destruição mútua. O filme mais triste da Bélgica. |
-| 1804 | Rabbit Hole | 2010 | Filme | H | 2 | 1 | 5 | 4 | 3 | 1 | 5 | BTS,CE | Nicole Kidman + Aaron Eckhart. Filho morto atropelado. "Eu não quero ficar melhor." |
-| 1805 | 21 Grams | 2003 | Filme | H | 3 | 3 | 5 | 5 | 4 | 1 | 5 | BTS,DD | Iñárritu. Três vidas destruídas por um acidente. Sean Penn + Naomi Watts. "Quanto pesa a alma?" |
-| 1806 | Biutiful | 2010 | Filme | H | 2 | 2 | 5 | 5 | 4 | 1 | 5 | BTS,CE | Iñárritu. Javier Bardem morrendo em Barcelona. Pai tentando deixar algo para os filhos. |
-| 1807 | Babel | 2006 | Filme | H | 2 | 2 | 5 | 4 | 3 | 1 | 5 | BTS | Iñárritu. Quatro histórias conectadas por uma bala. Incomunicabilidade. Chieko surda em Tóquio. |
-| 1808 | Shame — já listado #246 mas com contexto novo | 2011 | Filme | H | 4 | 4 | 5 | 3 | 3 | 1 | 5 | VD,CE,LIS | Brandon não consegue sentir. Sexo como anestesia. Irmã tenta se matar na banheira. Solidão de Nova Iorque. |
-| 1809 | Leaving Las Vegas | 1995 | Filme | H | 4 | 3 | 5 | 5 | 4 | 1 | 5 | DD,CE | Nicolas Cage bebe até morrer. Elisabeth Shue aceita. "Não me peça para parar." Oscar. |
-| 1810 | The Road | 2009 | Filme | H | 1 | 1 | 5 | 5 | 4 | 1 | 5 | BR,BTS | Viggo Mortensen + filho. Mundo acabou. Cinza infinita. "Nós carregamos o fogo." McCarthy. |
-| 1811 | Melancholia | 2011 | Filme | H | 3 | 3 | 5 | 4 | 2 | 1 | 5 | DD,CE,BTS | Von Trier. Kirsten Dunst depressiva. Planeta vai colidir. "A Terra é maligna." O fim como alívio. |
-| 1812 | Antichrist — já listado #510 mas contexto | 2009 | Filme | H | 5 | 5 | 5 | 5 | 5 | 1 | 5 | VD,DD,CE | Casal perde filho. Luto vira loucura vira violência. Floresta como inferno interior. |
-| 1813 | Dancer in the Dark | 2000 | Filme | H | 1 | 1 | 5 | 5 | 4 | 1 | 5 | CE,BTS | Von Trier. Björk vai ficando cega. Musicais na cabeça dela enquanto o mundo a destrói. Enforcamento final. |
-| 1814 | Breaking the Waves | 1996 | Filme | H | 4 | 4 | 5 | 5 | 5 | 1 | 5 | CE,BTS | Von Trier. Bess faz tudo por amor. Prostitui-se porque Deus disse. Espancada até a morte. Sinos no céu. |
-| 1815 | Dogville | 2003 | Filme | H | 2 | 2 | 5 | 5 | 5 | 1 | 5 | DD,VD | Von Trier. Nicole Kidman aceita tudo de uma cidade. Humilhação → estupro coletivo → vingança divina. |
-| 1816 | House of Sand and Fog | 2003 | Filme | H | 2 | 2 | 5 | 5 | 4 | 1 | 5 | BTS | Jennifer Connelly perde casa. Ben Kingsley compra. Ninguém ganha. Suicídio + desespero absoluto. |
-| 1817 | We Need to Talk About Kevin | 2011 | Filme | H | 2 | 1 | 5 | 5 | 5 | 1 | 5 | DD,BTS | Tilda Swinton. Mãe de um filho que comete massacre na escola. "Eu causei isso?" Culpa eterna. |
-| 1818 | Precious | 2009 | Filme | H,X | 2 | 2 | 5 | 5 | 5 | 1 | 5 | CE,BTS | Adolescente obesa + mãe abusiva + pai estuprador + dois filhos dele + HIV. Gabourey Sidibe + Mo'Nique Oscar. |
-| 1819 | Lilya 4-Ever | 2002 | Filme | H,X | 3 | 3 | 5 | 5 | 5 | 1 | 5 | BTS,CE | Lukas Moodysson. Garota de 16 abandonada na ex-URSS → tráfico sexual na Suécia. Suicídio. O filme mais triste já feito? |
-| 1820 | The Florida Project | 2017 | Filme | H | 1 | 1 | 5 | 4 | 3 | 1 | 5 | LIS,CE | Sean Baker. Menina de 6 anos no motel ao lado da Disney. Mãe prostituta. Infância como fuga. Final em corrida. |
-| 1821 | Beasts of the Southern Wild | 2012 | Filme | H | 1 | 1 | 5 | 3 | 2 | 1 | 5 | BTS,CE | Menina de 6 no bayou. Pai doente. Furacão. "O universo inteiro depende de tudo se encaixar." |
-| 1822 | Room | 2015 | Filme | H | 1 | 1 | 5 | 5 | 5 | 1 | 5 | BTS,CE | Brie Larson sequestrada por 7 anos. Filho nascido em cativeiro. Fuga + o mundo é demais. |
-| 1823 | The Pianist | 2002 | Filme | H | 1 | 1 | 5 | 5 | 5 | 1 | 5 | BTS | Polanski. Adrien Brody. Pianista judeu em Varsóvia. Cada cena remove mais humanidade. |
-| 1824 | Son of Saul (Saul Fia) | 2015 | Filme | H | 1 | 1 | 5 | 5 | 5 | 1 | 5 | VD,BTS | Húngaro. Sonderkommando em Auschwitz quer enterrar o filho com dignidade. Câmera nunca sai do rosto dele. |
-| 1825 | Schindler's List | 1993 | Filme | H | 1 | 2 | 5 | 5 | 5 | 1 | 5 | BTS | Spielberg. "Eu poderia ter salvo mais." A lista. O chuveiro. A menina de vermelho. |
-| 1826 | Bicycle Thieves (Ladri di Biciclette) | 1948 | Filme | H | 1 | 1 | 5 | 4 | 2 | 1 | 5 | CE | De Sica. Pai + filho + bicicleta roubada. Neorrealismo. Dignidade destroçada. Roma pós-guerra. |
-| 1827 | Tokyo Story (Tokyo Monogatari) | 1953 | Filme | H | 1 | 1 | 5 | 3 | 1 | 1 | 5 | LB,BTS | Ozu. Pais idosos visitam filhos em Tóquio. Filhos não têm tempo. "A vida não é decepcionante?" "Sim." |
-| 1828 | Still Walking (Aruitemo Aruitemo) | 2008 | Filme | H | 1 | 1 | 5 | 3 | 2 | 1 | 5 | LB | Koreeda. Família se reúne anualmente no aniversário da morte do filho favorito. O outro sabe que é o errado. |
-| 1829 | Nobody Knows (Dare mo Shiranai) | 2004 | Filme | H | 1 | 1 | 5 | 5 | 5 | 1 | 5 | CE,BTS | Koreeda. Mãe abandona quatro filhos pequenos num apartamento. Baseado em caso real. A menorzinha morre. |
-| 1830 | Shoplifters (Manbiki Kazoku) | 2018 | Filme | H | 2 | 1 | 5 | 4 | 3 | 1 | 5 | CE,BTS | Koreeda. Palma de Ouro. Família de ladrões. "Nós escolhemos nos amar." O estado não permite. |
-| 1831 | After Life (Wandafuru Raifu) | 1998 | Filme | H | 1 | 1 | 5 | 2 | 1 | 2 | 5 | BTS,LB | Koreeda. Mortos escolhem uma memória para levar para a eternidade. "Qual é a sua?" |
-| 1832 | Like Father, Like Son (Soshite Chichi ni Naru) | 2013 | Filme | H | 1 | 1 | 5 | 3 | 3 | 1 | 5 | BTS | Koreeda. Dois casais descobrem que filhos foram trocados no hospital. Sangue vs amor. |
-| 1833 | The Farewell | 2019 | Filme | H | 1 | 1 | 5 | 3 | 2 | 1 | 5 | LIS,BTS | Lulu Wang. Awkwafina. Avó está morrendo mas ninguém conta pra ela. Tradição chinesa + mentira por amor. |
-| 1834 | Ikiru (To Live) | 1952 | Filme | H | 1 | 1 | 5 | 4 | 2 | 1 | 5 | CE | Kurosawa. Burocrata descobre câncer terminal. Constrói um parque. Canta na neve. |
-| 1835 | Amour | 2012 | Filme | H | 2 | 1 | 5 | 5 | 4 | 1 | 5 | BTS,CE | Haneke. Casal de 80 anos. Ela tem derrame. Ele cuida. Sufoca com travesseiro. "Tudo estará bem." |
-| 1836 | Capernaum — já listado #1382 | 2018 | Filme | H | 1 | 1 | 5 | 5 | 4 | 1 | 5 | BTS,CE | Menino de 12 processa os pais. "Por que me tiveram?" Beirute como inferno. |
-| 1837 | The Elephant Man | 1980 | Filme | H | 1 | 1 | 5 | 5 | 3 | 1 | 5 | CE,BTS | Lynch. John Hurt. "Eu não sou um animal. Eu sou um ser humano." Dignidade roubada pela aparência. |
-| 1838 | Wendy and Lucy | 2008 | Filme | H | 1 | 1 | 5 | 3 | 2 | 1 | 5 | CE | Kelly Reichardt. Michelle Williams. Mulher perde cachorro e não tem dinheiro para recuperá-lo. América invisível. |
-| 1839 | Certain Women | 2016 | Filme | L,H | 1 | 1 | 5 | 2 | 1 | 1 | 5 | LIS,CE | Reichardt. Três mulheres em Montana. Lily Gladstone + Kristen Stewart. Solidão + desejo não dito. Lésbico sutil. |
-| 1840 | First Cow | 2019 | Filme | H,G | 1 | 1 | 5 | 2 | 1 | 1 | 5 | LB,CE | Reichardt. Dois homens + uma vaca + amizade como resistência. Fronteira americana. Gentileza radical. |
-| 1841 | Nomadland | 2020 | Filme | H | 1 | 1 | 5 | 3 | 2 | 1 | 5 | CE,BR | Chloé Zhao. Frances McDormand. Van life. "Eu não sou sem-teto. Eu sou sem-casa." América profunda. |
-| 1842 | Songs My Brothers Taught Me | 2015 | Filme | H | 1 | 1 | 5 | 2 | 2 | 2 | 4 | CE | Zhao. Reserva indígena. Irmão quer ir embora. Irmã precisa dele. Silêncio das planícies. |
-| 1843 | The Rider | 2017 | Filme | H | 1 | 1 | 5 | 3 | 2 | 1 | 5 | CE | Zhao. Cowboy com lesão cerebral. Não pode montar mais. Mas é tudo que sabe fazer. Atores reais. |
-| 1844 | Aftersun | 2022 | Filme | B | 2 | 1 | 5 | 4 | 2 | 1 | 5 | LIS,CE,DD | Charlotte Wells. Paul Mescal. Pai e filha de férias na Turquia. Ela reconstrói a memória 20 anos depois. Ele não estava bem. Final na rave + abraço = devastação. |
-| 1845 | Past Lives | 2023 | Filme | H | 2 | 1 | 5 | 3 | 1 | 1 | 5 | LIS,LB | Celine Song. Amigos de infância coreanos se reencontram 20 anos depois em NYC. "Em outra vida." O Uber no final. |
-| 1846 | All the Light We Cannot See (série) | 2023 | Serie | H,SE | 1 | 1 | 4 | 3 | 3 | 1 | 4 | BTS,LB | Netflix. Garota cega na França ocupada + garoto alemão com rádio. WWII + conexão impossível. |
-| 1847 | Normal People — já listado #1226 mas contexto | 2020 | Serie | H,SE | 4 | 4 | 5 | 2 | 1 | 1 | 5 | LIS,CE | Connell e Marianne. Timing errado sempre. Classe + vergonha + "Eu te amo mas não consigo falar." |
-| 1848 | Fleabag S2 — já listado #975 mas contexto | 2019 | Serie | H,B,C,SE | 3 | 3 | 5 | 2 | 2 | 1 | 5 | RH,LIS,CE | O padre. "Eu te amo." "Eu também te amo." Mas ele escolhe Deus. Ela olha para a câmera pela última vez e vai embora. |
-| 1849 | One Day (série) | 2024 | Serie | H,SE | 3 | 3 | 5 | 4 | 1 | 1 | 5 | LIS | Netflix. Ambika Mod + Leo Woodall. Sempre em 15 de julho. 20 anos de quase-amor. Episódio 13 = guilhotina emocional. |
-| 1850 | Mare of Easttown — já listado #1661 mas contexto | 2021 | Serie | H,SE | 2 | 2 | 5 | 4 | 3 | 1 | 5 | BTS,DD,LIS | Kate Winslet carrega a cidade inteira. Filho se matou. Ex-marido segue em frente. Ela não consegue. Frio eterno da Pensilvânia. |
-
----
-
-## CALMA E FELICIDADE QUE TE DESTRÓI DEPOIS — O EFEITO LIFE IS STRANGE
-
-### FILMES — COMEÇA BONITO, TERMINA EM PEDAÇOS
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1851 | Call Me by Your Name — já listado #11 mas ESSENCIAL aqui | 2017 | Filme | G | 3 | 2 | 5 | 1 | 2 | 1 | 5 | CE,LB,LIS | Verão perfeito na Itália. Sol + pêssego + "é tão gostoso." Depois Oliver parte. Elio chora no fogo. Pai explica que a dor é boa. |
-| 1852 | The Way We Were | 1973 | Filme | H | 3 | 2 | 5 | 2 | 1 | 1 | 5 | LIS,LB | Barbra Streisand + Robert Redford. Amor que não sobrevive à diferença. "Seus olhos... como era mesmo aquela canção?" |
-| 1853 | Before Sunrise | 1995 | Filme | H | 2 | 1 | 5 | 1 | 1 | 1 | 5 | LIS,LB | Linklater. Uma noite em Viena. Perfeito. "Nos encontramos em 6 meses." Mas ele não diz eu te amo. |
-| 1854 | Before Sunset | 2004 | Filme | H | 2 | 1 | 5 | 2 | 1 | 1 | 5 | LIS,LB | 9 anos depois. Ela chorou. Ele casou com a errada. "Eu acho que eu fiz tudo errado." |
-| 1855 | Before Midnight | 2013 | Filme | H | 3 | 2 | 5 | 3 | 2 | 1 | 5 | LIS | 18 anos depois. Briga num hotel na Grécia. "Eu não te amo mais." Amor é cansativo. |
-| 1856 | Blue Valentine — essencial repetição de #1772 | 2010 | Filme | H | 4 | 4 | 5 | 3 | 2 | 1 | 5 | LIS | Início: ele canta ukulele no dia do casamento. Fim: ela não suporta mais olhar pra ele. Simultâneo. |
-| 1857 | 500 Days of Summer | 2009 | Filme | H | 2 | 1 | 4 | 2 | 1 | 1 | 5 | LIS,DD | "Isso não é uma história de amor." Expectativa vs realidade (tela dividida). Ela casa com outro. |
-| 1858 | La La Land | 2016 | Filme | H | 2 | 1 | 5 | 2 | 1 | 1 | 5 | LIS,RH | Damien Chazelle. Musical perfeito → sacrifício de carreira → eles se olham no final e sabem: era outra vida. |
-| 1859 | About Time | 2013 | Filme | H,SF | 2 | 1 | 5 | 3 | 1 | 1 | 5 | LIS,DD,BTS | Viagem no tempo para viver dias perfeitos com o pai. Mas o pai morre e ele não pode mais voltar. |
-| 1860 | The Notebook — já listado #1279 mas contexto | 2004 | Filme | H | 3 | 2 | 3 | 1 | 1 | 1 | 4 | LIS | Romance na chuva. Cartas nunca entregues. Alzheimer. Morrem juntos. |
-| 1861 | Brokeback Mountain — terceira menção mas ESSENCIAL aqui | 2005 | Filme | G | 2 | 2 | 5 | 2 | 3 | 1 | 5 | LIS,CE | Montanha perfeita no verão. 20 anos de amor impossível. "Jack, eu não consigo te largar." Camisa no armário. Sozinho. |
-| 1862 | Portrait of a Lady on Fire — terceira menção mas ESSENCIAL | 2019 | Filme | L | 2 | 1 | 5 | 1 | 2 | 1 | 5 | LIS,CE | Ilha perfeita. Pinta → se apaixona → deve partir. Última cena: Héloïse ouvindo Vivaldi no teatro, chorando, sozinha. Marianne observa. Nunca mais se falam. |
-| 1863 | Atonement — terceira menção essencial | 2007 | Filme | H | 3 | 2 | 5 | 3 | 2 | 1 | 5 | LIS,BTS | Dia perfeito de verão. Mergulho na fonte. Depois: mentira → prisão → guerra → morte → reescrita. "Eu dei a eles a felicidade que roubei." |
-| 1864 | Her — repetição essencial #949 | 2013 | Filme | H,SF | 3 | 2 | 5 | 2 | 2 | 1 | 5 | BR,LIS,CE | Samantha é perfeita. Faz ele feliz. Depois ela ama 641 pessoas simultaneamente. Parte. Ele fica no telhado. |
-| 1865 | Eternal Sunshine — repetição essencial #931 | 2004 | Filme | H,SF | 3 | 2 | 5 | 3 | 2 | 1 | 5 | DD,LIS | Montauk na neve. Memórias sendo apagadas enquanto ele grita "eu não quero esquecer isso." Mas esquece. |
-| 1866 | One Day (2011) | 2011 | Filme | H | 3 | 2 | 4 | 3 | 1 | 1 | 4 | LIS | Anne Hathaway + Jim Sturgess. 20 anos de quase-amor. Finalmente ficam juntos. Depois: bicicleta + caminhão. |
-| 1867 | If Only | 2004 | Filme | H | 2 | 1 | 3 | 3 | 1 | 2 | 3 | LIS | Jennifer Love Hewitt morre num acidente. Ele volta no tempo. Salva ela. Morre no lugar. |
-| 1868 | Me Before You | 2016 | Filme | H | 2 | 1 | 4 | 3 | 3 | 1 | 4 | LIS,CE | Emilia Clarke + Sam Claflin. Tetraplégico que quer morrer. Ela tenta salvá-lo. Não consegue. |
-| 1869 | Up (Pixar) | 2009 | Filme | H | 1 | 1 | 5 | 3 | 1 | 1 | 5 | LIS,BTS | Primeiros 10 minutos: vida inteira de casamento → infertilidade → velhice → morte. O resto é sobre seguir em frente. |
-| 1870 | Coco (Pixar) | 2017 | Filme | H | 1 | 1 | 5 | 3 | 1 | 1 | 5 | LIS,BTS,LB | "Remember me." Bisavó com Alzheimer lembra a música. Chora. Eu choro. O cinema inteiro chora. |
-| 1871 | Inside Out 1 e 2 | 2015 | Filme | H | 1 | 1 | 5 | 3 | 1 | 1 | 5 | LIS,CE | Bing Bong se sacrifica. "Leve ela até a lua por mim." Alegria descobre que Tristeza é necessária. |
-| 1872 | The Iron Giant | 1999 | Filme | H | 1 | 1 | 5 | 3 | 1 | 1 | 5 | BTS,CE | "Superman." Robô se sacrifica. Hogarth é uma criança que perde tudo e tudo.  |
-| 1873 | Big Fish | 2003 | Filme | H | 1 | 1 | 5 | 2 | 1 | 1 | 5 | LB,BTS | Tim Burton. Pai contador de histórias está morrendo. Filho finalmente entende. Funeral. |
-| 1874 | The Curious Case of Benjamin Button | 2008 | Filme | H | 3 | 2 | 4 | 3 | 2 | 1 | 5 | BR,BTS,LIS | Nasce velho, morre bebê. Amor com Cate Blanchett que envelhece enquanto ele rejuvenesce. "Nossas vidas são definidas pelas oportunidades." |
-
----
-
-### ANIME — COMEÇA FOFO, TERMINA EM RUÍNAS
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1875 | Clannad + Clannad After Story | 2007 | Anime | H,AN,SE | 1 | 1 | 5 | 4 | 1 | 1 | 5 | LIS,CE,BTS | S1: comédia escolar fofa. S2: casamento, filha, esposa morre no parto. Episódio 18 = a cena do campo de flores. O anime que mais destruiu pessoas. |
-| 1876 | Plastic Memories | 2015 | Anime | H,SF,AN,SE | 1 | 1 | 5 | 4 | 1 | 1 | 4 | LIS,BR,BTS | Androides com prazo de validade. Tsukasa se apaixona por Isla. Ela tem 2000 horas. Roda gigante. |
-| 1877 | Angel Beats! | 2010 | Anime | H,AN,SE | 1 | 1 | 4 | 3 | 1 | 1 | 4 | CE,BTS,LIS | Escola no limbo para adolescentes mortos. Comédia → drama → desaparecimento um por um. "Obrigado por me amar." |
-| 1878 | Charlotte | 2015 | Anime | H,SF,AN,SE | 1 | 1 | 4 | 3 | 2 | 1 | 4 | LIS,BTS | Poderes + comédia → irmã morre → colapso → sacrifício. Episódio 7 destrói o tom leve. |
-| 1879 | Assassination Classroom (Ansatsu Kyoushitsu) | 2015 | Anime | H,C,AN,SE | 1 | 1 | 5 | 3 | 1 | 1 | 5 | LIS,LB | Professor alien vai destruir a Terra. Alunos devem matá-lo. Mas eles o amam. Final impossível de assistir seco. |
-| 1880 | Your Lie in April — repetição essencial #94 | 2014 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 1 | 1 | 4 | LB,CE,LIS | Kaori brilha como sol. Toca violino rindo. Então começa a desmaiar. A carta que ela escreveu. "Eu estava apaixonada por você." |
-| 1881 | Anohana — repetição essencial #95 | 2011 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 1 | 1 | 4 | BTS,LIS,LB | 6 amigos. Menma morreu criança. Reaparece como fantasma. "Eu quero que vocês me libertem." Mas ninguém quer deixar ir. |
-| 1882 | Violet Evergarden — repetição essencial #93 | 2018 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 5 | LB,BTS,LIS | Ep. 7: dramaturgo + filha doente. Ep. 10: mãe morrendo deixou cartas para 50 aniversários da filha. Cada carta é uma facada. |
-| 1883 | A Place Further Than the Universe — repetição essencial #91 | 2018 | Anime | H,AN,SE | 1 | 1 | 5 | 2 | 1 | 1 | 4 | LB,CE,LIS | 4 garotas vão à Antártica. Fofo e engraçado. Depois: Shirase abre o laptop da mãe morta. 1000 e-mails não lidos. Grita "MÃE!" |
-| 1884 | Made in Abyss — já listado #85 mas ESSENCIAL | 2017 | Anime | H,SF,AN,SE | 1 | 1 | 5 | 5 | 4 | 1 | 5 | BTS,CE | Começa como aventura fofa. Depois: transformação corporal + dor + Mitty. "Riko, eu quero voltar." O elevador. |
-| 1885 | Madoka Magica — já listado #64 mas ESSENCIAL | 2011 | Anime | L,PH,AN,SE | 1 | 1 | 5 | 4 | 2 | 1 | 5 | BTS,CE,DD,LIS | Magical girls fofas! Ep. 3: cabeça arrancada. Tudo é sofrimento. Homura repete a linha do tempo infinitamente por amor. "Eu não vou deixar você morrer de novo." |
-| 1886 | The Promised Neverland S1 — já listado #87 mas contexto | 2019 | Anime | H,PH,AN,SE | 1 | 1 | 5 | 4 | 4 | 1 | 5 | BTS,DD,LIS | Orfanato perfeito. Mamãe perfeita. Comida perfeita. Ep. 1: eles são a comida. |
-| 1887 | School-Live! — já listado #1627 mas ESSENCIAL | 2015 | Anime | H,PH,AN,SE | 1 | 1 | 5 | 4 | 3 | 1 | 4 | DD,BTS,LIS | Clube escolar de garotas fofas! Episódio 1: tudo é imaginação. A escola está destruída. Zumbis. Professora está morta. |
-| 1888 | To Your Eternity — repetição mas essencial | 2021 | Anime | H,AN,SE | 1 | 1 | 5 | 4 | 2 | 1 | 5 | BTS,CE,LB,LIS | Ser imortal faz amigos. Todos morrem. Episódio 1: menino no gelo + cachorro. Os dois morrem em 20 minutos. |
-| 1889 | Ranking of Kings — já listado #998 mas contexto | 2021 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 5 | CE,BTS,LIS | Bojji é surdo, fraco e minúsculo. Todos riem dele. Mãe morreu. Pai morreu. Mas ele não desiste. Cada vitória faz chorar. |
-| 1890 | Grave of the Fireflies — repetição essencial | 1988 | Anime | H,AN | 1 | 1 | 5 | 5 | 2 | 1 | 5 | LB,BTS | Você sabe que eles morrem porque é a primeira cena. Depois assiste 90 minutos de Setsuko perdendo peso. |
-| 1891 | SukaSuka (WorldEnd) | 2017 | Anime | H,SF,AN,SE | 1 | 1 | 4 | 4 | 2 | 2 | 4 | LIS,BTS | Último humano cuida de garotas-arma que vão morrer em batalha. Se apaixona pela mais velha. Ela cai. Scarborough Fair toca. |
-| 1892 | Hotarubi no Mori e (Into the Forest of Fireflies' Light) | 2011 | Anime | H,AN | 1 | 1 | 5 | 3 | 1 | 1 | 4 | LIS,BTS | 45 minutos. Menina ama espírito da floresta. Se ela o tocar, ele desaparece. Um dia, ele a abraça. |
-| 1893 | I Want to Eat Your Pancreas (Kimi no Suizou wo Tabetai) | 2018 | Anime | H,AN | 1 | 1 | 5 | 4 | 1 | 1 | 4 | LIS,LB | Garota com doença terminal vive feliz. Garoto antissocial se conecta. Ela morre — mas não da doença. Facada na rua. Random. |
-| 1894 | Weathering With You — já listado #101 mas contexto | 2019 | Anime | H,AN | 1 | 1 | 5 | 2 | 1 | 1 | 4 | LIS,BTS | Hina controla o clima. Cada vez que faz sol, perde um pedaço de si. Hodaka escolhe: salvar Tóquio ou salvar ela. |
-| 1895 | Maquia — repetição essencial | 2018 | Anime | H,AN | 1 | 1 | 5 | 3 | 2 | 1 | 4 | LB,BTS,LIS | Imortal adota bebê humano. Assiste ele crescer, casar, envelhecer, morrer. Ela fica jovem para sempre. Segurando a mão dele no leito. |
-| 1896 | Wolf Children — repetição essencial | 2012 | Anime | H,AN | 1 | 1 | 5 | 2 | 1 | 1 | 5 | BTS,CE,LIS | Hana perde o marido. Cria dois lobisomens sozinha. Ame escolhe a floresta. Parte. Ela assiste da varanda. "Eu fiz tudo certo?" |
-| 1897 | Fruits Basket (2019 remake) | 2019 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 3 | 1 | 5 | CE,LIS | Começa como comédia shoujo fofa. Depois: abuso infantil, rejeição materna, maldição que impede abraços, caixão. Tohru Honda é puro sol num mundo de dor. |
-| 1898 | March Comes In Like a Lion — repetição essencial | 2016 | Anime | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 5 | CE,LB,LIS | Rei come sozinho. Dorme no chão. Joga shogi porque não sabe fazer mais nada. Irmãs Kawamoto são sol. Arco de bullying de Hina = chorar por 4 episódios. |
-| 1899 | Odd Taxi — já listado #125 mas contexto | 2021 | Anime | H,PH,AN,SE | 1 | 1 | 5 | 3 | 3 | 1 | 5 | DD,LIS | Parece comédia sobre morsa taxista. Cada personagem esconde algo. Final: todos estão conectados. Revelação da garota desaparecida no baú. |
-| 1900 | Sonny Boy — já listado #124 mas contexto | 2021 | Anime | H,SF,PH,AN,SE | 1 | 1 | 5 | 3 | 2 | 2 | 4 | DD,BTS,LIS | Escola à deriva em dimensões. Parecem férias. Depois: não podem voltar. Nagara esquece tudo. Nozomi... o gato. O final com ela andando na neve. |
-
----
-
-### SÉRIES — COMEÇAM LEVES E DEPOIS TE DESTROEM
-
-| # | Titulo | Ano | Midia | Tipo | EROT | EXPL | PROF | PERT | TABU | RARI | CULT | REC | Notas |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1901 | Bojack Horseman | 2014 | Serie | H,B,C,AN,SE | 2 | 2 | 5 | 4 | 3 | 1 | 5 | DD,CE,LIS | Começa como comédia sobre cavalo ator. Vira o retrato mais preciso de depressão, vício e autodestruição na TV. "Eu preciso que você me diga que eu sou uma boa pessoa." Ele não é. |
-| 1902 | Adventure Time | 2010 | Serie | H,L,AN,SE | 1 | 1 | 5 | 2 | 1 | 1 | 5 | LIS,DD,CE | Começa bobinho. Depois: Ice King era um homem apaixonado. Marceline + Bubblegum = lésbico + imortalidade + perda. Simon. "Eu me lembro de você." |
-| 1903 | Steven Universe | 2013 | Serie | L,AN,SE | 1 | 1 | 5 | 2 | 1 | 1 | 5 | CE,LIS | Começa fofo. Depois: Rose quartz = mentira. Ruby + Sapphire = amor lésbico. Steven tem PTSD no Future. "Eu não estou bem." |
-| 1904 | Gravity Falls | 2012 | Serie | H,AN,SE | 1 | 1 | 5 | 2 | 1 | 1 | 5 | DD,LIS | Verão perfeito. Mistérios divertidos. Depois: Ford preso em dimensão. Stan sacrifica memória. Twins separam no final. |
-| 1905 | Over the Garden Wall | 2014 | Serie | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 5 | DD,BTS,LIS | 10 episódios de 11 minutos. Irmãos perdidos na floresta. Parece conto de fadas. Na verdade: eles estão morrendo congelados num lago. |
-| 1906 | Arcane | 2021 | Serie | L,AN,SE | 2 | 2 | 5 | 4 | 3 | 1 | 5 | LIS,DD,CE | Baseado em League of Legends. Vi + Jinx. Irmãs separadas. Caitlyn + Vi = lésbico. Jinx na cadeira: "Eu sou a gata perfeita?" Temporada 2 = devastação. |
-| 1907 | The Midnight Gospel — já listado #986 | 2020 | Serie | H,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 4 | DD,CE,BTS,LIS | Último episódio: mãe do criador real morrendo de câncer. Animação + podcast real com ela. Ele a segura enquanto vira universo. |
-| 1908 | Cyberpunk: Edgerunners | 2022 | Anime | H,AN,SE | 3 | 3 | 5 | 4 | 3 | 1 | 5 | BR,DD,CE | Trigger + CD Projekt Red. David + Lucy. Começa punk e divertido. Ele vira cyberpsicose. Ela vai pra lua sozinha. "I Really Want to Stay at Your House." |
-| 1909 | Devilman Crybaby — já listado #76 mas ESSENCIAL aqui | 2018 | Anime | H,BH,AN,SE | 4 | 4 | 5 | 5 | 5 | 1 | 5 | VD,DD,BTS,LIS | Começa com festas + rap + humor. Ep. 9: Miki decapitada em pau. Akira chora segurando a cabeça. Ryo não entende amor. Fim do mundo. |
-| 1910 | Banana Fish — repetição essencial #73 | 2018 | Anime | G,AN,SE | 2 | 2 | 5 | 5 | 4 | 1 | 5 | BTS,LIS | Ash Lynx finalmente está livre. Eiji vai embora. Carta: "Minha alma está sempre com você." Ash lê na biblioteca. Facada. Morre sorrindo segurando a carta. |
-| 1911 | Steins;Gate — já listado #89 mas ESSENCIAL | 2011 | Anime | H,SF,AN,SE | 1 | 1 | 5 | 3 | 2 | 1 | 5 | DD,LIS,BTS | Começa como comédia nerd. Ep. 12: Mayuri morre. E morre. E morre. Okabe não consegue salvar. Cada timeline piora. "Eu sou um cientista louco. É tão legal... sonuvabitch." |
-| 1912 | Attack on Titan — já listado #88 mas contexto | 2013 | Anime | H,AN,SE | 1 | 1 | 5 | 5 | 4 | 1 | 5 | BTS,DD | Começa como shounen de ação. Termina com genocídio, determinismo e Eren chorando: "Eu não quero que ela encontre outro homem." A liberdade era uma mentira. |
-
----
-
-## CONTAGEM DESTE BLOCO
-
-| Subcategoria | Total |
-|---|---|
-| Melancolia pura — Filmes novos | ~45 |
-| Calma → Destruição — Filmes | ~25 |
-| Calma → Destruição — Anime | ~25 |
-| Calma → Destruição — Séries | ~12 |
-| Referências essenciais re-contextualizadas | ~30 |
-| **Total neste bloco** | **~112** |
-| **Total geral acumulado** | **~1912** |
-
----
-
-## NOTAS DESTE BLOCO
-
-### Diretores-chave da melancolia cinematográfica (novos)
-- **Hirokazu Koreeda** — O poeta da família japonesa (Nobody Knows, Shoplifters, After Life, Still Walking, Like Father Like Son)
-- **Kelly Reichardt** — América silenciosa e solitária (Wendy and Lucy, Certain Women, First Cow)
-- **Chloé Zhao** — Horizontes vazios e gente marginalizada (Nomadland, The Rider, Songs My Brothers Taught Me)
-- **Richard Linklater** — Tempo como destruição (Before Trilogy)
-- **Lukas Moodysson** — Destruição da inocência (Lilya 4-Ever)
-- **Charlotte Wells** — Memória como luto (Aftersun)
-- **Celine Song** — O amor que quase foi (Past Lives)
-
-### O Efeito Life is Strange em outras mídias
-Filmes/séries/animes que começam com sensação de verão, amizade ou aventura e depois revelam que tudo era frágil:
-- **Clannad After Story** — O rei absoluto desta categoria em anime
-- **Bojack Horseman** — Comédia que vira espelho da depressão
-- **Before Trilogy** — Amor que envelhece e se desgasta
-- **Arcane** — Irmãs, trauma e escolhas impossíveis
-- **Made in Abyss** — Aventura que vira body horror e perda
-- **Cyberpunk: Edgerunners** — "Eu quero ficar na sua casa" tocando enquanto tudo desmorona
-
-### Filmes para chorar sozinho às 3 da manhã
-1. Aftersun (2022) — O pai que não estava bem
-2. Past Lives (2023) — O amor de outra vida
-3. Lilya 4-Ever (2002) — A garota que ninguém salvou
-4. Nobody Knows (2004) — As crianças que ninguém viu
-5. Manchester by the Sea (2016) — O homem que não consegue superar
-6. Leaving Las Vegas (1995) — O homem que não quer ser salvo
-7. Dancer in the Dark (2000) — A mulher que canta enquanto morre
-
----
-
-## NOTAS FINAIS
-
-- Todos os filmes listados são produções cinematográficas reconhecidas
-- Muitos foram premiados em Cannes, Berlim, Veneza, Sundance e Oscar
-- Use JustWatch.com para descobrir onde assistir cada título de filme/série
-- Use MyAnimeList.net ou AniList.co para encontrar onde assistir animes
-- Para filmes raros, Vinegar Syndrome e Severin Films são as melhores fontes em Blu-ray
-- Para cinema LGBTQ+, Dekkoo, Revry e Wolfe Video são especializados
-- Para streaming gratuito, Tubi e Kanopy (via biblioteca) têm seleções surpreendentes
-- Para anime, Crunchyroll tem o maior catálogo legal
-- Entradas marcadas como "já listado #XX" são referências cruzadas — o filme aparece com dados completos no número indicado
-- A coluna REC usa 8 códigos de afinidade: BTS (Beyond Two Souls), LIS (Life is Strange), RH (Rocky Horror), LB (Look Back), VD (Videodrome), CE (Celeste), BR (Blade Runner), DD (Donnie Darko)
-- Classificações numéricas de 1-5 para facilitar parsing por programas
-- Coluna Midia distingue Filme, Serie e Anime
-- Coluna Tipo usa siglas definidas na legenda no topo do documento
-
-FIM DO DOCUMENTO
