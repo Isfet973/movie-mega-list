@@ -9,15 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="variables.css">
-  <link rel="stylesheet" href="profile.css">
+  <!-- CSS Unificado -->
+  <link rel="stylesheet" href="megalist.css">
 </head>
 <body>
 
-
 <nav>
-  <div class="nav-logo" onclick="location.href='index.html'"><span class="logo-full">MEGALIST</span><span class="logo-short">M</span></div>
+  <div class="nav-logo" onclick="location.href='index.html'">
+    <span class="logo-full">MEGALIST</span>
+    <span class="logo-short">M</span>
+  </div>
   <div class="nav-sep"></div>
   <a href="index.html" class="nav-link">← Lista</a>
   <a href="profile.html" class="nav-link active">Perfil</a>
@@ -29,8 +30,8 @@
   <div class="profile-card">
     <div class="avatar-wrap">
       <div id="avatarDisplay"></div>
-      <button class="avatar-edit" onclick="document.getElementById('avatarInput').click()" title="Trocar foto">✏</button>
-      <input type="file" id="avatarInput" accept="image/*" onchange="handleAvatar(event)">
+      <button class="avatar-edit" onclick="document.getElementById('avatarInput').click()" title="Trocar foto">✏️</button>
+      <input type="file" id="avatarInput" accept="image/*" onchange="handleAvatar(event)" style="display:none;">
     </div>
     <div class="profile-info">
       <div class="profile-name-wrap">
@@ -44,10 +45,24 @@
   <!-- STATS GRID -->
   <div class="stats-grid" id="statsGrid"></div>
 
-  <!-- RATING CHART -->
+  <!-- RATING CHART (10 buckets: 0.5 a 5.0) -->
   <div class="chart-wrap">
     <div class="chart-title">Distribuição de Notas</div>
     <div class="chart-bars" id="ratingChart"></div>
+  </div>
+
+  <!-- MINHA COLEÇÃO (COMPACTO) -->
+  <div class="library-section">
+    <div class="library-tabs-simple">
+      <button class="lib-tab-simple active" onclick="switchLibraryTab('filme', this)">🎬 Filmes</button>
+      <button class="lib-tab-simple" onclick="switchLibraryTab('serie', this)">📺 Séries</button>
+      <button class="lib-tab-simple" onclick="switchLibraryTab('anime', this)">🎌 Animes</button>
+    </div>
+
+    <!-- Container único que muda de conteúdo via JS -->
+    <div class="library-single-view" id="librarySingleView">
+      <!-- Conteúdo injetado via JS (renderLibrary) -->
+    </div>
   </div>
 
   <!-- RANDOM PICKER -->
@@ -57,7 +72,7 @@
       <button class="picker-btn film active" id="pbFilme" data-m="Filme" onclick="setPickerMedia('Filme')">🎬 Filme</button>
       <button class="picker-btn serie" id="pbSerie" data-m="Serie" onclick="setPickerMedia('Serie')">📺 Série</button>
       <button class="picker-btn anime" id="pbAnime" data-m="Anime" onclick="setPickerMedia('Anime')">🎌 Anime</button>
-      <button class="picker-btn" id="pbAll" data-m="all" onclick="setPickerMedia('all')">Qualquer um</button>
+      <button class="picker-btn all" id="pbAll" data-m="all" onclick="setPickerMedia('all')">Qualquer um</button>
       <button class="picker-18" id="picker18btn" onclick="togglePicker18()">+18</button>
       <button class="spin-btn" onclick="spinPicker()">Sortear!</button>
     </div>
@@ -71,27 +86,88 @@
     <div class="sync-grid">
       <button class="sync-btn pri" onclick="exportData()">⬇ Exportar userdata.json</button>
       <button class="sync-btn pri" onclick="document.getElementById('importInput').click()">⬆ Importar userdata.json</button>
-      <button class="sync-btn" onclick="flushLocal()">💾 localStorage → arquivos</button>
+      <input type="file" id="importInput" accept=".json" onchange="importData(event)" style="display:none;">
+      <button class="sync-btn pri" onclick="exportMediaDataJson()">🧩 Exportar media-data.json</button>
       <button class="sync-btn dng" onclick="confirmClear()">🗑 Limpar dados locais</button>
+      <button class="sync-btn dng" onclick="openCleanModal()" style="grid-column: 1 / -1; border-color: var(--accent); color: var(--accent);">
+        🧹 Gerenciar/Limpar Dados do Perfil
+      </button>
     </div>
-    <input type="file" id="importInput" accept=".json" style="display:none" onchange="importData(event)">
   </div>
 
-  <!-- TABS -->
+  <!-- TABS (Favoritos/Ranking) -->
   <div class="tabs">
-    <div class="tab active" data-tab="favs">⭐ Favoritos</div>
-    <div class="tab" data-tab="rank">🏆 Ranking</div>
+    <div class="tab active" data-tab="favs" onclick="switchTab('favs')">⭐ Favoritos</div>
+    <div class="tab" data-tab="rank" onclick="switchTab('rank')">🏆 Ranking</div>
   </div>
 
-  <div id="tabContent"></div>
+  <div id="tabContent">
+    <!-- Conteúdo injetado via JS -->
+  </div>
+
+  <!-- CLEAN DATA MODAL -->
+  <div class="sub-overlay" id="cleanOverlay" onclick="if(event.target===this)closeCleanModal()">
+    <div class="sub-modal" style="max-width: 420px;">
+      <button class="modal-close" onclick="closeCleanModal()" style="position:static;margin-bottom:12px;float:right;">✕</button>
+      <div class="sub-title">🧹 Limpar Dados</div>
+      <div class="sub-sub">Selecione o que deseja remover:</div>
+      
+      <div style="display:flex;flex-direction:column;gap:10px;margin:16px 0;">
+        
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:1px;margin-bottom:8px;color:var(--accent);">⭐ Favoritos</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearFavorites('all')">Todos</button>
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearFavorites('filme')">Filmes</button>
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearFavorites('serie')">Séries</button>
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearFavorites('anime')">Animes</button>
+          </div>
+        </div>
+
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:1px;margin-bottom:8px;color:var(--accent2);">📚 Coleção (Status)</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearStatus('all')">Tudo</button>
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearStatus('watched')">✓ Assistidos</button>
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearStatus('watching')">▶ Assistindo</button>
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearStatus('want')">★ Quero Ver</button>
+          </div>
+        </div>
+
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:1px;margin-bottom:8px;color:var(--accent3);">🏆 Rankings</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearRankings('all')">Todos</button>
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearRankings('filme')">Filmes</button>
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearRankings('serie')">Séries</button>
+            <button class="btn danger" style="font-size:10px;padding:6px 12px;flex:1;" onclick="clearRankings('anime')">Animes</button>
+          </div>
+        </div>
+
+        <div style="background:rgba(232,71,63,0.1);border:1px solid var(--accent);border-radius:8px;padding:12px;margin-top:4px;">
+          <button class="btn danger grow" onclick="clearAllProfileData()" style="background:var(--accent);color:white;border-color:var(--accent);">
+            🗑️ Limpar TUDO (Reset Total)
+          </button>
+          <div style="font-size:9px;color:var(--text3);text-align:center;margin-top:6px;font-family:'Space Mono',monospace;">
+            Isso apagará favoritos, rankings, notas e status de visualização
+          </div>
+        </div>
+
+      </div>
+      
+      <div style="display:flex;gap:8px;margin-top:16px;">
+        <button class="btn grow" onclick="closeCleanModal()" style="background:var(--surface3);">Cancelar</button>
+      </div>
+    </div>
+  </div>
 
 </div>
 
+<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
-
-  <!-- Script -->
-  <script src="profile.js"></script>
+<!-- JS do perfil -->
+<script src="profile.js"></script>
 
 </body>
 </html>

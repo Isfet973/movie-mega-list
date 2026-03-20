@@ -9,12 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="variables.css">
-  <link rel="stylesheet" href="layout.css">
-  <link rel="stylesheet" href="cards.css">
-  <link rel="stylesheet" href="modal.css">
-  <link rel="stylesheet" href="responsive.css">
+  <!-- CSS Unificado -->
+  <link rel="stylesheet" href="megalist.css">
 </head>
 <body>
 
@@ -324,7 +320,6 @@
   <button class="sync-btn pri" onclick="document.getElementById('importInput').click()">⬆ Importar userdata.json</button>
   <div class="sync-divider"></div>
   <button class="sync-btn pri" onclick="exportMediaDataJson()">🧩 Exportar media-data.json</button>
-  <button class="sync-btn" onclick="flushLocalToFiles()">💾 Mover localStorage → arquivos</button>
   <div class="sync-divider"></div>
   <button class="sync-btn dng" onclick="confirmClear()">🗑 Limpar dados locais</button>
   <div class="sync-last" id="syncLast"></div>
@@ -334,19 +329,8 @@
 
 <div class="toast" id="toast"></div>
 
-
-  <!-- Scripts (ordem importa: constants → parser → api → ... → events) -->
-  <script src="constants.js"></script>
-  <script src="parser.js"></script>
-  <script src="api.js"></script>
-  <script src="posterEditor.js"></script>
-  <script src="posterNav.js"></script>
-  <script src="render.js"></script>
-  <script src="recommendations.js"></script>
-  <script src="modal.js"></script>
-  <script src="roulette.js"></script>
-  <script src="sync.js"></script>
-  <script src="events.js"></script>
+  <!-- JS Unificado -->
+  <script src="megalist.js"></script>
 
 </body>
 </html>
