@@ -481,7 +481,7 @@ const TL = window.TL = {
   SF:'Sci-Fi',PH:'Psicológico',BH:'Body Horror',TH:'Thriller',HR:'Horror',
   RO:'Romance',DR:'Drama',CR:'Crime',MY:'Mistério',MU:'Musical',DO:'Documentário',WS:'Western',
   EC:'Ecchi',HN:'Hentai',AN:'Anime',SE:'Série',OV:'OVA',
-  BR:'Brasil',JP:'Japão',KR:'Coreia',HK:'HK',TW:'Taiwan',FR:'França',IT:'Itália',MX:'México',AR:'Argentina',
+  BR:'Brasil',JP:'Japão',KR:'Coreia',HK:'Hong Kong',TW:'Taiwan',FR:'França',IT:'Itália',MX:'México',AR:'Argentina',
 };
 const LEVEL_COLORS = ['#6fcf6f','#f0c040','#f09040','#f06060','#c080ff'];
 const LEVEL_NAMES  = ['Nível 1 — Sutil','Nível 2 — Erótico','Nível 3 — Muito Erótico','Nível 4 — Altamente Explícito','Nível 5 — Fronteira Pornô'];
@@ -633,7 +633,7 @@ function renderGrid(){
         mCounts.Anime?`<span class="sec-media-pill" style="background:#2a1010;color:var(--anime)">🎌 ${mCounts.Anime}</span>`:'',
       ].filter(Boolean).join('');
       html+=`<div class="section-head">
-        <div class="sec-title" style="color:${color}">${sec}</div>
+        <div class="sec-title" style="color:${color}">${sectionLabel(sec)}</div>
         <div class="sec-count">${items.length}</div>
         <div class="sec-line"></div>
         <div class="sec-media">${pills}</div>
@@ -648,7 +648,7 @@ function renderGrid(){
       if(!byS[sec]) return;
       const items=byS[sec];
       const color=LEVEL_COLORS[items[0].nivel]||'var(--text2)';
-      html+=`<div class="section-head"><div class="sec-title" style="color:${color}">${sec}</div><div class="sec-count">${items.length}</div><div class="sec-line"></div></div><div class="grid">${items.map(renderCard).join('')}</div>`;
+      html+=`<div class="section-head"><div class="sec-title" style="color:${color}">${sectionLabel(sec)}</div><div class="sec-count">${items.length}</div><div class="sec-line"></div></div><div class="grid">${items.map(renderCard).join('')}</div>`;
     });
   } else {
     html+=`<div class="grid">${data.map(renderCard).join('')}</div>`;
@@ -658,14 +658,19 @@ function renderGrid(){
   loadPosters(data);
 }
 
+function sectionLabel(s){
+  // Strip "NÍVEL X — " prefix for display
+  return s.replace(/^N[IÍ]VEL\s+\d+\s+[—-]\s*/i,'').trim();
+}
 function buildNavTabs(){
   const sections=[...new Set(MEDIA_DATA.map(i=>i.section))];
   const nt=document.getElementById('navTabs');
   nt.innerHTML=`<div class="nav-tab active" data-s="all">Tudo <span class="tab-count">${MEDIA_DATA.length}</span></div>`+
     sections.map(s=>{
       const cnt=MEDIA_DATA.filter(i=>i.section===s).length;
-      const label=s.length>22?s.slice(0,20)+'…':s;
-      return `<div class="nav-tab" data-s="${s.replace(/"/g,'&quot;')}" title="${s}">${label} <span class="tab-count">${cnt}</span></div>`;
+      const label=sectionLabel(s);
+      const short=label.length>22?label.slice(0,20)+'…':label;
+      return `<div class="nav-tab" data-s="${s.replace(/"/g,'&quot;')}" title="${label}">${short} <span class="tab-count">${cnt}</span></div>`;
     }).join('');
   nt.addEventListener('click',e=>{
     const t=e.target.closest('.nav-tab');
@@ -1119,11 +1124,10 @@ document.getElementById('chipsBar').addEventListener('click',e=>{
 function openHam(){
   const groups=[
     {id:'hChipId',tipos:['all','L','G','T','B','H']},
-    {id:'hChipGenre',tipos:['SF','PH','BH','HR','TH','CR','MU','DO','RO','DR']},
-    {id:'hChipTheme',tipos:['X','V','R','Z','C','EC','HN']},
-    {id:'hChipOrigin',tipos:['BR','JP','KR','FR','HK']},
+    {id:'hChipGenre',tipos:['SF','PH','BH','HR','TH','CR','MU','DO','RO','DR','X','V','R','Z','C','EC','HN']},
+    {id:'hChipOrigin',tipos:['BR','JP','KR','HK','TW','FR','IT','MX','AR']},
   ];
-  const TLref=window.TL||{all:'Todos',L:'Lésbico',G:'Gay',T:'Trans',B:'Bi/Pan',H:'Hétero',SF:'Sci-Fi',PH:'Psicológico',BH:'Body Horror',HR:'Horror',TH:'Thriller',CR:'Crime',MU:'Musical',DO:'Documentário',RO:'Romance',DR:'Drama',X:'Tabu',V:'Voyeurismo',R:'Religião',Z:'Vampiro',C:'Comédia',EC:'Ecchi',HN:'Hentai',BR:'Brasil',JP:'Japão',KR:'Coreia',FR:'França',HK:'Hong Kong'};
+  const TLref=window.TL||{all:'Todos',L:'Lésbico',G:'Gay',T:'Trans',B:'Bi/Pan',H:'Hétero',SF:'Sci-Fi',PH:'Psicológico',BH:'Body Horror',HR:'Horror',TH:'Thriller',CR:'Crime',MU:'Musical',DO:'Documentário',RO:'Romance',DR:'Drama',X:'Tabu',V:'Voyeurismo',R:'Religião',Z:'Vampiro',C:'Comédia',EC:'Ecchi',HN:'Hentai',BR:'Brasil',JP:'Japão',KR:'Coreia',HK:'Hong Kong',TW:'Taiwan',FR:'França',IT:'Itália',MX:'México',AR:'Argentina'};
   groups.forEach(g=>{
     const el=document.getElementById(g.id);
     if(!el) return;
@@ -1221,6 +1225,13 @@ async function init(){
     updateMediaCounts();
     renderGrid();
     setNavH();
+
+    // Handle deep-link from directors page
+    const openId = localStorage.getItem('megalist_open_id');
+    if (openId) {
+      localStorage.removeItem('megalist_open_id');
+      setTimeout(() => { const id = parseInt(openId); if (id) openModal(id); }, 400);
+    }
 
   } catch (err) {
     console.error('Erro no INIT:', err);

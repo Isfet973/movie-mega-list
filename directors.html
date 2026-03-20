@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Diretores — MEGALIST</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="megalist.css">
+  <style>
+    /* ── DIRECTORS PAGE ── */
+    .dir-page { padding: 0 16px 80px; max-width: 1400px; margin: 0 auto; }
+
+    .dir-hero {
+      padding: 32px 0 24px;
+      display: flex;
+      align-items: flex-end;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .dir-hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(42px, 8vw, 80px);
+      letter-spacing: 4px;
+      color: var(--text);
+      line-height: 0.9;
+    }
+    .dir-hero-title span { color: var(--accent2); }
+    .dir-hero-sub {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--text3);
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .dir-count-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--accent2);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    /* Search + filter bar */
+    .dir-toolbar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .dir-search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 200px;
+      max-width: 360px;
+    }
+    .dir-search-wrap svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      color: var(--text3);
+    }
+    .dir-search {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      padding: 8px 12px 8px 32px;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .dir-search:focus { border-color: var(--accent2); }
+    .dir-country-filter {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .dir-country-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: .5px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .dir-country-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+    .dir-country-btn.active { background: var(--accent2); border-color: var(--accent2); color: #000; }
+
+    /* Directors grid */
+    .dir-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 14px;
+    }
+
+    .dir-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      cursor: pointer;
+      transition: all .2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .dir-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent2), transparent);
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    .dir-card:hover { border-color: var(--accent2); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+    .dir-card:hover::before { opacity: 1; }
+
+    .dir-card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .dir-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .dir-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .dir-card-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+    .dir-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dir-flag { font-size: 14px; }
+    .dir-country {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      color: var(--text3);
+      letter-spacing: .5px;
+    }
+    .dir-specialty-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      background: rgba(240,165,0,.12);
+      border: 1px solid rgba(240,165,0,.25);
+      color: var(--accent2);
+      padding: 2px 7px;
+      border-radius: 10px;
+      letter-spacing: .5px;
+    }
+    .dir-bio {
+      font-size: 11.5px;
+      color: var(--text2);
+      line-height: 1.6;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .dir-films-preview {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+    .dir-film-chip {
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text3);
+      padding: 2px 7px;
+      border-radius: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 120px;
+      transition: all .15s;
+    }
+    .dir-film-chip:hover { border-color: var(--accent2); color: var(--accent2); }
+    .dir-film-count {
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      color: var(--text3);
+      padding: 2px 7px;
+      align-self: center;
+    }
+
+    /* Empty state */
+    .dir-empty {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text3);
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+    }
+
+    /* ── DIRECTOR MODAL ── */
+    .dir-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.85);
+      backdrop-filter: blur(6px);
+      z-index: 500;
+      display: none;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .dir-overlay.open { display: flex; }
+
+    .dir-modal {
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dir-modal-header {
+      background: linear-gradient(135deg, var(--surface2) 0%, var(--surface) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 24px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .dir-modal-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--surface3);
+      border: 3px solid var(--accent2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+    .dir-modal-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .dir-modal-info { flex: 1; }
+    .dir-modal-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      letter-spacing: 2px;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .dir-modal-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .dir-modal-close {
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 14px;
+      flex-shrink: 0;
+      transition: all .15s;
+    }
+    .dir-modal-close:hover { background: var(--accent); color: white; border-color: var(--accent); }
+    .dir-modal-bio {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.7;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dir-modal-films-header {
+      padding: 16px 24px 12px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: var(--accent2);
+    }
+    .dir-modal-films {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: 10px;
+      padding: 0 24px 24px;
+    }
+    .dir-film-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .dir-film-card:hover {
+      border-color: var(--accent2);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,.4);
+    }
+    .dir-film-poster {
+      width: 100%;
+      aspect-ratio: 2/3;
+      background: var(--surface3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .dir-film-poster img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+    .dir-film-poster img.loaded { display: block; }
+    .dir-film-poster-ph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+    .dir-film-info { padding: 7px 8px; }
+    .dir-film-title {
+      font-size: 10px;
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 2px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .dir-film-year {
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      color: var(--text3);
+    }
+    .dir-film-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 7px;
+      padding: 1px 5px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 2px;
+    }
+    .dir-film-badge.film { background: rgba(102,136,204,.2); color: var(--film); }
+    .dir-film-badge.serie { background: rgba(46,204,138,.2); color: var(--serie); }
+    .dir-film-badge.anime { background: rgba(232,96,96,.2); color: var(--anime); }
+
+    .dir-no-films {
+      grid-column: 1/-1;
+      color: var(--text3);
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      padding: 10px 0;
+    }
+
+    /* Toast */
+    .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(60px); background: var(--surface2); border: 1px solid var(--border2); color: var(--text); font-family: 'Space Mono', monospace; font-size: 11px; padding: 10px 18px; border-radius: 20px; opacity: 0; transition: all .3s; z-index: 999; white-space: nowrap; pointer-events: none; }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    @media(max-width:600px){
+      .dir-grid { grid-template-columns: 1fr; }
+      .dir-modal-films { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+      .dir-modal-header { flex-wrap: wrap; }
+      .dir-hero-title { font-size: 52px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo" onclick="location.href='index.html'">
+    <span class="logo-full">MEGALIST</span>
+    <span class="logo-short">M</span>
+  </div>
+  <div class="nav-sep"></div>
+  <a href="index.html" class="nav-link">← Lista</a>
+  <a href="directors.html" class="nav-link active">Diretores</a>
+  <a href="profile.html" class="nav-link">Perfil</a>
+</nav>
+
+<div class="dir-page">
+
+  <div class="dir-hero">
+    <div>
+      <div class="dir-hero-title">DIRE<span>TORES</span></div>
+      <div class="dir-hero-sub">OS CINEASTAS POR TRÁS DA LISTA</div>
+    </div>
+    <div>
+      <div class="dir-count-badge" id="dirCountBadge">— diretores</div>
+    </div>
+  </div>
+
+  <div class="dir-toolbar">
+    <div class="dir-search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" class="dir-search" id="dirSearch" placeholder="Buscar diretor ou especialidade...">
+    </div>
+    <div class="dir-country-filter" id="countryFilter">
+      <button class="dir-country-btn active" data-c="all">Todos</button>
+    </div>
+  </div>
+
+  <div class="dir-grid" id="dirGrid"></div>
+
+</div>
+
+<!-- DIRECTOR MODAL -->
+<div class="dir-overlay" id="dirOverlay" onclick="if(event.target===this)closeDirModal()">
+  <div class="dir-modal" id="dirModal">
+    <div class="dir-modal-header">
+      <div class="dir-modal-avatar" id="dmAvatar"></div>
+      <div class="dir-modal-info">
+        <div class="dir-modal-name" id="dmName"></div>
+        <div class="dir-modal-meta" id="dmMeta"></div>
+      </div>
+      <button class="dir-modal-close" onclick="closeDirModal()">✕</button>
+    </div>
+    <div class="dir-modal-bio" id="dmBio"></div>
+    <div class="dir-modal-films-header">FILMES NA LISTA</div>
+    <div class="dir-modal-films" id="dmFilms"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ── DATA ── */
+const DIRECTORS = [
+  { id:1,  name:"Lars von Trier",       country:"Dinamarca",    flag:"🇩🇰", specialty:"Provocação / Dogma 95",            bio:"Mestre dinamarquês da provocação psicológica e do sofrimento feminino. Seu cinema é brutal, emotivo e deliberadamente perturbador — oscila entre o minimalismo do Dogma 95 e o maximalismo operístico. Mistura beleza e crueldade com rara honestidade.", films:[670,409,512,1811,1813,1814,1815,694] },
+  { id:2,  name:"Gaspar Noé",           country:"França/Argentina", flag:"🇫🇷", specialty:"Cinema de choque sensorial",       bio:"Argentino radicado em Paris, o provocador-mor do cinema contemporâneo. Seus filmes são experiências sensoriais extremas: câmera nervosa, longos planos, trilhas hipnóticas e sexo explícito misturado com violência e existencialismo.", films:[657,511,690,692] },
+  { id:3,  name:"Catherine Breillat",   country:"França",       flag:"🇫🇷", specialty:"Sexualidade feminina",               bio:"A cineasta mais radical sobre o desejo feminino. Seus filmes exploram poder, humilhação e prazer com uma frieza clínica perturbadora. Provocou escândalos em Cannes por décadas — e ainda provoca.", films:[689,659,660,503] },
+  { id:4,  name:"Tinto Brass",          country:"Itália",       flag:"🇮🇹", specialty:"Erotismo italiano",                  bio:"O mais elegante dos cineastas eróticos. Brass transformou o corpo feminino em arte visual com estética voyeurística única, cores vibrantes e humor italiano. Do épico escandaloso de Calígula ao softcore sofisticado de seus filmes tardios.", films:[502,420,421,422,423,424,425,426,427,428,429] },
+  { id:5,  name:"Radley Metzger",       country:"EUA",          flag:"🇺🇸", specialty:"Softcore artístico → Hardcore",      bio:"O cineasta que elevou o filme adulto à categoria de arte. Metzger fez a transição do softcore sofisticado europeu para o hardcore americano mantendo sempre qualidade visual e narrativa raramente vista no gênero.", films:[280,267,268,271,272,744,745,746,747,748,749] },
+  { id:6,  name:"Jesús Franco",         country:"Espanha",      flag:"🇪🇸", specialty:"Horror erótico / 200+ filmes",       bio:"O rei espanhol do exploitation. Com mais de 200 filmes, Franco criou um universo delirante de vampiras lésbicas, mulheres prisioneiras e horror erótico de baixo orçamento. Estética suja e onírica que influenciou gerações.", films:[594,595,596,597,598,599,600,601,602,603,604,605,606,607,608] },
+  { id:7,  name:"Joe D'Amato",          country:"Itália",       flag:"🇮🇹", specialty:"Exploitation extremo / 200+ filmes", bio:"Prolífico diretor italiano do exploitation mais extremo. De canibais a zumbis eróticos, passando pela série Emanuelle Nera, D'Amato redefiniu os limites do cinema de gênero com uma abordagem totalmente despudorada.", films:[532,535,609,610,611,612,613] },
+  { id:8,  name:"Jean Rollin",          country:"França",       flag:"🇫🇷", specialty:"Vampirismo erótico poético",         bio:"Poeta maldito do cinema de vampiros. Rollin criou um gênero próprio — surreal, melancólico e erótico — filmado em castelos normandos e praias nebulosas. Seus filmes são devaneios sensuais sobre morte e desejo.", films:[711,712] },
+  { id:9,  name:"Walerian Borowczyk",   country:"Polônia/França",flag:"🇵🇱",specialty:"Arte + pornografia",                 bio:"Artista plástico polonês que migrou para o cinema erótico com sensibilidade única. Borowczyk tratava o sexo como estética — seus filmes têm a textura de objetos antigos, feminilidade obsessiva e um erotismo que desafia qualquer categorização.", films:[507,508,509,531,1039,1040,1041,1042] },
+  { id:10, name:"Bernardo Bertolucci",  country:"Itália",       flag:"🇮🇹", specialty:"Drama provocativo",                  bio:"Grande dramaturgo italiano que usou o sexo como metáfora política e psicológica. Do escândalo de Último Tango em Paris ao épico visual de O Último Imperador, Bertolucci sempre colocou o desejo no centro das suas obsessões.", films:[501,505,415,1075,1076,1077,1078] },
+  { id:11, name:"Paul Verhoeven",       country:"Holanda",      flag:"🇳🇱", specialty:"Provocação mainstream",              bio:"O holandês que levou a provocação para Hollywood e voltou à Europa mais afiado. De thrillers eróticos ultrapopulares a filmes sobre fé e poder, Verhoeven é um intelectual disfarçado de entretenimento escandaloso.", films:[235,237,403,251,1037,1038] },
+  { id:12, name:"Pedro Almodóvar",      country:"Espanha",      flag:"🇪🇸", specialty:"Drama queer espanhol",               bio:"O maior nome do cinema espanhol contemporâneo. Almodóvar construiu um universo de mulheres fortes, identidades fluidas e melodramas operísticos com cores vibrantes e humor negro. Cinema que sangra de emoção.", films:[219,291,546,432,821,1095,1096,1097,1098,1099,1100,1101,1102,1103,1104,1105,1106,1107,1108,1109] },
+  { id:13, name:"Park Chan-wook",       country:"Coreia",       flag:"🇰🇷", specialty:"Thriller coreano",                   bio:"Mestre da vingança esteticamente perfeita. Park Chan-wook criou a trilogia da vingança mais influente do cinema asiático e redefiniu o thriller com elegância visual cirúrgica. Cada quadro é uma composição.", films:[402,439,589] },
+  { id:14, name:"Larry Clark",          country:"EUA",          flag:"🇺🇸", specialty:"Juventude provocativa",              bio:"Fotógrafo de rua convertido em cineasta, Clark documenta a juventude americana com brutalidade documental. Drogas, sexo e violência adolescente retratados sem filtro moral — um olhar que desconforta pelo que revela sobre a América.", films:[728,666] },
+  { id:15, name:"Bruce LaBruce",        country:"Canadá",       flag:"🇨🇦", specialty:"Queer radical",                      bio:"O punk queer mais radical do cinema independente. LaBruce mistura pornografia gay com crítica política e estética trash numa combinação única de provocação e ternura. Cinema para quem não tem medo de nada.", films:[702,703,704,705,706,707,645,646] },
+  { id:16, name:"Sion Sono",            country:"Japão",        flag:"🇯🇵", specialty:"Cinema extremo japonês",             bio:"O mais caótico e prolífico dos cineastas japoneses contemporâneos. Sono mistura erotismo, violência, crítica social e poesia num cinema que parece sempre prestes a explodir. Seus filmes duram horas e nunca entediam.", films:[491,492,493,434] },
+  { id:17, name:"Shin'ya Tsukamoto",    country:"Japão",        flag:"🇯🇵", specialty:"Body horror cyberpunk",              bio:"Criador do cyberpunk japonês mais visceral. Tsukamoto filmou a fusão entre carne e metal com uma energia punk sem paralelo. Seus filmes são alucinações industriais sobre identidade e o corpo como campo de batalha.", films:[331,332,333,490] },
+  { id:18, name:"Takashi Miike",        country:"Japão",        flag:"🇯🇵", specialty:"Extremo / 100+ filmes",              bio:"O mais prolífico e imprevisível dos cineastas japoneses. Miike pode fazer um musical infantil e um filme de tortura no mesmo ano. Sua filmografia extrema inclui algumas das cenas mais perturbadoras já filmadas.", films:[495,497,498] },
+  { id:19, name:"Kim Ki-duk",           country:"Coreia",       flag:"🇰🇷", specialty:"Drama extremo coreano",              bio:"O mais solitário e controverso dos cineastas coreanos. Kim Ki-duk filmou violência, silêncio e redenção com uma poética minimalista intensa. Seus filmes são feridas abertas — dolorosos, belos e impossíveis de esquecer.", films:[470,471,472,473,474] },
+  { id:20, name:"Tsai Ming-liang",      country:"Taiwan",       flag:"🇹🇼", specialty:"Slow cinema erótico",                bio:"O mestre do slow cinema de Taiwan. Tsai filma solidão urbana, desejos reprimidos e corpos que dificilmente se tocam com planos longos que pedem contemplação. Cinema para quem aguenta o silêncio.", films:[478,479,480,681] },
+  { id:21, name:"Xavier Dolan",         country:"Canadá",       flag:"🇨🇦", specialty:"Cinema queer jovem",                 bio:"Prodígio quebequense que começou a filmar aos 19 anos. Dolan constrói dramas intensos sobre amor, identidade queer e relações familiares com uma estética visual ousada e trilhas pop irresistíveis.", films:[286] },
+  { id:22, name:"David Lynch",          country:"EUA",          flag:"🇺🇸", specialty:"Surrealismo americano",              bio:"O surrealista americano por excelência. Lynch criou um universo único onde o cotidiano americano esconde horrores indescritíveis. Seus filmes são sonhos lúcidos — lindos, perturbadores e impossíveis de parar de pensar.", films:[155,311,312,168,169,170,353,1837] },
+  { id:23, name:"Stanley Kubrick",      country:"EUA/UK",       flag:"🇬🇧", specialty:"Perfeccionismo absoluto",            bio:"O perfeccionista supremo do cinema. Kubrick dominou todos os gêneros — ficção científica, horror, guerra, erotismo — com uma visão única e exigências lendárias. Cada filme seu é uma obra-prima técnica e filosófica.", films:[236,161,294,231,180] },
+  { id:24, name:"David Cronenberg",     country:"Canadá",       flag:"🇨🇦", specialty:"Body horror",                        bio:"O médico do cinema. Cronenberg explorou o corpo humano como território de horror, transformação e desejo num gênero que ele praticamente inventou: o body horror intelectual. Visceral, filosófico e perturbadoramente erótico.", films:[319,320,321,322,323,324,325,326,327] },
+  { id:25, name:"Brandon Cronenberg",   country:"Canadá",       flag:"🇨🇦", specialty:"Novo body horror",                   bio:"Filho de David Cronenberg que herdou a obsessão com corpos e identidade — e a radicalizou para o século XXI. Seus filmes são mais frios, mais corporativos e tão perturbadores quanto os do pai.", films:[328,329,330] },
+  { id:26, name:"Brian De Palma",       country:"EUA",          flag:"🇺🇸", specialty:"Hitchcock erótico",                  bio:"O herdeiro americano de Hitchcock. De Palma dominou o thriller erótico com câmeras voyeurísticas, split screens e uma exploração do olhar masculino que ao mesmo tempo celebra e critica. Estilo inconfundível.", films:[249,250,1269] },
+  { id:27, name:"Adrian Lyne",          country:"UK/EUA",       flag:"🇬🇧", specialty:"Thriller erótico mainstream",        bio:"O rei do thriller erótico dos anos 80–90. Lyne transformou o desejo adulto em entretenimento mainstream com uma estética sedutora e narrativas sobre obsessão e consequências. Seus filmes definiram uma era.", films:[243,252,232,1241,1242] },
+  { id:28, name:"Yorgos Lanthimos",     country:"Grécia",       flag:"🇬🇷", specialty:"Surreal perturbador",                bio:"O grego que inventou uma forma completamente nova de fazer cinema. Lanthimos cria mundos com regras absurdas e as segue com seriedade absoluta, produzindo um humor negro perturbador sobre poder, controle e relacionamentos.", films:[512,215,859,1611,1612,1613,1614] },
+  { id:29, name:"Pier Paolo Pasolini",  country:"Itália",       flag:"🇮🇹", specialty:"Cinema político/erótico",            bio:"Poeta, marxista, gay e herege — Pasolini foi tudo isso ao mesmo tempo e pagou com a vida. Seus filmes são denúncias políticas disfarçadas de parábolas eróticas, da trilogia da vida ao apocalipse de Saló.", films:[738,1079,1080,1081,1082,1083,1084,1085] },
+  { id:30, name:"R.W. Fassbinder",      country:"Alemanha",     flag:"🇩🇪", specialty:"Cinema queer alemão",                bio:"O gênio autodestrutivo do cinema alemão. Em menos de 15 anos, Fassbinder criou uma filmografia imensa sobre opressão, amor e poder — sempre com um olhar queer e uma intensidade que parecia vir de um lugar de dor real.", films:[293,823,822,447,1086,1087,1088,1089,1090,1091,1092] },
+  { id:31, name:"Just Jaeckin",         country:"França",       flag:"🇫🇷", specialty:"Erotismo elegante",                  bio:"O fotógrafo de moda que criou o erotismo mainstream dos anos 70. Jaeckin transformou Emmanuelle num fenômeno cultural global e definiu a estética do filme erótico soft: luz dourada, corpos perfeitos e fantasias burguesas.", films:[239,242,279] },
+  { id:32, name:"Russ Meyer",           country:"EUA",          flag:"🇺🇸", specialty:"Sexploitation king",                 bio:"O rei do sexploitation americano com estilo inconfundível: mulheres exuberantes, edição frenética e humor camp delirante. Meyer criou um subgênero próprio que misturava soft pornography com sátira social.", films:[275,1063,1064,1065,1066,1067,1068,1069,1070] },
+  { id:33, name:"Michael Haneke",       country:"Áustria",      flag:"🇦🇹", specialty:"Drama psicológico perturbador",      bio:"O mais implacável dos cineastas europeus. Haneke filma a violência, a frieza e os abismos das relações humanas sem nenhuma concessão ao espectador. Seus filmes são intervenções cirúrgicas no conforto moral da burguesia.", films:[416,1835,1304,1305] },
+  { id:34, name:"Satoshi Kon",          country:"Japão",        flag:"🇯🇵", specialty:"Anime psicológico",                  bio:"O mestre do anime psicológico. Kon explorava os limites entre realidade e ilusão com uma sofisticação narrativa raramente vista no cinema animado. Morreu cedo demais — sua filmografia curta é perfeita.", films:[55,56,62,63,60,61] },
+  { id:35, name:"Kunihiko Ikuhara",     country:"Japão",        flag:"🇯🇵", specialty:"Anime queer simbólico",              bio:"O cineasta mais hermético e simbólico do anime. Ikuhara usa a animação como linguagem de simbolismo denso — revolução feminista, queer theory e morte entranhados em estética visual única e perturbadora.", films:[66,67,140,141,142,380,381,919] },
+  { id:36, name:"Masaaki Yuasa",        country:"Japão",        flag:"🇯🇵", specialty:"Anime experimental",                 bio:"O mais inventivo dos animadores japoneses contemporâneos. Yuasa reinventa a linguagem visual a cada obra — seus filmes parecem que as regras do que a animação pode ser foram reescritas.", films:[117,118,119,120,121,76,899,1646] },
+  { id:37, name:"Makoto Shinkai",       country:"Japão",        flag:"🇯🇵", specialty:"Anime romântico",                    bio:"O poeta visual do anime romântico. Shinkai captura a melancolia da distância, do tempo perdido e do amor impossível com animações de beleza fotográfica. Cada cena parece uma memória.", films:[100,99,102,101,1945] },
+  { id:38, name:"Mamoru Hosoda",        country:"Japão",        flag:"🇯🇵", specialty:"Anime familiar / drama",             bio:"O mestre do drama familiar no anime. Hosoda explora família, crescimento e identidade com uma ternura rara e cenas que partem o coração. Seu cinema é acessível e profundamente emocional.", films:[104,105,106,107] },
+  { id:39, name:"Céline Sciamma",       country:"França",       flag:"🇫🇷", specialty:"Cinema lésbico/trans",               bio:"A cineasta mais importante do cinema queer feminino contemporâneo. Sciamma filma identidade de gênero, desejo feminino e coming-of-age com uma sensibilidade que parece vir de dentro do que retrata.", films:[1,46,22,1516,1517] },
+  { id:40, name:"Sean Baker",           country:"EUA",          flag:"🇺🇸", specialty:"Marginalidade sexual",               bio:"O cineasta humanista das margens americanas. Baker filma profissionais do sexo, imigrantes e moradores de motel com ternura e respeito, sem exotismo. Seus filmes são sobre dignidade em condições de invisibilidade.", films:[287,682,858,1820] },
+  { id:41, name:"Karim Aïnouz",         country:"Brasil",       flag:"🇧🇷", specialty:"Cinema queer brasileiro",            bio:"O maior nome do cinema queer brasileiro contemporâneo. Aïnouz filma corpos, afetos e identidades com uma sensualidade tropical e uma melancolia política. De Madame Satã ao épico de A Vida Invisível.", films:[574,576,577,582] },
+  { id:42, name:"Ari Aster",            country:"EUA",          flag:"🇺🇸", specialty:"Horror emocional",                   bio:"O renovador do horror americano que usa o gênero para explorar trauma e luto. Aster cria atmosferas de ansiedade sufocante antes de entregar o horror — seus filmes são sobre o medo que não conseguimos nomear.", films:[349,348] },
+  { id:43, name:"Robert Eggers",        country:"EUA",          flag:"🇺🇸", specialty:"Folk horror histórico",              bio:"O pesquisador que virou cineasta. Eggers constrói mundos históricos com precisão obsessiva e os popula com horror que parece vir do próprio período retratado. Cinema de período como atmosfera pura.", films:[350,351] },
+  { id:44, name:"Julia Ducournau",      country:"França",       flag:"🇫🇷", specialty:"Body horror feminino",               bio:"A herdeira do novo body horror francês. Ducournau explora o corpo feminino em transformação com brutalidade e sensualidade que nenhum cineasta tinha conseguido combinar assim. Palma de Ouro com Titane.", films:[336,335] },
+  { id:45, name:"Dario Argento",        country:"Itália",       flag:"🇮🇹", specialty:"Giallo",                             bio:"O mestre absoluto do giallo italiano. Argento transformou o thriller de assassinato numa experiência audiovisual sinestésica — cores irreais, trilhas de rock progressivo e violência coreografada como balé.", films:[630,631,345,633,634,635] },
+  { id:46, name:"Mario Bava",           country:"Itália",       flag:"🇮🇹", specialty:"Horror italiano pioneiro",           bio:"O pai do horror italiano. Bava inventou o giallo e o slasher antes que existissem como gêneros, com uma maestria visual de iluminação colorida que influenciou Argento, De Palma e Spielberg.", films:[636,637,638] },
+  { id:47, name:"Luca Guadagnino",      country:"Itália",       flag:"🇮🇹", specialty:"Sensorialidade / desejo",            bio:"O cineasta do desejo sensorial. Guadagnino filma atração, obsessão e prazer com atenção ao detalhe — a luz, a comida, o toque — que torna seus filmes experiências físicas tanto quanto emocionais.", films:[11,344,337,862,308,1536,1537] },
+  { id:48, name:"Tatsuki Fujimoto",     country:"Japão",        flag:"🇯🇵", specialty:"Mangá/Anime",                        bio:"O mangakista mais singular da sua geração. Fujimoto cria histórias que parecem impossíveis de existir — ao mesmo tempo violentas e ternamente emotivas. Look Back é uma obra-prima em 45 páginas.", films:[96,988] },
+  // NOVOS DIRETORES
+  { id:49, name:"Hayao Miyazaki",       country:"Japão",        flag:"🇯🇵", specialty:"Anime Ghibli / aventura",            bio:"O gênio fundador do Studio Ghibli. Miyazaki criou universos de fantasia únicos com heroínas fortes, ecologia e animação de padrão inigualável. Seus filmes falam com crianças e adultos com igual profundidade e poesia.", films:[109,110,111,894,895,1991,1992,1993,1995,2122,2123,2127,2129,2130] },
+  { id:50, name:"Isao Takahata",        country:"Japão",        flag:"🇯🇵", specialty:"Anime dramático / Ghibli",           bio:"O contraponto dramático de Miyazaki no Ghibli. Takahata abandonou a fantasia pelo realismo emocional brutal — de uma história de guerra que destrói corações a um conto folclórico de beleza transcendente.", films:[108,897] },
+  { id:51, name:"Hideaki Anno",         country:"Japão",        flag:"🇯🇵", specialty:"Anime existencial / deconstrução",   bio:"Criador de Neon Genesis Evangelion, Anno redefiniu o que anime pode ser. Misturou mecha com depressão, trauma e crítica à própria audiência otaku, criando a obra mais analisada da animação japonesa.", films:[58,59] },
+  { id:52, name:"Mamoru Oshii",         country:"Japão",        flag:"🇯🇵", specialty:"Anime sci-fi filosófico",            bio:"O filósofo do anime sci-fi. Ghost in the Shell redefiniu o cyberpunk visual e questões sobre identidade e consciência — influenciando Matrix e toda ficção científica que veio depois.", films:[53,112,1467,1470] },
+  { id:53, name:"Ingmar Bergman",       country:"Suécia",       flag:"🇸🇪", specialty:"Drama existencial sueco",           bio:"O maior dramaturgo do cinema. Bergman explorou Deus, morte, amor e solidão com profundidade psicológica que definiu o que o cinema pode fazer. Seus filmes são os mais honestos já feitos sobre o ser humano.", films:[1291,1292,1293,1294,1295,1296] },
+  { id:54, name:"Andrei Tarkovsky",     country:"URSS",         flag:"🇷🇺", specialty:"Slow cinema / espiritualidade",      bio:"O cineasta mais contemplativo da história. Tarkovsky filmou tempo, memória e transcendência com planos longos de beleza dolorosa. Seus filmes não são assistidos — são habitados.", films:[181,182] },
+  { id:55, name:"Wong Kar-wai",         country:"Hong Kong",    flag:"🇭🇰", specialty:"Melancolia / romantismo visual",     bio:"O poeta do amor impossível. Wong Kar-wai criou um cinema de memória, tempo e desejo com estética visual sem igual — imagens desfocadas, câmera lenta e trilhas que parecem sentimentos tornados visíveis.", films:[301,1778,1779,1780] },
+  { id:56, name:"Claire Denis",         country:"França",       flag:"🇫🇷", specialty:"Cinema sensorial / colonialismo",   bio:"A cineasta do corpo e do desejo sem palavras. Denis filma com linguagem puramente sensorial — texturas, músicas, pele e movimentos que comunicam mais que qualquer diálogo. Seus filmes são experiências físicas.", films:[1505,1506,1507,1508,1509,1510,1511,1513,1514] },
+  { id:57, name:"François Ozon",        country:"França",       flag:"🇫🇷", specialty:"Cinema queer francês",              bio:"O mais prolífico dos cineastas queer franceses. Ozon transita entre gêneros com destreza — thriller, musical, drama, comédia — sempre com um olhar sobre desejo, identidade e jogos de poder.", films:[1168,1169,1170,1171,1172,1173,1174,1175,1176,1177,1178,224] },
+  { id:58, name:"Lucrecia Martel",      country:"Argentina",    flag:"🇦🇷", specialty:"Cinema argentino / intimismo",       bio:"A cineasta mais importante da Argentina contemporânea. Martel filma famílias e classes sociais com câmera que capta o não-dito — os preconceitos, os desejos e as estruturas de poder que ninguém nomeia.", films:[1346,1347,1348,1349] },
+  { id:59, name:"Asghar Farhadi",       country:"Irã",          flag:"🇮🇷", specialty:"Drama iraniano / dilemas morais",   bio:"O dramaturgo moral do Irã. Farhadi constrói situações cotidianas que se tornam armadilhas morais de onde ninguém escapa limpo — um cinema que exige do espectador tanto quanto dos personagens.", films:[1376,1377,1378] },
+  { id:60, name:"Abbas Kiarostami",     country:"Irã",          flag:"🇮🇷", specialty:"Cinema iraniano / minimalismo",     bio:"O poeta supremo do cinema iraniano. Kiarostami dissolveu os limites entre ficção e documentário com simplicidade que esconde profundidade filosófica imensurável. Seus filmes são sobre vida, morte e o próprio cinema.", films:[1379,1380] },
+  { id:61, name:"Krzysztof Kieślowski", country:"Polônia/França",flag:"🇵🇱",specialty:"Drama filosófico / Trilogia das Cores",bio:"O moralista do cinema europeu. Kieślowski filmou o destino, o acaso e as escolhas humanas com delicadeza filosófica única. A Trilogia das Cores é um dos conjuntos mais perfeitos da história do cinema.", films:[1319,1320,1321,1322,1323] },
+  { id:62, name:"Hirokazu Kore-eda",    country:"Japão",        flag:"🇯🇵", specialty:"Drama familiar japonês",            bio:"O humanista do cinema japonês contemporâneo. Kore-eda filma famílias imperfeitas com ternura que nunca vira sentimentalismo — seus filmes sobre o que significa ser família são os mais honestos do cinema atual.", films:[1829,1830,1831,1832,1828] },
+  { id:63, name:"Pablo Larraín",        country:"Chile",        flag:"🇨🇱", specialty:"Cinema chileno / política",         bio:"O cineasta que captura a alma ferida do Chile. Larraín explora a ditadura, a identidade e o trauma com filmes que vão do rigoroso ao pop — de No à explosiva Ema, passando por biopics como Spencer e Priscilla.", films:[1358,1359,1360,863] },
+  { id:64, name:"Carlos Reygadas",      country:"México",       flag:"🇲🇽", specialty:"Slow cinema / México profundo",     bio:"O cineasta mais radical do México contemporâneo. Reygadas filma o México rural com ritmo contemplativo e imagens de beleza perturbadora, misturando sexo explícito, espiritualidade e paisagens hipnóticas.", films:[677,1368,1369,1370,1371] },
+  { id:65, name:"Nuri Bilge Ceylan",    country:"Turquia",      flag:"🇹🇷", specialty:"Slow cinema / drama anatoliano",    bio:"O Bergman turco. Ceylan filma paisagens anatolianas e conversas filosóficas com paciência e beleza visual raras. Seus filmes são extensos, inteligentes e deixam uma marca duradoura.", films:[1390,1391] },
+  { id:66, name:"Ruben Östlund",        country:"Suécia",       flag:"🇸🇪", specialty:"Sátira social europeia",            bio:"O satirista mais mordaz do cinema europeu contemporâneo. Östlund cria situações de humilhação social com câmera implacável que expõe a fragilidade da masculinidade e da classe média europeia.", films:[1297,1298,1299] },
+  { id:67, name:"Wes Anderson",         country:"EUA",          flag:"🇺🇸", specialty:"Estética whimsical / simetria",     bio:"O decorador supremo do cinema. Anderson criou um universo visual reconhecível num segundo — paletas pastel, simetria perfeita, melancolia escondida sob camadas de charme. Seus filmes são brinquedos tristonhos.", films:[1997,1998,1999,2000,2001,2002,2134,2135,2136] },
+  { id:68, name:"Sofia Coppola",        country:"EUA",          flag:"🇺🇸", specialty:"Melancolia feminina",               bio:"A cineasta do isolamento privilegiado e da solidão feminina. Coppola filma mulheres presas em gaiolas douradas com sensibilidade delicada e estética que captura o tédio e a beleza do vazio.", films:[1764,1767,1768,1769,863] },
+  { id:69, name:"Peter Greenaway",      country:"UK",           flag:"🇬🇧", specialty:"Arte conceitual / corpo",           bio:"O pintor que faz cinema. Greenaway cria composições visuais de densidade intelectual extrema — nudez, morte, comida e poder organizados como num quadro renascentista. Cinema para ver e rever.", films:[1187,1188,1190,1191,1192] },
+  { id:70, name:"Atom Egoyan",          country:"Canadá",       flag:"🇨🇦", specialty:"Drama psicológico canadense",       bio:"O cineasta do trauma e da memória. Egoyan constrói narrativas labirínticas sobre perda, obsessão e identidade com uma frieza que esconde profunda emoção reprimida.", films:[1180,1181,1182,1183] },
+  { id:71, name:"Alejandro Iñárritu",   country:"México",       flag:"🇲🇽", specialty:"Drama existencial / épico",         bio:"O cineasta mexicano que conquistou Hollywood com épicos de narrativas entrelaçadas e dor humana universal. De Amores Perros ao visceral Revenant, Iñárritu filma com intensidade que não dá trégua.", films:[1367,1805,1806,1807] },
+  { id:72, name:"Nicolas Winding Refn", country:"Dinamarca",    flag:"🇩🇰", specialty:"Neo-noir estilizado",               bio:"O esteta do neo-noir. Refn cria atmosferas hipnóticas de violência e neon com trilhas sintetizadas e personagens quase mudos. Estilo sobre substância — e que estilo.", films:[2008,2009,343] },
+  { id:73, name:"Andrzej Żuławski",     country:"Polônia",      flag:"🇵🇱", specialty:"Cinema histérico / extremo",        bio:"O mais histérico e apaixonado dos cineastas. Żuławski filmava crises de amor e existência com atores levados ao limite absoluto — Isabelle Adjani em Possession permanece como uma das atuações mais extremas da história.", films:[352] },
+  { id:74, name:"Federico Fellini",     country:"Itália",       flag:"🇮🇹", specialty:"Barroco italiano / autobiografia",  bio:"O sonhador do cinema italiano. Fellini dissolveu os limites entre autobiografia e fantasia num cinema exuberante de figuras circenses, mulheres voluptuosas e uma Itália que existe apenas na sua memória.", films:[1543,1544,1545,1546,1547,1548] },
+  { id:75, name:"Luchino Visconti",     country:"Itália",       flag:"🇮🇹", specialty:"Decadência aristocrática",          bio:"O aristocrata do cinema italiano. Visconti filmou a decadência da nobreza, a ópera como modo de vida e a homossexualidade reprimida com opulência visual que rivaliza com os maiores pintores.", films:[1202,1203,1204] },
+  { id:76, name:"Andrea Arnold",        country:"UK",           flag:"🇬🇧", specialty:"Realismo britânico / feminino",     bio:"A voz feminina mais crua do realismo britânico. Arnold filma mulheres em situações de pobreza e desejo com câmera de mão e atores não-profissionais, criando retratos de honestidade brutal.", films:[230,1272] },
+  { id:77, name:"Mike Leigh",           country:"UK",           flag:"🇬🇧", specialty:"Realismo britânico / classe",       bio:"O cronista da classe trabalhadora britânica. Leigh desenvolve seus filmes com improviso intenso, criando personagens de complexidade raramente vista — e humor que vem de um lugar de dor real.", films:[1577,1578,1579,1580] },
+  { id:78, name:"Chloe Zhao",           country:"China/EUA",    flag:"🇺🇸", specialty:"Realismo poético americano",        bio:"A cineasta que capturou a América esquecida com beleza documental rara. Zhao filma paisagens do oeste americano e comunidades à margem com câmera que encontra dignidade onde poucos olham.", films:[1841,1842,1843] },
+];
+
+/* ── STATE ── */
+const TMDB_KEY = '8265bd1679663a7ea12ac168da84d2e8';
+const TMDB_IMG = 'https://image.tmdb.org/t/p/w342';
+let MEDIA_DATA = [];
+let POSTERS = {};
+let searchQ = '';
+let countryFilter = 'all';
+
+/* ── INIT ── */
+async function init() {
+  // Load media data
+  try {
+    const [mdR, mdataR] = await Promise.all([
+      fetch('movie-list.md').catch(() => null),
+      fetch('media-data.json').catch(() => null)
+    ]);
+    if (mdR && mdR.ok) {
+      const md = await mdR.text();
+      MEDIA_DATA = parseMarkdown(md);
+    }
+    if (mdataR && mdataR.ok) {
+      const mdata = await mdataR.json();
+      if (mdata.posters) POSTERS = mdata.posters;
+    }
+    // Also load localStorage poster data
+    try {
+      const auto = JSON.parse(localStorage.getItem('megalist_poster_auto_v1') || '{}');
+      const edits = JSON.parse(localStorage.getItem('megalist_poster_edits_v1') || '{}');
+      Object.assign(POSTERS, auto);
+      Object.entries(edits).forEach(([k,v]) => { if (v) POSTERS[k] = v; else delete POSTERS[k]; });
+    } catch(e){}
+  } catch(e) {}
+
+  buildCountryFilter();
+  renderGrid();
+  document.getElementById('dirCountBadge').textContent = `${DIRECTORS.length} diretores`;
+}
+
+/* ── MARKDOWN PARSER (subset) ── */
+function parseMarkdown(text) {
+  const lines = text.split('\n'), items = [], seen = new Set();
+  let in_table = false, hp = false, is_media = false;
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (line.startsWith('## ') || line.startsWith('### ')) { in_table=false; hp=false; is_media=false; continue; }
+    if (line.startsWith('|')) {
+      const cols = line.split('|').slice(1,-1).map(c=>c.trim());
+      if (cols.every(c=>/^[-: ]+$/.test(c))) { if(in_table) hp=true; continue; }
+      if (!hp) { is_media = cols[0]==='#' && cols.some(c=>/titulo/i.test(c)); in_table=true; continue; }
+      if (in_table && hp && is_media) {
+        const id = parseInt(cols[0]); if (!id || seen.has(id)) continue;
+        const title = (cols[1]||'').replace(/—/g,'').trim();
+        if (!title || /já listado/i.test(title)) continue;
+        seen.add(id);
+        items.push({ id, title, year: parseInt(cols[2])||0, media: (cols[3]||'').replace(/—/g,'').trim()||'Filme', tipo: (cols[4]||'').split(',').map(t=>t.trim()).filter(Boolean) });
+      }
+    } else { if(in_table){in_table=false;hp=false;is_media=false;} }
+  }
+  return items;
+}
+
+/* ── POSTER RESOLVE ── */
+function resolveUrl(id) {
+  const k = String(id);
+  if (POSTERS[k]) return POSTERS[k].startsWith('/') ? TMDB_IMG+POSTERS[k] : POSTERS[k];
+  return null;
+}
+
+function mediaIcon(item) {
+  if (!item) return '🎬';
+  return item.media==='Anime'||item.tipo?.includes('AN') ? '🎌' :
+         item.media==='Serie'||item.tipo?.includes('SE') ? '📺' : '🎬';
+}
+
+/* ── COUNTRY FILTER ── */
+function buildCountryFilter() {
+  const countries = [...new Set(DIRECTORS.map(d => d.country))].sort();
+  const bar = document.getElementById('countryFilter');
+  countries.forEach(c => {
+    const btn = document.createElement('button');
+    btn.className = 'dir-country-btn';
+    btn.dataset.c = c;
+    btn.textContent = c;
+    btn.onclick = () => setCountry(c);
+    bar.appendChild(btn);
+  });
+}
+
+function setCountry(c) {
+  countryFilter = c;
+  document.querySelectorAll('.dir-country-btn').forEach(b => b.classList.toggle('active', b.dataset.c === c));
+  renderGrid();
+}
+
+/* ── RENDER ── */
+function getFiltered() {
+  let dirs = [...DIRECTORS];
+  if (countryFilter !== 'all') dirs = dirs.filter(d => d.country === countryFilter);
+  if (searchQ) {
+    const q = searchQ.toLowerCase();
+    dirs = dirs.filter(d => d.name.toLowerCase().includes(q) || d.specialty.toLowerCase().includes(q) || d.country.toLowerCase().includes(q));
+  }
+  return dirs.sort((a,b) => a.name.localeCompare(b.name, 'pt'));
+}
+
+function renderGrid() {
+  const dirs = getFiltered();
+  const grid = document.getElementById('dirGrid');
+  if (!dirs.length) {
+    grid.innerHTML = '<div class="dir-empty">Nenhum diretor encontrado.</div>';
+    return;
+  }
+  grid.innerHTML = dirs.map(d => {
+    const films = d.films.slice(0,4).map(id => {
+      const item = MEDIA_DATA.find(m => m.id === id);
+      const title = item ? item.title : `#${id}`;
+      return `<span class="dir-film-chip" onclick="event.stopPropagation();openDirModal(${d.id})">${title}</span>`;
+    }).join('');
+    const extra = d.films.length > 4 ? `<span class="dir-film-count">+${d.films.length-4} filmes</span>` : '';
+    return `<div class="dir-card" onclick="openDirModal(${d.id})">
+      <div class="dir-card-top">
+        <div class="dir-avatar">${d.flag}</div>
+        <div>
+          <div class="dir-card-name">${d.name}</div>
+          <div class="dir-card-meta">
+            <span class="dir-country">${d.country}</span>
+            <span class="dir-specialty-tag">${d.specialty}</span>
+          </div>
+        </div>
+      </div>
+      <div class="dir-bio">${d.bio}</div>
+      <div class="dir-films-preview">${films}${extra}</div>
+    </div>`;
+  }).join('');
+}
+
+/* ── MODAL ── */
+function openDirModal(dirId) {
+  const d = DIRECTORS.find(x => x.id === dirId);
+  if (!d) return;
+  document.getElementById('dmAvatar').textContent = d.flag;
+  document.getElementById('dmName').textContent = d.name;
+  document.getElementById('dmMeta').innerHTML = `
+    <span class="dir-flag">${d.flag}</span>
+    <span class="dir-country">${d.country}</span>
+    <span class="dir-specialty-tag">${d.specialty}</span>
+    <span class="dir-country" style="color:var(--text3)">${d.films.length} título(s) na lista</span>`;
+  document.getElementById('dmBio').textContent = d.bio;
+
+  const filmsEl = document.getElementById('dmFilms');
+  if (!d.films.length) {
+    filmsEl.innerHTML = '<div class="dir-no-films">Nenhum título desta lista.</div>';
+  } else {
+    filmsEl.innerHTML = d.films.map(id => {
+      const item = MEDIA_DATA.find(m => m.id === id);
+      const title = item ? item.title : `#${id}`;
+      const year = item ? item.year : '';
+      const url = resolveUrl(id);
+      const icon = item ? mediaIcon(item) : '🎬';
+      const badgeClass = !item ? 'film' : item.media==='Anime'||item.tipo?.includes('AN') ? 'anime' : item.media==='Serie' ? 'serie' : 'film';
+      const badgeLabel = !item ? 'Filme' : item.media==='Anime'||item.tipo?.includes('AN') ? 'Anime' : item.media==='Serie' ? 'Série' : 'Filme';
+      return `<div class="dir-film-card" onclick="goToFilm(${id})">
+        <div class="dir-film-poster">
+          ${url ? `<img src="${url}" onload="this.classList.add('loaded')" onerror="this.remove()">` : ''}
+          <div class="dir-film-poster-ph">${icon}</div>
+        </div>
+        <div class="dir-film-info">
+          <div class="dir-film-title">${title}</div>
+          <div class="dir-film-year">${year||''}</div>
+          <span class="dir-film-badge ${badgeClass}">${badgeLabel}</span>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  document.getElementById('dirOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDirModal() {
+  document.getElementById('dirOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function goToFilm(id) {
+  closeDirModal();
+  // Navigate to main list with this film highlighted
+  localStorage.setItem('megalist_open_id', id);
+  location.href = 'index.html';
+}
+
+/* ── SEARCH ── */
+document.getElementById('dirSearch').addEventListener('input', e => {
+  searchQ = e.target.value;
+  renderGrid();
+});
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDirModal(); });
+
+function showToast(m) {
+  const t = document.getElementById('toast');
+  t.textContent = m; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+init();
+</script>
+</body>
+</html>

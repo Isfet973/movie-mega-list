@@ -52,6 +52,7 @@
   </select>
   <div class="nav-tabs" id="navTabs"></div>
   <div class="nav-right">
+    <a href="directors.html" class="nav-link desktop-only" style="font-size:10px;white-space:nowrap;">🎬 Diretores</a>
     <button class="profile-ico-btn desktop-only" onclick="location.href='profile.html'" title="Perfil">
       <img class="profile-ico" id="navAvatar" alt="Perfil">
     </button>
@@ -62,7 +63,7 @@
 <!-- CHIPS FILTER BAR -->
 <div class="chips-bar" id="chipsBar">
   <div class="chip-group">
-    <span class="chip-label">ID</span>
+    <span class="chip-label">IDENTIDADE</span>
     <span class="chip active" data-tipo="all">Todos</span>
     <span class="chip" data-tipo="L">Lésbico</span>
     <span class="chip" data-tipo="G">Gay</span>
@@ -71,7 +72,7 @@
     <span class="chip" data-tipo="H">Hétero</span>
   </div>
   <div class="chip-group">
-    <span class="chip-label">GÊNERO</span>
+    <span class="chip-label">GÊNERO & TEMA</span>
     <span class="chip" data-tipo="SF">Sci-Fi</span>
     <span class="chip" data-tipo="PH">Psicológico</span>
     <span class="chip" data-tipo="BH">Body Horror</span>
@@ -82,9 +83,6 @@
     <span class="chip" data-tipo="DO">Documentário</span>
     <span class="chip" data-tipo="RO">Romance</span>
     <span class="chip" data-tipo="DR">Drama</span>
-  </div>
-  <div class="chip-group">
-    <span class="chip-label">TEMA</span>
     <span class="chip" data-tipo="X">Tabu</span>
     <span class="chip" data-tipo="V">Voyeurismo</span>
     <span class="chip" data-tipo="R">Religião</span>
@@ -98,8 +96,12 @@
     <span class="chip" data-tipo="BR">Brasil</span>
     <span class="chip" data-tipo="JP">Japão</span>
     <span class="chip" data-tipo="KR">Coreia</span>
-    <span class="chip" data-tipo="FR">França</span>
     <span class="chip" data-tipo="HK">Hong Kong</span>
+    <span class="chip" data-tipo="TW">Taiwan</span>
+    <span class="chip" data-tipo="FR">França</span>
+    <span class="chip" data-tipo="IT">Itália</span>
+    <span class="chip" data-tipo="MX">México</span>
+    <span class="chip" data-tipo="AR">Argentina</span>
   </div>
 </div>
 
@@ -268,6 +270,7 @@
   <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;margin-top:4px;">Filtros</div>
   <div style="margin-top:10px;">
     <button class="btn primary" style="width:100%" onclick="location.href='profile.html'">👤 Perfil</button>
+    <button class="btn" style="width:100%;margin-top:6px" onclick="location.href='directors.html'">🎬 Diretores</button>
   </div>
 
   <div class="ham-section">Ordenar por</div>
@@ -300,10 +303,8 @@
 
   <div class="ham-section">Identidade</div>
   <div class="ham-chips" id="hChipId"></div>
-  <div class="ham-section">Gênero</div>
+  <div class="ham-section">Gênero & Tema</div>
   <div class="ham-chips" id="hChipGenre"></div>
-  <div class="ham-section">Tema</div>
-  <div class="ham-chips" id="hChipTheme"></div>
   <div class="ham-section">Origem</div>
   <div class="ham-chips" id="hChipOrigin"></div>
 
