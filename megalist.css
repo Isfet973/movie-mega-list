@@ -201,8 +201,11 @@ nav .nav-link.active { color: var(--accent); border-bottom-color: var(--accent);
   overflow: hidden; 
   display: flex; 
   flex-direction: column; 
+  content-visibility: auto;
+  contain-intrinsic-size: 160px 280px;
 }
 
+.card { will-change: transform; }
 .card:hover { transform: translateY(-3px); border-color: var(--border2); box-shadow: 0 6px 20px rgba(0,0,0,.4); }
 .card.watched { border-color: var(--accent4); }
 .card.watching { border-color: var(--accent2); }
@@ -1416,4 +1419,17 @@ textarea.form-input { resize: vertical; min-height: 70px; }
 }
 @media(max-width: 480px) {
   .nav-tabs { display: none; }
+}
+
+/* ── PERFORMANCE ── */
+.grid {
+  will-change: auto;
+}
+.card-poster img {
+  /* Avoid layout shift while images load */
+  aspect-ratio: 2/3;
+}
+/* Reduce paint complexity on non-hovered cards */
+.card:not(:hover) {
+  will-change: auto;
 }

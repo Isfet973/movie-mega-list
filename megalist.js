@@ -37,6 +37,33 @@ let currentId     = null;
 let currentRating = 0;
 let rouFilter     = 'all';
 
+
+/* ── PERFORMANCE UTILS ── */
+function debounce(fn, ms) {
+  let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); };
+}
+
+// IntersectionObserver for lazy poster loading
+let _posterObserver = null;
+function getPosterObserver() {
+  if (_posterObserver) return _posterObserver;
+  _posterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const card = entry.target;
+      const id = parseInt(card.dataset.id);
+      if (!id) return;
+      const item = MEDIA_DATA.find(m => m.id === id);
+      if (!item) return;
+      _posterObserver.unobserve(card);
+      const u = resolveUrl(id);
+      if (u !== undefined) { applyPoster(id, u); }
+      else { enqueue(item); }
+    });
+  }, { rootMargin: '200px 0px', threshold: 0 });
+  return _posterObserver;
+}
+
 // LOCAL STORAGE
 function loadLS() {
   try { userData    = JSON.parse(localStorage.getItem(LS_USER)  || '{}'); } catch(e){}
@@ -132,7 +159,7 @@ function applyPoster(id, url){
 }
 
 // Auto-fetch queue
-const _Q = []; let _busy = false;
+const _Q = []; let _active = 0; const _MAX_CONCURRENT = 3;
 function enqueue(item){
   const k = String(item.id);
   if(k in posterEdits || k in POSTERS_JSON || k in posterAuto) return;
@@ -140,11 +167,13 @@ function enqueue(item){
   _Q.push(item); processQ();
 }
 async function processQ(){
-  if(_busy || !_Q.length) return;
-  _busy=true; const item=_Q.shift();
-  try { await autoFetch(item); }
-  catch(e){ posterAuto[String(item.id)]=null; savePosterAuto(); }
-  _busy=false; setTimeout(processQ, 100);
+  while (_active < _MAX_CONCURRENT && _Q.length) {
+    const item = _Q.shift();
+    _active++;
+    autoFetch(item)
+      .catch(() => { posterAuto[String(item.id)] = null; savePosterAuto(); })
+      .finally(() => { _active--; processQ(); });
+  }
 }
 
 async function autoFetch(item){
@@ -200,7 +229,21 @@ async function tryOMDB(item){
   } catch(e){ return null; }
 }
 
-function loadPosters(data){ data.forEach(item=>{ const u=resolveUrl(item.id); if(u!==undefined) applyPoster(item.id,u); else enqueue(item); }); }
+function loadPosters(data){
+  // Apply known posters immediately, use IntersectionObserver for unknown
+  const obs = getPosterObserver();
+  data.forEach(item => {
+    const u = resolveUrl(item.id);
+    if (u !== undefined) {
+      // Known (cached or in json) — apply right away
+      applyPoster(item.id, u);
+    } else {
+      // Unknown — observe the card element; fetch only when it enters viewport
+      const card = document.querySelector(`.card[data-id="${item.id}"]`);
+      if (card) obs.observe(card);
+    }
+  });
+}
 
 // DESCRIPTIONS
 function getDesc(item){
@@ -481,7 +524,7 @@ const TL = window.TL = {
   SF:'Sci-Fi',PH:'Psicológico',BH:'Body Horror',TH:'Thriller',HR:'Horror',
   RO:'Romance',DR:'Drama',CR:'Crime',MY:'Mistério',MU:'Musical',DO:'Documentário',WS:'Western',
   EC:'Ecchi',HN:'Hentai',AN:'Anime',SE:'Série',OV:'OVA',
-  BR:'Brasil',JP:'Japão',KR:'Coreia',HK:'Hong Kong',TW:'Taiwan',FR:'França',IT:'Itália',MX:'México',AR:'Argentina',
+  BR:'Brasil',JP:'Japão',KR:'Coreia',HK:'HK',TW:'Taiwan',FR:'França',IT:'Itália',MX:'México',AR:'Argentina',
 };
 const LEVEL_COLORS = ['#6fcf6f','#f0c040','#f09040','#f06060','#c080ff'];
 const LEVEL_NAMES  = ['Nível 1 — Sutil','Nível 2 — Erótico','Nível 3 — Muito Erótico','Nível 4 — Altamente Explícito','Nível 5 — Fronteira Pornô'];
@@ -504,7 +547,8 @@ function renderCard(item){
   if(item.tipo.includes('AN')&&item.media!=='Anime') strip+=`<span class="ms-badge ms-anime">ANIME</span>`;
   if(item.tipo.includes('SE')&&item.media!=='Serie') strip+=`<span class="ms-badge ms-serie">SÉRIE</span>`;
 
-  const hasPoster = (resolveUrl(item.id)!==null && resolveUrl(item.id)!==undefined);
+  const _rurl = resolveUrl(item.id);
+  const hasPoster = (_rurl !== null && _rurl !== undefined);
   const noDot = hasPoster?'':`<div class="no-poster-dot" data-pid="${item.id}" title="Sem capa"></div>`;
   const safe = item.title.replace(/"/g,'&quot;');
 
@@ -605,7 +649,7 @@ function renderGrid(){
         <div class="recs-scroll" id="recsScroll">${recs.map(i=>{
           const u=resolveUrl(i.id)||'';
           return `<div class="rec-card" onclick="openModal(${i.id})">
-            ${u?`<img class="rec-poster" src="${u}" onerror="this.style.background='var(--surface2)'">`
+            ${u?`<img class="rec-poster" src="${u}" loading="lazy" onerror="this.style.background='var(--surface2)'">`
               :`<div class="rec-poster" style="display:flex;align-items:center;justify-content:center;font-size:28px;">${i.media==='Anime'?'🎌':i.tipo.includes('SE')?'📺':'🎬'}</div>`}
             <div class="rec-title">${i.title}</div>
           </div>`;
@@ -633,7 +677,7 @@ function renderGrid(){
         mCounts.Anime?`<span class="sec-media-pill" style="background:#2a1010;color:var(--anime)">🎌 ${mCounts.Anime}</span>`:'',
       ].filter(Boolean).join('');
       html+=`<div class="section-head">
-        <div class="sec-title" style="color:${color}">${sectionLabel(sec)}</div>
+        <div class="sec-title" style="color:${color}">${sec}</div>
         <div class="sec-count">${items.length}</div>
         <div class="sec-line"></div>
         <div class="sec-media">${pills}</div>
@@ -648,29 +692,29 @@ function renderGrid(){
       if(!byS[sec]) return;
       const items=byS[sec];
       const color=LEVEL_COLORS[items[0].nivel]||'var(--text2)';
-      html+=`<div class="section-head"><div class="sec-title" style="color:${color}">${sectionLabel(sec)}</div><div class="sec-count">${items.length}</div><div class="sec-line"></div></div><div class="grid">${items.map(renderCard).join('')}</div>`;
+      html+=`<div class="section-head"><div class="sec-title" style="color:${color}">${sec}</div><div class="sec-count">${items.length}</div><div class="sec-line"></div></div><div class="grid">${items.map(renderCard).join('')}</div>`;
     });
   } else {
     html+=`<div class="grid">${data.map(renderCard).join('')}</div>`;
   }
 
-  mc.innerHTML=html;
-  loadPosters(data);
+  // Reset the observer before each full render
+  if (_posterObserver) { _posterObserver.disconnect(); }
+  _posterObserver = null;
+
+  mc.innerHTML = html;
+  // Defer poster loading to next frame so layout paint happens first
+  requestAnimationFrame(() => loadPosters(data));
 }
 
-function sectionLabel(s){
-  // Strip "NÍVEL X — " prefix for display
-  return s.replace(/^N[IÍ]VEL\s+\d+\s+[—-]\s*/i,'').trim();
-}
 function buildNavTabs(){
   const sections=[...new Set(MEDIA_DATA.map(i=>i.section))];
   const nt=document.getElementById('navTabs');
   nt.innerHTML=`<div class="nav-tab active" data-s="all">Tudo <span class="tab-count">${MEDIA_DATA.length}</span></div>`+
     sections.map(s=>{
       const cnt=MEDIA_DATA.filter(i=>i.section===s).length;
-      const label=sectionLabel(s);
-      const short=label.length>22?label.slice(0,20)+'…':label;
-      return `<div class="nav-tab" data-s="${s.replace(/"/g,'&quot;')}" title="${label}">${short} <span class="tab-count">${cnt}</span></div>`;
+      const label=s.length>22?s.slice(0,20)+'…':s;
+      return `<div class="nav-tab" data-s="${s.replace(/"/g,'&quot;')}" title="${s}">${label} <span class="tab-count">${cnt}</span></div>`;
     }).join('');
   nt.addEventListener('click',e=>{
     const t=e.target.closest('.nav-tab');
@@ -1092,11 +1136,11 @@ function showToast(m){
 
 
 /* ── EVENTS & INIT (events.js) ── */
-document.getElementById('searchInput').addEventListener('input',e=>{ searchQ=e.target.value; renderGrid(); });
-document.getElementById('sortSel').addEventListener('change',e=>{ sortMode=e.target.value; document.getElementById('sortSelMob').value=e.target.value; renderGrid(); });
-document.getElementById('statusSel').addEventListener('change',e=>{ statusFilt=e.target.value; document.getElementById('statusSelMob').value=e.target.value; renderGrid(); });
-document.getElementById('sortSelMob').addEventListener('change',e=>{ sortMode=e.target.value; document.getElementById('sortSel').value=e.target.value; renderGrid(); });
-document.getElementById('statusSelMob').addEventListener('change',e=>{ statusFilt=e.target.value; document.getElementById('statusSel').value=e.target.value; renderGrid(); });
+document.getElementById('searchInput').addEventListener('input', debounce(e=>{ searchQ=e.target.value; renderGrid(); }, 280));
+document.getElementById('sortSel').addEventListener('change',e=>{ sortMode=e.target.value; document.getElementById('sortSelMob').value=e.target.value; requestAnimationFrame(renderGrid); });
+document.getElementById('statusSel').addEventListener('change',e=>{ statusFilt=e.target.value; document.getElementById('statusSelMob').value=e.target.value; requestAnimationFrame(renderGrid); });
+document.getElementById('sortSelMob').addEventListener('change',e=>{ sortMode=e.target.value; document.getElementById('sortSel').value=e.target.value; requestAnimationFrame(renderGrid); });
+document.getElementById('statusSelMob').addEventListener('change',e=>{ statusFilt=e.target.value; document.getElementById('statusSel').value=e.target.value; requestAnimationFrame(renderGrid); });
 
 // MEDIA PILLS
 document.querySelector('.media-pills').addEventListener('click',e=>{
@@ -1124,10 +1168,11 @@ document.getElementById('chipsBar').addEventListener('click',e=>{
 function openHam(){
   const groups=[
     {id:'hChipId',tipos:['all','L','G','T','B','H']},
-    {id:'hChipGenre',tipos:['SF','PH','BH','HR','TH','CR','MU','DO','RO','DR','X','V','R','Z','C','EC','HN']},
-    {id:'hChipOrigin',tipos:['BR','JP','KR','HK','TW','FR','IT','MX','AR']},
+    {id:'hChipGenre',tipos:['SF','PH','BH','HR','TH','CR','MU','DO','RO','DR']},
+    {id:'hChipTheme',tipos:['X','V','R','Z','C','EC','HN']},
+    {id:'hChipOrigin',tipos:['BR','JP','KR','FR','HK']},
   ];
-  const TLref=window.TL||{all:'Todos',L:'Lésbico',G:'Gay',T:'Trans',B:'Bi/Pan',H:'Hétero',SF:'Sci-Fi',PH:'Psicológico',BH:'Body Horror',HR:'Horror',TH:'Thriller',CR:'Crime',MU:'Musical',DO:'Documentário',RO:'Romance',DR:'Drama',X:'Tabu',V:'Voyeurismo',R:'Religião',Z:'Vampiro',C:'Comédia',EC:'Ecchi',HN:'Hentai',BR:'Brasil',JP:'Japão',KR:'Coreia',HK:'Hong Kong',TW:'Taiwan',FR:'França',IT:'Itália',MX:'México',AR:'Argentina'};
+  const TLref=window.TL||{all:'Todos',L:'Lésbico',G:'Gay',T:'Trans',B:'Bi/Pan',H:'Hétero',SF:'Sci-Fi',PH:'Psicológico',BH:'Body Horror',HR:'Horror',TH:'Thriller',CR:'Crime',MU:'Musical',DO:'Documentário',RO:'Romance',DR:'Drama',X:'Tabu',V:'Voyeurismo',R:'Religião',Z:'Vampiro',C:'Comédia',EC:'Ecchi',HN:'Hentai',BR:'Brasil',JP:'Japão',KR:'Coreia',FR:'França',HK:'Hong Kong'};
   groups.forEach(g=>{
     const el=document.getElementById(g.id);
     if(!el) return;
@@ -1225,13 +1270,6 @@ async function init(){
     updateMediaCounts();
     renderGrid();
     setNavH();
-
-    // Handle deep-link from directors page
-    const openId = localStorage.getItem('megalist_open_id');
-    if (openId) {
-      localStorage.removeItem('megalist_open_id');
-      setTimeout(() => { const id = parseInt(openId); if (id) openModal(id); }, 400);
-    }
 
   } catch (err) {
     console.error('Erro no INIT:', err);
