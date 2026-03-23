@@ -1392,6 +1392,8 @@ function updateFilterBadge(){
   if(!badge) return;
   badge.style.display = count > 0 ? 'flex' : 'none';
   badge.textContent = count;
+  updateMobFilterBadge();
+  syncMobTabs();
 }
 function removeFilter(key){
   if(key.startsWith('tipo:')){ const t=key.slice(5); activeTipos.delete(t); pendingTipos.delete(t); }
@@ -1418,9 +1420,43 @@ function togglePendingRec(rec){
 function setRecFilter(rec){ togglePendingRec(rec); }
 
 
+
+/* ── MOBILE TAB BAR ── */
+function setMobMedia(m){
+  activeMedia = m;
+  activeSection = 'all';
+  // Sync desktop media pills
+  document.querySelectorAll('.mpill').forEach(b=>b.className='mpill');
+  const pillMap = {all:'mpAll',Filme:'mpFilme',Serie:'mpSerie',Anime:'mpAnime'};
+  const classMap = {all:'active-all',Filme:'active-film',Serie:'active-serie',Anime:'active-anime'};
+  const pill = document.getElementById(pillMap[m]);
+  if(pill) pill.className = 'mpill ' + classMap[m];
+  // Sync mob tabs
+  syncMobTabs();
+  updateActiveFilterBar();
+  updateFilterBadge();
+  renderGrid();
+}
+function syncMobTabs(){
+  const tabMap = {all:'mtAll',Filme:'mtFilme',Serie:'mtSerie',Anime:'mtAnime'};
+  ['all','Filme','Serie','Anime'].forEach(m=>{
+    const el = document.getElementById(tabMap[m]);
+    if(!el) return;
+    const cls = {all:'active-all',Filme:'active-film',Serie:'active-serie',Anime:'active-anime'}[m];
+    el.className = 'mob-tab' + (activeMedia===m ? ' '+cls : '');
+  });
+}
+function updateMobFilterBadge(){
+  const count = activeTipos.size + activeRecs.size +
+    (sortMode!=='default'?1:0) + (statusFilt!=='all'?1:0) + (searchQ?1:0);
+  const badge = document.getElementById('mobFilterBadge');
+  if(badge){ badge.style.display = count>0?'flex':'none'; badge.textContent=count; }
+}
+
 function clearFilters(){
   activeTipos=new Set(); activeRecs=new Set(); pendingTipos=new Set(); pendingRecs=new Set();
   sortMode='default'; statusFilt='all'; searchQ=''; activeMedia='all';
+  syncMobTabs();
   document.getElementById('searchInput').value='';
   document.getElementById('sortSel').value='default';
   const sortMob=document.getElementById('sortSelMob'); if(sortMob) sortMob.value='default';
