@@ -17,91 +17,212 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-brand">
-    <div class="nav-logo" onclick="location.href='index.html'"><span class="logo-full">MEGALIST</span><span class="logo-short">M</span></div>
-    <div class="media-pills">
-      <button class="mpill active-all" data-m="all" id="mpAll">Tudo <span class="mpill-count" id="cnt-all"></span></button>
-      <button class="mpill" data-m="Filme" id="mpFilme">🎬 Filmes <span class="mpill-count" id="cnt-filme"></span></button>
-      <button class="mpill" data-m="Serie" id="mpSerie">📺 Séries <span class="mpill-count" id="cnt-serie"></span></button>
-      <button class="mpill" data-m="Anime" id="mpAnime">🎌 Animes <span class="mpill-count" id="cnt-anime"></span></button>
-    </div>
+  <div class="nav-logo" onclick="location.href='index.html'">
+    <span class="logo-full">MEGALIST</span><span class="logo-short">M</span>
   </div>
-  <div class="search-wrap" style="max-width:520px;min-width:200px;flex:1;">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    <input type="text" id="searchInput" placeholder="Buscar título...">
+
+  <div class="nav-media-pills">
+    <button class="mpill active-all" data-m="all" id="mpAll">Tudo <span class="mpill-count" id="cnt-all"></span></button>
+    <button class="mpill" data-m="Filme" id="mpFilme">🎬<span class="mpill-label"> Filmes</span> <span class="mpill-count" id="cnt-filme"></span></button>
+    <button class="mpill" data-m="Serie" id="mpSerie">📺<span class="mpill-label"> Séries</span> <span class="mpill-count" id="cnt-serie"></span></button>
+    <button class="mpill" data-m="Anime" id="mpAnime">🎌<span class="mpill-label"> Animes</span> <span class="mpill-count" id="cnt-anime"></span></button>
   </div>
-  <select class="filter-sel desktop-only" id="sortSel">
-    <option value="default">Ordem do MD</option>
-    <option value="az">A → Z</option>
-    <option value="za">Z → A</option>
-    <option value="new">Mais Novo</option>
-    <option value="old">Mais Antigo</option>
-    <option value="prof">Profundidade</option>
-    <option value="cult">Valor Cultural</option>
-    <option value="erot">Erotismo</option>
-    <option value="pert">Perturbação</option>
-    <option value="rari">Raridade</option>
-    <option value="rec">Recomendado</option>
-  </select>
-  <select class="filter-sel desktop-only" id="statusSel">
-    <option value="all">Todos os Status</option>
-    <option value="watched">✓ Assistido</option>
-    <option value="watching">▶ Assistindo</option>
-    <option value="want">★ Quero Ver</option>
-    <option value="none">Sem Status</option>
-  </select>
-  <div class="nav-tabs" id="navTabs"></div>
-  <div class="nav-right">
-    <a href="directors.html" class="nav-link desktop-only" style="font-size:10px;white-space:nowrap;">🎬 Diretores</a>
+
+  <div class="nav-search">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text3);pointer-events:none;flex-shrink:0;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" id="searchInput" placeholder="Buscar título, gênero, notas...">
+  </div>
+
+  <div class="nav-tabs desktop-only" id="navTabs"></div>
+
+  <div class="nav-actions">
+    <select class="filter-sel desktop-only" id="sortSel">
+      <option value="default">Ordem padrão</option>
+      <option value="az">A → Z</option>
+      <option value="za">Z → A</option>
+      <option value="new">Mais Novo</option>
+      <option value="old">Mais Antigo</option>
+      <option value="prof">Profundidade</option>
+      <option value="cult">Valor Cultural</option>
+      <option value="erot">Erotismo</option>
+      <option value="pert">Perturbação</option>
+      <option value="rari">Raridade</option>
+      <option value="rec">Recomendado</option>
+    </select>
+    <select class="filter-sel desktop-only" id="statusSel">
+      <option value="all">Todos os Status</option>
+      <option value="watched">✓ Assistido</option>
+      <option value="watching">▶ Assistindo</option>
+      <option value="want">★ Quero Ver</option>
+      <option value="none">Sem Status</option>
+    </select>
     <button class="profile-ico-btn desktop-only" onclick="location.href='profile.html'" title="Perfil">
       <img class="profile-ico" id="navAvatar" alt="Perfil">
     </button>
-    <button class="ham-btn" id="hamBtn" onclick="openHam()">☰</button>
+    <button class="filter-toggle-btn" id="filterToggleBtn" onclick="toggleFilters()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+      <span class="filter-toggle-label">Filtrar</span>
+      <span class="filter-badge" id="filterBadge" style="display:none">0</span>
+    </button>
   </div>
 </nav>
 
-<!-- CHIPS FILTER BAR -->
-<div class="chips-bar" id="chipsBar">
-  <div class="chip-group">
-    <span class="chip-label">IDENTIDADE</span>
-    <span class="chip active" data-tipo="all">Todos</span>
-    <span class="chip" data-tipo="L">Lésbico</span>
-    <span class="chip" data-tipo="G">Gay</span>
-    <span class="chip" data-tipo="T">Trans</span>
-    <span class="chip" data-tipo="B">Bi/Pan</span>
-    <span class="chip" data-tipo="H">Hétero</span>
-  </div>
-  <div class="chip-group">
-    <span class="chip-label">GÊNERO & TEMA</span>
-    <span class="chip" data-tipo="SF">Sci-Fi</span>
-    <span class="chip" data-tipo="PH">Psicológico</span>
-    <span class="chip" data-tipo="BH">Body Horror</span>
-    <span class="chip" data-tipo="HR">Horror</span>
-    <span class="chip" data-tipo="TH">Thriller</span>
-    <span class="chip" data-tipo="CR">Crime</span>
-    <span class="chip" data-tipo="MU">Musical</span>
-    <span class="chip" data-tipo="DO">Documentário</span>
-    <span class="chip" data-tipo="RO">Romance</span>
-    <span class="chip" data-tipo="DR">Drama</span>
-    <span class="chip" data-tipo="X">Tabu</span>
-    <span class="chip" data-tipo="V">Voyeurismo</span>
-    <span class="chip" data-tipo="R">Religião</span>
-    <span class="chip" data-tipo="Z">Vampiro</span>
-    <span class="chip" data-tipo="C">Comédia</span>
-    <span class="chip" data-tipo="EC">Ecchi</span>
-    <span class="chip" data-tipo="HN">Hentai</span>
-  </div>
-  <div class="chip-group">
-    <span class="chip-label">ORIGEM</span>
-    <span class="chip" data-tipo="BR">Brasil</span>
-    <span class="chip" data-tipo="JP">Japão</span>
-    <span class="chip" data-tipo="KR">Coreia</span>
-    <span class="chip" data-tipo="HK">Hong Kong</span>
-    <span class="chip" data-tipo="TW">Taiwan</span>
-    <span class="chip" data-tipo="FR">França</span>
-    <span class="chip" data-tipo="IT">Itália</span>
-    <span class="chip" data-tipo="MX">México</span>
-    <span class="chip" data-tipo="AR">Argentina</span>
+<!-- ACTIVE FILTER BAR (shows active chips + clear) -->
+<div class="active-filter-bar" id="activeFilterBar" style="display:none">
+  <div class="active-filter-chips" id="activeFilterChips"></div>
+  <button class="clear-filters-btn" onclick="clearFilters()">Limpar</button>
+</div>
+
+<!-- FILTER PANEL (desktop dropdown / mobile bottom sheet) -->
+<div class="filter-backdrop" id="filterBackdrop" onclick="closeFilters()"></div>
+<div class="filter-panel" id="filterPanel">
+  <div class="filter-panel-inner">
+
+    <div class="filter-panel-header">
+      <span class="filter-panel-title">Filtros</span>
+      <button class="filter-panel-close" onclick="closeFilters()">✕</button>
+    </div>
+
+    <!-- Sort + Status (mobile only) -->
+    <div class="filter-mobile-controls mobile-only">
+      <select class="filter-sel" id="sortSelMob">
+        <option value="default">Ordem padrão</option>
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
+        <option value="new">Mais Novo</option>
+        <option value="old">Mais Antigo</option>
+        <option value="prof">Profundidade</option>
+        <option value="cult">Valor Cultural</option>
+        <option value="erot">Erotismo</option>
+        <option value="pert">Perturbação</option>
+        <option value="rari">Raridade</option>
+        <option value="rec">Recomendado</option>
+      </select>
+      <select class="filter-sel" id="statusSelMob">
+        <option value="all">Todos os Status</option>
+        <option value="watched">✓ Assistido</option>
+        <option value="watching">▶ Assistindo</option>
+        <option value="want">★ Quero Ver</option>
+        <option value="none">Sem Status</option>
+      </select>
+    </div>
+
+    <!-- Tab nav inside panel -->
+    <div class="fpanel-tabs" id="fpanelTabs">
+      <button class="fpanel-tab active" data-section="identidade">Identidade</button>
+      <button class="fpanel-tab" data-section="genero">Gênero</button>
+      <button class="fpanel-tab" data-section="emocional">Emocional</button>
+      <button class="fpanel-tab" data-section="tema">Tema</button>
+      <button class="fpanel-tab" data-section="origem">Origem</button>
+      <button class="fpanel-tab" data-section="afinidade">Afinidade</button>
+    </div>
+
+    <!-- Section: Identidade -->
+    <div class="fpanel-section active" id="fps-identidade">
+      <div class="filter-chips">
+        <span class="chip active" data-tipo="all">Todos</span>
+        <span class="chip" data-tipo="L">Lésbico / Sáfico</span>
+        <span class="chip" data-tipo="G">Gay masculino</span>
+        <span class="chip" data-tipo="T">Trans / Não-binário</span>
+        <span class="chip" data-tipo="B">Bi / Pan / Fluido</span>
+        <span class="chip" data-tipo="H">Hétero</span>
+      </div>
+    </div>
+
+    <!-- Section: Gênero -->
+    <div class="fpanel-section" id="fps-genero">
+      <div class="filter-chips">
+        <span class="chip" data-tipo="DR">Drama</span>
+        <span class="chip" data-tipo="RO">Romance</span>
+        <span class="chip" data-tipo="TH">Thriller</span>
+        <span class="chip" data-tipo="HR">Horror</span>
+        <span class="chip" data-tipo="CR">Crime</span>
+        <span class="chip" data-tipo="MY">Mistério</span>
+        <span class="chip" data-tipo="SF">Ficção Científica</span>
+        <span class="chip" data-tipo="PH">Psicológico</span>
+        <span class="chip" data-tipo="BH">Body Horror</span>
+        <span class="chip" data-tipo="MU">Musical</span>
+        <span class="chip" data-tipo="DO">Documentário</span>
+        <span class="chip" data-tipo="WS">Western</span>
+      </div>
+    </div>
+
+    <!-- Section: Tom Emocional -->
+    <div class="fpanel-section" id="fps-emocional">
+      <p class="fpanel-desc">Registro emocional da narrativa — independente do gênero.</p>
+      <div class="filter-chips">
+        <span class="chip" data-tipo="ML">Melancólico</span>
+        <span class="chip" data-tipo="TR">Trágico</span>
+        <span class="chip" data-tipo="CA">Coming-of-Age</span>
+        <span class="chip" data-tipo="IT">Impactante</span>
+      </div>
+    </div>
+
+    <!-- Section: Tema -->
+    <div class="fpanel-section" id="fps-tema">
+      <div class="filter-chips">
+        <span class="chip" data-tipo="C">Comédia</span>
+        <span class="chip" data-tipo="R">Religião / Nunsploitation</span>
+        <span class="chip" data-tipo="Z">Vampirismo</span>
+        <span class="chip" data-tipo="V">Voyeurismo</span>
+        <span class="chip" data-tipo="X">Tabu Extremo</span>
+        <span class="chip" data-tipo="EC">Ecchi</span>
+        <span class="chip" data-tipo="HN">Hentai</span>
+      </div>
+    </div>
+
+    <!-- Section: Origem -->
+    <div class="fpanel-section" id="fps-origem">
+      <div class="filter-chips">
+        <span class="chip" data-tipo="BR">🇧🇷 Brasil</span>
+        <span class="chip" data-tipo="JP">🇯🇵 Japão</span>
+        <span class="chip" data-tipo="KR">🇰🇷 Coreia</span>
+        <span class="chip" data-tipo="HK">🇭🇰 Hong Kong</span>
+        <span class="chip" data-tipo="TW">🇹🇼 Taiwan</span>
+        <span class="chip" data-tipo="FR">🇫🇷 França</span>
+        <span class="chip" data-tipo="IA">🇮🇹 Itália</span>
+        <span class="chip" data-tipo="ES">🇪🇸 Espanha</span>
+        <span class="chip" data-tipo="UK">🇬🇧 Reino Unido</span>
+        <span class="chip" data-tipo="DE">🇩🇪 Alemanha</span>
+        <span class="chip" data-tipo="DK">🇩🇰 Dinamarca</span>
+        <span class="chip" data-tipo="SW">🇸🇪 Suécia</span>
+        <span class="chip" data-tipo="RU">🇷🇺 Rússia</span>
+        <span class="chip" data-tipo="PL">🇵🇱 Polônia</span>
+        <span class="chip" data-tipo="MX">🇲🇽 México</span>
+        <span class="chip" data-tipo="AR">🇦🇷 Argentina</span>
+        <span class="chip" data-tipo="IN">🇮🇳 Índia</span>
+        <span class="chip" data-tipo="AU">🇦🇺 Austrália</span>
+        <span class="chip" data-tipo="IR">🇮🇷 Irã</span>
+        <span class="chip" data-tipo="GR">🇬🇷 Grécia</span>
+        <span class="chip" data-tipo="BE">🇧🇪 Bélgica</span>
+        <span class="chip" data-tipo="SN">🌍 Senegal / África Ocid.</span>
+        <span class="chip" data-tipo="PT">🇵🇹 Portugal</span>
+      </div>
+    </div>
+
+    <!-- Section: Afinidade (REC codes) -->
+    <div class="fpanel-section" id="fps-afinidade">
+      <p class="fpanel-desc">Filtra por vibe — filmes que compartilham atmosfera, temas ou sensação com a referência.</p>
+      <div class="filter-chips">
+        <span class="rec-chip active" data-rec="all">Todas</span>
+        <span class="rec-chip" data-rec="LIS" title="Coming-of-age, poderes, queer, nostalgia, escolhas">Life is Strange</span>
+        <span class="rec-chip" data-rec="BTS" title="Sobrenatural, vínculo emocional, luto, paranormal">Beyond Two Souls</span>
+        <span class="rec-chip" data-rec="DD" title="Existencialismo, adolescência sombria, realidade alternativa">Donnie Darko</span>
+        <span class="rec-chip" data-rec="VD" title="Body horror, distorção, mídia, Cronenberg">Videodrome</span>
+        <span class="rec-chip" data-rec="CE" title="Saúde mental, identidade, autodescoberta, luta interna">Celeste</span>
+        <span class="rec-chip" data-rec="LB" title="Amizade profunda, arte, perda, anime">Look Back</span>
+        <span class="rec-chip" data-rec="RH" title="Camp, gênero fluido, musical, liberação, cult">Rocky Horror</span>
+        <span class="rec-chip" data-rec="BR" title="Sci-fi existencial, humanidade artificial, noir">Blade Runner</span>
+        <span class="rec-chip" data-rec="TK" title="Slow cinema, contemplação, espiritualidade, silêncio">Tarkovsky / Bergman</span>
+        <span class="rec-chip" data-rec="HN" title="Frieza clínica, crueldade burguesa, sem catarse">Haneke / Austero</span>
+        <span class="rec-chip" data-rec="QC" title="Identidade crua, underground, política queer, raiva">New Queer Cinema</span>
+        <span class="rec-chip" data-rec="KY" title="Animação emocional, amizade, calor e destruição">KyoAni / Feel</span>
+        <span class="rec-chip" data-rec="NK" title="Pressão psicológica, isolamento, ansiedade cotidiana">NHK / Dark Slice</span>
+        <span class="rec-chip" data-rec="CL" title="Cinema sensorial, corpo sobre diálogo, desejo sem palavras">Claire Denis</span>
+      </div>
+    </div>
+
+    <button class="filter-apply-btn" id="filterApplyBtn" onclick="applyFilters()">Ver resultados</button>
   </div>
 </div>
 
@@ -117,6 +238,8 @@
   <span class="stat-pill">📺 <b id="stSerie">0</b></span>
   <span class="stat-pill">🎌 <b id="stAnime">0</b></span>
 </div>
+
+
 
 <div id="mainContent"></div>
 
@@ -263,55 +386,7 @@
   <div class="roulette-grid" id="rouletteGrid"></div>
 </div>
 
-<!-- ═══════════════ HAMBURGER DRAWER ═══════════════ -->
-<div class="ham-overlay" id="hamOverlay" onclick="closeHam()"></div>
-<div class="ham-drawer" id="hamDrawer">
-  <button class="ham-close" onclick="closeHam()">✕</button>
-  <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;margin-top:4px;">Filtros</div>
-  <div style="margin-top:10px;">
-    <button class="btn primary" style="width:100%" onclick="location.href='profile.html'">👤 Perfil</button>
-    <button class="btn" style="width:100%;margin-top:6px" onclick="location.href='directors.html'">🎬 Diretores</button>
-  </div>
 
-  <div class="ham-section">Ordenar por</div>
-  <div class="ham-row">
-    <select class="filter-sel" id="sortSelMob" style="width:100%">
-      <option value="default">Ordem do MD</option>
-      <option value="az">A → Z</option>
-      <option value="za">Z → A</option>
-      <option value="new">Mais Novo</option>
-      <option value="old">Mais Antigo</option>
-      <option value="prof">Profundidade</option>
-      <option value="cult">Valor Cultural</option>
-      <option value="erot">Erotismo</option>
-      <option value="pert">Perturbação</option>
-      <option value="rari">Raridade</option>
-      <option value="rec">Recomendado</option>
-    </select>
-  </div>
-
-  <div class="ham-section">Status</div>
-  <div class="ham-row">
-    <select class="filter-sel" id="statusSelMob" style="width:100%">
-      <option value="all">Todos os Status</option>
-      <option value="watched">✓ Assistido</option>
-      <option value="watching">▶ Assistindo</option>
-      <option value="want">★ Quero Ver</option>
-      <option value="none">Sem Status</option>
-    </select>
-  </div>
-
-  <div class="ham-section">Identidade</div>
-  <div class="ham-chips" id="hChipId"></div>
-  <div class="ham-section">Gênero & Tema</div>
-  <div class="ham-chips" id="hChipGenre"></div>
-  <div class="ham-section">Origem</div>
-  <div class="ham-chips" id="hChipOrigin"></div>
-
-  <div style="margin-top:20px;">
-    <button style="background:var(--accent);border:none;color:white;font-family:'Space Mono',monospace;font-size:10px;padding:10px 20px;cursor:pointer;border-radius:6px;width:100%;" onclick="clearFilters()">Limpar Filtros</button>
-  </div>
-</div>
 
 <!-- ═══════════════ SYNC ═══════════════ -->
 <div class="sync-menu" id="syncMenu">

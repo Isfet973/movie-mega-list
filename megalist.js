@@ -29,7 +29,12 @@ let descUser     = {};
 // filters
 let activeSection = 'all';
 let activeMedia   = 'all';
-let activeTipo    = 'all';
+// Multi-filter state (Sets of tags, empty = 'all')
+let activeTipos   = new Set();  // empty = no tipo filter
+let activeRecs    = new Set();  // empty = no rec filter
+// Pending state (inside panel, before Apply is clicked)
+let pendingTipos  = new Set();
+let pendingRecs   = new Set();
 let searchQ       = '';
 let sortMode      = 'default';
 let statusFilt    = 'all';
@@ -43,7 +48,6 @@ function debounce(fn, ms) {
   let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); };
 }
 
-// IntersectionObserver for lazy poster loading
 let _posterObserver = null;
 function getPosterObserver() {
   if (_posterObserver) return _posterObserver;
@@ -230,15 +234,11 @@ async function tryOMDB(item){
 }
 
 function loadPosters(data){
-  // Apply known posters immediately, use IntersectionObserver for unknown
   const obs = getPosterObserver();
   data.forEach(item => {
     const u = resolveUrl(item.id);
-    if (u !== undefined) {
-      // Known (cached or in json) — apply right away
-      applyPoster(item.id, u);
-    } else {
-      // Unknown — observe the card element; fetch only when it enters viewport
+    if (u !== undefined) { applyPoster(item.id, u); }
+    else {
       const card = document.querySelector(`.card[data-id="${item.id}"]`);
       if (card) obs.observe(card);
     }
@@ -524,10 +524,88 @@ const TL = window.TL = {
   SF:'Sci-Fi',PH:'Psicológico',BH:'Body Horror',TH:'Thriller',HR:'Horror',
   RO:'Romance',DR:'Drama',CR:'Crime',MY:'Mistério',MU:'Musical',DO:'Documentário',WS:'Western',
   EC:'Ecchi',HN:'Hentai',AN:'Anime',SE:'Série',OV:'OVA',
-  BR:'Brasil',JP:'Japão',KR:'Coreia',HK:'HK',TW:'Taiwan',FR:'França',IT:'Itália',MX:'México',AR:'Argentina',
+  BR:'Brasil',JP:'Japão',KR:'Coreia',HK:'Hong Kong',TW:'Taiwan',FR:'França',MX:'México',AR:'Argentina',
+  ML:'Melancólico', TR:'Trágico', CA:'Coming-of-Age', IT:'Impactante', MY:'Mistério', WS:'Western',
+  IA:'Itália', SW:'Suécia', UK:'Reino Unido', DE:'Alemanha', ES:'Espanha', RU:'Rússia', MX:'México', AR:'Argentina', DK:'Dinamarca', IN:'Índia', PL:'Polônia', AU:'Austrália', IR:'Irã', SN:'Senegal/África Ocid.', GR:'Grécia', BE:'Bélgica', PT:'Portugal'
 };
 const LEVEL_COLORS = ['#6fcf6f','#f0c040','#f09040','#f06060','#c080ff'];
 const LEVEL_NAMES  = ['Nível 1 — Sutil','Nível 2 — Erótico','Nível 3 — Muito Erótico','Nível 4 — Altamente Explícito','Nível 5 — Fronteira Pornô'];
+
+
+/* ── SECTION RENDER CACHE ── */
+const _sectionCache = new Map();
+let _cacheValid = false;
+
+function invalidateCache(){
+  _cacheValid = false;
+  _sectionCache.clear();
+}
+
+function isDefaultView(){
+  return activeSection === 'all' &&
+         activeMedia === 'all' &&
+         activeTipos.size === 0 &&
+         activeRecs.size === 0 &&
+         !searchQ &&
+         statusFilt === 'all' &&
+         sortMode === 'default';
+}
+
+function isFilteredView(){
+  return activeTipos.size > 0 ||
+         activeRecs.size > 0 ||
+         searchQ ||
+         sortMode !== 'default' ||
+         statusFilt !== 'all';
+}
+
+// Pre-render a single section into cache
+function cacheSection(sec, items){
+  const color = LEVEL_COLORS[items[0].nivel] || 'var(--text2)';
+  const mCounts = {Filme:0,Serie:0,Anime:0};
+  items.forEach(i=>{
+    if(i.media==='Anime'||i.tipo.includes('AN')) mCounts.Anime++;
+    else if(i.media==='Serie') mCounts.Serie++;
+    else mCounts.Filme++;
+  });
+  const pills=[
+    mCounts.Filme?`<span class="sec-media-pill" style="background:#1a2040;color:var(--film)">🎬 ${mCounts.Filme}</span>`:'',
+    mCounts.Serie?`<span class="sec-media-pill" style="background:#102a1a;color:var(--serie)">📺 ${mCounts.Serie}</span>`:'',
+    mCounts.Anime?`<span class="sec-media-pill" style="background:#2a1010;color:var(--anime)">🎌 ${mCounts.Anime}</span>`:'',
+  ].filter(Boolean).join('');
+
+  const html =
+    `<div class="section-head">` +
+    `<div class="sec-title" style="color:${color}">${sec}</div>` +
+    `<div class="sec-count">${items.length}</div>` +
+    `<div class="sec-line"></div>` +
+    `<div class="sec-media">${pills}</div>` +
+    `</div>` +
+    `<div class="grid">${items.map(renderCard).join('')}</div>`;
+
+  _sectionCache.set(sec, html);
+  return html;
+}
+
+// Warm all sections in background after initial render
+function warmCache(){
+  if(_cacheValid) return;
+  const secOrder = [...new Set(MEDIA_DATA.map(i=>i.section))];
+  const byS = {};
+  MEDIA_DATA.forEach(i=>{ if(!byS[i.section]) byS[i.section]=[]; byS[i.section].push(i); });
+
+  // Render in chunks using requestIdleCallback/setTimeout to not block
+  let idx = 0;
+  function renderNext(){
+    if(idx >= secOrder.length){ _cacheValid = true; return; }
+    const sec = secOrder[idx++];
+    if(!_sectionCache.has(sec) && byS[sec]){
+      cacheSection(sec, byS[sec]);
+    }
+    setTimeout(renderNext, 0);
+  }
+  setTimeout(renderNext, 200); // start after first paint
+}
 
 function mediaClass(m){ return m==='Anime'?'ms-anime':m==='Serie'?'ms-serie':'ms-film'; }
 function renderCard(item){
@@ -582,7 +660,14 @@ function getFiltered(){
     else if(activeMedia==='Serie') data=data.filter(i=>i.media==='Serie'||(i.tipo.includes('SE')&&!i.tipo.includes('AN')));
     else data=data.filter(i=>i.media==='Filme'&&!i.tipo.includes('AN')&&!i.tipo.includes('SE'));
   }
-  if(activeTipo!=='all') data=data.filter(i=>i.tipo.includes(activeTipo));
+  // Multi-tipo: AND logic across selected tags (item must have ALL selected)
+  if(activeTipos.size > 0){
+    data = data.filter(i => {
+      const tipos = i.tipo;
+      for(const t of activeTipos){ if(!tipos.includes(t)) return false; }
+      return true;
+    });
+  }
   if(statusFilt!=='all'){
     data=data.filter(i=>{
       const ud=userData[i.id]; const s=ud?ud.status:'none';
@@ -592,6 +677,14 @@ function getFiltered(){
   if(searchQ){
     const q=searchQ.toLowerCase();
     data=data.filter(i=>i.title.toLowerCase().includes(q)||i.notes.toLowerCase().includes(q)||i.tipo.some(t=>(TL[t]||'').toLowerCase().includes(q)));
+  }
+  // Multi-rec: AND logic
+  if(activeRecs.size > 0){
+    data = data.filter(i => {
+      const rec = i.rec;
+      for(const r of activeRecs){ if(!rec.includes(r)) return false; }
+      return true;
+    });
   }
   switch(sortMode){
     case 'az':  data.sort((a,b)=>a.title.localeCompare(b.title,'pt')); break;
@@ -615,6 +708,31 @@ function getFiltered(){
 function renderGrid(){
   const data = getFiltered();
   const mc = document.getElementById('mainContent');
+
+  // FAST PATH: single section switch with no filters = serve from cache
+  if(activeSection !== 'all' && !isFilteredView() && activeMedia === 'all'){
+    const cached = _sectionCache.get(activeSection);
+    if(cached){
+      // Update stats
+      const allW = Object.values(userData).filter(u=>u.status==='watched').length;
+      const allV = Object.values(userData).filter(u=>u.status==='watching').length;
+      const allWt= Object.values(userData).filter(u=>u.status==='want').length;
+      document.getElementById('stTotal').textContent   = data.length;
+      document.getElementById('stWatched').textContent = allW;
+      document.getElementById('stWatching').textContent= allV;
+      document.getElementById('stWant').textContent    = allWt;
+      const byM={Filme:0,Serie:0,Anime:0};
+      data.forEach(i=>{ if(i.media==='Anime'||i.tipo.includes('AN')) byM.Anime++; else if(i.media==='Serie') byM.Serie++; else byM.Filme++; });
+      document.getElementById('stFilme').textContent = byM.Filme;
+      document.getElementById('stSerie').textContent = byM.Serie;
+      document.getElementById('stAnime').textContent = byM.Anime;
+
+      if(_posterObserver){ _posterObserver.disconnect(); _posterObserver=null; }
+      mc.innerHTML = cached;
+      requestAnimationFrame(()=>loadPosters(data));
+      return; // done — no rebuild needed
+    }
+  }
 
   const allW = Object.values(userData).filter(u=>u.status==='watched').length;
   const allV = Object.values(userData).filter(u=>u.status==='watching').length;
@@ -641,7 +759,7 @@ function renderGrid(){
 
   let html='';
 
-  if(activeSection==='all'&&activeMedia==='all'&&activeTipo==='all'&&!searchQ&&statusFilt==='all'&&sortMode==='default'){
+  if(activeSection==='all'&&activeMedia==='all'&&activeTipos.size===0&&activeRecs.size===0&&!searchQ&&statusFilt==='all'&&sortMode==='default'){
     const recs = getRecommendations(16);
     if(recs.length){
       html+=`<div class="recs-strip">
@@ -649,7 +767,7 @@ function renderGrid(){
         <div class="recs-scroll" id="recsScroll">${recs.map(i=>{
           const u=resolveUrl(i.id)||'';
           return `<div class="rec-card" onclick="openModal(${i.id})">
-            ${u?`<img class="rec-poster" src="${u}" loading="lazy" onerror="this.style.background='var(--surface2)'">`
+            ${u?`<img class="rec-poster" src="${u}" onerror="this.style.background='var(--surface2)'">`
               :`<div class="rec-poster" style="display:flex;align-items:center;justify-content:center;font-size:28px;">${i.media==='Anime'?'🎌':i.tipo.includes('SE')?'📺':'🎬'}</div>`}
             <div class="rec-title">${i.title}</div>
           </div>`;
@@ -698,33 +816,22 @@ function renderGrid(){
     html+=`<div class="grid">${data.map(renderCard).join('')}</div>`;
   }
 
-  // Reset the observer before each full render
   if (_posterObserver) { _posterObserver.disconnect(); }
   _posterObserver = null;
 
   mc.innerHTML = html;
-  // Defer poster loading to next frame so layout paint happens first
   requestAnimationFrame(() => loadPosters(data));
+  // Warm cache in background after first render
+  if(isDefaultView()) requestAnimationFrame(warmCache);
 }
 
 function buildNavTabs(){
-  const sections=[...new Set(MEDIA_DATA.map(i=>i.section))];
+  // Legacy nav-tabs (desktop) — now hidden, kept for compatibility
   const nt=document.getElementById('navTabs');
-  nt.innerHTML=`<div class="nav-tab active" data-s="all">Tudo <span class="tab-count">${MEDIA_DATA.length}</span></div>`+
-    sections.map(s=>{
-      const cnt=MEDIA_DATA.filter(i=>i.section===s).length;
-      const label=s.length>22?s.slice(0,20)+'…':s;
-      return `<div class="nav-tab" data-s="${s.replace(/"/g,'&quot;')}" title="${s}">${label} <span class="tab-count">${cnt}</span></div>`;
-    }).join('');
-  nt.addEventListener('click',e=>{
-    const t=e.target.closest('.nav-tab');
-    if(!t) return;
-    document.querySelectorAll('.nav-tab').forEach(x=>x.classList.remove('active'));
-    t.classList.add('active');
-    activeSection=t.dataset.s;
-    renderGrid();
-  });
+  if(!nt) return;
+  // no-op: section slider handles navigation
 }
+
 
 function updateMediaCounts(){
   const m={Filme:0,Serie:0,Anime:0};
@@ -956,7 +1063,7 @@ function saveEntry(){
   ud.date=document.getElementById('fDate').value;
   ud.review=document.getElementById('fReview').value;
   ud.episode=document.getElementById('fEpisode').value;
-  saveUserData(); renderGrid(); closeModal(); showToast('✓ Salvo!');
+  invalidateCache(); saveUserData(); renderGrid(); closeModal(); showToast('✓ Salvo!');
 }
 
 
@@ -1136,71 +1243,193 @@ function showToast(m){
 
 
 /* ── EVENTS & INIT (events.js) ── */
-document.getElementById('searchInput').addEventListener('input', debounce(e=>{ searchQ=e.target.value; renderGrid(); }, 280));
-document.getElementById('sortSel').addEventListener('change',e=>{ sortMode=e.target.value; document.getElementById('sortSelMob').value=e.target.value; requestAnimationFrame(renderGrid); });
-document.getElementById('statusSel').addEventListener('change',e=>{ statusFilt=e.target.value; document.getElementById('statusSelMob').value=e.target.value; requestAnimationFrame(renderGrid); });
-document.getElementById('sortSelMob').addEventListener('change',e=>{ sortMode=e.target.value; document.getElementById('sortSel').value=e.target.value; requestAnimationFrame(renderGrid); });
-document.getElementById('statusSelMob').addEventListener('change',e=>{ statusFilt=e.target.value; document.getElementById('statusSel').value=e.target.value; requestAnimationFrame(renderGrid); });
+document.getElementById('searchInput').addEventListener('input', debounce(e=>{ searchQ=e.target.value; updateActiveFilterBar(); updateFilterBadge(); renderGrid(); }, 280));
+document.getElementById('sortSel').addEventListener('change',e=>{ sortMode=e.target.value; const _sm=document.getElementById('sortSelMob'); if(_sm) _sm.value=e.target.value; updateActiveFilterBar(); updateFilterBadge(); requestAnimationFrame(renderGrid); });
+document.getElementById('statusSel').addEventListener('change',e=>{ statusFilt=e.target.value; const _sm2=document.getElementById('statusSelMob'); if(_sm2) _sm2.value=e.target.value; updateActiveFilterBar(); updateFilterBadge(); requestAnimationFrame(renderGrid); });
+const _sortMobEl=document.getElementById('sortSelMob'); if(_sortMobEl) _sortMobEl.addEventListener('change',e=>{ sortMode=e.target.value; document.getElementById('sortSel').value=e.target.value; updateActiveFilterBar(); updateFilterBadge(); requestAnimationFrame(renderGrid); });
+const _statusMobEl=document.getElementById('statusSelMob'); if(_statusMobEl) _statusMobEl.addEventListener('change',e=>{ statusFilt=e.target.value; document.getElementById('statusSel').value=e.target.value; updateActiveFilterBar(); updateFilterBadge(); requestAnimationFrame(renderGrid); });
 
 // MEDIA PILLS
-document.querySelector('.media-pills').addEventListener('click',e=>{
+document.querySelector('.nav-media-pills').addEventListener('click',e=>{
   const btn=e.target.closest('.mpill');
   if(!btn) return;
   document.querySelectorAll('.mpill').forEach(b=>b.className='mpill');
   const m=btn.dataset.m;
   btn.className='mpill '+(m==='all'?'active-all':m==='Filme'?'active-film':m==='Serie'?'active-serie':'active-anime');
-  activeMedia=m; renderGrid();
+  activeMedia=m; activeSection='all'; updateActiveFilterBar(); updateFilterBadge(); renderGrid();
 });
 
 // CHIPS BAR
-document.getElementById('chipsBar').addEventListener('click',e=>{
-  const chip=e.target.closest('.chip[data-tipo]');
-  if(!chip) return;
-  document.querySelectorAll('.chip[data-tipo]').forEach(c=>c.classList.remove('active'));
-  chip.classList.add('active');
-  activeTipo=chip.dataset.tipo; renderGrid();
-  document.querySelectorAll('.ham-chips .chip[data-tipo]').forEach(c=>{
-    c.classList.toggle('active', c.dataset.tipo===chip.dataset.tipo);
-  });
-});
+// filterPanel click handled in initFilterPanelTabs()
 
 // HAMBURGER
-function openHam(){
-  const groups=[
-    {id:'hChipId',tipos:['all','L','G','T','B','H']},
-    {id:'hChipGenre',tipos:['SF','PH','BH','HR','TH','CR','MU','DO','RO','DR']},
-    {id:'hChipTheme',tipos:['X','V','R','Z','C','EC','HN']},
-    {id:'hChipOrigin',tipos:['BR','JP','KR','FR','HK']},
-  ];
-  const TLref=window.TL||{all:'Todos',L:'Lésbico',G:'Gay',T:'Trans',B:'Bi/Pan',H:'Hétero',SF:'Sci-Fi',PH:'Psicológico',BH:'Body Horror',HR:'Horror',TH:'Thriller',CR:'Crime',MU:'Musical',DO:'Documentário',RO:'Romance',DR:'Drama',X:'Tabu',V:'Voyeurismo',R:'Religião',Z:'Vampiro',C:'Comédia',EC:'Ecchi',HN:'Hentai',BR:'Brasil',JP:'Japão',KR:'Coreia',FR:'França',HK:'Hong Kong'};
-  groups.forEach(g=>{
-    const el=document.getElementById(g.id);
-    if(!el) return;
-    el.innerHTML=g.tipos.map(t=>`<span class="chip${activeTipo===t?' active':''}" data-tipo="${t}" onclick="setTipoFilter('${t}')">${TLref[t]||t}</span>`).join('');
+/* ── NEW FILTER PANEL ── */
+
+/* ── FILTER PANEL TAB SWITCHING ── */
+function initFilterPanelTabs(){
+  const tabsEl = document.getElementById('fpanelTabs');
+  if(!tabsEl) return;
+  tabsEl.addEventListener('click', e=>{
+    const tab = e.target.closest('.fpanel-tab');
+    if(!tab) return;
+    tabsEl.querySelectorAll('.fpanel-tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    const sec = tab.dataset.section;
+    document.querySelectorAll('.fpanel-section').forEach(s=>s.classList.remove('active'));
+    const target = document.getElementById('fps-'+sec);
+    if(target) target.classList.add('active');
   });
-  document.getElementById('hamOverlay').classList.add('open');
-  document.getElementById('hamDrawer').classList.add('open');
+
+  // Chip clicks inside panel (tipo + rec) — pending, not applied yet
+  document.getElementById('filterPanel').addEventListener('click', e=>{
+    const chip = e.target.closest('.chip[data-tipo]');
+    if(chip) { togglePendingTipo(chip.dataset.tipo); return; }
+    const rec = e.target.closest('.rec-chip[data-rec]');
+    if(rec) { togglePendingRec(rec.dataset.rec); return; }
+  });
 }
-function closeHam(){
-  document.getElementById('hamOverlay').classList.remove('open');
-  document.getElementById('hamDrawer').classList.remove('open');
+
+function toggleFilters(){
+  const panel = document.getElementById('filterPanel');
+  if(panel.classList.contains('open')) closeFilters();
+  else openFilters();
 }
-function setTipoFilter(tipo){
-  activeTipo=tipo;
-  document.querySelectorAll('.chip[data-tipo]').forEach(c=>c.classList.toggle('active',c.dataset.tipo===tipo));
+function openFilters(){
+  syncChipsToState();
+  document.getElementById('filterPanel').classList.add('open');
+  document.getElementById('filterBackdrop').classList.add('open');
+  document.getElementById('filterToggleBtn').classList.add('active');
+}
+function closeFilters(){
+  document.getElementById('filterPanel').classList.remove('open');
+  document.getElementById('filterBackdrop').classList.remove('open');
+  document.getElementById('filterToggleBtn').classList.remove('active');
+}
+function applyFilters(){
+  activeTipos = new Set(pendingTipos);
+  activeRecs  = new Set(pendingRecs);
+  updateActiveFilterBar();
+  updateFilterBadge();
+  invalidateCache();
+  closeFilters();
   renderGrid();
 }
+// Sync all chips in the panel to current pending state
+function syncPanelChips(){
+  // Sync tipo chips to pendingTipos
+  document.querySelectorAll('.filter-panel .chip[data-tipo]').forEach(c=>{
+    const t = c.dataset.tipo;
+    if(t === 'all') c.classList.toggle('active', pendingTipos.size === 0);
+    else c.classList.toggle('active', pendingTipos.has(t));
+  });
+  // Sync rec chips to pendingRecs
+  document.querySelectorAll('.rec-chip[data-rec]').forEach(c=>{
+    const r = c.dataset.rec;
+    if(r === 'all') c.classList.toggle('active', pendingRecs.size === 0);
+    else c.classList.toggle('active', pendingRecs.has(r));
+  });
+  // Update count on apply button
+  const total = pendingTipos.size + pendingRecs.size;
+  const btn = document.getElementById('filterApplyBtn');
+  if(btn) btn.textContent = total > 0 ? `Aplicar filtros (${total})` : 'Ver resultados';
+}
+function syncChipsToState(){
+  // Copy active state → pending when panel opens
+  pendingTipos = new Set(activeTipos);
+  pendingRecs  = new Set(activeRecs);
+  syncPanelChips();
+  const sortMobEl = document.getElementById('sortSelMob');
+  const statusMobEl = document.getElementById('statusSelMob');
+  if(sortMobEl) sortMobEl.value = sortMode;
+  if(statusMobEl) statusMobEl.value = statusFilt;
+}
+function togglePendingTipo(tipo){
+  if(tipo === 'all'){
+    pendingTipos.clear();
+  } else {
+    if(pendingTipos.has(tipo)) pendingTipos.delete(tipo);
+    else pendingTipos.add(tipo);
+  }
+  syncPanelChips();
+}
+// Legacy alias used elsewhere
+function setTipoFilter(tipo){ togglePendingTipo(tipo); }
+// Update the active filter bar above main content
+function updateActiveFilterBar(){
+  const bar = document.getElementById('activeFilterBar');
+  const chips = document.getElementById('activeFilterChips');
+  const TLref = window.TL || {};
+  const active = [];
+  activeTipos.forEach(t=>active.push({key:'tipo:'+t, val:t, label: TLref[t]||t}));
+  const RL={BTS:'Beyond Two Souls',LIS:'Life is Strange',RH:'Rocky Horror',LB:'Look Back',VD:'Videodrome',CE:'Celeste',BR:'Blade Runner',DD:'Donnie Darko',TK:'Tarkovsky',HN:'Haneke',QC:'New Queer Cinema',KY:'KyoAni',NK:'NHK/Dark Slice',CL:'Claire Denis'};
+  activeRecs.forEach(r=>active.push({key:'rec:'+r, val:r, label:'≈ '+(RL[r]||r)}));
+  if(sortMode !== 'default'){
+    const labels = {az:'A→Z',za:'Z→A',new:'Mais Novo',old:'Mais Antigo',prof:'Profundidade',cult:'Cult',erot:'Erotismo',pert:'Perturbação',rari:'Raridade',rec:'Recomendado'};
+    active.push({key:'sort', val:sortMode, label: '↕ '+labels[sortMode]});
+  }
+  if(statusFilt !== 'all'){
+    const labels = {watched:'✓ Assistido',watching:'▶ Vendo',want:'★ Quero',none:'Sem Status'};
+    active.push({key:'status', val:statusFilt, label: labels[statusFilt]});
+  }
+  if(activeMedia !== 'all') active.push({key:'media', val:activeMedia, label: '📺 '+activeMedia+'s'});
+  if(searchQ) active.push({key:'search', val:searchQ, label: '🔍 '+searchQ.slice(0,15)+(searchQ.length>15?'…':'')});
+  
+  if(!active.length){ bar.style.display='none'; return; }
+  bar.style.display='flex';
+  chips.innerHTML = active.map(a=>
+    `<span class="active-chip" onclick="removeFilter('${a.key}')">${a.label}<span class="active-chip-x">✕</span></span>`
+  ).join('');
+}
+function updateFilterBadge(){
+  let count = 0;
+  count += activeTipos.size;
+  count += activeRecs.size;
+  if(sortMode !== 'default') count++;
+  if(statusFilt !== 'all') count++;
+  if(activeMedia !== 'all') count++;
+  if(searchQ) count++;
+  const badge = document.getElementById('filterBadge');
+  if(!badge) return;
+  badge.style.display = count > 0 ? 'flex' : 'none';
+  badge.textContent = count;
+}
+function removeFilter(key){
+  if(key.startsWith('tipo:')){ const t=key.slice(5); activeTipos.delete(t); pendingTipos.delete(t); }
+  else if(key.startsWith('rec:')){ const r=key.slice(4); activeRecs.delete(r); pendingRecs.delete(r); }
+  else if(key==='sort'){ sortMode='default'; document.getElementById('sortSel').value='default'; const m=document.getElementById('sortSelMob'); if(m) m.value='default'; }
+  else if(key==='status'){ statusFilt='all'; document.getElementById('statusSel').value='all'; const m=document.getElementById('statusSelMob'); if(m) m.value='all'; }
+  else if(key==='media'){ activeMedia='all'; document.querySelectorAll('.mpill').forEach(b=>b.className='mpill'); document.getElementById('mpAll').className='mpill active-all'; }
+  else if(key==='search'){ searchQ=''; document.getElementById('searchInput').value=''; }
+  updateActiveFilterBar(); updateFilterBadge(); renderGrid();
+}
+// Keep openHam as alias for backwards compat (directors.html etc)
+function openHam(){ openFilters(); }
+function closeHam(){ closeFilters(); }
+
+function togglePendingRec(rec){
+  if(rec === 'all'){
+    pendingRecs.clear();
+  } else {
+    if(pendingRecs.has(rec)) pendingRecs.delete(rec);
+    else pendingRecs.add(rec);
+  }
+  syncPanelChips();
+}
+function setRecFilter(rec){ togglePendingRec(rec); }
+
+
 function clearFilters(){
-  activeTipo='all'; sortMode='default'; statusFilt='all'; searchQ=''; activeMedia='all';
+  activeTipos=new Set(); activeRecs=new Set(); pendingTipos=new Set(); pendingRecs=new Set();
+  sortMode='default'; statusFilt='all'; searchQ=''; activeMedia='all';
   document.getElementById('searchInput').value='';
   document.getElementById('sortSel').value='default';
-  document.getElementById('sortSelMob').value='default';
+  const sortMob=document.getElementById('sortSelMob'); if(sortMob) sortMob.value='default';
   document.getElementById('statusSel').value='all';
-  document.getElementById('statusSelMob').value='all';
+  const statusMob=document.getElementById('statusSelMob'); if(statusMob) statusMob.value='all';
   document.querySelectorAll('.mpill').forEach(b=>b.className='mpill');
   document.getElementById('mpAll').className='mpill active-all';
   document.querySelectorAll('.chip[data-tipo]').forEach(c=>c.classList.toggle('active',c.dataset.tipo==='all'));
-  renderGrid(); closeHam();
+  updateActiveFilterBar(); updateFilterBadge(); closeFilters(); renderGrid();
 }
 
 // STAR RATING
@@ -1267,8 +1496,11 @@ async function init(){
     if (!MEDIA_DATA.length) throw new Error('O arquivo movie-list.md parece estar vazio ou em formato inválido.');
 
     buildNavTabs();
+    initFilterPanelTabs();
     updateMediaCounts();
     renderGrid();
+    updateActiveFilterBar();
+    updateFilterBadge();
     setNavH();
 
   } catch (err) {
