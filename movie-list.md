@@ -506,6 +506,33 @@
 | 2252 | Jack & Diane | 2012 | Filme | L,HR,DR,RO,CA | 2 | 2 | 3 | 3 | 2 | 3 | 2 | LIS,VD | [Dir: Bradley Rust Gray] Juno Temple. Romance de verão em Nova York entre duas adolescentes. Elementos de body horror que externalizam o medo da intimidade e do abandono. |
 | 2253 | I Can't Think Straight | 2008 | Filme | L,DR,RO | 2 | 2 | 3 | 1 | 2 | 2 | 3 | LIS,RO | [Dir: Shamim Sarif] Noiva prestes a casar pela quarta vez se apaixona pela namorada do irmão. Romance quente com final feliz — raro nessa lista. |
 | 2269 | Tongues Untied | 1989 | Filme | G,DO,MU,DR,ML,UK | 2 | 2 | 5 | 3 | 4 | 3 | 5 | QC,NK | [Dir: Marlon Riggs] Poesia, spoken word e performance sobre a experiência de ser negro e gay na América. Pioneiro, político e devastadoramente belo. New Queer Cinema essencial. |
+| 2287 | Trinity Seven | 2014 | Anime | H,EC,SF,C,SE,AN | 3 | 1 | 3 | 1 | 2 | 1 | 3 | RH | Mago e seu harém de sete bruxas. Ecchi moderado com boa construção de mundo mágico. |
+| 2288 | Date A Live | 2013 | Anime | H,EC,SF,RO,C,SE,AN | 3 | 1 | 3 | 1 | 2 | 1 | 3 | RH | Espíritos femininos lacrados através de encontros românticos. Premissa criativa e popular. |
+| 2291 | Kore wa Zombie Desu ka? | 2011 | Anime | H,EC,HR,C,SE,AN | 3 | 1 | 3 | 2 | 2 | 2 | 3 | RH | Zumbi, mahou shoujo e necromante no mesmo harém. Ecchi + comédia absurda e inventiva. |
+| 2293 | Kämpfer | 2009 | Anime | H,EC,T,C,SF,SE,AN | 3 | 1 | 2 | 1 | 3 | 2 | 2 | RH | Garoto se transforma em garota para lutar. Ecchi + gênero fluido + comédia. |
+| 2294 | Omamori Himari | 2010 | Anime | H,EC,SF,Z,SE,AN | 3 | 1 | 2 | 1 | 2 | 3 | 2 | RH | Espíritos guardiões femininos (gata-demônio) cercam jovem alérgico a gatos. |
+| 2295 | Rosario + Vampire | 2008 | Anime | H,EC,SF,C,SE,AN | 3 | 1 | 2 | 1 | 2 | 1 | 3 | RH | Escola de monstros com harém. Clássico ecchi dos anos 2000. Personagens carismáticos. |
+| 2297 | Mayo Chiki! | 2011 | Anime | H,EC,RO,C,SE,AN | 3 | 1 | 3 | 1 | 2 | 2 | 3 | RH | Mordomo da escola é uma garota disfarçada. Bom desenvolvimento de personagem. |
+| 2298 | Oreshura | 2013 | Anime | H,EC,RO,C,SE,AN | 2 | 1 | 3 | 1 | 2 | 2 | 2 | RH | Harém romcom com contrato de namoro falso. Focado em comédia mais que fanservice. |
+| 2299 | Noucome | 2013 | Anime | H,EC,C,SE,AN | 3 | 1 | 3 | 2 | 3 | 3 | 2 | RH | Maldição obriga o protagonista a escolher entre opções constrangedoras em voz alta. |
+| 2311 | Maken-Ki! | 2011 | Anime | H,EC,SF,SE,AN | 3 | 2 | 2 | 2 | 2 | 2 | 2 | RH | Escola de batalhas com poderes elementais e fanservice abundante. |
+| 2312 | Eromanga Sensei | 2017 | Anime | H,EC,C,SE,AN | 3 | 2 | 2 | 1 | 3 | 1 | 3 | RH | Irmão descobre que irmã reclusa ilustra seu light novel ecchi. Autorreferencial. |
+| 2313 | Oreimo | 2010 | Anime | H,EC,C,SE,AN | 2 | 1 | 3 | 1 | 3 | 1 | 3 | RH,NK | Irmão descobre que irmã é otaku secreta. Subtexto de pseudo-incesto. Impactou a cultura otaku. |
+| 2316 | The Hidden Dungeon Only I Can Enter | 2021 | Anime | H,EC,SF,SE,AN | 3 | 2 | 2 | 1 | 2 | 2 | 2 | RH | Dungeon secreto. Habilidades restauradas por beijos e atos de prazer físico. |
+| 2320 | Strike the Blood | 2013 | Anime | H,EC,SF,Z,SE,AN | 3 | 2 | 3 | 1 | 2 | 1 | 3 | RH | Vampiro mais poderoso do mundo protegido por xamãs guardiãs. Longa franquia popular. |
+| 2323 | The Asterisk War | 2015 | Anime | H,EC,SF,SE,AN | 3 | 1 | 2 | 1 | 2 | 1 | 2 | RH | Academia de batalhas. Um dos primeiros do boom de animes de academia dos anos 2010. |
+| 2324 | Campione! | 2012 | Anime | H,EC,SF,SE,AN | 3 | 1 | 3 | 1 | 2 | 2 | 3 | RH | Garoto vira deus matador após eliminar divindades pagãs. Harém mitológico. |
+| 2325 | Saijaku Muhai no Bahamut | 2016 | Anime | H,EC,SF,SE,AN | 3 | 1 | 2 | 1 | 2 | 2 | 2 | RH | Academia mecha feminina com único aluno masculino. Fanservice com batalhas de dragartes. |
+| 2326 | Unlimited Fafnir | 2015 | Anime | H,EC,SF,SE,AN | 3 | 1 | 2 | 1 | 2 | 2 | 2 | RH | Único garoto com poderes de dragão em academia feminina sagrada. |
+| 2327 | Seireitsukai no Blade Dance | 2014 | Anime | H,EC,SF,SE,AN | 3 | 1 | 2 | 1 | 2 | 2 | 2 | RH | Único garoto capaz de invocar espíritos elementais em academia feminina sagrada. |
+| 2328 | Ichiban Ushiro no Daimaou | 2010 | Anime | H,EC,SF,C,SE,AN | 3 | 1 | 3 | 2 | 3 | 2 | 3 | RH | Destinado a ser Rei Demônio em escola mágica. Harém, caos e sátira do shonen. |
+| 2329 | Date A Live II/III/IV/V | 2014 | Anime | H,EC,SF,RO,SE,AN | 3 | 1 | 2 | 1 | 2 | 1 | 2 | RH | Franquia completa. Mais espíritos, mais harém, expansão do mundo narrativo. |
+| 2330 | Arifureta Shokugyou de Sekai Saikyou | 2019 | Anime | H,EC,SF,DR,SE,AN | 3 | 2 | 2 | 2 | 2 | 1 | 2 | RH | Isekai sombrio. Garoto traído constrói harém de monstros e se torna o mais forte. |
+| 2331 | Zero no Tsukaima | 2006 | Anime | H,EC,SF,RO,SE,AN | 3 | 1 | 3 | 1 | 2 | 2 | 4 | RH | Garoto convocado como familiar por feiticeira tsundere. Clássico ecchi dos anos 2000. |
+| 2332 | Hajimete no Gal | 2017 | Anime | H,EC,RO,C,SE,AN | 3 | 2 | 2 | 1 | 2 | 2 | 2 | RH | Nerd faz garota gyaru sair com ele. Ecchi leve com romance e comédia. |
+| 2333 | Ao-chan wa Benkyou ga Dekinai! | 2019 | Anime | H,EC,RO,C,SE,AN | 2 | 1 | 3 | 1 | 2 | 2 | 3 | RH | Filha de autor adulto tenta namorar sem pensar em sexo. Premissa autoconsciente e fofa. |
+| 2348 | Gleipnir | 2020 | Anime | H,SF,MY,EC,DR,SE,AN | 3 | 2 | 3 | 4 | 3 | 2 | 3 | VD,DD | Garoto vira traje de monstro que a garota veste. Body horror, moedas mágicas e violência. |
+| 2349 | Shokugeki no Soma (Food Wars!) | 2015 | Anime | H,EC,DR,C,SE,AN | 3 | 1 | 4 | 1 | 2 | 1 | 4 | RH | Academia culinária de elite. Degustar comida causa orgasmos metafóricos com nudez cômica. |
 
 ---
 
@@ -977,6 +1004,10 @@
 | 2261 | Esteros | 2016 | Filme | G,DR,RO,AR | 3 | 2 | 4 | 2 | 2 | 3 | 3 | LIS,CL | [Dir: Papu Curotto] Argentina. Dois amigos de infância se reencontram na vida adulta e a atração da infância ressurge. Contemplativo, sensorial e melancólico. |
 | 2262 | Fire | 1996 | Filme | L,DR,RO,IN | 3 | 2 | 4 | 3 | 5 | 2 | 5 | LIS,R,QC | [Dir: Deepa Mehta] Índia. Duas cunhadas — esposas de irmãos — encontram amor uma na outra. Primeiro filme lésbico indiano mainstream. Causou protestos violentos e foi banido em vários estados. |
 | 2265 | Lan Yu | 2001 | Filme | G,DR,RO,HK | 3 | 2 | 4 | 4 | 4 | 3 | 4 | LIS,TK | [Dir: Stanley Kwan] Hong Kong. Amor gay entre empresário rico e estudante pobre na China pós-Tiananmen. Tragédia inevitável e silenciosa ao fundo da história. |
+| 2321 | The Fruit of Grisaia | 2014 | Anime | H,DR,PH,TR,SE,AN | 3 | 2 | 4 | 3 | 4 | 2 | 3 | NK,DD | Cinco garotas com traumas profundos em escola isolada. Baseado em visual novel adulto. |
+| 2322 | High-Rise Invasion | 2021 | Anime | H,HR,SF,SE,AN | 3 | 2 | 3 | 4 | 3 | 1 | 3 | VD | Arranha-céus sem saída com mascarados assassinos. Suspense, gore e fanservice. |
+| 2342 | Mardock Scramble | 2010 | Anime | H,SF,TH,DR,AN | 3 | 2 | 4 | 4 | 4 | 3 | 3 | BR,VD | Trilogia de filmes. Prostituta assassinada revivida como ciborgue para caçar seu assassino. |
+| 2346 | Kemonozume | 2006 | Anime | H,HR,RO,DR,SE,AN | 3 | 2 | 4 | 3 | 3 | 4 | 4 | VD,CL | [Dir: Masaaki Yuasa] Caçador de monstros se apaixona por mulher-monstro devoradora de homens. |
 
 ---
 
@@ -1117,6 +1148,12 @@
 | 2283 | Otherside Picnic | 2021 | Anime | L,SF,HR,RO,AN,SE,CA | 1 | 1 | 3 | 3 | 1 | 2 | 3 | LIS,BTS | Duas garotas exploram o 'Outro Lado', dimensão paralela com lendas urbanas reais. Vínculo que cresce sob perigo. Yuri sutil mas presente. |
 | 2284 | Blue Drop | 2007 | Anime | L,DR,SF,RO,AN,SE,CA | 2 | 1 | 3 | 3 | 2 | 3 | 3 | LIS,BTS | Garota com amnésia num internato descobre que sua colega é uma alienígena. Romance lésbico que cresce sob a sombra de uma iminente invasão. |
 | 2285 | Given | 2019 | Anime | G,DR,MU,RO,AN,SE,CA,IT,TR | 2 | 1 | 5 | 4 | 1 | 1 | 5 | LIS,NK,KY | Banda de rock colegial. Garoto aprende guitarra com estranho em luto por namorado suicida. Música como forma de processar trauma e amor. Um dos melhores BL anime. |
+| 2319 | Akame ga Kill! | 2014 | Anime | H,DR,SF,HR,SE,AN | 2 | 2 | 3 | 4 | 2 | 1 | 3 | DD | Assassinos revolucionários. Mortes frequentes de personagens queridos. Adaptação controversa. |
+| 2334 | Rent-a-Girlfriend | 2020 | Anime | H,DR,RO,C,SE,AN | 2 | 1 | 3 | 1 | 2 | 1 | 3 | RH,NK | Garoto contrata namorada alugada. Drama emocional razoável. Harém crescente ao longo das temporadas. |
+| 2343 | Koi Kaze | 2004 | Anime | H,DR,RO,X,TR,SE,AN | 1 | 1 | 5 | 4 | 5 | 4 | 4 | NK,TK | Romance entre irmãos biológicos adultos tratado com peso dramático real. Perturbador e honesto. |
+| 2344 | Rumbling Hearts | 2003 | Anime | H,DR,RO,ML,SE,AN | 2 | 1 | 4 | 3 | 2 | 3 | 3 | LIS,NK | Coma, traição e luto paralisante. Kimi ga Nozomu Eien. Um dos dramas anime mais pesados. |
+| 2345 | White Album 2 | 2013 | Anime | H,DR,RO,MU,ML,SE,AN | 2 | 1 | 5 | 3 | 2 | 2 | 4 | LIS,KY | Triângulo amoroso realista que destrói todas as partes. Considerado um dos melhores romances anime. |
+| 2347 | Aoi Bungaku Series | 2009 | Anime | H,DR,PH,TR,SE,AN | 2 | 1 | 5 | 4 | 4 | 3 | 4 | TK,NK | Seis adaptações da literatura japonesa: Ningen Shikkaku, Sakura no Mori, etc. Suicídio e miséria. |
 
 ---
 
@@ -1841,6 +1878,9 @@
 | 1281 | An Officer and a Gentleman | 1982 | Filme | H,DR,RO | 3 | 2 | 4 | 1 | 1 | 1 | 5 | LIS | Taylor Hackford. Richard Gere + Debra Winger. |
 | 2233 | Stranger by the Lake | 2013 | Filme | G,TH,MY,DR,FR | 5 | 5 | 5 | 4 | 3 | 3 | 5 | HN,CL | [Dir: Alain Guiraudie] Praia de cruising gay. Homem presencia assassinato e se apaixona pelo assassino. Sexo real explícito, desejo suicida e verão eterno. Obra-prima do cinema queer francês. |
 | 2256 | Intimacy | 2001 | Filme | H,DR | 5 | 5 | 4 | 3 | 3 | 3 | 4 | HN,CL | [Dir: Patrice Chéreau] Londres. Dois estranhos se encontram toda quarta-feira apenas para sexo. Sem nomes, sem conversa. Sexo real não simulado. Quando ele descobre quem ela é, tudo muda. |
+| 2336 | Urotsukidouji: Legend of the Overfiend | 1989 | Anime | H,HN,HR,X,AN | 5 | 5 | 3 | 5 | 5 | 3 | 4 | VD,HN | OVA hentai histórico. Demônios e tentáculos. Pai do gênero hentai moderno. Extremamente violento. |
+| 2337 | Kuroinu: Kedakaki Seijo wa Hakudaku ni Somaru | 2012 | Anime | H,HN,SF,X,AN | 5 | 5 | 2 | 5 | 5 | 3 | 3 | HN,VD | OVA hentai dark fantasy. Conteúdo de dominação e agressão extremamente pesado. |
+| 2339 | Kangoku Senkan | 2008 | Anime | H,HN,SF,X,AN | 5 | 5 | 2 | 4 | 5 | 3 | 3 | HN,VD | OVA hentai. Espaçonave prisão com dominação pesada e conteúdo extremamente explícito. |
 
 ---
 
@@ -2065,6 +2105,31 @@
 | 1647 | The House of the Lost on the Cape (Misaki no Mayoiga) | 2021 | Anime | H,AN,DR | 1 | 1 | 4 | 2 | 1 | 2 | 3 | BTS | David Production. Após tsunami + casa misteriosa + cura. |
 | 1648 | Pompo the Cinephile | 2021 | Anime | H,AN,DR,ML | 1 | 1 | 5 | 1 | 1 | 1 | 4 | LB | Sobre FAZER cinema. Assistente vira diretor. Meta-cinema anime. |
 | 1649 | Words Bubble Up Like Soda Pop | 2020 | Anime | H,AN,DR,RO,CA | 1 | 1 | 4 | 1 | 1 | 1 | 3 | LIS | Haiku + garota de máscara + verão. Doce. Signal.MD. |
+| 2286 | The Testament of Sister New Devil | 2015 | Anime | H,EC,SF,DR,SE,AN | 4 | 2 | 2 | 2 | 3 | 1 | 3 | RH | Harém de demônios com irmãs adotivas. Alto fanservice e cenas muito sugestivas. |
+| 2289 | Sekirei | 2008 | Anime | H,EC,SF,SE,AN | 4 | 2 | 2 | 2 | 2 | 2 | 3 | RH | Seres femininos poderosos vinculados a um mestre em batalhas. Alto fanservice constante. |
+| 2290 | Sora no Otoshimono | 2009 | Anime | H,EC,SF,C,SE,AN | 4 | 2 | 3 | 1 | 2 | 2 | 3 | RH | Anjos cibernéticos caem do céu com poderes e muito fanservice. Clássico dos anos 2000. |
+| 2292 | Seikon no Qwaser | 2010 | Anime | H,EC,SF,SE,AN | 4 | 2 | 2 | 3 | 4 | 2 | 2 | RH | Poderes mágicos ativados ao beber leite materno diretamente. Extremamente sugestivo. |
+| 2296 | Ladies versus Butlers! | 2010 | Anime | H,EC,C,SE,AN | 4 | 2 | 2 | 1 | 2 | 3 | 2 | RH | Escola de mordomos e damas nobres. Versão BD com cenas muito explícitas. |
+| 2300 | Freezing | 2011 | Anime | H,EC,SF,DR,SE,AN | 4 | 2 | 3 | 3 | 3 | 2 | 3 | RH,VD | Garotas guerreiras em batalhas com destruição de roupas, gore e fanservice intenso. |
+| 2301 | Ikkitousen | 2003 | Anime | H,EC,DR,SE,AN | 4 | 2 | 2 | 2 | 2 | 2 | 3 | RH | Luchadores que incorporam guerreiros chineses clássicos. Muita roupa rasgada e ação. |
+| 2302 | Queen's Blade | 2009 | Anime | H,EC,SF,DR,SE,AN | 5 | 3 | 2 | 2 | 3 | 2 | 3 | RH,VD | Torneio de guerreiras com trajes mínimos e combates eróticos. Versão BD muito explícita. |
+| 2303 | Senran Kagura | 2013 | Anime | H,EC,SF,SE,AN | 4 | 2 | 2 | 2 | 2 | 2 | 3 | RH | Kunoichis com roupas destruídas em batalha. Baseado em jogo de luta famoso. |
+| 2304 | Keijo!!!!!!!! | 2016 | Anime | H,EC,DR,C,SE,AN | 4 | 2 | 3 | 1 | 2 | 1 | 3 | RH | Esporte fictício onde competidoras usam apenas seios e glúteos para competir. |
+| 2305 | Bikini Warriors | 2015 | Anime | H,EC,SF,C,SE,AN | 4 | 2 | 2 | 1 | 3 | 2 | 2 | RH | RPG de fantasia com guerreiras em biquíni. Sátira dos clichês do gênero. |
+| 2306 | Hyakka Ryouran: Samurai Girls | 2010 | Anime | H,EC,SF,SE,AN | 4 | 2 | 2 | 2 | 2 | 3 | 3 | RH | Guerreiras samurai em escola com estética de tinta japonesa e muito fanservice. |
+| 2307 | Tsugumomo | 2017 | Anime | H,EC,SF,SE,AN | 4 | 2 | 3 | 2 | 3 | 2 | 3 | RH | Espírito de um obi feminino vive com menino. Ecchi + ação sobrenatural sólida. |
+| 2308 | Kiss x Sis (TV) | 2010 | Anime | H,EC,X,C,SE,AN | 4 | 3 | 2 | 2 | 5 | 2 | 3 | RH,NK | Meias-irmãs agressivamente sedutoras. Constantemente flerta com hentai. Versão TV. |
+| 2309 | Okusama ga Seitokaichou! | 2015 | Anime | H,EC,RO,SE,AN | 4 | 3 | 2 | 1 | 3 | 2 | 2 | RH | ONA curto. Casamento secreto com presidente do conselho. Quase hentai explícito. |
+| 2310 | Aki-Sora | 2009 | Anime | H,EC,X,SE,AN | 4 | 3 | 2 | 3 | 5 | 4 | 2 | NK | OAVs. Relação incestuosa entre irmãos adultos. Muito próximo do hentai. |
+| 2314 | Futoku no Guild | 2022 | Anime | H,EC,SF,C,SE,AN | 4 | 3 | 2 | 2 | 3 | 2 | 2 | RH | Guild onde missões envolvem resistir à excitação para carregar magia. |
+| 2315 | Megami-ryou no Ryoubo-kun | 2021 | Anime | H,EC,C,SE,AN | 4 | 3 | 2 | 2 | 3 | 2 | 2 | RH | Menino sem-teto vira morador e figure materna de dormitório feminino universitário. |
+| 2317 | Highschool of the Dead | 2010 | Anime | H,EC,HR,DR,SE,AN | 4 | 2 | 3 | 3 | 3 | 1 | 4 | VD | Apocalipse zumbi com física absurda e violência gráfica. Produção Madhouse em alta forma. |
+| 2318 | Triage X | 2015 | Anime | H,EC,SF,SE,AN | 4 | 2 | 2 | 3 | 2 | 2 | 2 | VD | Assassinos disfarçados de enfermeiras eliminam criminosos. Gore e fanservice intenso. |
+| 2335 | Boin Lecture | 2013 | Anime | H,HN,AN | 5 | 5 | 1 | 1 | 2 | 3 | 1 | CL | OVA hentai. Dinâmica BDSM entre presidente do conselho estudantil e subordinado. |
+| 2338 | Mahou Shoujo Ai | 2005 | Anime | H,HN,SF,AN | 5 | 5 | 1 | 3 | 4 | 3 | 2 | HN | OVA hentai. Mahou shoujo adulta em situações explícitas. |
+| 2340 | Bakunyuu Bomb | 2003 | Anime | H,HN,AN | 5 | 5 | 1 | 1 | 2 | 4 | 1 | HN | OVA hentai. Fanservice extremo sem estrutura narrativa elaborada. |
+| 2341 | Kansen: Inyoku no Rensa | 2003 | Anime | H,HN,HR,AN | 5 | 5 | 2 | 3 | 4 | 3 | 2 | HN,VD | OVA hentai. Vírus causa compulsão sexual descontrolada. Conteúdo adulto pesado. |
+| 2350 | Kiss x Sis (OVA) | 2008 | Anime | H,EC,X,AN | 4 | 3 | 2 | 2 | 5 | 3 | 3 | RH,NK | Versão OVA mais explícita que o TV. Meias-irmãs em situações quase-hentai. |
 
 ---
 
